@@ -1,0 +1,9 @@
+'<br>'
+'<table border="0">'
+"<tr><td align=right valign=top width=25%>Programa    :</td><td></td><td valign=top >"v150+|<br>|,'</td></tr>',
+"<tr><td align=right valign=top width=25%>Programa    :</td><td></td><td valign=top >"v18+|<br>|,'</td></tr>',
+"<tr><td align=right valign=top width=25%>Tipo mídia  :</td><td></td><td valign=top >"d22,ref(['phl_spt']val(v22),v301,),'</td></tr>',
+"<tr><td align=right valign=top width=25%>Conteúdo    :</td><td></td><td valign=top >"d71,ref(['phl_cnt']val(v71),v301,),'</td></tr>',
+"<tr><td align=right valign=top width=25%>Arquivamento:</td><td></td><td valign=top >"d26,ref(['phl_col']val(v26),v301,),'</td></tr>',
+"<tr><td align=right valign=top width=25%>Número      :</td><td></td><td valign=top >"d49,v49*0.5,"-"d49, v49*5, " "d49 ,'</td></tr>',
+'</table>'

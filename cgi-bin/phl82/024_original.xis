@@ -1,0 +1,98 @@
+<!-- Registra novo exemplar catalogado
+     14/04/2007 - Revisado -->
+
+     <IsisScript name="024.xis">
+
+<!-- Define o tipo de conteúdo dos htmls que gerados dinamicamente -->
+     <display><pft>'Content-type: text/html; charset=iso-8859-1'/#</pft></display>
+
+<!-- Inclue funcao (vars) que carrega as variaveis de configuracao -->
+     <include>/Inetpub/wwwroot/cgi-bin/phl82/001.fnc</include>
+     
+<!-- Inclue funcao que atualiza tombo no catálogo -->
+     <include>/Inetpub/wwwroot/cgi-bin/phl82/008.fnc</include>
+
+<!-- Inclue funcao (009) que divide campos repetitivos -->
+     <include>/Inetpub/wwwroot/cgi-bin/phl82/009.fnc</include>
+
+<!-- Inclue funcao (tbo) que obtem dados sobre o tombo -->
+     <include>/Inetpub/wwwroot/cgi-bin/phl82/801.fnc</include>
+
+<!-- Inicia a secao do script -->
+     <section>
+
+<!-- Carrega variáveis de configuracao -->
+     <call name="001">now</call>
+
+<!-- Carrega variáveis do formulário do cliente -->
+	 <field action="cgi" tag="5000">mfn</field>
+	 <field action="cgi" tag="1010">rec</field>
+	 <field action="cgi" tag="958">exp</field>
+	 <field action="cgi" tag="3004">dbvar</field>
+
+<!-- Carrega permissões para entrada e edição -->
+     <field action="add" tag="2000"><pft>,ref(['phl_pwd']val(v3000^4),v655),</pft></field>
+     
+<!-- Inicia processo de gravação do novo registro de tombo -->
+
+     <!-- 29/05/2008 10:49:12 --><file action="close" type="database"><pft>,v3000^1'_tbo',</pft></file>
+
+     <do task="update">
+       <parm name="db"><pft>,v3000^1'_tbo',</pft></parm>
+       <parm name="mfn">New</parm>
+       <field action="define" tag="1105">Isis_Lock</field>
+       <parm name="lockid"><pft>getenv('REMOTE_ADDR'),x1,s(date).8</pft></parm>
+       <field action="define" tag="1003">Isis_Status</field>
+       <update>
+       <write>Unlock</write>
+       <field action="add" tag="998"><pft>,mfn(1),</pft></field>
+       <field action="export" tag="998">998</field>
+       </update>
+     </do>
+     
+     <file action="close" type="database"><pft>,v3000^1'_tbo',</pft></file>
+     
+     <do task="update">
+      <parm name="db"><pft>,v3000^1'_tbo',</pft></parm>
+      <parm name="mfn"><pft>,v998,</pft></parm>
+      <parm name="uctab"><pft>cat('uctab')</pft></parm>
+      <parm name="actab"><pft>cat('actab')</pft></parm>
+      <parm name="fst"><pft>,cat(v3000^1'_tbo.fst'),</pft></parm>
+      <field action="define" tag="1105">Isis_Lock</field>
+      <parm name="lockid"><pft>getenv('REMOTE_ADDR'),x1,s(date).8</pft></parm>
+      <field action="define" tag="1003">Isis_Status</field>
+
+      <update>
+        <field action="import" tag="list">958,998,3000/3004,4001,7003</field>
+        <cgitable><htmlpft><pft>,ref(['tab_fdt']23,'[pft]',v4,'[/pft]',),</pft></htmlpft></cgitable>
+        <file action="create" type="output"><pft>,v3000^1'_tbo.ctl',</pft></file>
+        <display><pft>,f(val(v801)+1,0,0),</pft></display>
+        <file action="close" type="output"><pft>,v3000^1'_tbo.ctl',</pft></file>
+        <field action="add" tag="999"><pft>'^d'v7003.8,'^h'v7003*9.4,'^b'v3000^2,</pft></field>
+        <call name="009">now</call>
+        <field action="export" tag="list">1/999,3000/3004,4001</field>
+        <field action="delete" tag="list">958,3000/3004,4001,7003</field>
+        <write>Unlock</write>
+        <field action="import" tag="list">958,1090,2000,3000/3004,4001,7003,1010,</field>
+        <display><htmlpft><pft>,ref(['tab_fmx']198,v4),</pft></htmlpft></display>
+
+        <display>
+          </table>
+          </body>
+          </html>
+        </display>
+
+        <field action="replace" tag="3000"><pft>,v3000,'^w'v1003,'^x'mstname,'^y'mfn,'^z'v7003.15,</pft></field>
+      </update>
+
+      <field action="export" tag="list">800/837,2000</field>
+     </do>
+     <file action="close" type="database"><pft>,v3000^1'_tbo',</pft></file>
+     
+<!-- Atualiza lista de tombos no catálogo -->
+     <call name="008">now</call>
+
+     <flow action="exit">1</flow>
+
+</section>
+</IsisScript>

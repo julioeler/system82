@@ -1,0 +1,11 @@
+/*
+'d602d603d604d605d606d607d608d609'
+'a602~'ref(['\phl8\cgi-bin\phl8\bases\phl_set']1,v602)'~',
+'a603~'ref(['\phl8\cgi-bin\phl8\bases\phl_set']1,v603)'~',
+'a604~'ref(['\phl8\cgi-bin\phl8\bases\phl_set']1,v604)'~',
+'a605~'ref(['\phl8\cgi-bin\phl8\bases\phl_set']1,v605)'~',
+'a606~'ref(['\phl8\cgi-bin\phl8\bases\phl_set']1,v606)'~',
+'a607~'ref(['\phl8\cgi-bin\phl8\bases\phl_set']1,v607)'~',
+'a608~'ref(['\phl8\cgi-bin\phl8\bases\phl_set']1,v608)'~',
+'a609~'ref(['\phl8\cgi-bin\phl8\bases\phl_set']1,v609)'~',
+*/

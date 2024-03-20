@@ -1,0 +1,2738 @@
+'<html>'/
+'<head>'/
+'<link href="',cat('path_css'),'phl.css" rel="stylesheet" type="text/css">'/
+'<script language="JavaScript" src="',cat('path_js'),'isis_limite.js"></script>'/
+'<script language="JavaScript" src="',cat('path_js'),'submit.js"></script>'/
+'<script language="JavaScript" src="',cat('path_js'),'restrito.js"></script>'/
+
+'<script language="JavaScript" type="text/javascript">'/
+'<!--'/
+'function comentario(x){ '/
+' ajuda = window.open("',cat('path_cgi'),'wxis.exe?IsisScript=',cat('path_xis'),'051.xis&tmp='v4001'opc=form&mfn="+x,"janela","height=400,width=600,menubar=yes,resizable=yes,scrollbars=yes,status=yes")'/
+'} '/
+
+'function tab_man(x) {'/
+' window.open("',cat('path_cgi'),'wxis.exe?IsisScript=',cat('path_xis'),'049.xis&tmp='v4001'&mfn="+x,"janela","height=400,width=600,menubar=no,resizable=yes,scrollbars=yes,status=no")'/
+'} '/
+
+'function proibido_voltar(){history.go(1) == false;}'/
+
+'function getXmlHttpRequestObject() { '/
+'if (window.XMLHttpRequest) { '/
+'return new XMLHttpRequest();'/
+'} else if(window.ActiveXObject) { '/
+'return new ActiveXObject("Microsoft.XMLHTTP");'/
+'} else { '/
+'alert("Your Browser Sucks!\nIts about time to upgrade dont you think?");'/
+'}'/
+'}'/
+'var searchReq = getXmlHttpRequestObject();'/
+
+'function buscaAutores() { '/
+'if (searchReq.readyState == 4 || searchReq.readyState == 0) {'/
+'var str = escape(document.getElementById("txtAutores").value); '/
+'searchReq.open("GET", "',cat('path_cgi'),'wxis.exe?IsisScript=',cat('path_xis'),'autocompleta_autores.xis&tmp='v4001'&exp=" + str, true);'/
+'searchReq.onreadystatechange = handleSearchSuggestAutores;'/
+'searchReq.send(null);'/
+'}'/
+'}'/
+
+'function buscaAutoresAnalitica() { '/
+'if (searchReq.readyState == 4 || searchReq.readyState == 0) {'/
+'var str = escape(document.getElementById("txtAutoresAnalitica").value); '/
+'searchReq.open("GET", "',cat('path_cgi'),'wxis.exe?IsisScript=',cat('path_xis'),'autocompleta_autores.xis&tmp='v4001'&exp=" + str, true);'/
+'searchReq.onreadystatechange = handleSearchSuggestAutoresAnalitica;'/
+'searchReq.send(null);'/
+'}'/
+'}'/
+
+'function buscaAutoresColetivos() { '/
+'if (searchReq.readyState == 4 || searchReq.readyState == 0) {'/
+'var str = escape(document.getElementById("txtAutoresColetivos").value); '/
+'searchReq.open("GET", "',cat('path_cgi'),'wxis.exe?IsisScript=',cat('path_xis'),'autocompleta_autores_coletivos.xis&tmp='v4001'&exp=" + str, true);'/
+'searchReq.onreadystatechange = handleSearchSuggestAutoresColetivos;'/
+'searchReq.send(null);'/
+'}'/
+'}'/
+
+'function buscaAutoresColetivosAnalitica() { '/
+'if (searchReq.readyState == 4 || searchReq.readyState == 0) {'/
+'var str = escape(document.getElementById("txtAutoresColetivosAnalitica").value); '/
+'searchReq.open("GET", "',cat('path_cgi'),'wxis.exe?IsisScript=',cat('path_xis'),'autocompleta_autores_coletivos.xis&tmp='v4001'&exp=" + str, true);'/
+'searchReq.onreadystatechange = handleSearchSuggestAutoresColetivosAnalitica;'/
+'searchReq.send(null);'/
+'}'/
+'}'/
+
+'function buscaAutoridades() { '/
+'if (searchReq.readyState == 4 || searchReq.readyState == 0) {'/
+'var str = escape(document.getElementById("txtAutoridades").value); '/
+'searchReq.open("GET", "',cat('path_cgi'),'wxis.exe?IsisScript=',cat('path_xis'),'autocompleta_autoridades.xis&tmp='v4001'&exp=" + str, true);'/
+'searchReq.onreadystatechange = handleSearchSuggestAutoridades;'/
+'searchReq.send(null);'/
+'}'/
+'}'/
+
+'function buscaAutoridadesAnalitica() { '/
+'if (searchReq.readyState == 4 || searchReq.readyState == 0) {'/
+'var str = escape(document.getElementById("txtAutoridadesAnalitica").value); '/
+'searchReq.open("GET", "',cat('path_cgi'),'wxis.exe?IsisScript=',cat('path_xis'),'autocompleta_autoridades.xis&tmp='v4001'&exp=" + str, true);'/
+'searchReq.onreadystatechange = handleSearchSuggestAutoridadesAnalitica;'/
+'searchReq.send(null);'/
+'}'/
+'}'/
+
+'function buscaCidade() { '/
+'if (searchReq.readyState == 4 || searchReq.readyState == 0) {'/
+/*'var str = escape(document.getElementById("066").value); '/*/
+'var str = escape(document.getElementById("txtCidade").value); '/
+'searchReq.open("GET", "',cat('path_cgi'),'wxis.exe?IsisScript=',cat('path_xis'),'autocompleta_cidades.xis&tmp='v4001'&exp=" + str, true);'/
+'searchReq.onreadystatechange = handleSearchSuggestCidade;'/
+'searchReq.send(null);'/
+'}'/
+'}'/
+
+'function buscaCidadeEvento() { '/
+'if (searchReq.readyState == 4 || searchReq.readyState == 0) {'/
+/*'var str = escape(document.getElementById("056").value); '/*/
+'var str = escape(document.getElementById("txtCidadeEvento").value); '/
+'searchReq.open("GET", "',cat('path_cgi'),'wxis.exe?IsisScript=',cat('path_xis'),'autocompleta_cidades.xis&tmp='v4001'&exp=" + str, true);'/
+'searchReq.onreadystatechange = handleSearchSuggestCidadeEvento;'/
+'searchReq.send(null);'/
+'}'/
+'}'/
+
+'function buscaClasse() { '/
+'if (searchReq.readyState == 4 || searchReq.readyState == 0) {'/
+'var str = escape(document.getElementById("003").value); '/
+'searchReq.open("GET", "',cat('path_cgi'),'wxis.exe?IsisScript=',cat('path_xis'),'autocompleta_classe.xis&tmp='v4001'&exp=" + str, true);'/
+'searchReq.onreadystatechange = handleSearchSuggestClasse;'/
+'searchReq.send(null);'/
+'}'/
+'}'/
+
+'function buscaCurso() { '/
+'if (searchReq.readyState == 4 || searchReq.readyState == 0) {'/
+'var str = escape(document.getElementById("txtCurso").value); '/
+'searchReq.open("GET", "',cat('path_cgi'),'wxis.exe?IsisScript=',cat('path_xis'),'autocompleta_curso.xis&tmp='v4001'&exp=" + str, true);'/
+'searchReq.onreadystatechange = handleSearchSuggestCurso;'/
+'searchReq.send(null);'/
+'}'/
+'}'/
+
+'function buscaCutter() { '/
+'if (searchReq.readyState == 4 || searchReq.readyState == 0) {'/
+'var str = escape(document.getElementById("103").value); '/
+'searchReq.open("GET", "',cat('path_cgi'),'wxis.exe?IsisScript=',cat('path_xis'),'autocompleta_cutter.xis&tmp='v4001'&exp=" + str, true);'/
+'searchReq.onreadystatechange = handleSearchSuggestCutter;'/
+'searchReq.send(null);'/
+'}'/
+'}'/
+
+'function buscaDescritores() { '/
+'if (searchReq.readyState == 4 || searchReq.readyState == 0) {'/
+'var str = escape(document.getElementById("txtDescritores").value); '/
+'searchReq.open("GET", "',cat('path_cgi'),'wxis.exe?IsisScript=',cat('path_xis'),'autocompleta_descritores.xis&tmp='v4001'&exp=" + str, true);'/
+'searchReq.onreadystatechange = handleSearchSuggestDescritores;'/
+'searchReq.send(null);'/
+'}'/
+'}'/
+
+'function buscaDescritoresSecundarios() { '/
+'if (searchReq.readyState == 4 || searchReq.readyState == 0) {'/
+'var str = escape(document.getElementById("txtDescritoresSecundarios").value); '/
+'searchReq.open("GET", "',cat('path_cgi'),'wxis.exe?IsisScript=',cat('path_xis'),'autocompleta_descritores.xis&tmp='v4001'&exp=" + str, true);'/
+'searchReq.onreadystatechange = handleSearchSuggestDescritoresSecundarios;'/
+'searchReq.send(null);'/
+'}'/
+'}'/
+
+'function buscaEditora() { '/
+'if (searchReq.readyState == 4 || searchReq.readyState == 0) {'/
+/*'var str = escape(document.getElementById("062").value); '/*/
+'var str = escape(document.getElementById("txtEditora").value); '/
+'searchReq.open("GET", "',cat('path_cgi'),'wxis.exe?IsisScript=',cat('path_xis'),'autocompleta_editoras.xis&tmp='v4001'&exp=" + str, true);'/
+'searchReq.onreadystatechange = handleSearchSuggestEditora;'/
+'searchReq.send(null);'/
+'}'/
+'}'/
+
+'function buscaKardex() { '/
+'if (searchReq.readyState == 4 || searchReq.readyState == 0) {'/
+'var str = escape(document.getElementById("033").value); '/
+'searchReq.open("GET", "',cat('path_cgi'),'wxis.exe?IsisScript=',cat('path_xis'),'autocompleta_kardex.xis&tmp='v4001'&exp=" + str, true);'/
+'searchReq.onreadystatechange = handleSearchSuggestKardex;'/
+'searchReq.send(null);'/
+'}'/
+'}'/
+
+'function buscaPaiM() { '/
+'if (searchReq.readyState == 4 || searchReq.readyState == 0) {'/
+'var str = escape(document.getElementById("996").value); '/
+'searchReq.open("GET", "',cat('path_cgi'),'wxis.exe?IsisScript=',cat('path_xis'),'autocompleta_pai_m.xis&tmp='v4001'&exp=" + str, true);'/
+'searchReq.onreadystatechange = handleSearchSuggestPaiM;'/
+'searchReq.send(null);'/
+'}'/
+'}'/
+
+'function buscaPaiS() { '/
+'if (searchReq.readyState == 4 || searchReq.readyState == 0) {'/
+'var str = escape(document.getElementById("996").value); '/
+'searchReq.open("GET", "',cat('path_cgi'),'wxis.exe?IsisScript=',cat('path_xis'),'autocompleta_pai_s.xis&tmp='v4001'&exp=" + str, true);'/
+'searchReq.onreadystatechange = handleSearchSuggestPaiS;'/
+'searchReq.send(null);'/
+'}'/
+'}'/
+
+'function buscaPaises() { '/
+'if (searchReq.readyState == 4 || searchReq.readyState == 0) {'/
+/*'var str = escape(document.getElementById("067").value); '/*/
+'var str = escape(document.getElementById("txtPaises").value); '/
+'searchReq.open("GET", "',cat('path_cgi'),'wxis.exe?IsisScript=',cat('path_xis'),'autocompleta_paises.xis&tmp='v4001'&exp=" + str, true);'/
+'searchReq.onreadystatechange = handleSearchSuggestPaises;'/
+'searchReq.send(null);'/
+'}'/
+'}'/
+
+'function buscaPaisesEvento() { '/
+'if (searchReq.readyState == 4 || searchReq.readyState == 0) {'/
+/*'var str = escape(document.getElementById("057").value); '/*/
+'var str = escape(document.getElementById("txtPaisesEvento").value); '/
+'searchReq.open("GET", "',cat('path_cgi'),'wxis.exe?IsisScript=',cat('path_xis'),'autocompleta_paises.xis&tmp='v4001'&exp=" + str, true);'/
+'searchReq.onreadystatechange = handleSearchSuggestPaisesEvento;'/
+'searchReq.send(null);'/
+'}'/
+'}'/
+
+'function buscaVocabulario() { '/
+'if (searchReq.readyState == 4 || searchReq.readyState == 0) {'/
+'var str = escape(document.getElementById("txtVocabulario").value); '/
+'searchReq.open("GET", "',cat('path_cgi'),'wxis.exe?IsisScript=',cat('path_xis'),'autocompleta_vocabulario.xis&tmp='v4001'&exp=" + str, true);'/
+'searchReq.onreadystatechange = handleSearchSuggestVocabulario;'/
+'searchReq.send(null);'/
+'}'/
+'}'/
+
+'function handleSearchSuggestAutores() {'/
+'if (searchReq.readyState == 4) { '/
+'var ss = document.getElementById("busca_autores") '/
+'ss.innerHTML = ""; '/
+'var str = searchReq.responseText.split("\n"); '/
+'for(i=0; i < str.length - 1; i++) { '/
+'var suggest = "<div onmouseover=javascript:suggestOver(this); ";'/
+'suggest += "onmouseout=javascript:suggestOut(this); ";'/
+'suggest += "onclick=javascript:setAutores(this.innerHTML); ";'/
+'suggest += "class=suggest_link>" + str[i] + "</div>";'/
+'ss.innerHTML += suggest;'/
+'} '/
+'}'/
+'}'/
+
+'function handleSearchSuggestAutoresAnalitica() {'/
+'if (searchReq.readyState == 4) { '/
+'var ss = document.getElementById("busca_autores_analitica") '/
+'ss.innerHTML = ""; '/
+'var str = searchReq.responseText.split("\n"); '/
+'for(i=0; i < str.length - 1; i++) { '/
+'var suggest = "<div onmouseover=javascript:suggestOver(this); ";'/
+'suggest += "onmouseout=javascript:suggestOut(this); ";'/
+'suggest += "onclick=javascript:setAutoresAnalitica(this.innerHTML); ";'/
+'suggest += "class=suggest_link>" + str[i] + "</div>";'/
+'ss.innerHTML += suggest;'/
+'} '/
+'}'/
+'}'/
+
+'function handleSearchSuggestAutoresColetivos() {'/
+'if (searchReq.readyState == 4) { '/
+'var ss = document.getElementById("busca_autores_coletivos") '/
+'ss.innerHTML = ""; '/
+'var str = searchReq.responseText.split("\n"); '/
+'for(i=0; i < str.length - 1; i++) { '/
+'var suggest = "<div onmouseover=javascript:suggestOver(this); ";'/
+'suggest += "onmouseout=javascript:suggestOut(this); ";'/
+'suggest += "onclick=javascript:setAutoresColetivos(this.innerHTML); ";'/
+'suggest += "class=suggest_link>" + str[i] + "</div>";'/
+'ss.innerHTML += suggest;'/
+'} '/
+'}'/
+'}'/
+
+'function handleSearchSuggestAutoresColetivosAnalitica() {'/
+'if (searchReq.readyState == 4) { '/
+'var ss = document.getElementById("busca_autores_coletivos_analitica") '/
+'ss.innerHTML = ""; '/
+'var str = searchReq.responseText.split("\n"); '/
+'for(i=0; i < str.length - 1; i++) { '/
+'var suggest = "<div onmouseover=javascript:suggestOver(this); ";'/
+'suggest += "onmouseout=javascript:suggestOut(this); ";'/
+'suggest += "onclick=javascript:setAutoresColetivosAnalitica(this.innerHTML); ";'/
+'suggest += "class=suggest_link>" + str[i] + "</div>";'/
+'ss.innerHTML += suggest;'/
+'} '/
+'}'/
+'}'/
+
+'function handleSearchSuggestAutoridades() {'/
+'if (searchReq.readyState == 4) { '/
+'var ss = document.getElementById("busca_autoridades") '/
+'ss.innerHTML = ""; '/
+'var str = searchReq.responseText.split("\n"); '/
+'for(i=0; i < str.length - 1; i++) { '/
+'var suggest = "<div onmouseover=javascript:suggestOver(this); ";'/
+'suggest += "onmouseout=javascript:suggestOut(this); ";'/
+'suggest += "onclick=javascript:setAutoridades(this.innerHTML); ";'/
+'suggest += "class=suggest_link>" + str[i] + "</div>";'/
+'ss.innerHTML += suggest;'/
+'} '/
+'}'/
+'}'/
+
+'function handleSearchSuggestAutoridadesAnalitica() {'/
+'if (searchReq.readyState == 4) { '/
+'var ss = document.getElementById("busca_autoridades_analitica") '/
+'ss.innerHTML = ""; '/
+'var str = searchReq.responseText.split("\n"); '/
+'for(i=0; i < str.length - 1; i++) { '/
+'var suggest = "<div onmouseover=javascript:suggestOver(this); ";'/
+'suggest += "onmouseout=javascript:suggestOut(this); ";'/
+'suggest += "onclick=javascript:setAutoridadesAnalitica(this.innerHTML); ";'/
+'suggest += "class=suggest_link>" + str[i] + "</div>";'/
+'ss.innerHTML += suggest;'/
+'} '/
+'}'/
+'}'/
+
+'function handleSearchSuggestCidade() {'/
+'if (searchReq.readyState == 4) { '/
+'var ss = document.getElementById("busca_cidade") '/
+'ss.innerHTML = ""; '/
+'var str = searchReq.responseText.split("\n"); '/
+'for(i=0; i < str.length - 1; i++) { '/
+'var suggest = "<div onmouseover=javascript:suggestOver(this); ";'/
+'suggest += "onmouseout=javascript:suggestOut(this); ";'/
+'suggest += "onclick=javascript:setCidade(this.innerHTML); ";'/
+'suggest += "class=suggest_link>" + str[i] + "</div>";'/
+'ss.innerHTML += suggest;'/
+'} '/
+'}'/
+'}'/
+
+'function handleSearchSuggestCidadeEvento() {'/
+'if (searchReq.readyState == 4) { '/
+'var ss = document.getElementById("busca_cidade_evento") '/
+'ss.innerHTML = ""; '/
+'var str = searchReq.responseText.split("\n"); '/
+'for(i=0; i < str.length - 1; i++) { '/
+'var suggest = "<div onmouseover=javascript:suggestOver(this); ";'/
+'suggest += "onmouseout=javascript:suggestOut(this); ";'/
+'suggest += "onclick=javascript:setCidadeEvento(this.innerHTML); ";'/
+'suggest += "class=suggest_link>" + str[i] + "</div>";'/
+'ss.innerHTML += suggest;'/
+'} '/
+'}'/
+'}'/
+
+'function handleSearchSuggestClasse() {'/
+'if (searchReq.readyState == 4) { '/
+'var ss = document.getElementById("busca_classe") '/
+'ss.innerHTML = ""; '/
+'var str = searchReq.responseText.split("\n"); '/
+'for(i=0; i < str.length - 1; i++) { '/
+'var suggest = "<div onmouseover=javascript:suggestOver(this); ";'/
+'suggest += "onmouseout=javascript:suggestOut(this); ";'/
+'suggest += "onclick=javascript:setClasse(this.innerHTML); ";'/
+'suggest += "class=suggest_link>" + str[i] + "</div>";'/
+'ss.innerHTML += suggest;'/
+'} '/
+'}'/
+'}'/
+
+'function handleSearchSuggestCurso() {'/
+'if (searchReq.readyState == 4) { '/
+'var ss = document.getElementById("busca_curso") '/
+'ss.innerHTML = ""; '/
+'var str = searchReq.responseText.split("\n"); '/
+'for(i=0; i < str.length - 1; i++) { '/
+'var suggest = "<div onmouseover=javascript:suggestOver(this); ";'/
+'suggest += "onmouseout=javascript:suggestOut(this); ";'/
+'suggest += "onclick=javascript:setCurso(this.innerHTML); ";'/
+'suggest += "class=suggest_link>" + str[i] + "</div>";'/
+'ss.innerHTML += suggest;'/
+'} '/
+'}'/
+'}'/
+
+'function handleSearchSuggestCutter() {'/
+'if (searchReq.readyState == 4) { '/
+'var ss = document.getElementById("busca_cutter") '/
+'ss.innerHTML = ""; '/
+'var str = searchReq.responseText.split("\n"); '/
+'for(i=0; i < str.length - 1; i++) { '/
+'var suggest = "<div onmouseover=javascript:suggestOver(this); ";'/
+'suggest += "onmouseout=javascript:suggestOut(this); ";'/
+'suggest += "onclick=javascript:setCutter(this.innerHTML); ";'/
+'suggest += "class=suggest_link>" + str[i] + "</div>";'/
+'ss.innerHTML += suggest;'/
+'} '/
+'}'/
+'}'/
+
+'function handleSearchSuggestDescritores() {'/
+'if (searchReq.readyState == 4) { '/
+'var ss = document.getElementById("busca_descritores") '/
+'ss.innerHTML = ""; '/
+'var str = searchReq.responseText.split("\n"); '/
+'for(i=0; i < str.length - 1; i++) { '/
+'var suggest = "<div onmouseover=javascript:suggestOver(this); ";'/
+'suggest += "onmouseout=javascript:suggestOut(this); ";'/
+'suggest += "onclick=javascript:setDescritores(this.innerHTML); ";'/
+'suggest += "class=suggest_link>" + str[i] + "</div>";'/
+'ss.innerHTML += suggest;'/
+'} '/
+'}'/
+'}'/
+
+'function handleSearchSuggestDescritoresSecundarios() {'/
+'if (searchReq.readyState == 4) { '/
+'var ss = document.getElementById("busca_descritores_secundarios") '/
+'ss.innerHTML = ""; '/
+'var str = searchReq.responseText.split("\n"); '/
+'for(i=0; i < str.length - 1; i++) { '/
+'var suggest = "<div onmouseover=javascript:suggestOver(this); ";'/
+'suggest += "onmouseout=javascript:suggestOut(this); ";'/
+'suggest += "onclick=javascript:setDescritoresSecundarios(this.innerHTML); ";'/
+'suggest += "class=suggest_link>" + str[i] + "</div>";'/
+'ss.innerHTML += suggest;'/
+'} '/
+'}'/
+'}'/
+
+'function handleSearchSuggestEditora() {'/
+'if (searchReq.readyState == 4) { '/
+'var ss = document.getElementById("busca_editora") '/
+'ss.innerHTML = ""; '/
+'var str = searchReq.responseText.split("\n"); '/
+'for(i=0; i < str.length - 1; i++) { '/
+'var suggest = "<div onmouseover=javascript:suggestOver(this); ";'/
+'suggest += "onmouseout=javascript:suggestOut(this); ";'/
+'suggest += "onclick=javascript:setEditora(this.innerHTML); ";'/
+'suggest += "class=suggest_link>" + str[i] + "</div>";'/
+'ss.innerHTML += suggest;'/
+'} '/
+'}'/
+'}'/
+
+'function handleSearchSuggestKardex() {'/
+'if (searchReq.readyState == 4) { '/
+'var ss = document.getElementById("busca_kardex") '/
+'ss.innerHTML = ""; '/
+'var str = searchReq.responseText.split("\n"); '/
+'for(i=0; i < str.length - 1; i++) { '/
+'var suggest = "<div onmouseover=javascript:suggestOver(this); ";'/
+'suggest += "onmouseout=javascript:suggestOut(this); ";'/
+'suggest += "onclick=javascript:setKardex(this.innerHTML); ";'/
+'suggest += "class=suggest_link>" + str[i] + "</div>";'/
+'ss.innerHTML += suggest;'/
+'} '/
+'}'/
+'}'/
+
+'function handleSearchSuggestPaiM() {'/
+'if (searchReq.readyState == 4) { '/
+'var ss = document.getElementById("busca_paim") '/
+'ss.innerHTML = ""; '/
+'var str = searchReq.responseText.split("\n"); '/
+'for(i=0; i < str.length - 1; i++) { '/
+'var suggest = "<div onmouseover=javascript:suggestOver(this); ";'/
+'suggest += "onmouseout=javascript:suggestOut(this); ";'/
+'suggest += "onclick=javascript:setPaiM(this.innerHTML); ";'/
+'suggest += "class=suggest_link>" + str[i] + "</div>";'/
+'ss.innerHTML += suggest;'/
+'} '/
+'}'/
+'}'/
+
+'function handleSearchSuggestPaiS() {'/
+'if (searchReq.readyState == 4) { '/
+'var ss = document.getElementById("busca_pais") '/
+'ss.innerHTML = ""; '/
+'var str = searchReq.responseText.split("\n"); '/
+'for(i=0; i < str.length - 1; i++) { '/
+'var suggest = "<div onmouseover=javascript:suggestOver(this); ";'/
+'suggest += "onmouseout=javascript:suggestOut(this); ";'/
+'suggest += "onclick=javascript:setPaiS(this.innerHTML); ";'/
+'suggest += "class=suggest_link>" + str[i] + "</div>";'/
+'ss.innerHTML += suggest;'/
+'} '/
+'}'/
+'}'/
+
+'function handleSearchSuggestPaises() {'/
+'if (searchReq.readyState == 4) { '/
+'var ss = document.getElementById("busca_paises") '/
+'ss.innerHTML = ""; '/
+'var str = searchReq.responseText.split("\n"); '/
+'for(i=0; i < str.length - 1; i++) { '/
+'var suggest = "<div onmouseover=javascript:suggestOver(this); ";'/
+'suggest += "onmouseout=javascript:suggestOut(this); ";'/
+'suggest += "onclick=javascript:setPaises(this.innerHTML); ";'/
+'suggest += "class=suggest_link>" + str[i] + "</div>";'/
+'ss.innerHTML += suggest;'/
+'} '/
+'}'/
+'}'/
+
+'function handleSearchSuggestPaisesEvento() {'/
+'if (searchReq.readyState == 4) { '/
+'var ss = document.getElementById("busca_paises_evento") '/
+'ss.innerHTML = ""; '/
+'var str = searchReq.responseText.split("\n"); '/
+'for(i=0; i < str.length - 1; i++) { '/
+'var suggest = "<div onmouseover=javascript:suggestOver(this); ";'/
+'suggest += "onmouseout=javascript:suggestOut(this); ";'/
+'suggest += "onclick=javascript:setPaisesEvento(this.innerHTML); ";'/
+'suggest += "class=suggest_link>" + str[i] + "</div>";'/
+'ss.innerHTML += suggest;'/
+'} '/
+'}'/
+'}'/
+
+'function handleSearchSuggestVocabulario() {'/
+'if (searchReq.readyState == 4) { '/
+'var ss = document.getElementById("busca_vocabulario") '/
+'ss.innerHTML = ""; '/
+'var str = searchReq.responseText.split("\n"); '/
+'for(i=0; i < str.length - 1; i++) { '/
+'var suggest = "<div onmouseover=javascript:suggestOver(this); ";'/
+'suggest += "onmouseout=javascript:suggestOut(this); ";'/
+'suggest += "onclick=javascript:setVocabulario(this.innerHTML); ";'/
+'suggest += "class=suggest_link>" + str[i] + "</div>";'/
+'ss.innerHTML += suggest;'/
+'} '/
+'}'/
+'}'/
+
+'function suggestOver(div_value) { '/
+'div_value.className = "suggest_link_over"; '/
+'} '/
+'function suggestOut(div_value) { '/
+'div_value.className = "suggest_link"; '/
+'}'/
+
+'AutoresOldValue = "";'/
+'AutoresAnaliticaOldValue = "";'/
+'AutoresColetivosOldValue = "";'/
+'AutoresColetivosAnaliticaOldValue = "";'/
+'AutoridadesOldValue = "";'/
+'AutoridadesAnaliticaOldValue = "";'/
+'CidadeOldValue = "";'/
+'CidadeEventoOldValue = "";'/
+'CursoOldValue = "";'/
+'DescritoresOldValue = "";'/
+'DescritoresSecundariosOldValue = "";'/
+'EditoraOldValue = "";'/
+'PaiMOldValue = "";'/
+'PaiSOldValue = "";'/
+'PaisesOldValue = "";'/
+'PaisesEventoOldValue = "";'/
+'VocabularioOldValue = "";'/
+
+'function setAutores(value) { '/
+'  if (value != "") { '/
+'  AutoresOldValue = document.getElementById("016").value; '/
+'  var totalvalue = AutoresOldValue+value+"\n";'/
+'  document.getElementById("016").value = totalvalue; '/
+'  document.getElementById("busca_autores").innerHTML = ""; '/
+'  AutoresOldValue = document.getElementById("016").value; '/
+'} '/
+'} '/
+
+'function setAutoresAnalitica(value) { '/
+'  if (value != "") { '/
+'  AutoresAnaliticaOldValue = document.getElementById("010").value; '/
+'  var totalvalue = AutoresAnaliticaOldValue+value+"\n";'/
+'  document.getElementById("010").value = totalvalue; '/
+'  document.getElementById("busca_autores_analitica").innerHTML = ""; '/
+'  AutoresAnaliticaOldValue = document.getElementById("010").value; '/
+'} '/
+'} '/
+
+'function setAutoresColetivos(value) { '/
+'  if (value != "") { '/
+'  AutoresColetivosOldValue = document.getElementById("017").value; '/
+'  var totalvalue = AutoresColetivosOldValue+value+"\n";'/
+'  document.getElementById("017").value = totalvalue; '/
+'  document.getElementById("busca_autores_coletivos").innerHTML = ""; '/
+'  AutoresColetivosOldValue = document.getElementById("017").value; '/
+'} '/
+'} '/
+
+'function setAutoresColetivosAnalitica(value) { '/
+'  if (value != "") { '/
+'  AutoresColetivosAnaliticaOldValue = document.getElementById("011").value; '/
+'  var totalvalue = AutoresColetivosAnaliticaOldValue+value+"\n";'/
+'  document.getElementById("011").value = totalvalue; '/
+'  document.getElementById("busca_autores_coletivos_analitica").innerHTML = ""; '/
+'  AutoresColetivosAnaliticaOldValue = document.getElementById("011").value; '/
+'} '/
+'} '/
+
+'function setAutoridades(value) { '/
+'  if (value != "") { '/
+'  AutoridadesOldValue = document.getElementById("016").value; '/
+'  var totalvalue = AutoridadesOldValue+value+"\n";'/
+'  document.getElementById("016").value = totalvalue; '/
+'  document.getElementById("busca_autoridades").innerHTML = ""; '/
+'  AutoridadesOldValue = document.getElementById("016").value; '/
+'} '/
+'} '/
+
+'function setAutoridadesAnalitica(value) { '/
+'  if (value != "") { '/
+'  AutoridadesAnaliticaOldValue = document.getElementById("010").value; '/
+'  var totalvalue = AutoridadesAnaliticaOldValue+value+"\n";'/
+'  document.getElementById("010").value = totalvalue; '/
+'  document.getElementById("busca_autoridades_analitica").innerHTML = ""; '/
+'  AutoridadesAnaliticaOldValue = document.getElementById("010").value; '/
+'} '/
+'} '/
+
+'function setClasse(value) { '/
+'  var mySplitResult = value.split("=");'
+'  if (value != "") { '/
+'  document.getElementById("busca_classe").innerHTML = ""; '/
+'  document.getElementById("003").value = mySplitResult[1]; '/
+'} '/
+'} '/
+
+/* Zedu 200912: funcao de campo nao repetitivo substituida pelo modelo com repeticao a seguir
+'function setCidade(value) { '/
+'  if (value != "") { '/
+'  document.getElementById("066").value = value; '/
+'  document.getElementById("busca_cidade").innerHTML = ""; '/
+'} '/
+'} '/
+**** */
+
+'function setCidadeEvento(value) { '/
+'  if (value != "") { '/
+'  CidadeEventoOldValue = document.getElementById("056").value; '/
+'  var totalvalue = CidadeEventoOldValue+value+"\n";'/
+'  document.getElementById("056").value = totalvalue; '/
+'  document.getElementById("busca_cidade_evento").innerHTML = ""; '/
+'  CidadeEventoOldValue = document.getElementById("056").value; '/
+'} '/
+'} '/
+
+'function setCidade(value) { '/
+'  if (value != "") { '/
+'  CidadeOldValue = document.getElementById("066").value; '/
+'  var totalvalue = CidadeOldValue+value+"\n";'/
+'  document.getElementById("066").value = totalvalue; '/
+'  document.getElementById("busca_cidade").innerHTML = ""; '/
+'  CidadeOldValue = document.getElementById("066").value; '/
+'} '/
+'} '/
+
+'function setCurso(value) { '/
+'  var mySplitResult = value.split("=");'
+'  if (value != "") { '/
+'  CursoOldValue = document.getElementById("079").value; '/
+'  var totalvalue = CursoOldValue+mySplitResult[1]+"\n";'/
+'  document.getElementById("079").value = totalvalue; '/
+'  document.getElementById("busca_curso").innerHTML = ""; '/
+'  CursoOldValue = document.getElementById("079").value; '/
+'} '/
+'} '/
+
+'function setCutter(value) { '/
+'  var mySplitResult = value.split("=");'
+'  if (value != "") { '/
+'  document.getElementById("busca_cutter").innerHTML = ""; '/
+'  document.getElementById("103").value = mySplitResult[1]; '/
+'} '/
+'} '/
+
+'function setDescritores(value) { '/
+'  if (value != "") { '/
+'  DescritoresOldValue = document.getElementById("087").value; '/
+'  var totalvalue = DescritoresOldValue+value+"\n";'/
+'  document.getElementById("087").value = totalvalue; '/
+'  document.getElementById("busca_descritores").innerHTML = ""; '/
+'  DescritoresOldValue = document.getElementById("087").value; '/
+'} '/
+'} '/
+
+'function setDescritoresSecundarios(value) { '/
+'  if (value != "") { '/
+'  DescritoresSecundariosOldValue = document.getElementById("088").value; '/
+'  var totalvalue = DescritoresSecundariosOldValue+value+"\n";'/
+'  document.getElementById("088").value = totalvalue; '/
+'  document.getElementById("busca_descritores_secundarios").innerHTML = ""; '/
+'  DescritoresSecundariosOldValue = document.getElementById("088").value; '/
+'} '/
+'} '/
+
+/* Zedu 200912: funcao de campo nao repetitivo substituida pelo modelo com repeticao a seguir
+'function setEditora(value) { '/
+'  if (value != "") { '/
+'  document.getElementById("062").value = value; '/
+'  document.getElementById("busca_editora").innerHTML = ""; '/
+'} '/
+'} '/
+**** */
+
+'function setEditora(value) { '/
+'  if (value != "") { '/
+'  EditoraOldValue = document.getElementById("062").value; '/
+'  var totalvalue = EditoraOldValue+value+"\n";'/
+'  document.getElementById("062").value = totalvalue; '/
+'  document.getElementById("busca_editora").innerHTML = ""; '/
+'  EditoraOldValue = document.getElementById("062").value; '/
+'} '/
+'} '/
+
+'function setKardex(value) { '/
+'  var mySplitResult = value.split("=");'
+'  if (value != "") { '/
+'  document.getElementById("busca_kardex").innerHTML = ""; '/
+'  document.getElementById("033").value = mySplitResult[1]; '/
+'} '/
+'} '/
+
+'function setPaiM(value) { '/
+'  var mySplitResult = value.split("=");'
+'  if (value != "") { '/
+'  document.getElementById("busca_paim").innerHTML = ""; '/
+'  document.getElementById("996").value = mySplitResult[1]; '/
+'} '/
+'} '/
+
+'function setPaiS(value) { '/
+'  var mySplitResult = value.split("=");'
+'  if (value != "") { '/
+'  document.getElementById("busca_pais").innerHTML = ""; '/
+'  document.getElementById("996").value = mySplitResult[1]; '/
+'} '/
+'} '/
+
+'function setPaisesEvento(value) { '/
+'  if (value != "") { '/
+'  PaisesEventoOldValue = document.getElementById("057").value; '/
+'  var totalvalue = PaisesEventoOldValue+value+"\n";'/
+'  document.getElementById("057").value = totalvalue; '/
+'  document.getElementById("busca_paises_evento").innerHTML = ""; '/
+'  PaisesEventoOldValue = document.getElementById("057").value; '/
+'} '/
+'} '/
+
+'function setPaises(value) { '/
+'  if (value != "") { '/
+'  PaisesOldValue = document.getElementById("067").value; '/
+'  var totalvalue = PaisesOldValue+value+"\n";'/
+'  document.getElementById("067").value = totalvalue; '/
+'  document.getElementById("busca_paises").innerHTML = ""; '/
+'  PaisesOldValue = document.getElementById("067").value; '/
+'} '/
+'} '/
+
+'function setVocabulario(value) { '/
+'  if (value != "") { '/
+'  VocabularioOldValue = document.getElementById("087").value; '/
+'  var totalvalue = VocabularioOldValue+value+"\n";'/
+'  document.getElementById("087").value = totalvalue; '/
+'  document.getElementById("busca_vocabulario").innerHTML = ""; '/
+'  VocabularioOldValue = document.getElementById("087").value; '/
+'} '/
+'} '/
+'-->'/
+'</script> '/
+
+'</head>'/
+
+'<script language=javascript>proibido_voltar()</script>'/
+'<table>'/
+'<form name="formulario" method="POST" onSubmit="return count(30000)" action="',cat('path_cgi'),'wxis.exe">'/
+'<input type="hidden" name="IsisScript" value="',cat('path_xis'),''v960'.xis">'/
+'<input type="hidden" name="tmp" value="'v4001'">'/
+'<input type="hidden" name="998" value="'v957'">'/
+'<input type="hidden" name="999" value="'v999[1]'">'/
+'<input type="hidden" name="mfn" value="'v957'">'/
+'<input type="hidden" name="rec" value="'v1010'">'/
+'<input type="hidden" name="exp" value="'v958,"$"n958'">'/
+'<input type="hidden" name="dbvar" value="^aphl_acv^b1^cacv">'/
+'<input type="hidden" name="opc" value="grava">'/
+'<input type="hidden" name="001" value="'v1'">'/
+
+/* Zedu 201001: preservar conteudo de campos pertencentes a outro nivel bibliografico */
+/* inicio preservar campos */
+,if v6='am' then /
+  ,if p(v182) then '<input type="hidden" name="182" value="'(v182/)'">',fi,/
+  ,if p(v34)  then '<input type="hidden" name="034" value="'(v34 /)'">',fi,/
+  ,if p(v31)  then '<input type="hidden" name="031" value="'(v31 /)'">',fi,/
+  ,if p(v32)  then '<input type="hidden" name="032" value="'(v32 /)'">',fi,/
+  ,if p(v33)  then '<input type="hidden" name="033" value="'(v33 /)'">',fi,/
+,fi/* v6='am' */,
+
+,if v6='as' then
+  ,if p(v16)  then '<input type="hidden" name="016" value="'(v16 /)'">',fi,/
+  ,if p(v17)  then '<input type="hidden" name="017" value="'(v17 /)'">',fi,/
+  ,if p(v18)  then '<input type="hidden" name="018" value="'(v18 /)'">',fi,/
+  ,if p(v181) then '<input type="hidden" name="181" value="'(v181/)'">',fi,/
+  ,if p(v19)  then '<input type="hidden" name="019" value="'(v19 /)'">',fi,/
+  ,if p(v15)  then '<input type="hidden" name="015" value="'(v15 /)'">',fi,/
+  ,if p(v63)  then '<input type="hidden" name="063" value="'(v63 /)'">',fi,/
+  ,if p(v20)  then '<input type="hidden" name="020" value="'(v20 /)'">',fi,/
+  ,if p(v21)  then '<input type="hidden" name="021" value="'(v21 /)'">',fi,/
+  ,if p(v38)  then '<input type="hidden" name="038" value="'(v38 /)'">',fi,/
+  ,if p(v68)  then '<input type="hidden" name="068" value="'(v68 /)'">',fi,/
+  ,if p(v69)  then '<input type="hidden" name="069" value="'(v69 /)'">',fi,/
+,fi/* v6='as' */,
+
+,if v6='m' then
+  ,if p(v10)  then '<input type="hidden" name="010" value="'(v10 /)'">',fi,/
+  ,if p(v11)  then '<input type="hidden" name="011" value="'(v11 /)'">',fi,/
+  ,if p(v12)  then '<input type="hidden" name="012" value="'(v12 /)'">',fi,/
+  ,if p(v13)  then '<input type="hidden" name="013" value="'(v13 /)'">',fi,/
+  ,if p(v121) then '<input type="hidden" name="121" value="'(v121/)'">',fi,/
+  ,if p(v14)  then '<input type="hidden" name="014" value="'(v14 /)'">',fi,/
+  ,if p(v141) then '<input type="hidden" name="141" value="'(v141/)'">',fi,/
+  ,if p(v182) then '<input type="hidden" name="182" value="'(v182/)'">',fi,/
+  ,if p(v34)  then '<input type="hidden" name="034" value="'(v34 /)'">',fi,/
+  ,if p(v31)  then '<input type="hidden" name="031" value="'(v31 /)'">',fi,/
+  ,if p(v32)  then '<input type="hidden" name="032" value="'(v32 /)'">',fi,/
+  ,if p(v33)  then '<input type="hidden" name="033" value="'(v33 /)'">',fi,/
+,fi/* v6='m' */,
+
+,if v6='s' then
+  ,if p(v10)  then '<input type="hidden" name="010" value="'(v10 /)'">',fi,/
+  ,if p(v11)  then '<input type="hidden" name="011" value="'(v11 /)'">',fi,/
+  ,if p(v12)  then '<input type="hidden" name="012" value="'(v12 /)'">',fi,/
+  ,if p(v13)  then '<input type="hidden" name="013" value="'(v13 /)'">',fi,/
+  ,if p(v121) then '<input type="hidden" name="121" value="'(v121/)'">',fi,/
+  ,if p(v14)  then '<input type="hidden" name="014" value="'(v14 /)'">',fi,/
+  ,if p(v141) then '<input type="hidden" name="141" value="'(v141/)'">',fi,/
+  ,if p(v16)  then '<input type="hidden" name="016" value="'(v16 /)'">',fi,/
+  ,if p(v17)  then '<input type="hidden" name="017" value="'(v17 /)'">',fi,/
+  ,if p(v181) then '<input type="hidden" name="181" value="'(v181/)'">',fi,/
+  ,if p(v19)  then '<input type="hidden" name="019" value="'(v19 /)'">',fi,/
+  ,if p(v15)  then '<input type="hidden" name="015" value="'(v15 /)'">',fi,/
+  ,if p(v63)  then '<input type="hidden" name="063" value="'(v63 /)'">',fi,/
+  ,if p(v21)  then '<input type="hidden" name="021" value="'(v21 /)'">',fi,/
+  ,if p(v38)  then '<input type="hidden" name="038" value="'(v38 /)'">',fi,/
+  ,if p(v68)  then '<input type="hidden" name="068" value="'(v68 /)'">',fi,/
+  ,if p(v69)  then '<input type="hidden" name="069" value="'(v69 /)'">',fi,/
+,fi/* v6='s' */,
+
+,if v6:'c' then
+  ,if p(v10)  then '<input type="hidden" name="010" value="'(v10 /)'">',fi,/
+  ,if p(v11)  then '<input type="hidden" name="011" value="'(v11 /)'">',fi,/
+  ,if p(v12)  then '<input type="hidden" name="012" value="'(v12 /)'">',fi,/
+  ,if p(v13)  then '<input type="hidden" name="013" value="'(v13 /)'">',fi,/
+  ,if p(v121) then '<input type="hidden" name="121" value="'(v121/)'">',fi,/
+  ,if p(v14)  then '<input type="hidden" name="014" value="'(v14 /)'">',fi,/
+  ,if p(v141) then '<input type="hidden" name="141" value="'(v141/)'">',fi,/
+  ,if p(v16)  then '<input type="hidden" name="016" value="'(v16 /)'">',fi,/
+  ,if p(v17)  then '<input type="hidden" name="017" value="'(v17 /)'">',fi,/
+  ,if p(v18)  then '<input type="hidden" name="018" value="'(v18 /)'">',fi,/
+  ,if p(v181) then '<input type="hidden" name="181" value="'(v181/)'">',fi,/
+  ,if p(v19)  then '<input type="hidden" name="019" value="'(v19 /)'">',fi,/
+  ,if p(v15)  then '<input type="hidden" name="015" value="'(v15 /)'">',fi,/
+  ,if p(v63)  then '<input type="hidden" name="063" value="'(v63 /)'">',fi,/
+  ,if p(v20)  then '<input type="hidden" name="020" value="'(v20 /)'">',fi,/
+  ,if p(v21)  then '<input type="hidden" name="021" value="'(v21 /)'">',fi,/
+  ,if p(v31)  then '<input type="hidden" name="031" value="'(v31 /)'">',fi,/
+  ,if p(v32)  then '<input type="hidden" name="032" value="'(v32 /)'">',fi,/
+  ,if p(v68)  then '<input type="hidden" name="068" value="'(v68 /)'">',fi,/
+  ,if p(v69)  then '<input type="hidden" name="069" value="'(v69 /)'">',fi,/
+,fi/* v6:'c' */,
+/* fim preservar campos */
+
+,if ref(['phl_acv_fmt']val(v5000),v6186)='' then
+  '<input type="hidden" name="186" value="'v186'">'/
+,fi,
+
+/* ============================================================= */
+/* secao elementos de identificacao geral */
+'<tr>'/
+  '<td class="td1e">',if v960<>'027' then 'MFN='mfn(1) fi,'</td>'/
+  '<td class="topico">'ref(['tab_txt']890,@tab_txt.pft,)'</td>'/
+'</tr>'/
+
+'<tr>
+  <td class="td1o">'ref(['tab_txt']891,@tab_txt.pft,)'<a href=JavaScript:tab_man(90);>[090]</a></td>
+  <td class="td2">
+    <input type="radio" value="b"',if v90='b' or v90='' or v90='0' then 'checked' fi,' name="090">'ref(['tab_txt']719,@tab_txt.pft,)'
+    <input type="radio" value="c"',if v90='c' or v90='1' then 'checked' fi,' name="090">'ref(['tab_txt']718,@tab_txt.pft,)'
+    <input type="radio" value="r"',if v90='r' then 'checked' fi,' name="090">Restrito à&nbsp;<a href=JavaScript:tab_man(91);>[091]</a>
+    <select id="r" width="300" name="091">
+      <option selected value="'v91'">'if s(ref(['phl_rgl']val(v91),@tab_txt.pft,))<>'' then ref(['phl_rgl']val(v91),@tab_txt.pft,) else v91,fi,"Usuários cadastrados"n91,'</option>',/,
+      /* 20110707 zedu - corrige erro incluindo opcao para limpar campo do tipo de restricao */
+      if p(v91) then '<option value="">Usuários cadastrados</option>',/,fi,
+      (,if val(v91[1])<>val(v3076^b) then '<option value="'v3076^b'">',v3076^a,'</option>',/,fi,),
+   '</select>
+  </td>
+</tr>'/
+
+'<tr>
+   <td class="td1o">ID&nbsp;<a href=JavaScript:tab_man(002);>[002]</a></td>
+   <td class="td2">
+     <!-- Zedu 201001: eliminar edicao do identificador do titulo -->
+     <!-- input type="text" style="width: 300px;  font-family: monospace; font-size: 14px;" name="002" value="'v2'"-->
+     <input type="hidden" name="002" value="'v2'">&nbsp;&nbsp;<font face="Verdana" size="2" style="font-family: monospace; font-size: 14px;"><b>',v2,'</b></font>
+     &nbsp;&nbsp;<span class="td1o">Unidade</span>&nbsp;<a href=JavaScript:tab_man(001);>[001]</a>
+     <!-- Zedu 201001: eliminar edicao do identificador do codigo da unidade -->
+     <!-- input type="text" style="width: 30px;  font-family: monospace; font-size: 14px;" name="001" value="'v1'"-->
+     &nbsp;&nbsp;<font face="Verdana" size="2" style="font-family: monospace; font-size: 14px;"><b>',v1,'</b></font>
+   </td>
+</tr>'/
+
+'<tr>
+  <td class="td1o">',ref(['phl_acv_fmt']val(v5000),v5,),'&nbsp;<a href=JavaScript:tab_man(05);>[005]</a></td>
+  <td class="td2">
+    <select width="300" name="005">
+      <option selected value="'v5'">'ref(['phl_tdo']val(v5),@tab_txt.pft,)'</option>',
+      (,if val(v5[1])<>val(v3077^b) then '<option value="'v3077^b'">',v3077^a,'</option>' fi,),
+   '</select>
+  </td>
+</tr>'/
+
+'<tr>
+ <td class="td1o">',ref(['phl_acv_fmt']val(v5000),v6,),'&nbsp;<a href=JavaScript:tab_man(6);>[006]</a></td>
+ <td class="td2">
+  <!-- trecho original
+   <select class="fix" name="006">
+     <option 'if v6='m'  then 'selected' fi ' value="m" >'ref(['tab_txt']1144,@tab_txt.pft,)'</option>
+     <option 'if v6='am' then 'selected' fi ' value="am">'ref(['tab_txt']1145,@tab_txt.pft,)'</option>
+     <option 'if v6='s'  then 'selected' fi ' value="s" >'ref(['tab_txt']1146,@tab_txt.pft,)'</option>
+     <option 'if v6='as' then 'selected' fi ' value="as">'ref(['tab_txt']1147,@tab_txt.pft,)'</option>
+     <option 'if v6='c'  then 'selected' fi ' value="c" >'ref(['tab_txt']49  ,@tab_txt.pft,)'</option>
+   </select>
+  -->
+  <!-- trecho adaptado a video -->
+   <select class="fix" name="006">
+     '/*if v6='m'  then */' <option 'if v6='m'  then 'selected' fi ' value="m" >Monográfico          <!--Mídia--></option> '/*,fi,*/'
+     '/*if v6='am' then */' <option 'if v6='am' then 'selected' fi ' value="am">Analítico Monográfico<!--Vídeo--></option> '/*,fi,*/'
+     '/*if v6='s'  then */' <option 'if v6='s'  then 'selected' fi ' value="s" >Série</option> '/*,fi,*/'
+     '/*if v6='as' then */' <option 'if v6='as' then 'selected' fi ' value="as">Analítico de série</option> '/*,fi,*/'
+     '/*if v6='c'  then */' <option 'if v6='c'  then 'selected' fi ' value="c" >Coleção</option> '/*,fi,*/'
+   </select>
+ </td>
+</tr>'/,
+
+/* Zedu 201001 ,if ref(['phl_cnf']1,v218)='S' then */
+,if ref(['phl_acv_fmt']val(v5000),v6022)<>'' or p(v22) then
+  '<tr>
+    <td class="td1e">',ref(['phl_acv_fmt']val(v5000),v22),'&nbsp;<a href=JavaScript:tab_man(22);>[022]</a></td>
+    <td class="td2">
+      <select name="022">
+        <option value=""></option>
+        <option selected value="'v22'">'ref(['phl_spt']val(v22),@tab_txt.pft,)'</option>',
+        (,if val(v22[1])<>val(v3074^b) then '<option value="'v3074^b'">'v3074^a'</option>' fi,),
+     '</select>
+    </td>
+  </tr>'
+,fi
+
+/* Zedu 201001 ,if ref(['phl_cnf']1,v213)='S' then */
+,if ref(['phl_acv_fmt']val(v5000),v6071)<>'' or p(v71) then
+  '<tr>
+    <td class="td1e">',ref(['phl_acv_fmt']val(v5000),v71),'&nbsp;<a href=JavaScript:tab_man(71);>[071]</a></td>
+    <td class="td2">
+      <select size="1" name="071">
+        <option value=""></option>
+        <option selected value="'v71'">',ref(['phl_cnt']val(v71),@tab_txt.pft,),'</option>',
+        (,if val(v71[1])<>val(v3075^b) then '<option value="'v3075^b'">'v3075^a'</option>' fi,),
+     '</select>
+    </td>
+  </tr>'
+,fi
+
+/* Zedu 201001 ,if ref(['phl_cnf']1,v208)='S' then */
+,if ref(['phl_acv_fmt']val(v5000),v6026)<>'' or p(v26) then
+  '<tr>
+    <td class="td1e">',ref(['phl_acv_fmt']val(v5000),v26),'&nbsp;<a href=JavaScript:tab_man(26);>[026]</a></td>
+    <td class="td2">
+      <select name="026">
+        <option value=""></option>
+        <option selected value="'v26'">',ref(['phl_col']val(v26),@tab_txt.pft,),'</option>',
+        (,if val(v26[1])<>val(v3091^b) then '<option value="'v3091^b'">',v3091^a,'</option>' fi,),
+     '</select>
+    </td>
+  </tr>'
+,fi
+
+/* Zedu 201001 ,if ref(['phl_acv_fmt']val(v5000),v6105)<>'' then */
+,if ref(['phl_acv_fmt']val(v5000),v6105)<>'' or p(v105) then
+  '<tr>
+    <td class="td1e">',ref(['phl_acv_fmt']val(v5000),v105,),'&nbsp;<a href=JavaScript:tab_man(105);>[105]</a></td>
+    <td class="td2">
+      <select class="fix" name="105">
+        <option value=""></option>
+        <option selected value="'v105'">'ref(['phl_gen']val(v105),@tab_txt.pft,)'</option>',
+        (,if val(v105[1])<>val(v3099^b) then '<option value="'v3099^b'">',v3099^a,'</option>' fi,),
+     '</select>
+    </td>
+  </tr>'
+,fi,
+
+,if ref(['phl_acv_fmt']val(v5000),v6039)<>'' or p(v39) then
+  '<tr>
+    <td class="td1e">',ref(['phl_acv_fmt']val(v5000),v39,),'&nbsp;<a href=JavaScript:tab_man(39);>[039]</a></td>
+    <td class="td2">
+      <select class="fix" name="039">
+        <option value=""></option>
+        <option selected value="'v39'">'ref(['phl_nda']val(v39),@tab_txt.pft,)'</option>',
+        (,if val(v39[1])<>val(v3098^b) then '<option value="'v3098^b'">'v3098^a'</option>' fi,),
+     '</select>
+    </td>
+  </tr>'
+fi,
+
+,if ref(['phl_acv_fmt']val(v5000),v6004)<>'' or p(v4) then
+  '<tr>
+    <td class="td1f">',ref(['phl_acv_fmt']val(v5000),v4)'&nbsp;<a href=JavaScript:tab_man(04);>[004]</a></td>
+    <td class="td2"><textarea rows="2" name="004" cols="48">'(v4/)'</textarea></td>
+  </tr>'
+,fi
+
+,if ref(['phl_acv_fmt']val(v5000),v6009)<>'' or p(v9) then
+  '<tr>
+    <td class="td1f">',ref(['phl_acv_fmt']val(v5000),v9,),'&nbsp;<a href=JavaScript:tab_man(09);>[009]</a></td>
+    <td class="td2">
+      <b>Sim</b>&nbsp;<input type="radio" value="S"',if v9='S' then ' checked' fi,' name="009">&nbsp;|&nbsp;
+      <b>Não</b>&nbsp;<input type="radio" value="N"',if v9='N' or v9='' then ' checked' fi,' name="009">
+    </td>
+  </tr>'
+,fi
+
+,if ref(['phl_acv_fmt']val(v5000),v6028)<>'' or p(v28) then
+  ,if v6.1<>'a' then
+   '<tr>
+      <td class="td1f">',ref(['phl_acv_fmt']val(v5000),v28),'&nbsp;<a href=JavaScript:tab_man(28);>[028]</a></td>
+      <td class="td2">
+        <select size="1" name="028">
+          <option value=""></option>
+          <option selected value="'v28'">',ref(['phl_prc']val(v28),@tab_txt.pft,),'</option>',
+          (,if val(v28[1])<>val(v3088^b) then '<option value="'v3088^b'">',v3088^a,'</option>' fi,),
+       '</select>
+     </td>
+    </tr>'
+  ,else,
+   '<tr>
+      <td class="td1f">',ref(['phl_acv_fmt']val(v5000),v28),'<br>(não analítica)&nbsp;<a href=JavaScript:tab_man(28);>[028]</a></td>
+      <td class="td2"><input type="hidden" name="028" value="'(v28/)'">&nbsp;&nbsp;<font face="Verdana" size="2" style="font-family: monospace; font-size: 14px;"><b>',v28+|; |,'</b></font></td>
+    </tr>'/
+  fi,
+fi,
+
+if ref(['phl_acv_fmt']val(v5000),v6029)<>'' or p(v29) then
+  '<tr>
+    <td class="td1f">',ref(['phl_acv_fmt']val(v5000),v29,),'&nbsp;<a href=JavaScript:tab_man(29);>[029]</a></td>
+    <td class="td2">
+      <b>Sim</b>&nbsp;<input type="radio" value="S"',if v29='S' or v29='' then ' checked' fi,' name="029">&nbsp;|&nbsp;
+      <b>Não</b>&nbsp;<input type="radio" value="N"',if v29='N' then ' checked' fi,' name="029">
+    </td>
+  </tr>'
+,fi
+
+,if ref(['phl_acv_fmt']val(v5000),v6027)<>'' or p(v27) then
+  '<tr>
+    <td class="td1f">',ref(['phl_acv_fmt']val(v5000),v27),'&nbsp;<a href=JavaScript:tab_man(27);>[027]</a></td>
+    <td class="td2"><input type="text" class="textbox" name="027" value="'v27'"></td>
+  </tr>',
+,fi
+
+,if ref(['phl_acv_fmt']val(v5000),v6003)<>'' or p(v3) then
+  ,if v5='25' or v5='26' then
+    '<tr>
+      <td class="td1e">'ref(['phl_acv_fmt']val(v5000),v3),':&nbsp;<a href=JavaScript:tab_man(003);>[003]</a></td>
+      <td class="td3">
+        <input type="radio" value="MB"',if v3='MB' or v3='' then 'checked' fi,' name="003">Material Bruto
+        <input type="radio" value="ME"',if v3='ME'          then 'checked' fi,' name="003">Matéria Editada
+        <input type="radio" value="PE"',if v3='PE'          then 'checked' fi,' name="003">Programa Editado
+      ',if v3<>'MB' and v3<>'ME' and v3<>'PE' then '
+        <input type="radio" value="'v3'" checked name="003">Não definido ('v3')
+      ',fi,'
+      </td>
+    </tr>'/
+  ,else,
+    '<tr>
+      <td class="td1e">'ref(['phl_acv_fmt']val(v5000),v3),':&nbsp;<a href=JavaScript:tab_man(003);>[003]</a></td>
+      <td class="td3">
+   <!-- <textarea rows="1" style="width: 300px;  font-family: monospace; font-size: 14px;" id="003" name="003" cols="48"    onkeyup="buscaClasse();" autocomplete="off" />'(v3/)'</textarea>  -->
+        <input             style="width: 300px;  font-family: monospace; font-size: 14px;" id="003" name="003" value="'v3'" onkeyup="buscaClasse();" autocomplete="off" />
+        <div id="busca_classe"></div>
+      </td>
+    </tr>'
+  ,fi,
+,fi,
+
+if ref(['phl_acv_fmt']val(v5000),v6103)<>'' or p(v103) then
+  '<tr>
+    <td class="td1e">',ref(['phl_acv_fmt']val(v5000),v103),':&nbsp;<a href=JavaScript:tab_man(103);>[103]</a></td>
+    <td class="td3">
+      <input style="width: 300px;  font-family: monospace; font-size: 14px;" id="103" name="103" value="'v103'" onkeyup="buscaCutter();" autocomplete="off" />
+      <div id="busca_cutter"></div>
+    </td>
+  </tr>'
+,fi
+
+if ref(['phl_acv_fmt']val(v5000),v6007)<>'' or p(v7) then
+  '<tr>
+    <td class="td1e">',ref(['phl_acv_fmt']val(v5000),v7),':&nbsp;<a href=JavaScript:tab_man(007);>[007]</a></td>
+    <td class="td3">
+      &nbsp;&nbsp;<font face="Verdana" size="2" style="font-family: monospace; font-size: 14px;"><b>',v7^a+|; &nbsp;&nbsp;|,'</b></font>
+    </td>
+  </tr>'
+,fi
+
+/* ============================================================= */
+/* nivel analitico monografico (capitulos de livros ou partes de outros documentos) */
+,if v6='am' then
+ /* Secao analitico */
+  '<tr><td class="td1e"></td><td class="topico">'ref(['tab_txt']546,@tab_txt.pft,)'</td></tr>'
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6010)<>'' or p(v10) then
+    ,if ref(['phl_cnf']1,v226)='A' then
+      '<tr>
+         <td class="td1e">'ref(['tab_txt']1062,@tab_txt.pft,)':&nbsp;<a href=JavaScript:tab_man(1005);>[?]</a></td>
+         <td class="td3">
+           <input type="text" style="width: 300px;  font-family: monospace; font-size: 14px;" id="txtAutoridadesAnalitica" name="txtAutoridadesAnalitica" onkeyup="buscaAutoridadesAnalitica();" autocomplete="off" />
+           <div id="busca_autoridades_analitica"></div>
+         </td>
+       </tr>'
+    ,else,
+      '<tr>
+         <td class="td1e">'ref(['tab_txt']1062,@tab_txt.pft,)':&nbsp;<a href=JavaScript:tab_man(1006);>[?]</a></td>
+         <td class="td3">
+           <input type="text" style="width: 300px;  font-family: monospace; font-size: 14px;" id="txtAutoresAnalitica" name="txtAutoresAnalitica" onkeyup="buscaAutoresAnalitica();" autocomplete="off" />
+           <div id="busca_autores_analitica"></div>
+         </td>
+       </tr>'
+    ,fi
+    '<tr>
+       <td class="td1e">',ref(['phl_acv_fmt']val(v5000),v10),'&nbsp;<a href=JavaScript:tab_man(10);>[010]</a></td>
+       <td class="td2"><textarea rows="3" id="010" name="010">',(v10/),'</textarea></td>
+     </tr>'
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6011)<>'' or p(v11) then
+    '<tr>
+       <td class="td1e">'ref(['tab_txt']1062,@tab_txt.pft,)':&nbsp;<a href=JavaScript:tab_man(1006);>[?]</a></td>
+       <td class="td3">
+         <input type="text" style="width: 300px;  font-family: monospace; font-size: 14px;" id="txtAutoresColetivosAnalitica" name="txtAutoresColetivosAnalitica" onkeyup="buscaAutoresColetivosAnalitica();" autocomplete="off" />
+         <div id="busca_autores_coletivos_analitica"></div>
+       </td>
+     </tr>'
+    '<tr>
+       <td class="td1f">',ref(['phl_acv_fmt']val(v5000),v11),'&nbsp;<a href=JavaScript:tab_man(11);>[011]</a></td>
+    <!--td class="td2"><textarea rows="3" name="011">',(v11/),'</textarea></td-->
+       <td class="td2"><textarea rows="3" id="011" name="011">',(v11/),'</textarea></td>
+     </tr>'
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6012)<>'' or p(v12) then
+    '<tr>
+       <td class="td1o">',ref(['phl_acv_fmt']val(v5000),v12),'&nbsp;<a href=JavaScript:tab_man(12);>[012]</a></td>
+       <td class="td2"><textarea rows="2" name="012">'(mpl,v12/)'</textarea></td>
+     </tr>'
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6013)<>'' or p(v13) then
+    '<tr>
+       <td class="td1f">',ref(['phl_acv_fmt']val(v5000),v13),'&nbsp;<a href=JavaScript:tab_man(13);>[013]</a></td>
+       <td class="td2"><textarea rows="2" name="013">'(v13/)'</textarea></td>
+     </tr>'
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6121)<>'' or p(v121) then
+    '<tr>
+       <td class="td1f">',ref(['phl_acv_fmt']val(v5000),v121),'&nbsp;<a href=JavaScript:tab_man(121);>[121]</a></td>
+       <td class="td2"><textarea rows="2" name="121">'(v121/)'</textarea></td>
+     </tr>'
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6014)<>'' or p(v14) then
+    '<tr>
+       <td class="td1e">'ref(['phl_acv_fmt']val(v5000),v14),'&nbsp;<a href=JavaScript:tab_man(14);>[014]</a></td>
+       <td class="td2"><input type="text" class="textbox" name="014" value="'v14'"></td>
+     </tr>'
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6141)<>'' or p(v141) then
+    '<tr>
+       <td class="td1f">',ref(['phl_acv_fmt']val(v5000),v141),'&nbsp;<a href=JavaScript:tab_man(141);>[141]</a></td>
+       <td class="td2"><textarea rows="2" name="141">',(v141/),'</textarea></td>
+     </tr>'
+  ,fi,
+
+ /* ============================================================= */
+ /* Secao monografico dentro de analitico */
+ ,if ref(['phl_acv_fmt']val(v5000),v6018)<>'' or p(v16) or p(v17) or p(v18) or p(v181) or p(v19) or p(v15) or p(v63) or p(v20) or p(v21) or p(v30) or p(v38) or p(v68) or p(v35) or p(v69) then ,
+  '<tr><td class="td1e"></td><td class="topico">'ref(['tab_txt']545,@tab_txt.pft,)'</td></tr>'
+ ,fi,
+      
+  ,if ref(['phl_acv_fmt']val(v5000),v6016)<>'' or p(v16) then
+    ,if ref(['phl_cnf']1,v226)='A' then
+     '<tr>
+        <td class="td1e">'ref(['tab_txt']1062,@tab_txt.pft,)':&nbsp;<a href=JavaScript:tab_man(1005);>[?]</a></td>
+        <td class="td3">
+          <input type="text" style="width: 300px;  font-family: monospace; font-size: 14px;" id="txtAutoridades" name="txtAutoridades" onkeyup="buscaAutoridades();" autocomplete="off" />
+          <div id="busca_autoridades"></div>
+        </td>
+      </tr>'
+    ,else,
+     '<tr>
+        <td class="td1e">'ref(['tab_txt']1062,@tab_txt.pft,)':&nbsp;<a href=JavaScript:tab_man(1006);>[?]</a></td>
+        <td class="td3">
+          <input type="text" style="width: 300px;  font-family: monospace; font-size: 14px;" id="txtAutores" name="txtAutores" onkeyup="buscaAutores();" autocomplete="off" />
+          <div id="busca_autores"></div>
+        </td>
+      </tr>'
+    ,fi,
+    '<tr>
+       <td valign="top" class="td1e">&nbsp;',ref(['phl_acv_fmt']val(v5000),v16),'&nbsp;<a href=JavaScript:tab_man(16);>[016]</a></td>
+       <td class="td2"><textarea rows="3" id="016" name="016">',(v16/),'</textarea></td>
+     </tr>'/
+  ,fi
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6017)<>'' or p(v17) then
+     '<tr>
+        <td class="td1e">'ref(['tab_txt']1062,@tab_txt.pft,)':&nbsp;<a href=JavaScript:tab_man(1006);>[?]</a></td>
+        <td class="td3">
+          <input type="text" style="width: 300px;  font-family: monospace; font-size: 14px;" id="txtAutoresColetivos" name="txtAutoresColetivos" onkeyup="buscaAutoresColetivos();" autocomplete="off" />
+          <div id="busca_autores_coletivos"></div>
+        </td>
+      </tr>'
+    '<tr>
+       <td class="td1e">',ref(['phl_acv_fmt']val(v5000),v17),'&nbsp;<a href=JavaScript:tab_man(17);>[017]</a></td>
+    <!--td class="td2"><textarea rows="3" name="017">',(v17/),'</textarea></td-->
+       <td class="td2"><textarea rows="3" id="017" name="017">',(v17/),'</textarea></td>
+     </tr>'/
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6018)<>'' or p(v18) then
+    '<tr>
+       <td class="td1o">',ref(['phl_acv_fmt']val(v5000),v18),'&nbsp;<a href=JavaScript:tab_man(18);>[018]</a></td>
+       <td class="td2"><textarea rows="2" name="018">',(v18/),'</textarea></td>
+     </tr>'
+  ,fi,
+      
+  ,if ref(['phl_acv_fmt']val(v5000),v6181)<>'' or p(v181) then
+    '<tr>
+       <td class="td1e">',ref(['phl_acv_fmt']val(v5000),v181),'&nbsp;<a href=JavaScript:tab_man(181);>[181]</a></td>
+       <td class="td2"><textarea rows="2" name="181">',(v181/),'</textarea></td>
+     </tr>'
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6019)<>'' or p(v19) then
+    '<tr>
+       <td class="td1f">',ref(['phl_acv_fmt']val(v5000),v19),'&nbsp;<a href=JavaScript:tab_man(19);>[019]</a></td>
+       <td class="td2"><textarea rows="2" name="019">'(v19/)'</textarea></td>
+     </tr>'
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6015)<>'' or p(v15) then 
+    '<tr>
+       <td class="td1e">',ref(['phl_acv_fmt']val(v5000),v15),'&nbsp;<a href=JavaScript:tab_man(15);>[015]</a></td>
+       <td class="td2"><textarea rows="2" name="015">'(v15/)'</textarea></td>
+     </tr>'
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6063)<>'' or p(v63) then 
+    '<tr>
+       <td class="td1e">',ref(['phl_acv_fmt']val(v5000),v63),'&nbsp;<a href=JavaScript:tab_man(63);>[063]</a></td>
+       <td class="td2"><input type="text" class="textbox" name="063" value="'v63'"></td>
+     </tr>'
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6020)<>'' or p(v20) then 
+    '<tr>
+       <td class="td1e">',ref(['phl_acv_fmt']val(v5000),v20),'&nbsp;<a href=JavaScript:tab_man(20);>[020]</a></td>
+       <td class="td2"><input type="text" class="textbox" name="020" value="'v20'"></td>
+     </tr>'
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6021)<>'' or p(v21) then 
+    '<tr>
+       <td class="td1e">',ref(['phl_acv_fmt']val(v5000),v21),'&nbsp;<a href=JavaScript:tab_man(21);>[021]</a></td>
+       <td class="td2"><input type="text" class="textbox" name="021" value="'v21'"></td>
+     </tr>'
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6030)<>'' or p(v30) then 
+    '<tr>
+       <td class="td1e">',ref(['phl_acv_fmt']val(v5000),v30),'&nbsp;<a href=JavaScript:tab_man(30);>[030]</a></td>
+       <td class="td2"><textarea rows="2" name="030">',(v30/),'</textarea></td>
+     <tr>',
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6038)<>'' or p(v38) then 
+    '<tr>
+       <td class="td1e">',ref(['phl_acv_fmt']val(v5000),v38),'&nbsp;<a href=JavaScript:tab_man(38);>[038]</a></td>
+       <td class="td2"><input type="text" class="textbox" name="038" value="'v38'"></td>
+     </tr>'
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6035)<>'' or p(v35) then
+    '<tr>
+       <td class="td1e">',ref(['phl_acv_fmt']val(v5000),v35),'&nbsp;<a href=JavaScript:tab_man(35);>[035]</a></td>
+       <td class="td2"><input type="text" class="textbox" name="035" value="'v35'"></td>
+     </tr>'
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6068)<>'' or p(v68) then 
+    '<tr>
+       <td class="td1f">',ref(['phl_acv_fmt']val(v5000),v68),'&nbsp;<a href=JavaScript:tab_man(68);>[068]</a></td>
+       <td class="td2"><input type="text" class="textbox" name="068" value="'v68'"></td>
+     </tr>'
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6069)<>'' or p(v69) then 
+    '<tr>
+       <td class="td1e">',ref(['phl_acv_fmt']val(v5000),v69),'&nbsp;<a href=JavaScript:tab_man(69);>[069]</a></td>
+       <td class="td2"><input type="text" class="textbox" name="069" value="'v69'"></td>
+     </tr>'
+  ,fi,
+,fi/* v6='am' */,
+
+/* ============================================================= */
+/* nivel analitico de serie (artigos de periodicos) */
+,if v6='as' then
+ /* secao analitico */
+  '<tr><td class="td1e"></td><td class="topico">'ref(['tab_txt']546,@tab_txt.pft,)'</td></tr>'/
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6010)<>'' or p(v10) then
+    ,if ref(['phl_cnf']1,v226)='A' then
+      '<tr>
+         <td class="td1e">'ref(['tab_txt']1062,@tab_txt.pft,)':&nbsp;<a href=JavaScript:tab_man(1005);>[?]</a></td>
+         <td class="td3">
+           <input type="text" style="width: 300px;  font-family: monospace; font-size: 14px;" id="txtAutoridadesAnalitica" name="txtAutoridadesAnalitica" onkeyup="buscaAutoridadesAnalitica();" autocomplete="off" />
+           <div id="busca_autoridades_analitica"></div>
+         </td>
+       </tr>'
+    ,else,
+      '<tr>
+         <td class="td1e">'ref(['tab_txt']1062,@tab_txt.pft,)':&nbsp;<a href=JavaScript:tab_man(1006);>[?]</a></td>
+         <td class="td3">
+           <input type="text" style="width: 300px;  font-family: monospace; font-size: 14px;" id="txtAutoresAnalitica" name="txtAutoresAnalitica" onkeyup="buscaAutoresAnalitica();" autocomplete="off" />
+           <div id="busca_autores_analitica"></div>
+         </td>
+       </tr>'
+    ,fi
+    '<tr>
+       <td class="td1e">',ref(['phl_acv_fmt']val(v5000),v10),'&nbsp;<a href=JavaScript:tab_man(10);>[010]</a></td>
+       <td class="td2"><textarea rows="3" id="010" name="010">',(v10/),'</textarea></td>
+     </tr>'
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6011)<>'' or p(v11) then
+    '<tr>
+       <td class="td1e">'ref(['tab_txt']1062,@tab_txt.pft,)':&nbsp;<a href=JavaScript:tab_man(1006);>[?]</a></td>
+       <td class="td3">
+         <input type="text" style="width: 300px;  font-family: monospace; font-size: 14px;" id="txtAutoresColetivosAnalitica" name="txtAutoresColetivosAnalitica" onkeyup="buscaAutoresColetivosAnalitica();" autocomplete="off" />
+         <div id="busca_autores_coletivos_analitica"></div>
+       </td>
+     </tr>'
+    '<tr>
+       <td class="td1f">',ref(['phl_acv_fmt']val(v5000),v11),'&nbsp;<a href=JavaScript:tab_man(11);>[011]</a></td>
+    <!--td class="td2"><textarea rows="3" name="011">',(v11/),'</textarea></td-->
+       <td class="td2"><textarea rows="3" id="011" name="011">',(v11/),'</textarea></td>
+     </tr>'
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6012)<>'' or p(v12) then 
+    '<tr>
+       <td class="td1o">',ref(['phl_acv_fmt']val(v5000),v12),'&nbsp;<a href=JavaScript:tab_man(12);>[012]</a></td>
+       <td class="td2"><textarea rows="2" name="012">'(mpl,v12/)'</textarea></td>
+     </tr>'
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6013)<>'' or p(v13) then 
+    '<tr>
+       <td class="td1f">',ref(['phl_acv_fmt']val(v5000),v13),'&nbsp;<a href=JavaScript:tab_man(13);>[013]</a></td>
+       <td class="td2"><textarea rows="2" name="013">'(v13/)'</textarea></td>
+     </tr>'
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6121)<>'' or p(v121) then
+    '<tr>
+       <td class="td1f">',ref(['phl_acv_fmt']val(v5000),v121),'&nbsp;<a href=JavaScript:tab_man(121);>[121]</a></td>
+       <td class="td2"><textarea rows="2" name="121">'(v121/)'</textarea></td>
+     </tr>'/
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6014)<>'' or p(v14) then
+    '<tr>
+       <td class="td1e">'ref(['phl_acv_fmt']val(v5000),v14),'&nbsp;<a href=JavaScript:tab_man(14);>[014]</a></td>
+       <td class="td2"><input type="text" class="textbox" name="014" value="'v14'"></td>
+     </tr>'/
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6141)<>'' or p(v141) then
+    '<tr>
+       <td class="td1f">',ref(['phl_acv_fmt']val(v5000),v141),'&nbsp;<a href=JavaScript:tab_man(141);>[141]</a></td>
+       <td class="td2"><textarea rows="2" name="141">',(v141/),'</textarea></td>
+     </tr>'/
+  ,fi,
+
+ /* ============================================================= */
+ /* secao serie dentro de analitico */
+  '<tr><td class="td1e"></td><td class="topico">'ref(['tab_txt']548,@tab_txt.pft,)'</td></tr>'/
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6030)<>'' or p(v30) then
+    '<tr>
+       <td class="td1e">',ref(['phl_acv_fmt']val(v5000),v30),'&nbsp;<a href=JavaScript:tab_man(30);>[030]</a></td>
+       <td class="td2"><textarea rows="2" name="030">',(v30/),'</textarea></td>
+     <tr>',/
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6182)<>'' or p(v182) then
+    '<tr>
+       <td class="td1e">',ref(['phl_acv_fmt']val(v5000),v182),'&nbsp;<a href=JavaScript:tab_man(182);>[182]</a></td>
+       <td class="td2"><textarea rows="2" name="182">'(v182/)'</textarea></td>
+     </tr>'
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6034)<>'' or p(v34) then
+    '<tr>
+       <td class="td1e">',ref(['phl_acv_fmt']val(v5000),v34),'&nbsp;<a href=JavaScript:tab_man(34);>[034]</a></td>
+       <td class="td2"><input type="text" class="textbox" name="034" value="'v34'"></td>
+     </tr>'
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6031)<>'' or p(v31) then
+    '<tr>
+       <td class="td1e">',ref(['phl_acv_fmt']val(v5000),v31),'&nbsp;<a href=JavaScript:tab_man(31);>[031]</a></td>
+       <td class="td2"><input type="text" class="textbox" name="031" value="'v31'"></td>
+     </tr>'
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6032)<>'' or p(v32) then
+    '<tr>
+       <td class="td1e">',ref(['phl_acv_fmt']val(v5000),v32),'&nbsp;<a href=JavaScript:tab_man(32);>[032]</a></td>
+       <td class="td2"><input type="text" class="textbox" name="032" value="'v32'"></td>
+     </tr>'
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6035)<>'' or p(v35) then
+    '<tr>
+       <td class="td1e">',ref(['phl_acv_fmt']val(v5000),v35),'&nbsp;<a href=JavaScript:tab_man(35);>[035]</a></td>
+       <td class="td2"><input type="text" class="textbox" name="035" value="'v35'"></td>
+     </tr>'
+  ,fi,
+
+    ,if ref(['phl_acv_fmt']val(v5000),v6033)<>'' or p(v33) then
+      '<tr>
+         <td class="td1o">',ref(['phl_acv_fmt']val(v5000),v33),':&nbsp;<a href=JavaScript:tab_man(33);>[033]</a></td>
+         <td class="td3">
+           <input type="text" style="width: 300px;  font-family: monospace; font-size: 14px;" id="033" name="033" value="'v33'" onkeyup="buscaKardex();" autocomplete="off" />
+           <div id="busca_kardex"></div>
+         </td>
+       </tr>'
+    ,fi
+,fi/* v6='as' */,
+
+/* ============================================================= */
+/* nível monográfico */,
+,if v6='m' then
+ /* secao monografico */
+  '<tr><td class="td1e"></td><td class="topico">'ref(['tab_txt']545,@tab_txt.pft,)'</td></tr>'/
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6016)<>'' or p(v16) then
+    ,if ref(['phl_cnf']1,v226)='A' then
+     '<tr>
+        <td class="td1e">'ref(['tab_txt']1062,@tab_txt.pft,)':&nbsp;<a href=JavaScript:tab_man(1005);>[?]</a></td>
+        <td class="td3">
+          <input type="text" style="width: 300px;  font-family: monospace; font-size: 14px;" id="txtAutoridades" name="txtAutoridades" onkeyup="buscaAutoridades();" autocomplete="off" />
+          <div id="busca_autoridades"></div>
+        </td>
+      </tr>'
+    ,else,
+     '<tr>
+        <td class="td1e">'ref(['tab_txt']1062,@tab_txt.pft,)':&nbsp;<a href=JavaScript:tab_man(1006);>[?]</a></td>
+        <td class="td3">
+          <input type="text" style="width: 300px;  font-family: monospace; font-size: 14px;" id="txtAutores" name="txtAutores" onkeyup="buscaAutores();" autocomplete="off" />
+          <div id="busca_autores"></div>
+        </td>
+      </tr>'
+    ,fi,
+    '<tr>
+       <td valign="top" class="td1e">&nbsp;',ref(['phl_acv_fmt']val(v5000),v16),'&nbsp;<a href=JavaScript:tab_man(16);>[016]</a></td>
+       <td class="td2"><textarea rows="3" id="016" name="016">',(v16/),'</textarea></td>
+     </tr>'/
+  ,fi
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6017)<>'' or p(v17) then
+     '<tr>
+        <td class="td1e">'ref(['tab_txt']1062,@tab_txt.pft,)':&nbsp;<a href=JavaScript:tab_man(1006);>[?]</a></td>
+        <td class="td3">
+          <input type="text" style="width: 300px;  font-family: monospace; font-size: 14px;" id="txtAutoresColetivos" name="txtAutoresColetivos" onkeyup="buscaAutoresColetivos();" autocomplete="off" />
+          <div id="busca_autores_coletivos"></div>
+        </td>
+      </tr>'
+    '<tr>
+       <td class="td1e">',ref(['phl_acv_fmt']val(v5000),v17),'&nbsp;<a href=JavaScript:tab_man(17);>[017]</a></td>
+    <!--td class="td2"><textarea rows="3" name="017">',(v17/),'</textarea></td-->
+       <td class="td2"><textarea rows="3" id="017" name="017">',(v17/),'</textarea></td>
+     </tr>'/
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6018)<>'' or p(v18) then
+    '<tr>
+       <td class="td1o">',ref(['phl_acv_fmt']val(v5000),v18),'&nbsp;<a href=JavaScript:tab_man(18);>[018]</a></td>
+       <td class="td2"><textarea rows="2" name="018">',(v18/),'</textarea></td>
+      </tr>'/
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6181)<>'' or p(v181) then
+    '<tr>
+       <td class="td1e">',ref(['phl_acv_fmt']val(v5000),v181),'&nbsp;<a href=JavaScript:tab_man(181);>[181]</a></td>
+       <td class="td2"><textarea rows="2" name="181">',(v181/),'</textarea></td>
+     </tr>'/
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6019)<>'' or p(v19) then
+    '<tr>
+       <td class="td1f">',ref(['phl_acv_fmt']val(v5000),v19),'&nbsp;<a href=JavaScript:tab_man(19);>[019]</a></td>
+       <td class="td2"><textarea rows="2" name="019">'(v19/)'</textarea></td>
+     </tr>'/
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6015)<>'' or p(v15) then
+    '<tr>
+       <td class="td1e">',ref(['phl_acv_fmt']val(v5000),v15),'&nbsp;<a href=JavaScript:tab_man(15);>[015]</a></td>
+       <td class="td2"><textarea rows="2" name="015">'(v15/)'</textarea></td>
+     </tr>'/
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6063)<>'' or p(v63) then
+    '<tr>
+       <td class="td1e">',ref(['phl_acv_fmt']val(v5000),v63),'&nbsp;<a href=JavaScript:tab_man(63);>[063]</a></td>
+       <td class="td2"><input type="text" class="textbox" name="063" value="'v63'"></td>
+     </tr>'/
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6020)<>'' or p(v20) then
+    '<tr>
+       <td class="td1e">',ref(['phl_acv_fmt']val(v5000),v20),'&nbsp;<a href=JavaScript:tab_man(20);>[020]</a></td>
+       <td class="td2"><input type="text" class="textbox" name="020" value="'v20'"></td>
+     </tr>'/
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6021)<>'' or p(v21) then
+    '<tr>
+       <td class="td1e">',ref(['phl_acv_fmt']val(v5000),v21),'&nbsp;<a href=JavaScript:tab_man(21);>[021]</a></td>
+       <td class="td2"><input type="text" class="textbox" name="021" value="'v21'"></td>
+     </tr>'/
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6030)<>'' or p(v30) then
+    '<tr>
+       <td class="td1e">',ref(['phl_acv_fmt']val(v5000),v30),'&nbsp;<a href=JavaScript:tab_man(30);>[030]</a></td>
+       <td class="td2"><textarea rows="2" name="030">',(v30/),'</textarea></td>
+      <tr>',
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6038)<>'' or p(v38) then
+    '<tr>
+       <td class="td1e">',ref(['phl_acv_fmt']val(v5000),v38),'&nbsp;<a href=JavaScript:tab_man(38);>[038]</a></td>
+       <td class="td2"><input type="text" class="textbox" name="038" value="'v38'"></td>
+     </tr>'/
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6068)<>'' or p(v68) then
+    '<tr>
+       <td class="td1f">',ref(['phl_acv_fmt']val(v5000),v68),'&nbsp;<a href=JavaScript:tab_man(68);>[068]</a></td>
+       <td class="td2"><input type="text" class="textbox" name="068" value="'v68'"></td>
+     </tr>'/
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6035)<>'' or p(v35) then
+    '<tr>
+       <td class="td1e">',ref(['phl_acv_fmt']val(v5000),v35),'&nbsp;<a href=JavaScript:tab_man(35);>[035]</a></td>
+       <td class="td2"><input type="text" class="textbox" name="035" value="'v35'"></td>
+     </tr>'
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6069)<>'' or p(v69) then
+    '<tr>
+       <td class="td1e">',ref(['phl_acv_fmt']val(v5000),v69),'&nbsp;<a href=JavaScript:tab_man(69);>[069]</a></td>
+       <td class="td2"><input type="text" class="textbox" name="069" value="'v69'"></td>
+     </tr>'/
+  ,fi,
+,fi/* v6='m' */,
+
+/* ============================================================= */
+/* nível série (fasciculos de revistas) */
+,if v6='s' then
+ /* Secao serie */
+  '<tr><td class="td1e"></td><td class="topico">'ref(['tab_txt']548,@tab_txt.pft,)'</td></tr>'/
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6030)<>'' or p(v30) then 
+    '<tr>
+      <td class="td1e">',ref(['phl_acv_fmt']val(v5000),v30),'&nbsp;<a href=JavaScript:tab_man(30);>[030]</a></td>
+      <td class="td2"><textarea rows="2" name="030">',(v30/),'</textarea></td>
+    <tr>',/
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6182)<>'' or p(v182) then 
+    '<tr>
+      <td class="td1e">',ref(['phl_acv_fmt']val(v5000),v182),'&nbsp;<a href=JavaScript:tab_man(182);>[182]</a></td>
+      <td class="td2"><textarea rows="2" name="182">'(v182/)'</textarea></td>
+    </tr>'/
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6034)<>'' or p(v34) then 
+    '<tr>
+      <td class="td1e">',ref(['phl_acv_fmt']val(v5000),v34),'&nbsp;<a href=JavaScript:tab_man(34);>[034]</a></td>
+      <td class="td2"><input type="text" class="textbox" name="034" value="'v34'"></td>
+    </tr>'/
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6018)<>'' or p(v18) then
+    '<tr>
+       <td class="td1f">',ref(['phl_acv_fmt']val(v5000),v18),'&nbsp;<a href=JavaScript:tab_man(18);>[018]</a></td>
+       <td class="td2"><textarea rows="2" name="018">',(v18/),'</textarea></td>
+     </tr>'
+  ,fi,
+      
+  ,if ref(['phl_acv_fmt']val(v5000),v6031)<>'' or p(v31) then 
+    '<tr>
+      <td class="td1e">',ref(['phl_acv_fmt']val(v5000),v31),'&nbsp;<a href=JavaScript:tab_man(31);>[031]</a></td>
+      <td class="td2"><input type="text" class="textbox" name="031" value="'v31'"></td>
+    </tr>'/
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6032)<>'' or p(v32) then 
+    '<tr>
+      <td class="td1e">',ref(['phl_acv_fmt']val(v5000),v32),'&nbsp;<a href=JavaScript:tab_man(32);>[032]</a></td>
+      <td class="td2"><input type="text" class="textbox" name="032" value="'v32'"></td>
+    </tr>'/
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6020)<>'' or p(v20) then 
+    '<tr>
+       <td class="td1f">',ref(['phl_acv_fmt']val(v5000),v20),'&nbsp;<a href=JavaScript:tab_man(20);>[020]</a></td>
+       <td class="td2"><input type="text" class="textbox" name="020" value="'v20'"></td>
+     </tr>'
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6035)<>'' or p(v35) then 
+    '<tr>
+       <td class="td1e">',ref(['phl_acv_fmt']val(v5000),v35),'&nbsp;<a href=JavaScript:tab_man(35);>[035]</a></td>
+       <td class="td2"><input type="text" class="textbox" name="035" value="'v35'"></td>
+     </tr>'/
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6033)<>'' or p(v33) then 
+    '<tr>
+       <td class="td1o">',ref(['phl_acv_fmt']val(v5000),v33),':&nbsp;<a href=JavaScript:tab_man(33);>[033]</a></td>
+       <td class="td3">
+         <input type="text" style="width: 300px;  font-family: monospace; font-size: 14px;" id="033" name="033" value="'v33'" onkeyup="buscaKardex();" autocomplete="off" />
+         <div id="busca_kardex"></div>
+       </td>
+     </tr>'
+  ,fi,
+,fi/* v6='s' */,
+
+/* ============================================================= */
+/* Nivel colecao (titulos de periodicos) */
+,if v6:'c' then
+ /* Secao colecao */
+  '<tr><td class="td1e"></td><td class="topico">'ref(['tab_txt']1178,@tab_txt.pft,)'</td></tr>'/
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6030)<>'' or p(v30) then 
+    '<tr>
+       <td class="td1e">',ref(['phl_acv_fmt']val(v5000),v30),'&nbsp;<a href=JavaScript:tab_man(30);>[030]</a></td>
+       <td class="td2"><textarea rows="2" name="030">',(v30/),'</textarea></td>
+     <tr>',
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6182)<>'' or p(v182) then
+    '<tr>
+       <td class="td1e">',ref(['phl_acv_fmt']val(v5000),v182),'&nbsp;<a href=JavaScript:tab_man(182);>[182]</a></td>
+       <td class="td2"><textarea rows="2" name="182">'(v182/)'</textarea></td>
+     </tr>'/
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6034)<>'' or p(v34) then
+    '<tr>
+       <td class="td1e">',ref(['phl_acv_fmt']val(v5000),v34),'&nbsp;<a href=JavaScript:tab_man(34);>[034]</a></td>
+       <td class="td2"><input type="text" class="textbox" name="034" value="'v34'"></td>
+     </tr>'/
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6038)<>'' or p(v38) then 
+    '<tr>
+       <td class="td1e">',ref(['phl_acv_fmt']val(v5000),v38),'&nbsp;<a href=JavaScript:tab_man(38);>[038]</a></td>
+       <td class="td2"><input type="text" class="textbox" name="038" value="'v38'"></td>
+     </tr>'/
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6035)<>'' or p(v35) then
+    '<tr>
+       <td class="td1e">',ref(['phl_acv_fmt']val(v5000),v35),'&nbsp;<a href=JavaScript:tab_man(35);>[035]</a></td>
+       <td class="td2"><input type="text" class="textbox" name="035" value="'v35'"></td>
+     </tr>'/
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6033)<>'' or p(v33) then
+    '<tr>
+       <td class="td1o">',ref(['phl_acv_fmt']val(v5000),v33),':&nbsp;<a href=JavaScript:tab_man(33);>[033]</a></td>
+       <td class="td3">
+         <input type="text" style="width: 300px;  font-family: monospace; font-size: 14px;" id="033" name="033" value="'v33'" onkeyup="buscaKardex();" autocomplete="off" />
+         <div id="busca_kardex"></div>
+       </td>
+     </tr>'
+  ,fi,
+,fi/* v6:'c' */,
+
+/* ============================================================= */
+/* Secao elementos da imprenta */
+,if ref(['phl_acv_fmt']val(v5000),v6065)<>'' or p(v66) or p(v67) or p(v62) or p(v64) or p(v65) or p(v8) or p(v61) then
+,'<tr><td class="td1e"></td><td class="topico">'ref(['tab_txt']903,@tab_txt.pft,)'</td></tr>'/
+,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6066)<>'' or p(v66) then
+    '<tr>
+       <td class="td1e">Índice de cidades:&nbsp;<a href=JavaScript:tab_man(1008);>[?]</a></td>
+       <td class="td3">
+         <input type="text" style="width: 300px;  font-family: monospace; font-size: 14px;" id="txtCidade" name="txtCidade" onkeyup="buscaCidade();" autocomplete="off" />
+         <div id="busca_cidade"></div>
+       </td>
+     </tr>'
+    '<tr>
+       <td class="td1e">',ref(['phl_acv_fmt']val(v5000),v66),'&nbsp;<a href=JavaScript:tab_man(66);>[066]</a></td>
+       <td class="td3">
+         <textarea rows="2" id="066" name="066">',(v66/),'</textarea>
+         <!-- Zedu 200912: corrigido campo cidade de nao repetitivo para campo com repeticao -->
+         <!--input type="text" style="width: 300px;  font-family: monospace; font-size: 14px;" id="066" name="066" value="'v66'" onkeyup="buscaCidade();" autocomplete="off" /-->
+         <!--div id="busca_cidade"></div-->
+       </td>
+     </tr>'
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6067)<>'' or p(v67) then
+    '<tr>
+       <td class="td1e">Índice de paises:&nbsp;<a href=JavaScript:tab_man(1008);>[?]</a></td>
+       <td class="td3">
+         <!-- Zedu 200912: incluido indice de paises -->
+         <input type="text" style="width: 300px;  font-family: monospace; font-size: 14px;" id="txtPaises" name="txtPaises" onkeyup="buscaPaises();" autocomplete="off" />
+         <div id="busca_paises"></div>
+       </td>
+     </tr>'
+    '<tr>
+       <td class="td1e">',ref(['phl_acv_fmt']val(v5000),v67),'&nbsp;<a href=JavaScript:tab_man(67);>[067]</a></td>
+       <td class="td3">
+         <textarea rows="2" id="067" name="067">',(v67/),'</textarea>
+         <!-- Zedu 200912: campo paises de forma nao repetitiva -->
+         <!--input type="text" style="width: 300px;  font-family: monospace; font-size: 14px;" id="067" name="067" value="'v67'" onkeyup="buscaPaises();" autocomplete="off" /-->
+         <!--div id="busca_paises"></div-->
+       </td>
+     </tr>'
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6062)<>'' or p(v62) then
+    '<tr>
+       <td class="td1e">Índice de editoras:&nbsp;<a href=JavaScript:tab_man(1008);>[?]</a></td>
+       <td class="td3">
+         <input type="text" style="width: 300px;  font-family: monospace; font-size: 14px;" id="txtEditora" name="txtEditora" onkeyup="buscaEditora();" autocomplete="off" />
+         <div id="busca_editora"></div>
+       </td>
+     </tr>'
+    '<tr>
+       <td class="td1e">',ref(['phl_acv_fmt']val(v5000),v62),'&nbsp;<a href=JavaScript:tab_man(62);>[062]</a></td>
+       <td class="td3">
+         <textarea rows="2" id="062" name="062">',(v62/),'</textarea>
+         <!-- Zedu 200912: corrigido campo editora de nao repetitivo para campo com repeticao -->
+         <!--input type="text" style="width: 300px;  font-family: monospace; font-size: 14px;" id="062" name="062" value="'v62'" onkeyup="buscaEditora();" autocomplete="off" /-->
+         <!--div id="busca_editora"></div-->
+       </td>
+     </tr>'
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6064)<>'' or p(v64) then 
+    '<tr>
+       <td class="td1e">',ref(['phl_acv_fmt']val(v5000),v64),'&nbsp;<a href=JavaScript:tab_man(64);>[064]</a></td>
+       <td class="td2"><input type="text" class="textbox" name="064" value="'v64'" size="28"></td>
+     </tr>'
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6065)<>'' or p(v65) then 
+    '<tr>
+       <td class="td1o">',ref(['phl_acv_fmt']val(v5000),v65),'&nbsp;<a href=JavaScript:tab_man(65);>[065]</a></td>
+       <td class="td2"><input type="text" name="065" value="'v65'" size="18" maxlength="38" style="text-align: left; font-family: monospace; font-size: 14px;"></td>
+     </tr>'/
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6008)<>'' or p(v8) then 
+    '<tr>
+       <td class="td1f">',ref(['phl_acv_fmt']val(v5000),v8),'&nbsp;<a href=JavaScript:tab_man(08);>[008]</a></td>
+       <td class="td2"><textarea rows="2" name="008">',(mpl,v8/),'</textarea></td>
+     </tr>'/
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6061)<>'' or p(v61) then 
+    '<tr>
+       <td class="td1f">',ref(['phl_acv_fmt']val(v5000),v61),'&nbsp;<a href=JavaScript:tab_man(61);>[061]</a></td>
+       <td class="td2"><textarea rows="3" name="061">'(v61/)'</textarea></td>
+     </tr>'
+  ,fi,
+
+/* ============================================================= */
+/* Secao elementos da tese */
+,if ref(['phl_acv_fmt']val(v5000),v6050)<>'' or p(v50) or p(v51) then
+  '<tr><td class="td1e"></td><td class="topico">'ref(['tab_txt']907,@tab_txt.pft,)'</td></tr>'/
+,fi
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6050)<>'' or p(v50) then 
+    '<tr>
+       <td class="td1e">',ref(['phl_acv_fmt']val(v5000),v50),'&nbsp;<a href=JavaScript:tab_man(50);>[050]</a></td>
+       <td class="td2"><input type="text" class="textbox" name="050" value="'v50'"></td>
+     </tr>'/
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6051)<>'' or p(v51) then 
+    '<tr>
+       <td class="td1e">',ref(['phl_acv_fmt']val(v5000),v51),'&nbsp;<a href=JavaScript:tab_man(51);>[051]</a></td>
+       <td class="td2"><input type="text" class="textbox" name="051" value="'v51'"></td>
+     </tr>'/
+  ,fi,
+
+/* ============================================================= */
+/* Secao elementos do evento */
+,if ref(['phl_acv_fmt']val(v5000),v6054)<>'' or p(v52) or p(v53) or p(v54) or p(v55) or p(v56) or p(v57) then
+  '<tr><td class="td1f"></td><td class="topico">'ref(['tab_txt']908,@tab_txt.pft,)'</td></tr>'/
+,fi
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6052)<>'' or p(v52) then 
+    '<tr>
+       <td class="td1f">',ref(['phl_acv_fmt']val(v5000),v52),'&nbsp;<a href=JavaScript:tab_man(52);>[052]</a></td>
+       <td class="td2"><textarea rows="2" name="052">'(v52/)'</textarea></td>
+     </tr>'
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6053)<>'' or p(v53) then 
+    '<tr>
+       <td class="td1e">',ref(['phl_acv_fmt']val(v5000),v53),'&nbsp;<a href=JavaScript:tab_man(53);>[053]</a></td>
+   <!-- td class="td2"><input type="text" class="textbox" name="053" value="'v53'"></td -->
+       <td class="td2"><textarea rows="2" name="053">'(v53/)'</textarea></td>
+     </tr>'/ 
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6054)<>'' or p(v54) then 
+    '<tr>
+       <td class="td1o">',ref(['phl_acv_fmt']val(v5000),v54),'&nbsp;<a href=JavaScript:tab_man(54);>[054]</a></td>
+       <td class="td2"><input type="text" class="textbox" name="054" value="'v54'"></td>
+     </tr>'
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6055)<>'' or p(v55) then 
+    '<tr>
+       <td class="td1o">',ref(['phl_acv_fmt']val(v5000),v55),'&nbsp;<a href=JavaScript:tab_man(55);>[055]</a></td>
+       <td class="td2"><input type="text" class="textbox" name="055" value="'v55'"></td>
+     </tr>'
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6056)<>'' or p(v56) then
+    '<tr>
+       <td class="td1e">Índice de cidades:&nbsp;<a href=JavaScript:tab_man(1008);>[?]</a></td>
+       <td class="td3">
+         <input type="text" style="width: 300px;  font-family: monospace; font-size: 14px;" id="txtCidadeEvento" name="txtCidadeEvento" onkeyup="buscaCidadeEvento();" autocomplete="off" />
+         <div id="busca_cidade_evento"></div>
+       </td>
+     </tr>'
+    '<tr>
+       <td class="td1e">',ref(['phl_acv_fmt']val(v5000),v56),'&nbsp;<a href=JavaScript:tab_man(56);>[056]</a></td>
+       <td class="td3">
+         <textarea rows="2" id="056" name="056">',(v56/),'</textarea>
+         <!-- Zedu 200912: corrigido campo cidade de nao repetitivo para campo com repeticao -->
+         <!--input type="text" style="width: 300px;  font-family: monospace; font-size: 14px;" id="056" name="056" value="'v56'" onkeyup="buscaCidadeEvento();" autocomplete="off" /-->
+         <!--div id="busca_cidade_evento"></div-->
+       </td>
+     </tr>'
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6057)<>'' or p(v57) then
+    '<tr>
+       <td class="td1f">Índice de paises:&nbsp;<a href=JavaScript:tab_man(1008);>[?]</a></td>
+       <td class="td3">
+         <!-- Zedu 200912: incluido indice de paises -->
+         <input type="text" style="width: 300px;  font-family: monospace; font-size: 14px;" id="txtPaisesEvento" name="txtPaisesEvento" onkeyup="buscaPaisesEvento();" autocomplete="off" />
+         <div id="busca_paises_evento"></div>
+       </td>
+     </tr>'
+    '<tr>
+       <td class="td1f">',ref(['phl_acv_fmt']val(v5000),v57),'&nbsp;<a href=JavaScript:tab_man(57);>[057]</a></td>
+       <td class="td3">
+         <textarea rows="2" id="057" name="057">',(v57/),'</textarea>
+         <!-- Zedu 200912: campo paises de forma nao repetitiva -->
+         <!--input type="text" style="width: 300px;  font-family: monospace; font-size: 14px;" id="057" name="057" value="'v57'" onkeyup="buscaPaisesEvento();" autocomplete="off" /-->
+         <!--div id="busca_paises_evento"></div-->
+       </td>
+     </tr>'
+  ,fi,
+
+/* ============================================================= */
+/* Secao elementos do projeto */
+,if ref(['phl_acv_fmt']val(v5000),v6059)<>'' or p(v58) or p(v59) or p(v60) then
+  '<tr><td class="td1f"></td><td class="topico">'ref(['tab_txt']909,@tab_txt.pft,)'</td></tr>'/
+,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6058)<>'' or p(v58) then 
+    '<tr>
+       <td class="td1f">',ref(['phl_acv_fmt']val(v5000),v58),'&nbsp;<a href=JavaScript:tab_man(58);>[058]</a></td>
+       <td class="td2"><textarea rows="2" name="058">'(v58/)'</textarea></td>
+     </tr>'/
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6059)<>'' or p(v59) then 
+    '<tr>
+       <td class="td1f">',ref(['phl_acv_fmt']val(v5000),v59),'&nbsp;<a href=JavaScript:tab_man(59);>[059]</a></td>
+   <!-- td class="td2"><input type="text" class="textbox" name="059" value="'v59'"></td -->
+       <td class="td2"><textarea rows="2" name="059">'(v59/)'</textarea></td>
+     </tr>'/
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6060)<>'' or p(v60) then 
+    '<tr>
+       <td class="td1f">',ref(['phl_acv_fmt']val(v5000),v60),'&nbsp;<a href=JavaScript:tab_man(60);>[060]</a></td>
+       <td class="td2"><input type="text" class="textbox" name="060" value="'v60'"></td>
+     </tr>'/
+  ,fi,
+
+/* ============================================================= */
+/* Secao elementos da patente */
+,if ref(['phl_acv_fmt']val(v5000),v6043)<>'' or p(v42) or p(v43) or p(v44) or p(v108) or p(v109) or p(v110) or p(v111) or p(v112) or p(v113) then
+  '<tr><td class="td1f"></td><td class="topico">Elementos da patente</td></tr>'/
+,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6042)<>'' or p(v42) then 
+    '<tr>
+       <td class="td1f">',ref(['phl_acv_fmt']val(v5000),v42),'&nbsp;<a href=JavaScript:tab_man(42);>[042]</a></td>
+       <td class="td2"><textarea rows="2" name="042">'(v42/)'</textarea></td>
+     </tr>'
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6043)<>'' or p(v43) then 
+    '<tr>
+       <td class="td1f">',ref(['phl_acv_fmt']val(v5000),v43),'&nbsp;<a href=JavaScript:tab_man(43);>[043]</a></td>
+       <td class="td2"><textarea rows="2" name="043">'(v43/)'</textarea></td>
+   <!-- td class="td2"><input type="text" class="textbox" name="043" value="'v43'"></td -->
+     </tr>'
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6044)<>'' or p(v44) then 
+    '<tr>
+       <td class="td1f">',ref(['phl_acv_fmt']val(v5000),v44),'&nbsp;<a href=JavaScript:tab_man(44);>[044]</a></td>
+   <!-- td class="td2"><textarea rows="2" name="044">'(v44/)'</textarea></td -->
+       <td class="td2"><input type="text" class="textbox" name="044" value="'v44'"></td>
+     </tr>'
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6108)<>'' or p(v108) then 
+    '<tr>
+       <td class="td1f">',ref(['phl_acv_fmt']val(v5000),v108),'&nbsp;<a href=JavaScript:tab_man(108);>[108]</a></td>
+   <!-- td class="td2"><textarea rows="2" name="108">'(v108/)'</textarea></td -->
+       <td class="td2"><input type="text" class="textbox" name="108" value="'v108'"></td>
+     </tr>'
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6109)<>'' or p(v109) then 
+    '<tr>
+       <td class="td1f">',ref(['phl_acv_fmt']val(v5000),v109),'&nbsp;<a href=JavaScript:tab_man(109);>[109]</a></td>
+       <td class="td2"><textarea rows="2" name="109">'(v109/)'</textarea></td>
+   <!-- td class="td2"><input type="text" class="textbox" name="109" value="'v109'"></td -->
+     </tr>'
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6110)<>'' or p(v110) then 
+    '<tr>
+       <td class="td1f">',ref(['phl_acv_fmt']val(v5000),v110),'&nbsp;<a href=JavaScript:tab_man(110);>[110]</a></td>
+       <td class="td2"><textarea rows="2" name="110">'(v110/)'</textarea></td>
+     </tr>'
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6111)<>'' or p(v111) then 
+    '<tr>
+       <td class="td1f">',ref(['phl_acv_fmt']val(v5000),v111),'&nbsp;<a href=JavaScript:tab_man(111);>[111]</a></td>
+   <!-- td class="td2"><textarea rows="2" name="111">'(v111/)'</textarea></td -->
+       <td class="td2"><input type="text" class="textbox" name="111" value="'v111'"></td>
+     </tr>'
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6112)<>'' or p(v112) then 
+    '<tr>
+       <td class="td1f">',ref(['phl_acv_fmt']val(v5000),v112),'&nbsp;<a href=JavaScript:tab_man(112);>[112]</a></td>
+   <!-- td class="td2"><textarea rows="2" name="112">'(v112/)'</textarea></td -->
+       <td class="td2"><input type="text" class="textbox" name="112" value="'v112'"></td>
+     </tr>'
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6113)<>'' or p(v113) then 
+    '<tr>
+       <td class="td1f">',ref(['phl_acv_fmt']val(v5000),v113),'&nbsp;<a href=JavaScript:tab_man(113);>[113]</a></td>
+   <!-- td class="td2"><textarea rows="2" name="113">'(v113/)'</textarea></td -->
+       <td class="td2"><input type="text" class="textbox" name="113" value="'v113'"></td>
+     </tr>'
+  ,fi,
+
+/* ============================================================= */
+/* Secao elementos de museu */
+,if ref(['phl_acv_fmt']val(v5000),v6093)<>'' or p(v92) or p(v93) or p(v94) or p(v95) then
+  '<tr><td class="td1f"></td><td class="topico">Elementos de museu</td></tr>'/
+,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6092)<>'' or p(v92) then 
+    '<tr>
+       <td class="td1f">',ref(['phl_acv_fmt']val(v5000),v92),'&nbsp;<a href=JavaScript:tab_man(92);>[092]</a></td>
+       <td class="td2"><textarea rows="2" name="092">',(v92/),'</textarea></td>
+     </tr>'/
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6093)<>'' or p(v93) then 
+    '<tr>
+       <td class="td1f">',ref(['phl_acv_fmt']val(v5000),v93),'&nbsp;<a href=JavaScript:tab_man(93);>[093]</a></td>
+       <td class="td2"><textarea rows="2" name="093">',(v93/),'</textarea></td>
+     </tr>'/
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6094)<>'' or p(v94) then 
+    '<tr>
+       <td class="td1f">',ref(['phl_acv_fmt']val(v5000),v94),'&nbsp;<a href=JavaScript:tab_man(94);>[094]</a></td>
+       <td class="td2"><textarea rows="2" name="094">',(v94/),'</textarea></td>
+     </tr>'/
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6095)<>'' or p(v95) then 
+    '<tr>
+       <td class="td1f">',ref(['phl_acv_fmt']val(v5000),v95),'&nbsp;<a href=JavaScript:tab_man(95);>[095]</a></td>
+       <td class="td2"><textarea rows="2" name="095">',(v95/),'</textarea></td>
+     </tr>'/
+  ,fi,
+
+/* ============================================================= */
+/* Secao elementos de video */
+,if ref(['phl_acv_fmt']val(v5000),v6150)<>'' or p(v150) or p(v151) or p(v152) or p(v153) or p(v154) or p(v155) or p(v156) or p(v157) or p(v158) then
+  '<tr><td class="td1f"></td><td class="topico">Elementos de vídeo</td></tr>'/
+,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6150)<>'' or p(v150) then 
+    '<tr>
+       <td class="td1f">',ref(['phl_acv_fmt']val(v5000),v150),'&nbsp;<a href=JavaScript:tab_man(150);>[150]</a></td>
+       <td class="td2"><textarea rows="2" name="150">',(v150/),'</textarea></td>
+     </tr>'/
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6151)<>'' or p(v151) then 
+    '<tr>
+       <td class="td1f">',ref(['phl_acv_fmt']val(v5000),v151),'&nbsp;<a href=JavaScript:tab_man(151);>[151]</a></td>
+       <td class="td2"><textarea rows="2" name="151">',(v151/),'</textarea></td>
+     </tr>'/
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6152)<>'' or p(v152) then 
+    '<tr>
+       <td class="td1f">',ref(['phl_acv_fmt']val(v5000),v152),'&nbsp;<a href=JavaScript:tab_man(152);>[152]</a></td>
+       <td class="td2"><textarea rows="2" name="152">',(v152/),'</textarea></td>
+     </tr>'/
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6153)<>'' or p(v153) then 
+    '<tr>
+       <td class="td1f">',ref(['phl_acv_fmt']val(v5000),v153),'&nbsp;<a href=JavaScript:tab_man(153);>[153]</a></td>
+   <!-- td class="td2"><textarea rows="2" name="153">',(v153/),'</textarea></td -->
+   <!-- td class="td2"><input type="text" class="textbox" name="153" value="'v153'"></td -->
+     ',if a(v153) or (size(v153)=11 and s(v153*2.1,v153*5.1,v153*8.1)=':::') then '
+       <td class="td2">
+         <input type="hidden" name="153" value="^h">hh
+         <input type="text" size="2" maxlength="2" style="text-align: center; font-family: monospace; font-size: 14px;" name="153" value="',if p(v153) then v153*0.2 else '',fi,'">
+         <sup style="font-weight: bold; font-family: monospace; font-size: 18px;">:</sup>
+         <input type="hidden" name="153" value="^m">mm
+         <input type="text" size="2" maxlength="2" style="text-align: center; font-family: monospace; font-size: 14px;" name="153" value="',if p(v153) then v153*3.2 else '',fi,'">
+         <sup style="font-weight: bold; font-family: monospace; font-size: 18px;">:</sup>
+         <input type="hidden" name="153" value="^s">ss
+         <input type="text" size="2" maxlength="2" style="text-align: center; font-family: monospace; font-size: 14px;" name="153" value="',if p(v153) then v153*6.2 else '',fi,'">
+         <sup style="font-weight: bold; font-family: monospace; font-size: 18px;">:</sup>
+         <input type="hidden" name="153" value="^f">ff
+         <input type="text" size="2" maxlength="2" style="text-align: center; font-family: monospace; font-size: 14px;" name="153" value="',if p(v153) then v153*9.2 else '',fi,'">
+       </td>
+     ',else,'
+       <td class="td2"><textarea rows="2" name="153">',(v153/),'</textarea></td>
+     ',fi,'
+     </tr>'/
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6154)<>'' or p(v154) then 
+    '<tr>
+       <td class="td1f">',ref(['phl_acv_fmt']val(v5000),v154),'&nbsp;<a href=JavaScript:tab_man(154);>[154]</a></td>
+   <!-- td class="td2"><textarea rows="2" name="154">',(v154/),'</textarea></td -->
+   <!-- td class="td2"><input type="text" class="textbox" name="154" value="'v154'"></td -->
+     ',if a(v154) or (size(v154)=11 and s(v154*2.1,v154*5.1,v154*8.1)=':::') then '
+       <td class="td2">
+         <input type="hidden" name="154" value="^h">hh
+         <input type="text" size="2" maxlength="2" style="text-align: center; font-family: monospace; font-size: 14px;" name="154" value="',if p(v154) then v154*0.2 else '',fi,'">
+         <sup style="font-weight: bold; font-family: monospace; font-size: 18px;">:</sup>
+         <input type="hidden" name="154" value="^m">mm
+         <input type="text" size="2" maxlength="2" style="text-align: center; font-family: monospace; font-size: 14px;" name="154" value="',if p(v154) then v154*3.2 else '',fi,'">
+         <sup style="font-weight: bold; font-family: monospace; font-size: 18px;">:</sup>
+         <input type="hidden" name="154" value="^s">ss
+         <input type="text" size="2" maxlength="2" style="text-align: center; font-family: monospace; font-size: 14px;" name="154" value="',if p(v154) then v154*6.2 else '',fi,'">
+         <sup style="font-weight: bold; font-family: monospace; font-size: 18px;">:</sup>
+         <input type="hidden" name="154" value="^f">ff
+         <input type="text" size="2" maxlength="2" style="text-align: center; font-family: monospace; font-size: 14px;" name="154" value="',if p(v154) then v154*9.2 else '',fi,'">
+     ',else,'
+       <td class="td2"><textarea rows="2" name="154">',(v154/),'</textarea></td>
+     ',fi,'
+       </td>
+     </tr>'/
+  ,fi,
+
+/*
+  ,if ref(['phl_acv_fmt']val(v5000),v6155)<>'' or p(v155) then 
+    '<tr>
+       <td class="td1f">',ref(['phl_acv_fmt']val(v5000),v155),'&nbsp;<a href=JavaScript:tab_man(155);>[155]</a></td>
+       <td class="td2"><textarea rows="2" name="155">',(v155/),'</textarea></td>
+     </tr>'/
+  ,fi,
+*/
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6155)<>'' or p(v155) then 
+    '<tr>
+       <td class="td1f">',ref(['phl_acv_fmt']val(v5000),v155),'&nbsp;<a href=JavaScript:tab_man(155);>[155]</a></td>
+   <!-- td class="td2"><textarea rows="4" name="155">',(v155/),'</textarea></td -->
+     '/*,if a(v155) or (s(mhu,v155[1]^b,mpl)='PRIMEIRO' and size(v155[1]^d)=5 and mid(v155[1]^d,3,1)=`'` and nocc(v155)<=6) then */'
+     ',e1:=0,e2:=0,e3:=0,'
+     ',( select s(mhu,v155^b,mpl) 
+            case 'PRIMEIRO':,e1:=e1+0,
+            case 'SEGUNDO' :,e1:=e1+0,
+            case 'TERCEIRO':,e1:=e1+0,
+            case 'QUARTO'  :,e1:=e1+0,
+            case 'QUINTO'  :,e1:=e1+0,
+            case 'SEXTO'   :,e1:=e1+0,
+            elsecase        ,e1:=e1+1,
+         endsel, ),'
+     ',( if size(v155^d)<>5      then e2:=e2+1 ,fi, ),'
+     ',( if mid(v155^d,3,1)<>`'` then e3:=e3+1 ,fi, ),'
+     ',if a(v155) or (e1+e2+e3=0 and nocc(v155)<=6) then '
+       <td class="td2">
+         <input type="hidden" name="155" value="^h">
+         <font style="font-family: monospace;">Primeiro:</font>
+         <input type="text" size="2" maxlength="2" style="text-align: center; font-family: monospace; font-size: 14px;" name="155" 
+          value="',( if s(mhu,v155^b,mpl)='PRIMEIRO' then v155^d*0.2 ,fi, ),'">m
+         <sup style="font-weight: bold; font-family: monospace; font-size: 18px;">&rsquo;</sup>
+         <input type="hidden" name="155" value="^i">
+         <input type="text" size="2" maxlength="2" style="text-align: center; font-family: monospace; font-size: 14px;" name="155" 
+          value="',( if s(mhu,v155^b,mpl)='PRIMEIRO' then v155^d*3.2 ,fi, ),'">s
+         <sup style="font-weight: bold; font-family: monospace; font-size: 18px;">&nbsp;&nbsp;&nbsp;&nbsp;</sup>
+
+         <input type="hidden" name="155" value="^j">
+         <font style="font-family: monospace;">Segundo:</font>
+         <input type="text" size="2" maxlength="2" style="text-align: center; font-family: monospace; font-size: 14px;" name="155" 
+          value="',( if s(mhu,v155^b,mpl)='SEGUNDO' then v155^d*0.2 ,fi, ),'">m
+         <sup style="font-weight: bold; font-family: monospace; font-size: 18px;">&rsquo;</sup>
+         <input type="hidden" name="155" value="^k">
+         <input type="text" size="2" maxlength="2" style="text-align: center; font-family: monospace; font-size: 14px;" name="155" 
+          value="',( if s(mhu,v155^b,mpl)='SEGUNDO' then v155^d*3.2 ,fi, ),'">s
+         <sup style="font-weight: bold; font-family: monospace; font-size: 18px;">&nbsp;&nbsp;&nbsp;&nbsp;</sup>
+
+         <input type="hidden" name="155" value="^l">
+         <font style="font-family: monospace;">Terceiro:</font>
+         <input type="text" size="2" maxlength="2" style="text-align: center; font-family: monospace; font-size: 14px;" name="155" 
+          value="',( if s(mhu,v155^b,mpl)='TERCEIRO' then v155^d*0.2 ,fi, ),'">m
+         <sup style="font-weight: bold; font-family: monospace; font-size: 18px;">&rsquo;</sup>
+         <input type="hidden" name="155" value="^m">
+         <input type="text" size="2" maxlength="2" style="text-align: center; font-family: monospace; font-size: 14px;" name="155" 
+          value="',( if s(mhu,v155^b,mpl)='TERCEIRO' then v155^d*3.2 ,fi, ),'">s
+         <br><br>
+         <input type="hidden" name="155" value="^n">
+         <font style="font-family: monospace;">Quarto:&nbsp;&nbsp;</font>
+         <input type="text" size="2" maxlength="2" style="text-align: center; font-family: monospace; font-size: 14px;" name="155" 
+          value="',( if s(mhu,v155^b,mpl)='QUARTO' then v155^d*0.2 ,fi, ),'">m
+         <sup style="font-weight: bold; font-family: monospace; font-size: 18px;">&rsquo;</sup>
+         <input type="hidden" name="155" value="^o">
+         <input type="text" size="2" maxlength="2" style="text-align: center; font-family: monospace; font-size: 14px;" name="155" 
+          value="',( if s(mhu,v155^b,mpl)='QUARTO' then v155^d*3.2 ,fi, ),'">s
+         <sup style="font-weight: bold; font-family: monospace; font-size: 18px;">&nbsp;&nbsp;&nbsp;&nbsp;</sup>
+
+         <input type="hidden" name="155" value="^p">
+         <font style="font-family: monospace;">Quinto:&nbsp;</font>
+         <input type="text" size="2" maxlength="2" style="text-align: center; font-family: monospace; font-size: 14px;" name="155" 
+          value="',( if s(mhu,v155^b,mpl)='QUINTO' then v155^d*0.2 ,fi, ),'">m
+         <sup style="font-weight: bold; font-family: monospace; font-size: 18px;">&rsquo;</sup>
+         <input type="hidden" name="155" value="^q">
+         <input type="text" size="2" maxlength="2" style="text-align: center; font-family: monospace; font-size: 14px;" name="155" 
+          value="',( if s(mhu,v155^b,mpl)='QUINTO' then v155^d*3.2 ,fi, ),'">s
+         <sup style="font-weight: bold; font-family: monospace; font-size: 18px;">&nbsp;&nbsp;&nbsp;&nbsp;</sup>
+
+         <input type="hidden" name="155" value="^r">
+         <font style="font-family: monospace;">Sexto:&nbsp;&nbsp;&nbsp;</font>
+         <input type="text" size="2" maxlength="2" style="text-align: center; font-family: monospace; font-size: 14px;" name="155" 
+          value="',( if s(mhu,v155^b,mpl)='SEXTO' then v155^d*0.2 ,fi, ),'">m
+         <sup style="font-weight: bold; font-family: monospace; font-size: 18px;">&rsquo;</sup>
+         <input type="hidden" name="155" value="^s">
+         <input type="text" size="2" maxlength="2" style="text-align: center; font-family: monospace; font-size: 14px;" name="155" 
+          value="',( if s(mhu,v155^b,mpl)='SEXTO' then v155^d*3.2 ,fi, ),'">s
+       </td>
+     ',else,'
+       <td class="td2"><textarea rows="4" name="155">',(v155/),'</textarea></td>
+     ',fi,'
+     </tr>'/
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6156)<>'' or p(v156) then 
+    '<tr>
+       <td class="td1f">',ref(['phl_acv_fmt']val(v5000),v156),'&nbsp;<a href=JavaScript:tab_man(156);>[156]</a></td>
+       <td class="td2"><textarea rows="2" name="156">',(v156/),'</textarea></td>
+     </tr>'/
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6157)<>'' or p(v157) then 
+    '<tr>
+       <td class="td1f">',ref(['phl_acv_fmt']val(v5000),v157),'&nbsp;<a href=JavaScript:tab_man(157);>[157]</a></td>
+       <td class="td2"><textarea rows="2" name="157">',(v157/),'</textarea></td>
+     </tr>'/
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6158)<>'' or p(v158) then 
+    '<tr>
+       <td class="td1f">',ref(['phl_acv_fmt']val(v5000),v158),'&nbsp;<a href=JavaScript:tab_man(158);>[158]</a></td>
+       <td class="td2"><textarea rows="2" name="158">',(v158/),'</textarea></td>
+     </tr>'/
+  ,fi,
+
+/* ============================================================= */
+/* Secao descricao do conteudo */
+,if ref(['phl_acv_fmt']val(v5000),v6087)<>'' or p(v85) or p(v86) or p(v87) or p(v88) or p(v83) or p(v41) or p(v84) or p(v72) or p(v74) or p(v75) or p(v76) or p(v78) or p(v79) or p(v82) then
+'<tr><td class="td1e"></td><td class="topico">'ref(['tab_txt']910,@tab_txt.pft,)'</td></tr>'/
+,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6085)<>'' or p(v85) then
+    ,if v6.1<>'a' then
+      '<tr>
+         <td class="td1f">',ref(['phl_acv_fmt']val(v5000),v85),'&nbsp;<a href=JavaScript:tab_man(85);>[085]</a></td>
+         <td class="td2">
+           <select size="1" name="085">',
+              '<option value=""></option>',
+             ('<option selected value="'v85'">',ref(['phl_mec']val(v85),@tab_txt.pft,),'</option>'),
+             (,if val(v85[1])<>val(v3501^b) then '<option value="'v3501^b'">'v3501^a'</option>' fi,),
+          '</select>
+         </td>
+       </tr>'/
+    ,else,
+      '<tr>
+         <td class="td1f">',ref(['phl_acv_fmt']val(v5000),v85),'<br>(não analítica)&nbsp;<a href=JavaScript:tab_man(85);>[085]</a></td>
+         <td class="td2"><input type="hidden" name="085" value="'(v85/)'">&nbsp;&nbsp;<font face="Verdana" size="2" style="font-family: monospace; font-size: 14px;"><b>',v85+|; |,'</b></font></td>
+       </tr>'/
+    ,fi
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6086)<>'' or p(v86) then 
+    '<tr>
+       <td class="td1f">',ref(['phl_acv_fmt']val(v5000),v86),'&nbsp;<a href=JavaScript:tab_man(86);>[086]</a></td>
+       <td class="td2"><textarea rows="3" name="086">'(v86/)'</textarea></td>
+     </tr>'
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6087)<>'' or p(v87) then
+    ,if ref(['phl_cnf']1,v225)='V' then
+      '<tr>
+         <td class="td1e">'ref(['tab_txt']1064,@tab_txt.pft,)':&nbsp;<a href=JavaScript:tab_man(1007);>[?]</a></td>
+         <td class="td3">
+           <input type="text" style="width: 300px;  font-family: monospace; font-size: 14px;" id="txtVocabulario" name="txtVocabulario" onkeyup="buscaVocabulario();" autocomplete="off" />
+           <div id="busca_vocabulario"></div>
+         </td>
+       </tr>'
+    ,else,
+      '<tr>
+         <td class="td1e">'ref(['tab_txt']1064,@tab_txt.pft,)':&nbsp;<a href=JavaScript:tab_man(1008);>[?]</a></td>
+         <td class="td3">
+           <input type="text" style="width: 300px;  font-family: monospace; font-size: 14px;" id="txtDescritores" name="txtDescritores" onkeyup="buscaDescritores();" autocomplete="off" />
+           <div id="busca_descritores"></div>
+         </td>
+       </tr>'
+    ,fi
+    '<tr>
+       <td valign="top" class="td1e">&nbsp;',ref(['phl_acv_fmt']val(v5000),v87),'&nbsp;<a href=JavaScript:tab_man(87);>[087]</a></td>
+       <td class="td2"><textarea rows="5" id="087" name="087">',(v87/),'</textarea></td>
+     </tr>'/
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6088)<>'' or p(v88) then
+    '<tr>
+       <td class="td1f">'ref(['tab_txt']1064,@tab_txt.pft,)':&nbsp;<a href=JavaScript:tab_man(1008);>[?]</a></td>
+       <td class="td3">
+         <input type="text" style="width: 300px;  font-family: monospace; font-size: 14px;" id="txtDescritoresSecundarios" name="txtDescritoresSecundarios" onkeyup="buscaDescritoresSecundarios();" autocomplete="off" />
+         <div id="busca_descritores_secundarios"></div>
+       </td>
+     </tr>'
+    '<tr>
+       <td valign="top" class="td1f">&nbsp;',ref(['phl_acv_fmt']val(v5000),v88),'&nbsp;<a href=JavaScript:tab_man(88);>[088]</a></td>
+       <td class="td2"><textarea rows="3" id="088" name="088">',(v88/),'</textarea></td>
+     </tr>'/
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6083)<>'' or p(v83) then 
+    '<tr>
+       <td class="td1f">',ref(['phl_acv_fmt']val(v5000),v83),'&nbsp;<a href=JavaScript:tab_man(83);>[083]</a></td>
+       <td class="td2"><textarea rows="5" name="083">'(v83/)'</textarea></td>
+     </tr>'
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6041)<>'' or p(v41) then 
+    '<tr>
+       <td class="td1f">',ref(['phl_acv_fmt']val(v5000),v41),'&nbsp;<a href=JavaScript:tab_man(41);>[041]</a></td>
+       <td class="td2">
+         <select multiple size="4" name="041">',
+            '<option value=""></option>',
+           ('<option selected value="'v41'">',ref(['phl_idm']val(v41),@tab_txt.pft,),'</option>'),
+           ('<option value="'v3078^b'">'v3078^a'</option>'),
+        '</select>
+       </td>
+     </tr>'
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6084)<>'' or p(v84) then 
+    '<tr>
+       <td class="td1f">',ref(['phl_acv_fmt']val(v5000),v84),'&nbsp;<a href=JavaScript:tab_man(84);>[084]</a></td>
+       <td><textarea rows="5" name="htm">'(v84/)'</textarea></td>
+     </tr>'
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6072)<>'' or p(v72) then 
+    '<tr>
+       <td class="td1f">',ref(['phl_acv_fmt']val(v5000),v72),'&nbsp;<a href=JavaScript:tab_man(72);>[072]</a></td>
+       <td class="td2"><input type="text" class="textbox" name="072" value="'v72'"></td>
+     </tr>'
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6074)<>'' or p(v74) then 
+    '<tr>
+       <td class="td1f">',ref(['phl_acv_fmt']val(v5000),v74),'&nbsp;<a href=JavaScript:tab_man(74);>[074]</a></td>
+       <td class="td2"><input type="text" class="textbox" name="074" value="'v74'"></td>
+     </tr>'
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6075)<>'' or p(v75) then 
+    '<tr>
+       <td class="td1f">',ref(['phl_acv_fmt']val(v5000),v75),'&nbsp;<a href=JavaScript:tab_man(75);>[075]</a>
+       </td><td class="td2"><input type="text" class="textbox" name="075" value="'v75'"></td>
+     </tr>'/
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6076)<>'' or p(v76) then 
+    '<tr>
+       <td class="td1f">',ref(['phl_acv_fmt']val(v5000),v76),'&nbsp;<a href=JavaScript:tab_man(76);>[076]</a></td>
+       <td class="td2"><textarea rows="2" name="076">'(v76/)'</textarea></td>
+     </tr>'/
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6078)<>'' or p(v78) then 
+    '<tr>
+       <td class="td1f">',ref(['phl_acv_fmt']val(v5000),v78),'&nbsp;<a href=JavaScript:tab_man(78);>[078]</a></td>
+       <td class="td2"><textarea rows="2" name="078">'(v78/)'</textarea></td>
+     </tr>'/
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6079)<>'' or p(v79) then 
+    '<tr>
+       <td class="td1f">',ref(['tab_txt']1182,@tab_txt.pft,),':&nbsp;<a href=JavaScript:tab_man(1010);>[?]</a></td>
+       <td class="td3">
+         <input type="text" style="width: 300px;  font-family: monospace; font-size: 14px;" id="txtCurso" name="txtCurso" onkeyup="buscaCurso();" autocomplete="off" />
+         <div id="busca_curso"></div>
+       </td>
+     </tr>'
+    '<tr>
+       <td valign="top" class="td1f">&nbsp;',ref(['phl_acv_fmt']val(v5000),v79),'&nbsp;<a href=JavaScript:tab_man(79);>[079]</a></td>
+       <td class="td2"><textarea rows="2" id="079" name="079">',(v79/),'</textarea></td>
+     </tr>'/
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6082)<>'' or p(v82) then 
+    '<tr>
+       <td class="td1f">',ref(['phl_acv_fmt']val(v5000),v82),'&nbsp;<a href=JavaScript:tab_man(82);>[082]</a></td>
+       <td class="td2"><textarea rows="2" name="082">'(v82/)'</textarea></td>
+     </tr>'/
+  ,fi,
+
+/* ============================================================= */
+/* Secao informacoes complementares */
+,'<tr><td class="td1e"></td><td class="topico">Informações Complementares</td></tr>'/
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6040)<>'' or p(v40) then 
+    '<tr>
+       <td class="td1e">',ref(['phl_acv_fmt']val(v5000),v40),'&nbsp;<a href=JavaScript:tab_man(40);>[040]</a></td>
+       <td class="td2">
+         <select multiple size="3" name="040">',
+            '<option value=""></option>',
+           ('<option selected value="'v40'">',ref(['phl_idm']val(v40),@tab_txt.pft,)'</option>'),
+           ('<option value="'v3078^b'">'v3078^a'</option>'),
+        '</select>
+       </td>
+     </tr>',
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6070)<>'' or p(v70) then 
+    '<tr>
+       <td class="td1f">',ref(['phl_acv_fmt']val(v5000),v70),'&nbsp;<a href=JavaScript:tab_man(70);>[070]</a></td>
+       <td class="td2"><input type="text" class="textbox" name="070" value="'v70'"></td>
+     </tr>'
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6120)<>'' or p(v120) then 
+    '<tr>
+       <td class="td1f">',ref(['phl_acv_fmt']val(v5000),v120),'&nbsp;<a href=JavaScript:tab_man(120);>[120]</a></td>
+       <td class="td2"><textarea rows="2" name="120">'(v120/)'</textarea></td>
+   <!-- td class="td2"><input type="text" class="textbox" name="120" value="'v120'"></td -->
+     </tr>'
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6089)<>'' or p(v89) then 
+    '<tr>
+       <td class="td1f">',ref(['phl_acv_fmt']val(v5000),v89),'&nbsp;<a href=JavaScript:tab_man(89);>[089]</a></td>
+       <td class="td2"><textarea rows="3" name="089">'(v89/)'</textarea></td>
+     </tr>'
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6023)<>'' or p(v23) then 
+    '<tr>
+       <td class="td1f">',ref(['phl_acv_fmt']val(v5000),v23),'&nbsp;<a href=JavaScript:tab_man(23);>[023]</a></td>
+       <td class="td2"><textarea rows="2" name="023">'(v23/)'</textarea></td>
+     </tr>'
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6024)<>'' or p(v24) then 
+    '<tr>
+       <td class="td1f">',ref(['phl_acv_fmt']val(v5000),v24),'&nbsp;<a href=JavaScript:tab_man(24);>[024]</a></td>
+       <td class="td2"><textarea rows="2" name="024">'(v24/)'</textarea></td>
+     </tr>'
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6025)<>'' or p(v25) then 
+    '<tr>
+       <td class="td1f">',ref(['phl_acv_fmt']val(v5000),v25),'&nbsp;<a href=JavaScript:tab_man(25);>[025]</a></td>
+       <td class="td2"><textarea rows="2" name="025">'(v25/)'</textarea></td>
+     </tr>',
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6045)<>'' or p(v45) then 
+    '<tr>
+       <td class="td1f">',ref(['phl_acv_fmt']val(v5000),v45),'&nbsp;<a href=JavaScript:tab_man(45);>[045]</a></td>
+   <!-- td class="td2"><textarea rows="2" name="045">'(v45/)'</textarea></td -->
+       <td class="td2"><input type="text" class="textbox" name="045" value="'v45'"></td>
+     </tr>'/
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6046)<>'' or p(v46) then 
+    '<tr>
+       <td class="td1f">',ref(['phl_acv_fmt']val(v5000),v46),'&nbsp;<a href=JavaScript:tab_man(46);>[046]</a></td>
+   <!-- td class="td2"><textarea rows="2" name="046">'(v46/)'</textarea></td -->
+       <td class="td2"><input type="text" class="textbox" name="046" value="'v46'"></td>
+     </tr>'/
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6047)<>'' or p(v47) then 
+    '<tr>
+       <td class="td1f">',ref(['phl_acv_fmt']val(v5000),v47),'&nbsp;<a href=JavaScript:tab_man(47);>[047]</a></td>
+   <!-- td class="td2"><textarea rows="2" name="047">'(v47/)'</textarea></td -->
+       <td class="td2"><input type="text" class="textbox" name="047" value="'v47'"></td>
+     </tr>'
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6048)<>'' or p(v48) then 
+    '<tr>
+       <td class="td1f">',ref(['phl_acv_fmt']val(v5000),v48),'&nbsp;<a href=JavaScript:tab_man(48);>[048]</a></td>
+   <!-- td class="td2"><textarea rows="2" name="048">'(v48/)'</textarea></td -->
+       <td class="td2"><input type="text" class="textbox" name="048" value="'v48'"></td>
+     </tr>'/
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6049)<>'' or p(v49) then 
+    '<tr>
+       <td class="td1f">',ref(['phl_acv_fmt']val(v5000),v49),'&nbsp;<a href=JavaScript:tab_man(49);>[049]</a></td>
+   <!-- td class="td2"><textarea rows="2" name="049">'(v49/)'</textarea></td -->
+   <!-- td class="td2"><input type="text" class="textbox" name="049" value="'v49'"></td -->
+<!--==========================================================================================-->
+     ',e1:=0,e2:=0,e3:=0,'
+     ',( if v49^a<>''            then e1:=e1+1 ,fi, ),'
+     ',( if nocc(v49)<>e1        then e2:=e2+1 ,fi, ),'
+     ',( select v49^b case '':,e3:=e3+0, elsecase, e3:=e3+1, endsel, ),'
+     ',( select v49^c case '':,e3:=e3+0, elsecase, e3:=e3+1, endsel, ),'
+     ',( select v49^d case '':,e3:=e3+0, elsecase, e3:=e3+1, endsel, ),'
+     ',( select v49^e case '':,e3:=e3+0, elsecase, e3:=e3+1, endsel, ),'
+     ',( select v49^f case '':,e3:=e3+0, elsecase, e3:=e3+1, endsel, ),'
+     ',( select v49^g case '':,e3:=e3+0, elsecase, e3:=e3+1, endsel, ),'
+     ',( select v49^h case '':,e3:=e3+0, elsecase, e3:=e3+1, endsel, ),'
+     ',( select v49^j case '':,e3:=e3+0, elsecase, e3:=e3+1, endsel, ),'
+     ',( select v49^k case '':,e3:=e3+0, elsecase, e3:=e3+1, endsel, ),'
+     ',( select v49^l case '':,e3:=e3+0, elsecase, e3:=e3+1, endsel, ),'
+     ',( select v49^m case '':,e3:=e3+0, elsecase, e3:=e3+1, endsel, ),'
+     ',( select v49^n case '':,e3:=e3+0, elsecase, e3:=e3+1, endsel, ),'
+     ',( select v49^o case '':,e3:=e3+0, elsecase, e3:=e3+1, endsel, ),'
+     ',( select v49^p case '':,e3:=e3+0, elsecase, e3:=e3+1, endsel, ),'
+     ',( select v49^q case '':,e3:=e3+0, elsecase, e3:=e3+1, endsel, ),'
+     ',( select v49^r case '':,e3:=e3+0, elsecase, e3:=e3+1, endsel, ),'
+     ',( select v49^s case '':,e3:=e3+0, elsecase, e3:=e3+1, endsel, ),'
+     ',( select v49^t case '':,e3:=e3+0, elsecase, e3:=e3+1, endsel, ),'
+     ',( select v49^u case '':,e3:=e3+0, elsecase, e3:=e3+1, endsel, ),'
+     ',( select v49^v case '':,e3:=e3+0, elsecase, e3:=e3+1, endsel, ),'
+     ',( select v49^w case '':,e3:=e3+0, elsecase, e3:=e3+1, endsel, ),'
+     ',( select v49^x case '':,e3:=e3+0, elsecase, e3:=e3+1, endsel, ),'
+     ',( select v49^y case '':,e3:=e3+0, elsecase, e3:=e3+1, endsel, ),'
+     ',( select v49^z case '':,e3:=e3+0, elsecase, e3:=e3+1, endsel, ),'
+     ',( select v49^0 case '':,e3:=e3+0, elsecase, e3:=e3+1, endsel, ),'
+     ',( select v49^1 case '':,e3:=e3+0, elsecase, e3:=e3+1, endsel, ),'
+     ',( select v49^2 case '':,e3:=e3+0, elsecase, e3:=e3+1, endsel, ),'
+     ',( select v49^3 case '':,e3:=e3+0, elsecase, e3:=e3+1, endsel, ),'
+     ',( select v49^4 case '':,e3:=e3+0, elsecase, e3:=e3+1, endsel, ),'
+     ',( select v49^5 case '':,e3:=e3+0, elsecase, e3:=e3+1, endsel, ),'
+     ',( select v49^6 case '':,e3:=e3+0, elsecase, e3:=e3+1, endsel, ),'
+     ',( select v49^7 case '':,e3:=e3+0, elsecase, e3:=e3+1, endsel, ),'
+     ',( select v49^8 case '':,e3:=e3+0, elsecase, e3:=e3+1, endsel, ),'
+     ',( select v49^9 case '':,e3:=e3+0, elsecase, e3:=e3+1, endsel, ),'
+     ',if a(v49) or (e2+e3=0 and nocc(v49)<2) then '
+     ',/*if 'a'='a' then */'
+       <td class="td2">
+         <input type="hidden" name="049" value="^j">
+         <font style="font-family: monospace;">img:</font>
+         <input type="checkbox" name="049" value="Sim"',if s(mhu,v49[1]^i,mpl)='SIM' then 'checked' fi,'>
+         <input type="hidden" name="049" value="^k">
+         <input type="text" size="26" maxlength="40" style="text-align: left; font-family: monospace; font-size: 14px;" name="049" value="',v49[1]^a,'">
+         <font style="font-family: monospace; font-size: 18px;">&nbsp;</font>
+
+         <input type="hidden" name="049" value="^l">
+         <font style="font-family: monospace;">img:</font>
+         <input type="checkbox" name="049" value="Sim"',if s(mhu,v49[2]^i,mpl)='SIM' then 'checked' fi,'>
+         <input type="hidden" name="049" value="^m">
+         <input type="text" size="26" maxlength="40" style="text-align: left; font-family: monospace; font-size: 14px;" name="049" value="',v49[2]^a,'">
+         <font style="font-family: monospace; font-size: 18px;"></font>
+
+         <!--
+         <input type="hidden" name="049" value="^n">
+         <font style="font-family: monospace;">img:</font>
+         <input type="checkbox" name="049" value="Sim"',if s(mhu,v49[3]^i,mpl)='SIM' then 'checked' fi,'>
+         <input type="hidden" name="049" value="^o">
+         <input type="text" size="26" maxlength="40" style="text-align: left; font-family: monospace; font-size: 14px;" name="049" value="',v49[3]^a,'">
+         -->
+         <br><br>
+       </td>
+     ',else,'
+       <td class="td2"><textarea rows="2" name="049">'(v49/)'</textarea></td>
+     ',fi,'
+<!--==========================================================================================-->
+     </tr>'/
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6036)<>'' or p(v36) then 
+    '<tr>
+       <td class="td1f">',ref(['phl_acv_fmt']val(v5000),v36),'&nbsp;<a href=JavaScript:tab_man(36);>[036]</a></td>
+       <td class="td2"><textarea rows="2" name="036">',(mpl,v36/),'</textarea></td>
+     </tr>'
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6037)<>'' or p(v37) then 
+    '<tr>
+       <td class="td1f">',ref(['phl_acv_fmt']val(v5000),v37),'&nbsp;<a href=JavaScript:tab_man(37);>[037]</a></td>
+       <td class="td2"><textarea rows="2" name="037">',(mpl,v37/),'</textarea></td>
+     </tr>'
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6104)<>'' or p(v104) then 
+    '<tr>
+       <td class="td1f">',ref(['phl_acv_fmt']val(v5000),v104),'&nbsp;<a href=JavaScript:tab_man(104);>[104]</a></td>
+       <td class="td2"><textarea rows="2" name="104">'(v104/)'</textarea></td>
+     </tr>'/
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6114)<>'' or p(v114) then 
+    '<tr>
+       <td class="td1f">',ref(['phl_acv_fmt']val(v5000),v114),'&nbsp;<a href=JavaScript:tab_man(114);>[114]</a></td>
+       <td class="td2"><textarea rows="2" name="114">'(v114/)'</textarea></td>
+     </tr>'/
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6116)<>'' or p(v116) then 
+    '<tr>
+       <td class="td1f">',ref(['phl_acv_fmt']val(v5000),v116),'&nbsp;<a href=JavaScript:tab_man(116);>[116]</a></td>
+       <td class="td2"><textarea rows="2" name="116">'(v116/)'</textarea></td>
+     </tr>'/
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6097)<>'' or p(v97) then 
+    '<tr>
+       <td class="td1f">',ref(['phl_acv_fmt']val(v5000),v97),'&nbsp;<a href=JavaScript:tab_man(97);>[097]</a></td>
+   <!-- td class="td2"><textarea rows="2" name="097">',(v97/),'</textarea></td -->
+       <td class="td2"><input type="text" class="textbox" name="097" value="'v97'"></td>
+     </tr>'/
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6098)<>'' or p(v98) then 
+    '<tr>
+       <td class="td1f">',ref(['phl_acv_fmt']val(v5000),v98),'&nbsp;<a href=JavaScript:tab_man(98);>[098]</a></td>
+   <!-- td class="td2"><textarea rows="2" name="098">',(v98/),'</textarea></td -->
+       <td class="td2"><input type="text" class="textbox" name="098" value="'v98'"></td>
+     </tr>'/
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6099)<>'' or p(v99) then 
+    '<tr>
+       <td class="td1f">',ref(['phl_acv_fmt']val(v5000),v99),'&nbsp;<a href=JavaScript:tab_man(99);>[099]</a></td>
+   <!-- td class="td2"><textarea rows="2" name="099">',(v99/),'</textarea></td -->
+       <td class="td2"><input type="text" class="textbox" name="099" value="'v99'"></td>
+     </tr>'/
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6073)<>'' or p(v73) then 
+    '<tr>
+       <td class="td1f">',ref(['phl_acv_fmt']val(v5000),v73),'&nbsp;<a href=JavaScript:tab_man(73);>[073]</a></td>
+       <td class="td2"><textarea rows="2" name="073">'(v73/)'</textarea></td>
+     </tr>'/
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6077)<>'' or p(v77) then 
+    '<tr>
+       <td class="td1f">',ref(['phl_acv_fmt']val(v5000),v77),'&nbsp;<a href=JavaScript:tab_man(77);>[077]</a></td>
+       <td class="td2"><textarea rows="2" name="077">'(v77/)'</textarea></td>
+     </tr>'/
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6100)<>'' or p(v100) then 
+    '<tr>
+       <td class="td1f">',ref(['phl_acv_fmt']val(v5000),v100),'&nbsp;<a href=JavaScript:tab_man(100);>[100]</a></td>
+       <td class="td2"><textarea rows="2" name="100">'(v100/)'</textarea></td>
+     </tr>'/
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6117)<>'' or p(v117) then 
+    '<tr>
+       <td class="td1f">',ref(['phl_acv_fmt']val(v5000),v117),'&nbsp;<a href=JavaScript:tab_man(117);>[117]</a></td>
+       <td class="td2"><textarea rows="2" name="117">'(v117/)'</textarea></td>
+     </tr>'/
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6118)<>'' or p(v118) then 
+    '<tr>
+       <td class="td1f">',ref(['phl_acv_fmt']val(v5000),v118),'&nbsp;<a href=JavaScript:tab_man(118);>[118]</a></td>
+       <td class="td2"><textarea rows="2" name="118">'(v118/)'</textarea></td>
+     </tr>'/
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6119)<>'' or p(v119) then 
+    '<tr>
+       <td class="td1f">',ref(['phl_acv_fmt']val(v5000),v119),'&nbsp;<a href=JavaScript:tab_man(119);>[119]</a></td>
+       <td class="td2"><textarea rows="2" name="119">'(v119/)'</textarea></td>
+     </tr>'/
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6101)<>'' or p(v101) then 
+    '<tr>
+       <td class="td1f">',ref(['phl_acv_fmt']val(v5000),v101),'&nbsp;<a href=JavaScript:tab_man(101);>[101]</a></td>
+       <td class="td2"><input type="text" class="textbox" name="101" value="'v101'"></td>
+     </tr>'/
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6102)<>'' or p(v102) then 
+    '<tr>
+       <td class="td1f">',ref(['phl_acv_fmt']val(v5000),v102),'&nbsp;<a href=JavaScript:tab_man(102);>[102]</a></td>
+       <td class="td2"><input type="text" class="textbox" name="102" value="'v102'"></td>
+     </tr>'/
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6106)<>'' or p(v106) then 
+    '<tr>
+       <td class="td1f">',ref(['phl_acv_fmt']val(v5000),v106),'&nbsp;<a href=JavaScript:tab_man(106);>[106]</a></td>
+       <td class="td2"><input type="text" class="textbox" name="106" value="'v106'"></td>
+     </tr>'/
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6115)<>'' or p(v115) then 
+    '<tr>
+       <td class="td1f">',ref(['phl_acv_fmt']val(v5000),v115),'&nbsp;<a href=JavaScript:tab_man(115);>[115]</a></td>
+       <td class="td2"><input type="text" class="textbox" name="115" value="'v115'"></td>
+     </tr>'/
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6107)<>'' or p(v107) then 
+    '<tr>
+       <td class="td1f">',ref(['phl_acv_fmt']val(v5000),v107),'&nbsp;<a href=JavaScript:tab_man(107);>[107]</a></td>
+       <td class="td2"><input type="text" class="textbox" name="107" value="'v107'"></td>
+     </tr>'/
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6080)<>'' or p(v80) then 
+    '<tr>
+       <td class="td1f">',ref(['phl_acv_fmt']val(v5000),v80),'&nbsp;<a href=JavaScript:tab_man(80);>[080]</a></td>
+   <!-- td class="td2"><textarea rows="2" name="080">'(v80/)'</textarea></td -->
+   <!-- td class="td2"><input type="text" class="textbox" name="080" value="'v80'"></td -->
+       <td class="td2"><input type="hidden" name="080" value="'v80'">&nbsp;&nbsp;<font face="Verdana" size="2" style="font-family: monospace; font-size: 14px;"><b>',v80,'</b></font></td>
+    </tr>'/
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6081)<>'' or p(v81) then 
+    '<tr>
+       <td class="td1f">',ref(['phl_acv_fmt']val(v5000),v81),'&nbsp;<a href=JavaScript:tab_man(81);>[081]</a></td>
+   <!-- td class="td2"><textarea rows="2" name="081">'(v81/)'</textarea></td -->
+   <!-- td class="td2"><input type="text" class="textbox" name="081" value="'v81'"></td -->
+       <td class="td2"><input type="hidden" name="081" value="'v81'">&nbsp;&nbsp;<font face="Verdana" size="2" style="font-family: monospace; font-size: 14px;"><b>',v81,'</b></font></td>
+     </tr>'/
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6096)<>'' or p(v96) then 
+    '<tr>
+       <td class="td1f">',ref(['phl_acv_fmt']val(v5000),v96),'&nbsp;<a href=JavaScript:tab_man(96);>[096]</a></td>
+       <td><textarea rows="5" name="htr">'(v96/)'</textarea></td>
+     </tr>'/
+  ,fi,
+
+  ,if ref(['phl_acv_fmt']val(v5000),v6186)<>'' then
+    '<tr>
+       <td class="td1f">',ref(['phl_acv_fmt']val(v5000),v186),'&nbsp;<a href=JavaScript:tab_man(186);>[186]</a></td>
+       <td class="td2"><textarea rows=5 name=186>'(v186/)'</textarea></td>
+     </tr>'/
+  ,fi,
+
+,if v6='am' then
+  '<tr>
+     <td class="td1o">ID (todo):&nbsp;<a href=JavaScript:tab_man(996);>[996]</a></td>
+     <td class="td3">
+       <input type="text" style="width: 300px;  font-family: monospace; font-size: 14px;" id="996" name="996" value="'v996'" onkeyup="buscaPaiM();" autocomplete="off" />
+       <div id="busca_paim"></div>
+     </td>
+   </tr>'
+,else,
+  ,if v6='as' then
+    '<tr>
+       <td class="td1o">ID (todo):&nbsp;<a href=JavaScript:tab_man(996);>[996]</a></td>
+       <td class="td3">
+         <input type="text" style="width: 300px;  font-family: monospace; font-size: 14px;" id="996" name="996" value="'v996'" onkeyup="buscaPaiS();" autocomplete="off" />
+         <div id="busca_pais"></div>
+       </td>
+     </tr>'
+  ,else,
+    ,if p(v996) then
+      '<tr>
+         <td class="td1f">ID (todo):<br>(nível analítico)&nbsp;<a href=JavaScript:tab_man(996);>[996]</a></td>
+         <td class="td2"><input type="hidden" name="996" value="'(v996/)'">&nbsp;&nbsp;<font face="Verdana" size="2" style="font-family: monospace; font-size: 14px;"><b>',v996+|; |,'</b></font></td>
+       </tr>'/
+    ,fi,
+  ,fi,
+,fi,
+
+/* ============================================================= */
+/* Secao elementos de controle */
+,'<tr><td class="td1e"></td><td class="topico">Elementos de Controle</td></tr>'/
+
+  '<tr>
+     <td class="td1o">MFN (cópia):&nbsp;<a href=JavaScript:tab_man(998);>[998]</a></td>
+     <td class="td3"><font face="Verdana" size="2" style="font-family: monospace; font-size: 14px;"><b>',v998+|; |,'</b></font></td>
+  </tr>'
+
+  '<tr>
+     <td class="td1o">Controle datas:&nbsp;<a href=JavaScript:tab_man(999);>[999]</a></td>
+     <td class="td3"><font face="Verdana" size="2" style="font-family: monospace; font-size: 14px;"><b>',v999+|<br>|,'</b></font></td>
+  </tr>'
+
+/* ============================================================= */

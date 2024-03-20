@@ -1,0 +1,75 @@
+# Instalacao server (IIS 6) estrutura consolidada sob raiz unica
+        00*=/Data/DadosApl/ACEBIB/ant/bases/00*
+      phl_*=/Data/DadosApl/ACEBIB/ant/bases/phl_*
+      actab=/Data/DadosApl/ACEBIB/ant/bases/actab
+      uctab=/Data/DadosApl/ACEBIB/ant/bases/uctab
+      menu*=/Data/DadosApl/ACEBIB/ant/html/menu*
+      cabe*=/Data/DadosApl/ACEBIB/ant/html/cabe*
+      mens*=/Data/DadosApl/ACEBIB/ant/html/mens*
+      rest*=/Data/DadosApl/ACEBIB/ant/html/rest*
+      inde*=/Data/DadosApl/ACEBIB/ant/html/inde*
+      logo*=/Data/DadosApl/ACEBIB/ant/html/logo*
+      atra*=/Data/DadosApl/ACEBIB/ant/php/mail_lote/atra*
+      aler*=/Data/DadosApl/ACEBIB/ant/php/mail_lote/aler*
+      disp*=/Data/DadosApl/ACEBIB/ant/php/mail_lote/disp*
+       iso*=/Data/DadosApl/ACEBIB/ant/bkp/iso*
+      usua*=/Data/DadosApl/ACEBIB/ant/php/mail_lote/usua*
+    phl.css=/Data/DadosApl/ACEBIB/ant/css/phl.css
+      tab_*=/Data/DadosApl/ACEBIB/ant/cgi-bin/phl82/tabs/tab_*
+   path_bas=/Data/DadosApl/ACEBIB/ant/cgi-bin/phl82/tabs/path_bas.inf
+   path_cgi=/Data/DadosApl/ACEBIB/ant/cgi-bin/phl82/tabs/path_cgi.inf
+   path_cip=/Data/DadosApl/ACEBIB/ant/cgi-bin/phl82/tabs/path_cip.inf
+   path_css=/Data/DadosApl/ACEBIB/ant/cgi-bin/phl82/tabs/path_css.inf
+   path_htm=/Data/DadosApl/ACEBIB/ant/cgi-bin/phl82/tabs/path_htm.inf
+   path_img=/Data/DadosApl/ACEBIB/ant/cgi-bin/phl82/tabs/path_img.inf
+   path_iss=/Data/DadosApl/ACEBIB/ant/cgi-bin/phl82/tabs/path_iss.inf
+    path_js=/Data/DadosApl/ACEBIB/ant/cgi-bin/phl82/tabs/path_js.inf
+   path_man=/Data/DadosApl/ACEBIB/ant/cgi-bin/phl82/tabs/path_man.inf
+   path_php=/Data/DadosApl/ACEBIB/ant/cgi-bin/phl82/tabs/path_php.inf
+   path_tab=/Data/DadosApl/ACEBIB/ant/cgi-bin/phl82/tabs/path_tab.inf
+   path_www=/Data/DadosApl/ACEBIB/ant/cgi-bin/phl82/tabs/path_www.inf
+   path_xis=/Data/DadosApl/ACEBIB/ant/cgi-bin/phl82/tabs/path_xis.inf
+   path_xsl=/Data/DadosApl/ACEBIB/ant/cgi-bin/phl82/tabs/path_xsl.inf
+ CI_TEMPDIR=/Data/DadosApl/ACEBIB/temp/antphl/
+      mstxl=3
+
+## Custom attention:
+# root directory physical path
+# root directory http response
+# *.cip [cipar file]
+# *.inf [cat() paths]
+# *.xis [include functions]
+# tree*.x, mfn.x [cipar path]
+# sair.xis [include functions]
+# FMX63, 021., 025. [home menus]
+# *.html [xis, src, cgi]
+# *.js   [xis, src, cgi]
+# *.xsl  [xis, src, cgi]
+# tab_man [src]
+# phl_col [src]
+# phl_spt [src]
+# phl_tdo [src]
+## adding fields:
+# fdt, fst, 009.fnc, man
+# fmt, pft [bases, tab]
+# FMX16 [export]
+
+# Instalacao local (tiny web) original
+#00*=/phl82/bases/00*
+#phl_*=/phl82/bases/phl_*
+#actab=/phl82/bases/actab
+#uctab=/phl82/bases/uctab
+#menu*=/phl82/phl82/html/menu*
+#cabe*=/phl82/phl82/html/cabe*
+#mens*=/phl82/phl82/html/mens*
+#rest*=/phl82/phl82/html/rest*
+#inde*=/phl82/phl82/html/inde*
+#logo*=/phl82/phl82/html/logo*
+#atra*=/phl82/phl82/php/mail_lote/atra*
+#aler*=/phl82/phl82/php/mail_lote/aler*
+#disp*=/phl82/phl82/php/mail_lote/disp*
+#iso*=/phl82/phl82/bkp/iso*
+#usua*=/phl82/phl82/php/mail_lote/usua*
+#phl.css=/phl82/phl82/css/phl.css
+#tab_*=/phl82/cgi-bin/phl82/tabs/tab_*
+#mstxl=3

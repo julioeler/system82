@@ -1,0 +1,21 @@
+if p(v48) then /*relatorios com grau de sigilo*/
+   '<a href="http://AceBib/Imagens/Relatorios/',
+   /*pasta conforme o grau de sigilo*/
+   ,if p(v48^n) then ,v48^n,'/',v48^*, /* Exemplo: Reservado^nRT17 */
+               ,else ,          v48^*, /* Exemplo: Livre           */
+   ,fi,
+,else,  /*demais documentos sem grau de sigilo*/
+   ,'<a href="http://AceBib/Imagens/Biblioteca/',
+   /*pasta conforme o tipo de documento*/
+   ,if val(v5)=31 then 'AA', else, /* Artigo */
+   ,if val(v5)=27 then 'CL', else, /* Capitulo */
+   ,if val(v5)=7  then 'LI', else, /* Livro */
+   ,if val(v5)=10 then 'NT', else, /* Norma */
+   ,if val(v5)=29 then 'PA', else, /* Publicacao */
+   ,if val(v5)=14 then 'PT', else, /* Patente */
+   ,if val(v5)=30 then 'TD', else, /* Traducao */
+   ,if val(v5)=21 then 'TE', else, /* Tese */
+   ,if val(v5)=19 then 'RT', else, /* Relatorio */
+                      ,'XX',       /* Outros */
+   ,fi,fi,fi,fi,fi,fi,fi,fi,fi,
+,fi,

@@ -1,0 +1,1125 @@
+'<html>'/
+'<head>'/
+'<link href="/phl82/css/phl.css" rel="stylesheet" type="text/css">'/
+'<script language="JavaScript" src="/phl82/js/isis_limite.js"></script>'/
+'<script language="JavaScript" src="/phl82/js/submit.js"></script>'/
+'<script>
+function classe(){
+ajuda = window.open("/cgi-bin/wxis.exe?IsisScript=phl82/012.xis&opc=cdu&tmp='v4001'","janela","height=500,width=700,menubar=no,resizable=no,scrollbars=yes,status=no,location=0,titlebar=0")
+}
+function autor(){
+ajuda = window.open("/cgi-bin/wxis.exe?IsisScript=phl82/012.xis&opc=aut&tmp='v4001'","janela","menubar=yes,resizable=yes,scrollbars=yes,status=yes")
+}
+function vocabulario(){
+ajuda = window.open("/cgi-bin/wxis.exe?IsisScript=phl82/012.xis&opc=vocabulario&tmp='v4001'","janela","height=500,width=600,menubar=no,resizable=no,scrollbars=no,status=no,location=0,titlebar=0")
+}
+function cursos(){
+ ajuda = window.open("/cgi-bin/wxis.exe?IsisScript=phl82/012.xis&opc=cur&tmp='v4001'","janela","menubar=yes,resizable=yes,scrollbars=yes,status=yes")
+ }
+function comentario(x){
+ ajuda = window.open("/cgi-bin/wxis.exe?IsisScript=phl82/051.xis&&tmp='v4001'opc=form&mfn="+x,"janela","height=400,width=600,menubar=yes,resizable=yes,scrollbars=yes,status=yes")
+ }
+function autoridades(){
+ ajuda = window.open("/cgi-bin/wxis.exe?IsisScript=phl82/012.xis&opc=autoridades&tmp='v4001'","janela","height=500,width=700,menubar=no,resizable=no,scrollbars=no,status=no,location=0,titlebar=0")
+ }
+function cutter(){
+ ajuda = window.open("/cgi-bin/wxis.exe?IsisScript=phl82/012.xis&opc=cutter&tmp='v4001'","janela","height=600,width=600,menubar=no,resizable=no,scrollbars=no,status=no,location=0,titlebar=0")
+ }
+function indice_autores(){
+ ajuda = window.open("/cgi-bin/wxis.exe?IsisScript=phl82/012.xis&opc=indice_autores&tmp='v4001'","janela","height=500,width=700,menubar=no,resizable=no,scrollbars=no,status=no,location=0,titlebar=0")
+ }
+function indice_assuntos(){
+ ajuda = window.open("/cgi-bin/wxis.exe?IsisScript=phl82/012.xis&opc=indice_assuntos&tmp='v4001'","janela","height=500,width=700,menubar=0,resizable=no,scrollbars=no,status=no,location=0,titlebar=0")
+ }
+function tab_man(x)
+ {
+  window.open("/cgi-bin/wxis.exe?IsisScript=phl82/049.xis&tmp='v4001'&mfn="+x,"janela","height=400,width=600,menubar=no,resizable=yes,scrollbars=yes,status=no")
+ }
+</script>'/
+'<script language=javascript>function proibido_voltar(){history.go(1) == false;}</script>'/
+
+'<style type="text/css" media="screen">'/
+'body {'/
+'font: 11px arial;'/
+'}'/
+'.suggest_link {'/
+'background-color: #FFFFFF;'/
+'padding: 2px 6px 2px 6px;'/
+'}'/
+'.suggest_link_over {'/
+  'background-color: #3366CC;'/
+  'padding: 2px 6px 2px 6px;'/
+'}'/
+'#search_suggest {'/
+'position: absolute;'/
+'background-color: #FFFFFF;'/
+'text-align: left;'/
+'border: 1px solid #000000;'/
+'}'/
+'</style>'/
+'<script language="JavaScript" type="text/javascript">'/
+/*
+'function getXmlHttpRequestObject() { '/
+'  if (window.XMLHttpRequest) { '/
+'    return new XMLHttpRequest();'/
+'     } else if(window.ActiveXObject) { '/
+'       return new ActiveXObject("Microsoft.XMLHTTP");'/
+'     } else { '/
+'       alert("Seu navegador está desatualizado");'/
+'     }'/
+'  }'/
+*/
+'function getXmlHttpRequestObject() '/
+'{ '/
+'var xmlHttp=null;'/
+'try '/
+' {  '/
+' // Firefox, Opera 8.0+, Safari '/
+' xmlHttp=new XMLHttpRequest(); '/
+' } '/
+'catch (e) '/
+' {  '/
+' // Internet Explorer '/
+' try '/
+'  {  '/
+'  xmlHttp=new ActiveXObject("Msxml2.XMLHTTP"); '/
+'  }  '/
+' catch (e) '/
+'  {  '/
+'  xmlHttp=new ActiveXObject("Microsoft.XMLHTTP"); '/
+'  }  '/
+' }  '/
+'return xmlHttp;  '/
+'}'/
+
+'var searchReq = getXmlHttpRequestObject();'/
+'function searchSuggest() { '/
+'if (searchReq.readyState == 4 || searchReq.readyState == 0) {'/
+'var str = escape(document.getElementById("txtSearch").value); '/
+'searchReq.open("GET", "/cgi-bin/wxis.exe?IsisScript=phl82/autocompleta_autoridades.xis&tmp='v4001'&exp=" + str, true);'/
+'searchReq.onreadystatechange = handleSearchSuggest;'/
+'searchReq.send(null);'/
+'}'/
+'}'/
+'function handleSearchSuggest() {'/
+'if (searchReq.readyState == 4) { '/
+'var ss = document.getElementById("search_suggest") '/
+'ss.innerHTML = ""; '/
+'var str = searchReq.responseText.split("\n");'/
+'for(i=0; i < str.length - 1; i++) { '/
+'var suggest = "<div onmouseover=javascript:suggestOver(this); ";'/
+'suggest += "onmouseout=javascript:suggestOut(this); ";'/
+'suggest += "onclick=javascript:setSearch(this.innerHTML); ";'/
+'suggest += "class=suggest_link>" + str[i] + "</div>";'/
+'ss.innerHTML += suggest;'/
+'} '/
+'}'/
+'}'/
+'function suggestOver(div_value) { '/
+'div_value.className = "suggest_link_over"; '/
+'} '/
+'function suggestOut(div_value) { '/
+'div_value.className = "suggest_link"; '/
+'}'/
+'oldvalue = "";'/
+'function setSearch(value) { '/
+'  if (value != "") { '/
+'  var totalvalue = oldvalue+value+"\n";'/
+'  document.getElementById("016").value = totalvalue; '/
+'  document.getElementById("search_suggest").innerHTML = ""; '/
+'  oldvalue = document.getElementById("016").value; '/
+'} '/
+'} '/
+'</script> '/
+
+'</head>'/
+'<body>'/
+'<script language=javascript>proibido_voltar()</script>'/
+'<table>'/
+'<form name="formulario" method="POST" onSubmit="return count(30000)" action="/cgi-bin/wxis.exe">'/
+'<input type="hidden" name="IsisScript" value="phl82/'v960'.xis">'/
+'<input type="hidden" name="tmp" value="'v4001'">'/
+'<input type="hidden" name="998" value="'v957'">'/
+'<input type="hidden" name="999" value="'v999[1]'">'/
+'<input type="hidden" name="mfn" value="'v957'">'/
+'<input type="hidden" name="rec" value="'v1010'">'/
+'<input type="hidden" name="exp" value="'v958,"$"n958,'">'/
+'<input type="hidden" name="dbvar" value="^aphl_acv^b1^cacv">'/
+'<input type="hidden" name="opc" value="grava">'/
+'<input type="hidden" name="001" value="'v1'">'/
+,if ref(['phl_acv_fmt']val(v5000),v6186)='' then
+'<input type="hidden" name="186" value="'v186'">'/
+,fi,
+'<tr>'/
+'<td class="td1e">',if v960<>'027' then 'MFN='mfn(1) fi,'</td>'/
+'<td class="topico">'ref(['tab_txt']890,@tab_txt.pft,)'</td></tr>'/
+'<tr>
+<td class="td1o">'ref(['tab_txt']891,@tab_txt.pft,)'&nbsp;<a href=JavaScript:tab_man(90);>[090]</a></td>
+<td class="td2">
+ <input type="radio" value="b"',if v90='b' or v90='' or v90='0' then 'checked' fi,' name="090">'ref(['tab_txt']719,@tab_txt.pft,)'
+ <input type="radio" value="c"',if v90='c' or v90='1' then 'checked' fi,' name="090">'ref(['tab_txt']718,@tab_txt.pft,)'
+ <input type="radio" value="r"',if v90='r' then 'checked' fi,' name="090">Restrito
+</td>
+</tr>'
+,if p(v2) then
+'<tr>
+<td class="td1o">ID&nbsp;<a href=JavaScript:tab_man(002);>[002]</a></td>
+<td class="td2"><input type="text" class="textbox" name="002" value="'v2'"></td>
+</tr>'/
+,fi 
+'<tr>
+  <td class="td1o">',ref(['phl_acv_fmt']val(v5000),v5,),'&nbsp;<a href=JavaScript:tab_man(05);>[005]</a></td>
+  <td class="td2">
+  <select class="fix" name="005">
+  <option selected value="'v5'">'ref(['phl_tdo']val(v5),@tab_txt.pft,)'</option>',
+  (,if val(v5[1])<>val(v3077^b) then '<option value="'v3077^b'">',v3077^a,'</option>' fi,),
+  '</select>
+  </td>
+</tr>'/
+
+'<tr>
+ <td class="td1o">',ref(['phl_acv_fmt']val(v5000),v6,),'&nbsp;<a href=JavaScript:tab_man(6);>[006]</a></td>
+ <td class="td2">
+   <select class="fix" name="006">
+   <option 'if v6='m' then 'selected' fi ' value="m">'ref(['tab_txt']1144,@tab_txt.pft,)'</option>
+   <option 'if v6='am' then 'selected' fi ' value="am">'ref(['tab_txt']1145,@tab_txt.pft,)'</option>
+   <option 'if v6='s' then 'selected' fi ' value="s">'ref(['tab_txt']1146,@tab_txt.pft,)'</option>
+   <option 'if v6='as' then 'selected' fi ' value="as">'ref(['tab_txt']1147,@tab_txt.pft,)'</option>
+   <option 'if v6='c' then 'selected' fi ' value="c">'ref(['tab_txt']49,@tab_txt.pft,)'</option>
+   </select>
+ </td>
+</tr>'/,
+
+,if ref(['phl_cnf']1,v218)='S' then
+'<tr>
+<td class="td1e">',ref(['phl_acv_fmt']val(v5000),v22),'&nbsp;<a href=JavaScript:tab_man(22);>[022]</a></td>
+<td class="td2">
+<select name="022">
+<option value=""></option>
+<option selected value="'v22'">'ref(['phl_spt']val(v22),@tab_txt.pft,)'</option>',(,if val(v22[1])<>val(v3074^b) then '<option value="',v3074^b,'">',v3074^a,'</option>' fi,),'</select>
+</td>
+</tr>'
+,fi
+,if ref(['phl_cnf']1,v213)='S' then
+ '<tr>
+    <td class="td1e">',ref(['phl_acv_fmt']val(v5000),v71),'&nbsp;<a href=JavaScript:tab_man(71);>[071]</a></td>
+    <td class="td2"><select size="1" name="071">
+    <option value=""></option>
+    <option selected value="'v71'">',ref(['phl_cnt']val(v71),@tab_txt.pft,),'</option>',
+    (,if val(v71[1])<>val(v3075^b) then '<option value="'v3075^b'">',v3075^a,'</option>' fi,)'</select>
+    </td>
+  </tr>'
+,fi
+,if ref(['phl_cnf']1,v208)='S' then
+  '<tr>
+    <td class="td1e">',ref(['phl_acv_fmt']val(v5000),v26),'&nbsp;<a href=JavaScript:tab_man(26);>[026]</a></td>
+    <td class="td2">
+    <select name="026"><option value=""></option>
+    <option selected value="'v26'">',ref(['phl_col']val(v26),@tab_txt.pft,),'</option>',(,if val(v26[1])<>val(v3091^b) then '<option value="'v3091^b'">',v3091^a,'</option>' fi,),'</select></td>
+  </tr>'
+,fi
+,if ref(['phl_acv_fmt']val(v5000),v6105)<>'' then
+'<tr>
+<td class="td1o">',ref(['phl_acv_fmt']val(v5000),v105,),'&nbsp;<a href=JavaScript:tab_man(105);>[105]</a></td>
+<td class="td2">
+<select class="fix" name="105">
+<option selected value="'v105'">'ref(['phl_gen']val(v105),@tab_txt.pft,)'</option>',
+(,if val(v105[1])<>val(v3099^b) then '<option value="'v3099^b'">',v3099^a,'</option>' fi,),
+'</select>
+</td>
+</tr>'
+,fi,
+,if ref(['phl_acv_fmt']val(v5000),v6039)<>'' or p(v39) then 
+'<tr>
+  <td class="td1o">',ref(['phl_acv_fmt']val(v5000),v39,),'&nbsp;<a href=JavaScript:tab_man(39);>[039]</a></td>
+  <td class="td2">
+  <select class="fix" name="039">
+  <option selected value="'v39'">'ref(['phl_nda']val(v39),@tab_txt.pft,)'</option>',
+  (,if val(v5[1])<>val(v3098^b) then '<option value="'v3098^b'">',v3098^a,'</option>' fi,),
+  '</select>
+  </td>
+</tr>'
+fi,
+,if ref(['phl_acv_fmt']val(v5000),v6004)<>'' or p(v4) then
+'<tr>
+<td class="td1f">',ref(['phl_acv_fmt']val(v5000),v4)'&nbsp;<a href=JavaScript:tab_man(04);>[004]</a></td>
+<td class="td2"><textarea rows="2" name="004" cols="48">'(v4/)'</textarea></td>
+</tr>'
+,fi
+,if ref(['phl_acv_fmt']val(v5000),v6009)<>'' then
+'<tr>
+<td class="td1f">',ref(['phl_acv_fmt']val(v5000),v9,),'&nbsp;<a href=JavaScript:tab_man(09);>[009]</a></td>
+<td class="td2"><b>Sim</b>&nbsp;<input type="radio" value="S"',if v9='S' then ' checked' fi,' name="009">&nbsp;|&nbsp;<b>Não</b>&nbsp;
+<input type="radio" value="N"',if v9='N' or v9='' then ' checked' fi,' name="009"></td>
+</tr>'
+,fi
+,if ref(['phl_acv_fmt']val(v5000),v6028)<>'' then
+  ,if v6.1<>'a' then
+   '<tr>
+     <td class="td1f">',ref(['phl_acv_fmt']val(v5000),v28),'&nbsp;<a href=JavaScript:tab_man(28);>[028]</a></td>
+     <td class="td2"><select size="1" name="028">
+     <option selected value="'v28'">',ref(['phl_prc']val(v28),@tab_txt.pft,),'</option>',
+     (,if val(v28[1])<>val(v3088^b) then '<option value="'v3088^b'">',v3088^a,'</option>' fi,)'</select>
+     </td>
+    </tr>'
+  fi,
+fi,
+if ref(['phl_acv_fmt']val(v5000),v6029)<>'' then
+'<tr>
+<td class="td1f">',ref(['phl_acv_fmt']val(v5000),v29,),'&nbsp;<a href=JavaScript:tab_man(29);>[029]</a></td>
+<td class="td2"><b>Sim</b>&nbsp;<input type="radio" value="S"',if v29='S' or v29='' then ' checked' fi,' name="029">&nbsp;|&nbsp;<b>Não</b>&nbsp;
+<input type="radio" value="N"',if v29='N' then ' checked' fi,' name="029"></td>
+</tr>'
+,fi
+,if ref(['phl_acv_fmt']val(v5000),v6027)<>'' or p(v27) then
+'<tr>
+<td class="td1f">',ref(['phl_acv_fmt']val(v5000),v27),'&nbsp;<a href=JavaScript:tab_man(27);>[027]</a></td>
+<td class="td2"><input type="text" class="textbox" name="027" value="'v27'"></td>
+</tr>',
+,fi
+if ref(['phl_acv_fmt']val(v5000),v6003)<>'' or p(v3) then
+'<tr>
+  <td class="td1e">
+    ',ref(['phl_acv_fmt']val(v5000),v3),'
+    <a href=JavaScript:tab_man(3);>[003]</a>
+  </td>
+  <td class="td2">
+    <input type="text" name="003" value="',v3,'">&nbsp;&nbsp;<a href="JavaScript:classe();">BD Classificação</a>
+  </td>
+</tr>'
+,fi
+if ref(['phl_acv_fmt']val(v5000),v6103)<>'' or p(v103) then
+'<tr>
+  <td class="td1e">
+    ',ref(['phl_acv_fmt']val(v5000),v103),'
+    <a href=JavaScript:tab_man(103);>[103]</a>
+  </td>
+  <td class="td2">
+    <input type="text" name="103" value="',v103,'">&nbsp;&nbsp;<a href="JavaScript:cutter();">BD Cutter</a>
+  </td>
+</tr>'
+,fi
+,if v6='am' then
+'<tr><td class="td1e"></td><td class="topico">Nivel Analítico</td></tr>'
+,if ref(['phl_acv_fmt']val(v5000),v6010)<>'' or p(v10) then
+'<tr>
+  <td class="td1e">
+    <a href="JavaScript:autoridades();"><img src="/phl82/img/023.gif" border="0"></a>
+    &nbsp;',ref(['phl_acv_fmt']val(v5000),v10),'&nbsp;<a href=JavaScript:tab_man(10);>[010]</a>
+  </td>
+  <td class="td2"><textarea rows="3" name="010">',(v10/),'</textarea></td>
+</tr>'
+fi,
+  ,if ref(['phl_acv_fmt']val(v5000),v6011)<>'' or p(v11) then 
+'<tr>
+<td class="td1f">',ref(['phl_acv_fmt']val(v5000),v11),'&nbsp;<a href=JavaScript:tab_man(11);>[011]</a></td>
+<td class="td2"><textarea rows="3" name="011">',(v11/),'</textarea></td>
+</tr>'
+fi,
+,if ref(['phl_acv_fmt']val(v5000),v6012)<>'' or p(v12) then
+'<tr>
+<td class="td1o">',ref(['phl_acv_fmt']val(v5000),v12),'&nbsp;<a href=JavaScript:tab_man(12);>[012]</a></td>
+<td class="td2"><textarea rows="2" name="012">'(mpl,v12/)'</textarea></td>
+</tr>'
+,fi,
+,if ref(['phl_acv_fmt']val(v5000),v6013)<>'' or p(v13) then 
+'<tr>
+<td class="td1f">',ref(['phl_acv_fmt']val(v5000),v13),'&nbsp;<a href=JavaScript:tab_man(13);>[013]</a></td>
+<td class="td2"><textarea rows="2" name="013">'(v13/)'</textarea></td>
+</tr>'
+,fi,
+,if ref(['phl_acv_fmt']val(v5000),v6121)<>'' or p(v121) then 
+'<tr>
+<td class="td1f">',ref(['phl_acv_fmt']val(v5000),v121),'&nbsp;<a href=JavaScript:tab_man(121);>[121]</a></td>
+<td class="td2"><textarea rows="2" name="121">'(v121/)'</textarea></td>
+</tr>'
+,fi,
+,if ref(['phl_acv_fmt']val(v5000),v6014)<>'' or p(v14) then 
+'<tr>
+<td class="td1e">'ref(['phl_acv_fmt']val(v5000),v14),'&nbsp;<a href=JavaScript:tab_man(14);>[014]</a></td>
+<td class="td2"><input type="text" class="textbox" name="014" value="'v14'"></td>
+</tr>'
+,fi,
+,if ref(['phl_acv_fmt']val(v5000),v6141)<>'' or p(v141) then 
+'<tr>
+<td class="td1f">',ref(['phl_acv_fmt']val(v5000),v141),'&nbsp;<a href=JavaScript:tab_man(141);>[141]</a></td>
+<td class="td2"><textarea rows="2" name="141">',(v141/),'</textarea></td>
+</tr>'
+,fi,
+'<tr><td class="td1e"></td><td class="topico">Nivel Monográfico</td></tr>'
+,if ref(['phl_acv_fmt']val(v5000),v6017)<>'' or p(v17) then 
+'<tr>
+  <td class="td1e">',ref(['phl_acv_fmt']val(v5000),v17),'&nbsp;<a href=JavaScript:tab_man(17);>[017]</a></td>
+  <td class="td2"><textarea rows="3" name="017">',(v17/),'</textarea></td>
+</tr>'
+,fi,
+,if ref(['phl_acv_fmt']val(v5000),v6018)<>'' or p(v18) then 
+'<tr>
+<td class="td1o">',ref(['phl_acv_fmt']val(v5000),v18),'&nbsp;<a href=JavaScript:tab_man(18);>[018]</a></td>
+<td class="td2"><textarea rows="2" name="018">',(v18/),'</textarea></td>
+</tr>'
+,fi,
+,if ref(['phl_acv_fmt']val(v5000),v6181)<>'' or p(v181) then 
+'<tr>
+<td class="td1e">',ref(['phl_acv_fmt']val(v5000),v181),'&nbsp;<a href=JavaScript:tab_man(181);>[181]</a></td>
+<td class="td2"><textarea rows="2" name="181">',(v181/),'</textarea></td>
+</tr>'
+,fi,
+,if ref(['phl_acv_fmt']val(v5000),v6019)<>'' or p(v19) then 
+'<tr>
+<td class="td1f">',ref(['phl_acv_fmt']val(v5000),v19),'&nbsp;<a href=JavaScript:tab_man(19);>[019]</a></td>
+<td class="td2"><textarea rows="2" name="019">'(v19/)'</textarea></td>
+</tr>'
+,fi,
+,if ref(['phl_acv_fmt']val(v5000),v6015)<>'' or p(v15) then 
+'<tr>
+  <td class="td1e">',ref(['phl_acv_fmt']val(v5000),v15),'&nbsp;<a href=JavaScript:tab_man(15);>[015]</a></td>
+  <td class="td2"><textarea rows="2" name="015">'(v15/)'</textarea></td>
+</tr>'
+,fi,
+,if ref(['phl_acv_fmt']val(v5000),v6063)<>'' or p(v63) then 
+'<tr>
+<td class="td1e">',ref(['phl_acv_fmt']val(v5000),v63),'&nbsp;<a href=JavaScript:tab_man(63);>[063]</a></td>
+<td class="td2"><input type="text" class="textbox" name="063" value="'v63'"></td>
+</tr>'
+,fi,
+,if ref(['phl_acv_fmt']val(v5000),v6020)<>'' or p(v20) then 
+'<tr>
+<td class="td1e">',ref(['phl_acv_fmt']val(v5000),v20),'&nbsp;<a href=JavaScript:tab_man(20);>[020]</a></td>
+<td class="td2"><input type="text" class="textbox" name="020" value="'v20'"></td>
+</tr>'
+,fi,
+,if ref(['phl_acv_fmt']val(v5000),v6038)<>'' or p(v38) then 
+'<tr>
+<td class="td1e">',ref(['phl_acv_fmt']val(v5000),v38),'&nbsp;<a href=JavaScript:tab_man(38);>[038]</a></td>
+<td class="td2"><input type="text" class="textbox" name="038" value="'v38'"></td>
+</tr>'
+,fi,
+,if ref(['phl_acv_fmt']val(v5000),v6021)<>'' or p(v21) then 
+'<tr>
+<td class="td1e">',ref(['phl_acv_fmt']val(v5000),v21),'&nbsp;<a href=JavaScript:tab_man(21);>[021]</a></td>
+<td class="td2"><input type="text" class="textbox" name="021" value="'v21'"></td>
+</tr>'
+,fi,
+,if ref(['phl_acv_fmt']val(v5000),v6030)<>'' or p(v30) then 
+'<tr>
+  <td class="td1e">',ref(['phl_acv_fmt']val(v5000),v30),'&nbsp;<a href=JavaScript:tab_man(30);>[030]</a></td>
+  <td class="td2"><textarea rows="1" name="030">',(v30/),'</textarea></td>
+<tr>',
+,fi,
+,if ref(['phl_acv_fmt']val(v5000),v6068)<>'' or p(v68) then 
+'<tr>
+<td class="td1f">',ref(['phl_acv_fmt']val(v5000),v68),'&nbsp;<a href=JavaScript:tab_man(68);>[068]</a></td>
+<td class="td2"><input type="text" class="textbox" name="068" value="'v68'"></td>
+</tr>'
+,fi,
+,if ref(['phl_acv_fmt']val(v5000),v6069)<>'' or p(v69) then 
+'<tr>
+  <td class="td1e">',ref(['phl_acv_fmt']val(v5000),v69),'&nbsp;<a href=JavaScript:tab_man(69);>[069]</a></td>
+  <td class="td2"><input type="text" class="textbox" name="069" value="'v69'"></td>
+</tr>'
+,fi,
+,fi,
+,if v6='as' then
+'<tr><td class="td1e"></td><td class="topico">Nivel Analítico</td></tr>'/
+,if ref(['phl_acv_fmt']val(v5000),v6010)<>'' or p(v10) then
+'<tr>
+  <td class="td1e">
+    <a href="JavaScript:autoridades();"><img src="/phl82/img/023.gif" border="0"></a>
+    &nbsp;',ref(['phl_acv_fmt']val(v5000),v10),'&nbsp;<a href=JavaScript:tab_man(10);>[010]</a>
+  </td>
+  <td class="td2"><textarea rows="3" name="010">',(v10/),'</textarea></td>
+</tr>'
+fi,
+,if ref(['phl_acv_fmt']val(v5000),v6011)<>'' or p(v11) then
+'<tr>
+<td class="td1f">',ref(['phl_acv_fmt']val(v5000),v11),'&nbsp;<a href=JavaScript:tab_man(11);>[011]</a></td>
+<td class="td2"><textarea rows="3" name="011">',(v11/),'</textarea></td>
+</tr>'/
+,fi,
+,if ref(['phl_acv_fmt']val(v5000),v6012)<>'' or p(v12) then 
+'<tr>
+<td class="td1o">',ref(['phl_acv_fmt']val(v5000),v12),'&nbsp;<a href=JavaScript:tab_man(12);>[012]</a></td>
+<td class="td2"><textarea rows="2" name="012">'(mpl,v12/)'</textarea></td>
+</tr>'
+,fi,
+,if ref(['phl_acv_fmt']val(v5000),v6013)<>'' or p(v13) then 
+'<tr>
+<td class="td1f">',ref(['phl_acv_fmt']val(v5000),v13),'&nbsp;<a href=JavaScript:tab_man(13);>[013]</a></td>
+<td class="td2"><textarea rows="2" name="013">'(v13/)'</textarea></td>
+</tr>'
+,fi,
+,if ref(['phl_acv_fmt']val(v5000),v6121)<>'' or p(v121) then 
+'<tr>
+<td class="td1f">',ref(['phl_acv_fmt']val(v5000),v121),'&nbsp;<a href=JavaScript:tab_man(121);>[121]</a></td>
+<td class="td2"><textarea rows="2" name="121">'(v121/)'</textarea></td>
+</tr>'/ 
+,fi,
+,if ref(['phl_acv_fmt']val(v5000),v6014)<>'' or p(v14) then 
+'<tr>
+<td class="td1e">'ref(['phl_acv_fmt']val(v5000),v14),'&nbsp;<a href=JavaScript:tab_man(14);>[014]</a></td>
+<td class="td2"><input type="text" class="textbox" name="014" value="'v14'"></td>
+</tr>'/ 
+,fi,
+,if ref(['phl_acv_fmt']val(v5000),v6141)<>'' or p(v141) then 
+'<tr>
+<td class="td1f">',ref(['phl_acv_fmt']val(v5000),v141),'&nbsp;<a href=JavaScript:tab_man(141);>[141]</a></td>
+<td class="td2"><textarea rows="2" name="141">',(v141/),'</textarea></td>
+</tr>'/ 
+,fi,
+'<tr><td class="td1e"></td><td class="topico">Nivel Série</td></tr>'/
+,if ref(['phl_acv_fmt']val(v5000),v6030)<>'' or p(v30) then 
+'<tr>
+  <td class="td1e">',ref(['phl_acv_fmt']val(v5000),v30),'&nbsp;<a href=JavaScript:tab_man(30);>[030]</a></td>
+  <td class="td2"><textarea rows="1" name="030">',(v30/),'</textarea></td>
+<tr>',/
+,fi,
+,if ref(['phl_acv_fmt']val(v5000),v6182)<>'' or p(v182) then 
+'<tr>
+  <td class="td1e">',ref(['phl_acv_fmt']val(v5000),v182),'&nbsp;<a href=JavaScript:tab_man(182);>[182]</a></td>
+  <td class="td2"><textarea rows="2" name="182">'(v182/)'</textarea></td>
+</tr>'
+,fi,
+,if ref(['phl_acv_fmt']val(v5000),v6034)<>'' or p(v34) then 
+'<tr>
+  <td class="td1e">',ref(['phl_acv_fmt']val(v5000),v34),'&nbsp;<a href=JavaScript:tab_man(34);>[034]</a></td>
+  <td class="td2"><input type="text" class="textbox" name="034" value="'v34'"></td>
+</tr>'
+,fi,
+,if ref(['phl_acv_fmt']val(v5000),v6031)<>'' or p(v31) then 
+'<tr>
+<td class="td1e">',ref(['phl_acv_fmt']val(v5000),v31),'&nbsp;<a href=JavaScript:tab_man(31);>[031]</a></td>
+<td class="td2"><input type="text" class="textbox" name="031" value="'v31'"></td>
+</tr>'
+,fi,
+,if ref(['phl_acv_fmt']val(v5000),v6032)<>'' or p(v32) then 
+'<tr>
+<td class="td1e">',ref(['phl_acv_fmt']val(v5000),v32),'&nbsp;<a href=JavaScript:tab_man(32);>[032]</a></td>
+<td class="td2"><input type="text" class="textbox" name="032" value="'v32'"></td>
+</tr>'
+,fi,
+,if v6.1<>'a' then
+  ,if ref(['phl_acv_fmt']val(v5000),v6033)<>'' or p(v33) then
+'<tr>
+  <td class="td1o">',ref(['phl_acv_fmt']val(v5000),v33),'&nbsp;<a href=JavaScript:tab_man(33);>[033]</a></td>
+  <td class="td2"><input type="text" class="textbox" name="033" value="'v33'"></td>
+</tr>'
+ ,fi
+,fi,
+,if ref(['phl_acv_fmt']val(v5000),v6035)<>'' or p(v35) then 
+'<tr>
+  <td class="td1e">',ref(['phl_acv_fmt']val(v5000),v35),'&nbsp;<a href=JavaScript:tab_man(35);>[035]</a></td>
+  <td class="td2"><input type="text" class="textbox" name="035" value="'v35'"></td>
+</tr>'
+,fi,
+,fi,
+,if v6='m' then
+'<tr><td class="td1e"></td><td class="topico">Nivel Monográfico</td></tr>'/
+,if ref(['phl_acv_fmt']val(v5000),v6016)<>'' or p(v16) then 
+
+'<tr>
+<td class="td1e">
+</td>
+<td class="td2"><a href="JavaScript:autoridades();">BD Autoridades</a>&nbsp;|&nbsp;<a href="JavaScript:indice_autores();">BD Catálogo</a></td>
+</tr>'
+
+'<tr>
+<td valign="top" class="td1e">&nbsp;',ref(['phl_acv_fmt']val(v5000),v16),'&nbsp;<a href=JavaScript:tab_man(16);>[016]</a>
+</td>
+<td class="td2">
+<input type="text" id="txtSearch" name="txtSearch" onkeyup="searchSuggest();" autocomplete="off" />
+ <div id="search_suggest"></div>
+ <br>
+ <textarea rows="3" name="016">',(v16/),'</textarea></td>
+</tr>'/
+,fi,
+,if ref(['phl_acv_fmt']val(v5000),v6017)<>'' or p(v17) then 
+'<tr>
+  <td class="td1e">',ref(['phl_acv_fmt']val(v5000),v17),'&nbsp;<a href=JavaScript:tab_man(17);>[017]</a></td>
+  <td class="td2"><textarea rows="3" name="017">',(v17/),'</textarea></td>
+</tr>'/
+,fi,
+,if ref(['phl_acv_fmt']val(v5000),v6018)<>'' or p(v18) then 
+'<tr>
+<td class="td1o">',ref(['phl_acv_fmt']val(v5000),v18),'&nbsp;<a href=JavaScript:tab_man(18);>[018]</a></td>
+<td class="td2"><textarea rows="2" name="018">',(v18/),'</textarea></td>
+</tr>'/
+,fi,
+,if ref(['phl_acv_fmt']val(v5000),v6181)<>'' or p(v181) then 
+'<tr>
+<td class="td1e">',ref(['phl_acv_fmt']val(v5000),v181),'&nbsp;<a href=JavaScript:tab_man(181);>[181]</a></td>
+<td class="td2"><textarea rows="2" name="181">',(v181/),'</textarea></td>
+</tr>'/
+,fi,
+,if ref(['phl_acv_fmt']val(v5000),v6019)<>'' or p(v19) then 
+'<tr>
+<td class="td1f">',ref(['phl_acv_fmt']val(v5000),v19),'&nbsp;<a href=JavaScript:tab_man(19);>[019]</a></td>
+<td class="td2"><textarea rows="2" name="019">'(v19/)'</textarea></td>
+</tr>'/
+,fi,
+,if ref(['phl_acv_fmt']val(v5000),v6015)<>'' or p(v15) then 
+'<tr>
+  <td class="td1e">',ref(['phl_acv_fmt']val(v5000),v15),'&nbsp;<a href=JavaScript:tab_man(15);>[015]</a></td>
+  <td class="td2"><textarea rows="2" name="015">'(v15/)'</textarea></td>
+</tr>'/
+,fi,
+,if ref(['phl_acv_fmt']val(v5000),v6063)<>'' or p(v63) then 
+'<tr>
+<td class="td1e">',ref(['phl_acv_fmt']val(v5000),v63),'&nbsp;<a href=JavaScript:tab_man(63);>[063]</a></td>
+<td class="td2"><input type="text" class="textbox" name="063" value="'v63'"></td>
+</tr>'/
+,fi,
+,if ref(['phl_acv_fmt']val(v5000),v6020)<>'' or p(v20) then 
+'<tr>
+<td class="td1e">',ref(['phl_acv_fmt']val(v5000),v20),'&nbsp;<a href=JavaScript:tab_man(20);>[020]</a></td>
+<td class="td2"><input type="text" class="textbox" name="020" value="'v20'"></td>
+</tr>'/
+,fi,
+,if ref(['phl_acv_fmt']val(v5000),v6021)<>'' or p(v21) then 
+'<tr>
+<td class="td1e">',ref(['phl_acv_fmt']val(v5000),v21),'&nbsp;<a href=JavaScript:tab_man(21);>[021]</a></td>
+<td class="td2"><input type="text" class="textbox" name="021" value="'v21'"></td>
+</tr>'/
+,fi,
+,if ref(['phl_acv_fmt']val(v5000),v6030)<>'' or p(v30) then 
+'<tr>
+  <td class="td1e">',ref(['phl_acv_fmt']val(v5000),v30),'&nbsp;<a href=JavaScript:tab_man(30);>[030]</a></td>
+  <td class="td2"><textarea rows="1" name="030">',(v30/),'</textarea></td>
+<tr>',
+,fi,
+,if ref(['phl_acv_fmt']val(v5000),v6038)<>'' or p(v38) then 
+'<tr>
+<td class="td1e">',ref(['phl_acv_fmt']val(v5000),v38),'&nbsp;<a href=JavaScript:tab_man(38);>[038]</a></td>
+<td class="td2"><input type="text" class="textbox" name="038" value="'v38'"></td>
+</tr>'/
+,fi,
+,if ref(['phl_acv_fmt']val(v5000),v6068)<>'' or p(v68) then 
+'<tr>
+<td class="td1f">',ref(['phl_acv_fmt']val(v5000),v68),'&nbsp;<a href=JavaScript:tab_man(68);>[068]</a></td>
+<td class="td2"><input type="text" class="textbox" name="068" value="'v68'"></td>
+</tr>'/
+,fi,
+,if ref(['phl_acv_fmt']val(v5000),v6035)<>'' or p(v35) then 
+'<tr>
+  <td class="td1e">',ref(['phl_acv_fmt']val(v5000),v35),'&nbsp;<a href=JavaScript:tab_man(35);>[035]</a></td>
+  <td class="td2"><input type="text" class="textbox" name="035" value="'v35'"></td>
+</tr>'
+,fi,
+,if ref(['phl_acv_fmt']val(v5000),v6069)<>'' or p(v69) then 
+'<tr>
+  <td class="td1e">',ref(['phl_acv_fmt']val(v5000),v69),'&nbsp;<a href=JavaScript:tab_man(69);>[069]</a></td>
+  <td class="td2"><input type="text" class="textbox" name="069" value="'v69'"></td>
+</tr>'/ 
+,fi,
+,fi,
+,if v6='s' then
+  '<tr><td class="td1e"></td><td class="topico">Nivel Série</td></tr>'/
+  ,if ref(['phl_acv_fmt']val(v5000),v6030)<>'' or p(v30) then 
+'<tr>
+  <td class="td1e">',ref(['phl_acv_fmt']val(v5000),v30),'&nbsp;<a href=JavaScript:tab_man(30);>[030]</a></td>
+  <td class="td2"><textarea rows="1" name="030">',(v30/),'</textarea></td>
+<tr>',/
+  ,fi,
+  ,if ref(['phl_acv_fmt']val(v5000),v6182)<>'' or p(v182) then 
+'<tr>
+  <td class="td1e">',ref(['phl_acv_fmt']val(v5000),v182),'&nbsp;<a href=JavaScript:tab_man(182);>[182]</a></td>
+  <td class="td2"><textarea rows="2" name="182">'(v182/)'</textarea></td>
+</tr>'/
+  ,fi,
+  ,if ref(['phl_acv_fmt']val(v5000),v6034)<>'' or p(v34) then 
+'<tr>
+  <td class="td1e">',ref(['phl_acv_fmt']val(v5000),v34),'&nbsp;<a href=JavaScript:tab_man(34);>[034]</a></td>
+  <td class="td2"><input type="text" class="textbox" name="034" value="'v34'"></td>
+</tr>'/
+  ,fi,
+  ,if ref(['phl_acv_fmt']val(v5000),v6031)<>'' or p(v31) then 
+'<tr>
+<td class="td1e">',ref(['phl_acv_fmt']val(v5000),v31),'&nbsp;<a href=JavaScript:tab_man(31);>[031]</a></td>
+<td class="td2"><input type="text" class="textbox" name="031" value="'v31'"></td>
+</tr>'/
+  ,fi,
+  ,if ref(['phl_acv_fmt']val(v5000),v6032)<>'' or p(v32) then 
+'<tr>
+<td class="td1e">',ref(['phl_acv_fmt']val(v5000),v32),'&nbsp;<a href=JavaScript:tab_man(32);>[032]</a></td>
+<td class="td2"><input type="text" class="textbox" name="032" value="'v32'"></td>
+</tr>'/
+  ,fi,
+  ,if ref(['phl_acv_fmt']val(v5000),v6033)<>'' or p(v33) then 
+'<tr>
+  <td class="td1o">',ref(['phl_acv_fmt']val(v5000),v33),'&nbsp;<a href=JavaScript:tab_man(33);>[033]</a></td>
+  <td class="td2"><input type="text" class="textbox" name="033" value="'v33'"></td>
+</tr>'/
+  ,fi,
+  ,if ref(['phl_acv_fmt']val(v5000),v6035)<>'' or p(v35) then 
+'<tr>
+  <td class="td1e">',ref(['phl_acv_fmt']val(v5000),v35),'&nbsp;<a href=JavaScript:tab_man(35);>[035]</a></td>
+  <td class="td2"><input type="text" class="textbox" name="035" value="'v35'"></td>
+</tr>'/
+  ,fi,
+  ,if ref(['phl_acv_fmt']val(v5000),v6020)<>'' or p(v20) then 
+'<tr>
+<td class="td1e">',ref(['phl_acv_fmt']val(v5000),v20),'&nbsp;<a href=JavaScript:tab_man(20);>[020]</a></td>
+<td class="td2"><input type="text" class="textbox" name="020" value="'v20'"></td>
+</tr>'/ 
+  ,fi,
+  ,if ref(['phl_acv_fmt']val(v5000),v6038)<>'' or p(v38) then 
+'<tr>
+<td class="td1e">',ref(['phl_acv_fmt']val(v5000),v38),'&nbsp;<a href=JavaScript:tab_man(38);>[038]</a></td>
+<td class="td2"><input type="text" class="textbox" name="038" value="'v38'"></td>
+</tr>'/
+  ,fi,
+,fi,
+,if v6:'c' then
+  '<tr><td class="td1e"></td><td class="topico">Nivel Coleção</td></tr>'/
+  ,if ref(['phl_acv_fmt']val(v5000),v6030)<>'' or p(v30) then 
+'<tr>
+  <td class="td1e">',ref(['phl_acv_fmt']val(v5000),v30),'&nbsp;<a href=JavaScript:tab_man(30);>[030]</a></td>
+  <td class="td2"><textarea rows="1" name="030">',(v30/),'</textarea></td>
+<tr>',
+  ,fi,
+  ,if ref(['phl_acv_fmt']val(v5000),v6182)<>'' or p(v182) then 
+'<tr>
+  <td class="td1e">',ref(['phl_acv_fmt']val(v5000),v182),'&nbsp;<a href=JavaScript:tab_man(182);>[182]</a></td>
+  <td class="td2"><textarea rows="2" name="182">'(v182/)'</textarea></td>
+</tr>'/
+  ,fi,
+  ,if ref(['phl_acv_fmt']val(v5000),v6033)<>'' or p(v33) then 
+'<tr>
+  <td class="td1o">',ref(['phl_acv_fmt']val(v5000),v33),'&nbsp;<a href=JavaScript:tab_man(33);>[033]</a></td>
+  <td class="td2"><input type="text" class="textbox" name="033" value="'v33'"></td>
+</tr>'/
+  ,fi,
+  ,if ref(['phl_acv_fmt']val(v5000),v6034)<>'' or p(v34) then 
+'<tr>
+  <td class="td1e">',ref(['phl_acv_fmt']val(v5000),v34),'&nbsp;<a href=JavaScript:tab_man(34);>[034]</a></td>
+  <td class="td2"><input type="text" class="textbox" name="034" value="'v34'"></td>
+</tr>'/
+  ,fi,
+  ,if ref(['phl_acv_fmt']val(v5000),v6035)<>'' or p(v35) then 
+'<tr>
+  <td class="td1e">',ref(['phl_acv_fmt']val(v5000),v35),'&nbsp;<a href=JavaScript:tab_man(35);>[035]</a></td>
+  <td class="td2"><input type="text" class="textbox" name="035" value="'v35'"></td>
+</tr>'/ 
+  ,fi,
+,fi,
+,'<tr><td class="td1e"></td><td class="topico">Imprenta</td></tr>'/
+,if ref(['phl_acv_fmt']val(v5000),v6066)<>'' or p(v66) then 
+'<tr>
+<td class="td1o">',ref(['phl_acv_fmt']val(v5000),v66),'&nbsp;<a href=JavaScript:tab_man(66);>[066]</a></td>
+<td class="td2"><input type="text" class="textbox" name="066" value="'v66'"></td>
+</tr>'
+,fi,
+,if ref(['phl_acv_fmt']val(v5000),v6067)<>'' or p(v67) then 
+'<tr>
+<td class="td1f">',ref(['phl_acv_fmt']val(v5000),v67),'&nbsp;<a href=JavaScript:tab_man(67);>[067]</a></td>
+<td class="td2"><input type="text" class="textbox" name="067" value="'v67'"></td>
+</tr>'/
+,fi,
+,if ref(['phl_acv_fmt']val(v5000),v6062)<>'' or p(v62) then 
+'<tr>
+<td class="td1o">',ref(['phl_acv_fmt']val(v5000),v62),'&nbsp;<a href=JavaScript:tab_man(62);>[062]</a></td>
+<td class="td2"><input type="text" class="textbox" name="062" value="'v62'"></td>
+</tr>'
+,fi,
+,if ref(['phl_acv_fmt']val(v5000),v6064)<>'' or p(v64) then 
+'<tr>
+<td class="td1o">',ref(['phl_acv_fmt']val(v5000),v64),'&nbsp;<a href=JavaScript:tab_man(64);>[064]</a></td>
+<td class="td2"><input type="text" class="textbox" name="064" value="'v64'" size="28"></td>
+</tr>'
+,fi,
+,if ref(['phl_acv_fmt']val(v5000),v6065)<>'' or p(v65) then 
+'<tr>
+<td class="td1o">',ref(['phl_acv_fmt']val(v5000),v65),'&nbsp;<a href=JavaScript:tab_man(65);>[065]</a></td>
+<td class="td2"><input type="text" class="textbox" name="065" value="'v65'" size="8"></td>
+</tr>'/
+,fi,
+,if ref(['phl_acv_fmt']val(v5000),v6008)<>'' or p(v8) then 
+'<tr>
+<td class="td1f">',ref(['phl_acv_fmt']val(v5000),v8),'&nbsp;<a href=JavaScript:tab_man(08);>[008]</a></td>
+<td class="td2"><textarea rows="2" name="008">',(mpl,v8/),'</textarea></td>
+</tr>'/
+,fi,
+,if ref(['phl_acv_fmt']val(v5000),v6061)<>'' or p(v61) then 
+'<tr>
+<td class="td1f">',ref(['phl_acv_fmt']val(v5000),v61),'&nbsp;<a href=JavaScript:tab_man(61);>[061]</a></td>
+<td class="td2"><textarea rows="3" name="061">'(v61/)'</textarea></td>
+</tr>'
+,fi,
+,if ref(['phl_acv_fmt']val(v5000),v6050)<>'' then
+  '<tr><td class="td1e"></td><td class="topico">'ref(['tab_txt']907,@tab_txt.pft,)'</td></tr>'/
+,fi
+,if ref(['phl_acv_fmt']val(v5000),v6050)<>'' or p(v50) then 
+'<tr>
+<td class="td1e">',ref(['phl_acv_fmt']val(v5000),v50),'&nbsp;<a href=JavaScript:tab_man(50);>[050]</a></td>
+<td class="td2"><input type="text" class="textbox" name="050" value="'v50'"></td>
+</tr>'/
+,fi,
+,if ref(['phl_acv_fmt']val(v5000),v6051)<>'' or p(v51) then 
+'<tr>
+  <td class="td1e">',ref(['phl_acv_fmt']val(v5000),v51),'&nbsp;<a href=JavaScript:tab_man(51);>[051]</a></td>
+  <td class="td2"><input type="text" class="textbox" name="051" value="'v51'"></td>
+</tr>'/
+,fi,
+,if ref(['phl_acv_fmt']val(v5000),v6054)<>'' or p(v54) then
+        '<tr><td class="td1f"></td><td class="topico">'ref(['tab_txt']908,@tab_txt.pft,)'</td></tr>'/
+      ,fi
+,if ref(['phl_acv_fmt']val(v5000),v6052)<>'' or p(v52) then 
+'<tr>
+<td class="td1f">',ref(['phl_acv_fmt']val(v5000),v52),'&nbsp;<a href=JavaScript:tab_man(52);>[052]</a></td>
+<td class="td2"><textarea rows="2" name="052">'(v52/)'</textarea></td>
+</tr>'
+,fi,
+,if ref(['phl_acv_fmt']val(v5000),v6053)<>'' or p(v53) then 
+'<tr>
+<td class="td1f">',ref(['phl_acv_fmt']val(v5000),v53),'&nbsp;<a href=JavaScript:tab_man(53);>[053]</a></td>
+<td class="td2"><input type="text" class="textbox" name="053" value="'v53'"></td>
+</tr>'/ 
+,fi,
+,if ref(['phl_acv_fmt']val(v5000),v6054)<>'' or p(v54) then 
+'<tr>
+  <td class="td1o">',ref(['phl_acv_fmt']val(v5000),v54),'&nbsp;<a href=JavaScript:tab_man(54);>[054]</a></td>
+  <td class="td2"><input type="text" class="textbox" name="054" value="'v54'"></td>
+</tr>'
+,fi,
+,if ref(['phl_acv_fmt']val(v5000),v6055)<>'' or p(v55) then 
+'<tr>
+  <td class="td1o">',ref(['phl_acv_fmt']val(v5000),v55),'&nbsp;<a href=JavaScript:tab_man(55);>[055]</a></td>
+  <td class="td2"><input type="text" class="textbox" name="055" value="'v55'"></td>
+</tr>'
+,fi,
+,if ref(['phl_acv_fmt']val(v5000),v6056)<>'' or p(v56) then 
+'<tr>
+  <td class="td1o">',ref(['phl_acv_fmt']val(v5000),v56),'&nbsp;<a href=JavaScript:tab_man(56);>[056]</a></td>
+  <td class="td2"><input type="text" class="textbox" name="056" value="'v56'"></td>
+</tr>'/
+,fi,
+,if ref(['phl_acv_fmt']val(v5000),v6057)<>'' or p(v57) then 
+'<tr>
+<td class="td1f">',ref(['phl_acv_fmt']val(v5000),v57),'&nbsp;<a href=JavaScript:tab_man(57);>[057]</a></td>
+<td class="td2"><input type="text" class="textbox" name="057" value="'v57'"></td>
+</tr>'/
+,fi,
+,if ref(['phl_acv_fmt']val(v5000),v6059)<>'' or p(v59) then
+        '<tr><td class="td1f"></td><td class="topico">'ref(['tab_txt']909,@tab_txt.pft,)'</td></tr>'/
+      ,fi
+,if ref(['phl_acv_fmt']val(v5000),v6058)<>'' or p(v58) then 
+'<tr>
+<td class="td1f">',ref(['phl_acv_fmt']val(v5000),v58),'&nbsp;<a href=JavaScript:tab_man(58);>[058]</a></td>
+<td class="td2"><textarea rows="2" name="058">'(v58/)'</textarea></td>
+</tr>'/
+,fi,
+,if ref(['phl_acv_fmt']val(v5000),v6059)<>'' or p(v59) then 
+'<tr>
+<td class="td1f">',ref(['phl_acv_fmt']val(v5000),v59),'&nbsp;<a href=JavaScript:tab_man(59);>[059]</a></td>
+<td class="td2"><input type="text" class="textbox" name="059" value="'v59'"></td>
+</tr>'/
+,fi,
+,if ref(['phl_acv_fmt']val(v5000),v6060)<>'' or p(v60) then 
+'<tr>
+<td class="td1f">',ref(['phl_acv_fmt']val(v5000),v60),'&nbsp;<a href=JavaScript:tab_man(60);>[060]</a></td>
+<td class="td2"><input type="text" class="textbox" name="060" value="'v60'"></td>
+</tr>'/
+,fi,
+'<tr><td class="td1e"></td><td class="topico">'ref(['tab_txt']910,@tab_txt.pft,)'</td></tr>'/
+,if ref(['phl_acv_fmt']val(v5000),v6085)<>'' or p(v85) then
+  ,if v6.1<>'a' then
+'<tr>
+<td class="td1f">',ref(['phl_acv_fmt']val(v5000),v85),'&nbsp;<a href=JavaScript:tab_man(85);>[085]</a></td>
+<td class="td2">
+<select size="1" name="085">',('<option selected value="',v85,'">',ref(['phl_mec']val(v85),@tab_txt.pft,),'</option>'),
+(,if val(v85[1])<>val(v3501^b) then '<option value="'v3501^b'">'v3501^a'</option>' fi,),'</select></td>
+</tr>'/
+  ,fi
+,fi,
+,if ref(['phl_acv_fmt']val(v5000),v6086)<>'' or p(v86) then 
+'<tr>
+  <td class="td1e">',ref(['phl_acv_fmt']val(v5000),v86),'&nbsp;<a href=JavaScript:tab_man(86);>[086]</a></td>
+  <td class="td2"><textarea rows="3" name="086">'(v86/)'</textarea></td>
+</tr>'
+,fi,
+,if ref(['phl_acv_fmt']val(v5000),v6087)<>'' or p(v87) then
+
+'<tr>
+  <td class="td1e">
+  </td>
+  <td class="td2"><a href="JavaScript:vocabulario();">BD Vocabulário</a>&nbsp;|&nbsp;<a href="JavaScript:indice_assuntos();">BD Catálogo</a>
+  </td>
+</tr>',
+
+'<tr>
+  <td class="td1e">&nbsp;',ref(['phl_acv_fmt']val(v5000),v87),'&nbsp;<a href=JavaScript:tab_man(87);>[087]</a>
+  </td>
+  <td class="td2"><textarea rows="5" name="087">',(v87/),'</textarea>
+  </td>
+</tr>',
+,fi,
+,if ref(['phl_acv_fmt']val(v5000),v6088)<>'' or p(v88) then 
+'<tr>
+<td class="td1f">',ref(['phl_acv_fmt']val(v5000),v88),'&nbsp;<a href=JavaScript:tab_man(88);>[088]</a></td>
+<td class="td2"><textarea rows="3" name="088">'(v88/)'</textarea></td>
+</tr>'
+,fi,
+,if ref(['phl_acv_fmt']val(v5000),v6083)<>'' or p(v83) then 
+'<tr>
+  <td class="td1f">',ref(['phl_acv_fmt']val(v5000),v83),'&nbsp;<a href=JavaScript:tab_man(83);>[083]</a></td>
+  <td class="td2">
+    <textarea rows=5 name=083>'(v83/)'</textarea>
+  </td>
+</tr>'
+,fi,
+,if ref(['phl_acv_fmt']val(v5000),v6041)<>'' or p(v41) then 
+'<tr>
+<td class="td1f">',ref(['phl_acv_fmt']val(v5000),v41),'&nbsp;<a href=JavaScript:tab_man(41);>[041]</a></td>
+<td class="td2">
+<select multiple size="4" name="041">',
+('<option selected value="'v41'">',ref(['phl_idm']val(v41),@tab_txt.pft,),'</option>'),
+('<option value="'v3078^b'">',v3078^a,'</option>'),'</select>
+</td>
+</tr>'
+,fi,
+,if ref(['phl_acv_fmt']val(v5000),v6084)<>'' or p(v84) then 
+'<tr>
+<td class="td1f">',ref(['phl_acv_fmt']val(v5000),v84),'&nbsp;<a href=JavaScript:tab_man(84);>[084]</a></td>
+<td><textarea rows="5" name="htm">'(v84/)'</textarea></td>
+</tr>'
+,fi,
+,if ref(['phl_acv_fmt']val(v5000),v6094)<>'' or p(v94) then 
+'<tr>
+<td class="td1f">',ref(['phl_acv_fmt']val(v5000),v94),'&nbsp;<a href=JavaScript:tab_man(94);>[094]</a></td>
+<td class="td2"><textarea rows="2" name="094">',(v94/),'</textarea></td>
+</tr>'
+,fi,
+,if ref(['phl_acv_fmt']val(v5000),v6072)<>'' or p(v72) then 
+'<tr>
+<td class="td1f">',ref(['phl_acv_fmt']val(v5000),v72),'&nbsp;<a href=JavaScript:tab_man(72);>[072]</a></td>
+<td class="td2"><input type="text" class="textbox" name="072" value="'v72'"></td>
+</tr>'
+,fi,
+,if ref(['phl_acv_fmt']val(v5000),v6074)<>'' or p(v74) then 
+'<tr>
+<td class="td1f">',ref(['phl_acv_fmt']val(v5000),v74),'&nbsp;<a href=JavaScript:tab_man(74);>[074]</a></td>
+<td class="td2"><input type="text" class="textbox" name="074" value="'v74'"></td>
+</tr>'
+,fi,
+,if ref(['phl_acv_fmt']val(v5000),v6075)<>'' or p(v75) then 
+'<tr>
+<td class="td1f">',ref(['phl_acv_fmt']val(v5000),v75),'&nbsp;<a href=JavaScript:tab_man(75);>[075]</a>
+</td><td class="td2"><input type="text" class="textbox" name="075" value="'v75'"></td>
+</tr>'/
+,fi,
+,if ref(['phl_acv_fmt']val(v5000),v6076)<>'' or p(v76) then 
+'<tr>
+<td class="td1f">',ref(['phl_acv_fmt']val(v5000),v76),'&nbsp;<a href=JavaScript:tab_man(76);>[076]</a></td>
+<td class="td2"><textarea rows="2" name="076">'(v76/)'</textarea></td>
+</tr>'/
+,fi,
+,if ref(['phl_acv_fmt']val(v5000),v6078)<>'' or p(v78) then 
+'<tr>
+<td class="td1f">',ref(['phl_acv_fmt']val(v5000),v78),'&nbsp;<a href=JavaScript:tab_man(78);>[078]</a></td>
+<td class="td2"><textarea rows="2" name="078">'(v78/)'</textarea></td>
+</tr>'/
+,fi,
+,if ref(['phl_acv_fmt']val(v5000),v6079)<>'' or p(v79) then 
+'<tr>
+<td class="td1f">',ref(['phl_acv_fmt']val(v5000),v79),'&nbsp;<a href=JavaScript:tab_man(79);>[079]</a></td>
+<td class="td2">
+<select multiple size="4" name="079">',
+('<option selected value="'v79'">',ref(['phl_cur']val(v79),@tab_txt.pft,),'</option>'/),
+('<option value="'v3092^b'">',v3092^a,'</option>'/),
+'</select></td>
+</tr>'/
+,fi,
+,if ref(['phl_acv_fmt']val(v5000),v6082)<>'' or p(v82) then 
+'<tr>
+<td class="td1f">',ref(['phl_acv_fmt']val(v5000),v82),'&nbsp;<a href=JavaScript:tab_man(82);>[082]</a></td>
+<td class="td2"><textarea rows="2" name="082">'(v82/)'</textarea></td>
+</tr>'/ 
+,fi,
+,'<tr><td class="td1e"></td><td class="topico">Informações Complementares</td></tr>'/
+,if ref(['phl_acv_fmt']val(v5000),v6040)<>'' or p(v40) then 
+'<tr>
+  <td class="td1e">',ref(['phl_acv_fmt']val(v500),v40),'&nbsp;<a href=JavaScript:tab_man(40);>[040]</a></td>
+  <td class="td2">
+  <select multiple size="4" name="040">',
+  ('<option selected value="'v40'">',ref(['phl_idm']val(v40),@tab_txt.pft,)'</option>'),
+  ('<option value="'v3078^b'">',v3078^a,'</option>'),
+  '</select>
+  </td>
+</tr>',
+,fi,
+,if ref(['phl_acv_fmt']val(v5000),v6070)<>'' or p(v70) then 
+'<tr>
+<td class="td1f">',ref(['phl_acv_fmt']val(v5000),v70),'&nbsp;<a href=JavaScript:tab_man(70);>[070]</a></td>
+<td class="td2"><input type="text" class="textbox" name="070" value="'v70'"></td>
+</tr>'
+,fi,
+,if ref(['phl_acv_fmt']val(v5000),v6089)<>'' or p(v89) then 
+'<tr>
+  <td class="td1f">',ref(['phl_acv_fmt']val(v5000),v89),'&nbsp;<a href=JavaScript:tab_man(89);>[089]</a></td>
+  <td class="td2"><textarea rows="3" name="089">'(v89/)'</textarea></td>
+</tr>'
+,fi,
+,if ref(['phl_acv_fmt']val(v5000),v6023)<>'' or p(v23) then 
+'<tr>
+<td class="td1f">',ref(['phl_acv_fmt']val(v5000),v23),'&nbsp;<a href=JavaScript:tab_man(23);>[023]</a></td>
+<td class="td2"><textarea rows="2" name="023">'(v23/)'</textarea></td>
+</tr>'
+,fi,
+,if ref(['phl_acv_fmt']val(v5000),v6024)<>'' or p(v24) then 
+'<tr>
+<td class="td1f">',ref(['phl_acv_fmt']val(v5000),v24),'&nbsp;<a href=JavaScript:tab_man(24);>[024]</a></td>
+<td class="td2"><textarea rows="2" name="024">'(v24/)'</textarea></td>
+</tr>'
+,fi,
+,if ref(['phl_acv_fmt']val(v5000),v6025)<>'' or p(v25) then 
+'<tr>
+<td class="td1f">',ref(['phl_acv_fmt']val(v5000),v25),'&nbsp;<a href=JavaScript:tab_man(25);>[025]</a></td>
+<td class="td2"><textarea rows="2" name="025">'(v25/)'</textarea></td>
+</tr>',
+,fi,
+,if ref(['phl_acv_fmt']val(v5000),v6036)<>'' or p(v36) then 
+'<tr>
+<td class="td1f">',ref(['phl_acv_fmt']val(v5000),v36),'&nbsp;<a href=JavaScript:tab_man(36);>[036]</a></td>
+<td class="td2"><textarea rows="2" name="036">',(mpl,v36/),'</textarea></td>
+</tr>'
+,fi,
+,if ref(['phl_acv_fmt']val(v5000),v6037)<>'' or p(v37) then 
+'<tr>
+<td class="td1f">',ref(['phl_acv_fmt']val(v5000),v37),'&nbsp;<a href=JavaScript:tab_man(37);>[037]</a></td>
+<td class="td2"><textarea rows="2" name="037">',(mpl,v37/),'</textarea></td>
+</tr>'
+,fi,
+,if ref(['phl_acv_fmt']val(v5000),v6042)<>'' or p(v42) then 
+'<tr>
+<td class="td1f">',ref(['phl_acv_fmt']val(v5000),v42),'&nbsp;<a href=JavaScript:tab_man(42);>[042]</a></td>
+<td class="td2"><textarea rows="2" name="042">'(v42/)'</textarea></td>
+</tr>'
+,fi,
+,if ref(['phl_acv_fmt']val(v5000),v6043)<>'' or p(v43) then 
+'<tr>
+<td class="td1f">',ref(['phl_acv_fmt']val(v5000),v43),'&nbsp;<a href=JavaScript:tab_man(43);>[043]</a></td>
+<td class="td2"><textarea rows="2" name="043">'(v43/)'</textarea></td>
+</tr>'
+,fi,
+,if ref(['phl_acv_fmt']val(v5000),v6044)<>'' or p(v44) then 
+'<tr>
+<td class="td1f">',ref(['phl_acv_fmt']val(v5000),v44),'&nbsp;<a href=JavaScript:tab_man(44);>[044]</a></td>
+<td class="td2"><textarea rows="2" name="044">'(v44/)'</textarea></td>
+</tr>'
+,fi,
+,if ref(['phl_acv_fmt']val(v5000),v6045)<>'' or p(v45) then 
+'<tr>
+<td class="td1f">',ref(['phl_acv_fmt']val(v5000),v45),'&nbsp;<a href=JavaScript:tab_man(45);>[045]</a></td>
+<td class="td2"><textarea rows="2" name="045">'(v45/)'</textarea></td>
+</tr>'/
+,fi,
+,if ref(['phl_acv_fmt']val(v5000),v6046)<>'' or p(v46) then 
+'<tr>
+<td class="td1f">',ref(['phl_acv_fmt']val(v5000),v46),'&nbsp;<a href=JavaScript:tab_man(46);>[046]</a></td>
+<td class="td2"><textarea rows="2" name="046">'(v46/)'</textarea></td>
+</tr>'/
+,fi,
+,if ref(['phl_acv_fmt']val(v5000),v6047)<>'' or p(v47) then 
+'<tr>
+<td class="td1f">',ref(['phl_acv_fmt']val(v5000),v47),'&nbsp;<a href=JavaScript:tab_man(47);>[047]</a></td>
+<td class="td2"><textarea rows="2" name="047">'(v47/)'</textarea></td>
+</tr>'
+,fi,
+,if ref(['phl_acv_fmt']val(v5000),v6048)<>'' or p(v48) then 
+'<tr>
+<td class="td1f">',ref(['phl_acv_fmt']val(v5000),v48),'&nbsp;<a href=JavaScript:tab_man(48);>[048]</a></td>
+<td class="td2"><textarea rows="2" name="048">'(v48/)'</textarea></td>
+</tr>'/
+,fi,
+,if ref(['phl_acv_fmt']val(v5000),v6049)<>'' or p(v49) then 
+'<tr>
+<td class="td1f">',ref(['phl_acv_fmt']val(v5000),v49),'&nbsp;<a href=JavaScript:tab_man(49);>[049]</a></td>
+<td class="td2"><textarea rows="2" name="049">'(v49/)'</textarea></td>
+</tr>'/
+,fi,
+,if ref(['phl_acv_fmt']val(v5000),v6073)<>'' or p(v73) then 
+'<tr>
+<td class="td1f">',ref(['phl_acv_fmt']val(v5000),v73),'&nbsp;<a href=JavaScript:tab_man(73);>[073]</a></td>
+<td class="td2"><textarea rows="2" name="073">'(v73/)'</textarea></td>
+</tr>'/
+,fi,
+,if ref(['phl_acv_fmt']val(v5000),v6077)<>'' or p(v77) then 
+'<tr>
+<td class="td1f">',ref(['phl_acv_fmt']val(v5000),v77),'&nbsp;<a href=JavaScript:tab_man(77);>[077]</a></td>
+<td class="td2"><textarea rows="2" name="077">'(v77/)'</textarea></td>
+</tr>'/
+,fi,
+,if ref(['phl_acv_fmt']val(v5000),v6080)<>'' or p(v80) then 
+'<tr>
+<td class="td1f">',ref(['phl_acv_fmt']val(v5000),v80),'&nbsp;<a href=JavaScript:tab_man(80);>[080]</a></td>
+<td class="td2"><textarea rows="2" name="080">'(v80/)'</textarea></td>
+</tr>'/
+,fi,
+,if ref(['phl_acv_fmt']val(v5000),v6081)<>'' or p(v81) then 
+'<tr>
+<td class="td1f">',ref(['phl_acv_fmt']val(v5000),v81),'&nbsp;<a href=JavaScript:tab_man(81);>[081]</a></td>
+<td class="td2"><textarea rows="2" name="081">'(v81/)'</textarea></td>
+</tr>'/
+,fi,
+,if ref(['phl_acv_fmt']val(v5000),v6091)<>'' or p(v91) then 
+'<tr>
+<td class="td1f">',ref(['phl_acv_fmt']val(v5000),v91),'&nbsp;<a href=JavaScript:tab_man(91);>[091]</a></td>
+<td class="td2"><textarea rows="2" name="091">',(v91/),'</textarea></td>
+</tr>'/
+,fi,
+,if ref(['phl_acv_fmt']val(v5000),v6092)<>'' or p(v92) then 
+'<tr>
+<td class="td1f">',ref(['phl_acv_fmt']val(v5000),v92),'&nbsp;<a href=JavaScript:tab_man(92);>[092]</a></td>
+<td class="td2"><textarea rows="2" name="092">',(v92/),'</textarea></td>
+</tr>'/
+,fi,
+,if ref(['phl_acv_fmt']val(v5000),v6093)<>'' or p(v93) then 
+'<tr>
+<td class="td1f">',ref(['phl_acv_fmt']val(v5000),v93),'&nbsp;<a href=JavaScript:tab_man(93);>[093]</a></td>
+<td class="td2"><textarea rows="2" name="093">',(v93/),'</textarea></td>
+</tr>'/
+,fi,
+,if ref(['phl_acv_fmt']val(v5000),v6095)<>'' or p(v95) then 
+'<tr>
+<td class="td1f">',ref(['phl_acv_fmt']val(v5000),v95),'&nbsp;<a href=JavaScript:tab_man(95);>[095]</a></td>
+<td class="td2"><textarea rows="2" name="095">',(v95/),'</textarea></td>
+</tr>'/
+,fi,
+,if ref(['phl_acv_fmt']val(v5000),v6096)<>'' or p(v96) then 
+'<tr>
+<td class="td1f">',ref(['phl_acv_fmt']val(v5000),v96),'&nbsp;<a href=JavaScript:tab_man(96);>[096]</a></td>
+<td><textarea rows="5" name="htr">'(v96/)'</textarea></td>
+</tr>'/
+,fi,
+,if ref(['phl_acv_fmt']val(v5000),v6097)<>'' or p(v97) then 
+'<tr>
+<td class="td1f">',ref(['phl_acv_fmt']val(v5000),v97),'&nbsp;<a href=JavaScript:tab_man(97);>[097]</a></td>
+<td class="td2"><textarea rows="2" name="097">',(v97/),'</textarea></td>
+</tr>'/
+,fi,
+,if ref(['phl_acv_fmt']val(v5000),v6098)<>'' or p(v98) then 
+'<tr>
+<td class="td1f">',ref(['phl_acv_fmt']val(v5000),v98),'&nbsp;<a href=JavaScript:tab_man(98);>[098]</a></td>
+<td class="td2"><textarea rows="2" name="098">',(v98/),'</textarea></td>
+</tr>'/
+,fi,
+,if ref(['phl_acv_fmt']val(v5000),v6099)<>'' or p(v99) then 
+'<tr>
+<td class="td1f">',ref(['phl_acv_fmt']val(v5000),v99),'&nbsp;<a href=JavaScript:tab_man(99);>[099]</a></td>
+<td class="td2"><textarea rows="2" name="099">',(v99/),'</textarea></td>
+</tr>'/
+,fi,
+,if ref(['phl_acv_fmt']val(v5000),v6186)<>'' then
+'<tr>
+  <td class="td1f">',ref(['phl_acv_fmt']val(v5000),v186),'&nbsp;<a href=JavaScript:tab_man(186);>[186]</a></td>
+  <td class="td2">
+    <textarea rows=5 name=186>'(v186/)'</textarea>
+  </td>
+</tr>'/
+,fi,
+,if v6:'a' then
+'<tr>
+<td class="td1o">ID (todo)&nbsp;<a href=JavaScript:tab_man(996);>[996]</a></td>
+<td class="td2"><input type="text" class="textbox" name="996" value="'v996'"></td>
+</tr>'/
+,fi

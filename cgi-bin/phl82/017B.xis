@@ -1,0 +1,77 @@
+<!-- Gera extratos, sem login -->
+     <IsisScript name="017B.xis">
+
+<!-- Define o tipo de conteúdo dos htmls que gerados dinamicamente -->
+     <display><pft>'Content-type: text/html; charset=iso-8859-1'/#</pft></display>
+
+<!-- Inclue funcao (vars) que carrega as variaveis de configuracao -->
+     <include>/Data/DadosApl/ACEBIB/ant/cgi-bin/phl82/001B.fnc</include>
+     
+<!-- Inclue funcao (manutencao) que verifica estado de manutencao do sistema -->
+<!-- <include>/Data/DadosApl/ACEBIB/ant/cgi-bin/phl82/manutencao.fnc</include> 20110725 Zedu - suspenso -->
+
+<!-- Inclue funcao (007) que obtem emprestimos do usuario -->
+     <include>/Data/DadosApl/ACEBIB/ant/cgi-bin/phl82/007B.fnc</include>
+
+<!-- Inclue funcao (003) que carrega status do titulo -->
+<!-- <include>/Data/DadosApl/ACEBIB/ant/cgi-bin/phl82/003.fnc</include> 20110725 Zedu - suspenso -->
+
+<!-- Inicia a secao do script -->
+     <section>
+
+<!-- Carrega variáveis de configuração -->
+     <call name="001">now</call>
+     
+<!-- Verifica estado de manutencao  -->
+<!-- <call name="manutencao">now</call> 20110725 Zedu - suspenso -->
+
+<!-- Carrega variáveis do cliente -->
+     <field action="cgi" tag="951">usr</field>
+     <field action="replace" tag="951"><pft>,replace(v951,' ',''),</pft></field>
+
+<!-- Armazena em v2211 dados sobre permissoes do usuario -->
+<!--20110725 Zedu - deletado -->
+ 
+<!-- Verifica se usuário tem permissões para esta rotina -->
+<!--20110725 Zedu - deletado -->
+
+    <field action="replace" tag="951">
+      <pft>,
+        if p(v951) then mhu,v951,mpl, else
+         if s(v3000^3)='usuario' then mhu,v3000^2,mpl, fi,
+        fi
+      </pft></field>
+<!--20110725 Zedu - deletado -->
+
+<!--20110725 Zedu - deletado -->
+
+<!--20110725 Zedu - deletado -->
+
+<!--20110725 Zedu - deletado -->
+    
+<!--20110725 Zedu - deletado -->
+    
+<!--Verifica se usuario é valido -->
+    <label>usuario</label>
+    <flow action="jump">
+           <pft>
+             if npost(['phl_usr'],'USR='v951)<>0 then 'EXTUSR' else '380' fi,,
+           </pft>
+           <file action="close" type="database">phl_usr</file>
+         </flow>
+
+    <label>380</label>
+    <field action="replace" tag="250">380</field>
+    <display><htmlpft><pft>,"<center>***<b>"v951"</b>***</center>",</pft></htmlpft></display>
+    <display><htmlpft><pft>,ref(['tab_fmx']10,v4),</pft></htmlpft></display>
+    <flow action="exit">1</flow>
+
+<!--Verifica se tombo é valido -->
+<!--20110725 Zedu - deletado -->
+
+    <label>EXTUSR</label>
+    <call name="007">now</call>
+    <flow action="exit">1</flow>
+
+</section>
+</IsisScript>

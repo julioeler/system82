@@ -1,0 +1,80 @@
+,if v6='am' then /
+  ,if p(v182) then '<input type="hidden" name="182" value="'(v182/)'">',fi,/
+  ,if p(v34)  then '<input type="hidden" name="034" value="'(v34 /)'">',fi,/
+  ,if p(v31)  then '<input type="hidden" name="031" value="'(v31 /)'">',fi,/
+  ,if p(v32)  then '<input type="hidden" name="032" value="'(v32 /)'">',fi,/
+  ,if p(v33)  then '<input type="hidden" name="033" value="'(v33 /)'">',fi,/
+,fi/* v6='am' */,
+
+,if v6='as' then
+  ,if p(v16)  then '<input type="hidden" name="016" value="'(v16 /)'">',fi,/
+  ,if p(v17)  then '<input type="hidden" name="017" value="'(v17 /)'">',fi,/
+  ,if p(v18)  then '<input type="hidden" name="018" value="'(v18 /)'">',fi,/
+  ,if p(v181) then '<input type="hidden" name="181" value="'(v181/)'">',fi,/
+  ,if p(v19)  then '<input type="hidden" name="019" value="'(v19 /)'">',fi,/
+  ,if p(v15)  then '<input type="hidden" name="015" value="'(v15 /)'">',fi,/
+  ,if p(v63)  then '<input type="hidden" name="063" value="'(v63 /)'">',fi,/
+  ,if p(v20)  then '<input type="hidden" name="020" value="'(v20 /)'">',fi,/
+  ,if p(v21)  then '<input type="hidden" name="021" value="'(v21 /)'">',fi,/
+  ,if p(v38)  then '<input type="hidden" name="038" value="'(v38 /)'">',fi,/
+  ,if p(v68)  then '<input type="hidden" name="068" value="'(v68 /)'">',fi,/
+  ,if p(v69)  then '<input type="hidden" name="069" value="'(v69 /)'">',fi,/
+,fi/* v6='as' */,
+
+,if v6='m' then
+  ,if p(v10)  then '<input type="hidden" name="010" value="'(v10 /)'">',fi,/
+  ,if p(v11)  then '<input type="hidden" name="011" value="'(v11 /)'">',fi,/
+  ,if p(v12)  then '<input type="hidden" name="012" value="'(v12 /)'">',fi,/
+  ,if p(v13)  then '<input type="hidden" name="013" value="'(v13 /)'">',fi,/
+  ,if p(v121) then '<input type="hidden" name="121" value="'(v121/)'">',fi,/
+  ,if p(v14)  then '<input type="hidden" name="014" value="'(v14 /)'">',fi,/
+  ,if p(v141) then '<input type="hidden" name="141" value="'(v141/)'">',fi,/
+  ,if p(v182) then '<input type="hidden" name="182" value="'(v182/)'">',fi,/
+  ,if p(v34)  then '<input type="hidden" name="034" value="'(v34 /)'">',fi,/
+  ,if p(v31)  then '<input type="hidden" name="031" value="'(v31 /)'">',fi,/
+  ,if p(v32)  then '<input type="hidden" name="032" value="'(v32 /)'">',fi,/
+  ,if p(v33)  then '<input type="hidden" name="033" value="'(v33 /)'">',fi,/
+,fi/* v6='m' */,
+
+,if v6='s' then
+  ,if p(v10)  then '<input type="hidden" name="010" value="'(v10 /)'">',fi,/
+  ,if p(v11)  then '<input type="hidden" name="011" value="'(v11 /)'">',fi,/
+  ,if p(v12)  then '<input type="hidden" name="012" value="'(v12 /)'">',fi,/
+  ,if p(v13)  then '<input type="hidden" name="013" value="'(v13 /)'">',fi,/
+  ,if p(v121) then '<input type="hidden" name="121" value="'(v121/)'">',fi,/
+  ,if p(v14)  then '<input type="hidden" name="014" value="'(v14 /)'">',fi,/
+  ,if p(v141) then '<input type="hidden" name="141" value="'(v141/)'">',fi,/
+  ,if p(v16)  then '<input type="hidden" name="016" value="'(v16 /)'">',fi,/
+  ,if p(v17)  then '<input type="hidden" name="017" value="'(v17 /)'">',fi,/
+  ,if p(v181) then '<input type="hidden" name="181" value="'(v181/)'">',fi,/
+  ,if p(v19)  then '<input type="hidden" name="019" value="'(v19 /)'">',fi,/
+  ,if p(v15)  then '<input type="hidden" name="015" value="'(v15 /)'">',fi,/
+  ,if p(v63)  then '<input type="hidden" name="063" value="'(v63 /)'">',fi,/
+  ,if p(v21)  then '<input type="hidden" name="021" value="'(v21 /)'">',fi,/
+  ,if p(v38)  then '<input type="hidden" name="038" value="'(v38 /)'">',fi,/
+  ,if p(v68)  then '<input type="hidden" name="068" value="'(v68 /)'">',fi,/
+  ,if p(v69)  then '<input type="hidden" name="069" value="'(v69 /)'">',fi,/
+,fi/* v6='s' */,
+
+,if v6:'c' then
+  ,if p(v10)  then '<input type="hidden" name="010" value="'(v10 /)'">',fi,/
+  ,if p(v11)  then '<input type="hidden" name="011" value="'(v11 /)'">',fi,/
+  ,if p(v12)  then '<input type="hidden" name="012" value="'(v12 /)'">',fi,/
+  ,if p(v13)  then '<input type="hidden" name="013" value="'(v13 /)'">',fi,/
+  ,if p(v121) then '<input type="hidden" name="121" value="'(v121/)'">',fi,/
+  ,if p(v14)  then '<input type="hidden" name="014" value="'(v14 /)'">',fi,/
+  ,if p(v141) then '<input type="hidden" name="141" value="'(v141/)'">',fi,/
+  ,if p(v16)  then '<input type="hidden" name="016" value="'(v16 /)'">',fi,/
+  ,if p(v17)  then '<input type="hidden" name="017" value="'(v17 /)'">',fi,/
+  ,if p(v18)  then '<input type="hidden" name="018" value="'(v18 /)'">',fi,/
+  ,if p(v181) then '<input type="hidden" name="181" value="'(v181/)'">',fi,/
+  ,if p(v19)  then '<input type="hidden" name="019" value="'(v19 /)'">',fi,/
+  ,if p(v15)  then '<input type="hidden" name="015" value="'(v15 /)'">',fi,/
+  ,if p(v63)  then '<input type="hidden" name="063" value="'(v63 /)'">',fi,/
+  ,if p(v20)  then '<input type="hidden" name="020" value="'(v20 /)'">',fi,/
+  ,if p(v21)  then '<input type="hidden" name="021" value="'(v21 /)'">',fi,/
+  ,if p(v31)  then '<input type="hidden" name="031" value="'(v31 /)'">',fi,/
+  ,if p(v32)  then '<input type="hidden" name="032" value="'(v32 /)'">',fi,/
+  ,if p(v68)  then '<input type="hidden" name="068" value="'(v68 /)'">',fi,/
+  ,if p(v69)  then '<input type="hidden" name="069" value="'(v69 /)'">',fi,/
+,fi/* v6:'c' */,

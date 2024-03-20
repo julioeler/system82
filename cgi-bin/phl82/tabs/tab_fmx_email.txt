@@ -1,0 +1,36 @@
+Mfn's de tab_fmx contendo email's
+
+!ID 000097
+!v004!'<disponivel>'/
+
+!ID 000109
+!v004!'<correio>'/
+
+!ID 000111
+!v004!'<correio>'/
+
+!ID 000155
+!v004!'<email_atraso>'/
+
+!ID 000157
+!v004!'<email_atraso>'/
+!v004!'<email_alerta>'/
+
+!ID 000159
+!v004!'<email_atraso>'/
+!v004!'<email_alerta>'/
+
+!ID 000161
+!v004!'<email_atraso>'/
+
+!ID 000245
+!v004!'<texto_email>'/
+
+!ID 000246
+!v004!'<texto_email>'/
+
+!ID 000247
+!v004!'<texto_email>'/
+
+!ID 000255
+!v004!'<texto_email>'/

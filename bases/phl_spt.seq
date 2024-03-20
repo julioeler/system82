@@ -1,0 +1,402 @@
+!ID 000001
+!v301!Cerâmica
+!v302!Cerámica
+!v303!Cerâmic
+!v304!Cerâmica
+!v305!Cerâmica
+!v370!/acp2/img/057.gif
+!v371!1
+!v999!^d20010501^belysio
+!v999!^d20091217^h0246^bZedu
+!ID 000002
+!v301!Cartolina, cartão
+!v302!Cartolina, cartão
+!v303!Cartoon
+!v304!Cartolina, cartão
+!v305!Cartolina, cartão
+!v370!/acp2/img/032.gif
+!v371!1
+!v999!^d20010501^belysio
+!ID 000003
+!v301!Cassete
+!v302!Cassete
+!v303!Cassete
+!v304!Cassete
+!v305!Cassete
+!v370!/acp2/img/033.gif
+!v999!^d20010501^belysio
+!v999!^d20110713^h1453^bZedu
+!ID 000004
+!v301!CD
+!v302!CD
+!v303!CD
+!v304!CD
+!v305!CD
+!v370!/acp2/img/029.gif
+!v999!^d20010501^belysio
+!v999!^d20110713^h1453^bZedu
+!ID 000005
+!v301!CD-ROM
+!v302!CD-ROM
+!v303!CD-ROM
+!v304!CD-ROM
+!v305!CD-ROM
+!v370!/acp2/img/029.gif
+!v999!^d20010501^belysio
+!ID 000006
+!v301!Disco
+!v302!Disco
+!v303!Disc
+!v304!Disco
+!v305!Disco
+!v370!/acp2/img/034.gif
+!v999!^d20010501^belysio
+!v999!^d20110713^h1454^bZedu
+!ID 000007
+!v301!Disquete
+!v302!Disquete
+!v303!Diskette
+!v304!Disquete
+!v305!Disquete
+!v370!/acp2/img/035.gif
+!v999!^d20010501^belysio
+!v999!^d20110713^h1454^bZedu
+!ID 000008
+!v301!DVD
+!v302!DVD
+!v303!DVD
+!v304!DVD
+!v305!DVD
+!v370!/acp2/img/029.gif
+!v999!^d20010501^belysio
+!v999!^d20100819^h1914^bZedu
+!ID 000009
+!v301!Impresso
+!v302!Impreso
+!v303!Printed
+!v304!Stampato
+!v305!Imprimé
+!v370!/acp2/img/027.gif
+!v999!^d20010501^belysio
+!v999!^d20110713^h1500^bZedu
+!ID 000010
+!v301!Web
+!v302!Web
+!v303!Web
+!v304!Web
+!v305!Web
+!v370!/acp2/img/036.gif
+!v999!^d20010501^belysio
+!v999!^d20110713^h1352^bZedu
+!ID 000011
+!v301!Microforma
+!v302!Microforma
+!v303!Microform
+!v304!Microforma
+!v305!Microforma
+!v370!/acp2/img/037.gif
+!v999!^d20010501^belysio
+!v999!^d20110713^h1352^bZedu
+!ID 000012
+!v301!Película
+!v302!Película
+!v303!Film
+!v304!Película
+!v305!Película
+!v370!/acp2/img/038.gif
+!v999!^d20010501^belysio
+!ID 000013
+!v301!Videocassete
+!v302!Videocassete
+!v303!Videocassete
+!v304!Videocassete
+!v305!Videocassete
+!v370!/acp2/img/039.gif
+!v999!^d20010501^belysio
+!ID 000014
+!v301!Vidro
+!v302!Vidro
+!v303!Glass
+!v304!Vidro
+!v305!Vidro
+!v370!/acp2/img/040.gif
+!v371!1
+!v999!^d20010501^belysio
+!ID 000015
+!v301!Madeira
+!v302!Madeira
+!v303!Wood
+!v304!Madeira
+!v305!Madeira
+!v370!/acp2/img/041.gif
+!v371!1
+!v999!^d20010501^belysio
+!ID 000016
+!v301!Ferro, aço
+!v302!Ferro, aço
+!v303!Steel
+!v304!Ferro, aço
+!v305!Ferro, aço
+!v370!/acp2/img/042.gif
+!v371!1
+!v999!^d20010501^belysio
+!ID 000017
+!v301!Tecido
+!v302!Tecido
+!v303!Tecido
+!v304!Tecido
+!v305!Tecido
+!v370!/acp2/img/043.gif
+!v371!1
+!v999!^d20010501^belysio
+!ID 000018
+!v301!Fibra vegetal
+!v302!Fibra vegetal
+!v303!Vegetal fiber
+!v304!Fibra vegetal
+!v305!Fibra vegetal
+!v370!/acp2/img/044.gif
+!v371!1
+!v999!^d20010501^belysio
+!ID 000019
+!v301!Fibra sintética
+!v302!Fibra sintética
+!v303!Sintetic fiber
+!v304!Fibra sintética
+!v305!Fibra sintética
+!v370!/acp2/img/045.gif
+!v371!1
+!v999!^d20010501^belysio
+!ID 000020
+!v301!Acetato
+!v302!Acetato
+!v303!Acetato
+!v304!Acetato
+!v305!Acetato
+!v370!/acp2/img/045.gif
+!v999!^d20010501^belysio
+!v999!^d20110713^h1353^bZedu
+!ID 000021
+!v301!Diapositivo
+!v302!Diapositivo
+!v303!Diapositivo
+!v304!Diapositivo
+!v305!Diapositivo
+!v370!/acp2/img/045.gif
+!v999!^d20010501^belysio
+!v999!^d20110713^h1353^bZedu
+!ID 000022
+!v301!Tela
+!v302!Tela
+!v303!Tela
+!v304!Tela
+!v305!Tela
+!v370!/acp2/img/045.gif
+!v371!1
+!v999!^d20010501^belysio
+!ID 000023
+!v301!Betacam
+!v302!Betacam
+!v303!Betacam
+!v304!Betacam
+!v305!Betacam
+!v370!/acp2/img/039.gif
+!v371!1
+!v999!^d20100209^h0122^bZedu
+!v999!^d20100819^h1914^bZedu
+!ID 000024
+!v301!Betacam 05
+!v302!Betacam 05
+!v303!Betacam 05
+!v304!Betacam 05
+!v305!Betacam 05
+!v370!/acp2/img/039.gif
+!v371!1
+!v999!^d20100209^h0122^bZedu
+!v999!^d20100819^h1914^bZedu
+!ID 000025
+!v301!Betacam 10
+!v302!Betacam 10
+!v303!Betacam 10
+!v304!Betacam 10
+!v305!Betacam 10
+!v370!/acp2/img/039.gif
+!v371!1
+!v999!^d20100209^h0122^bZedu
+!v999!^d20100819^h1914^bZedu
+!ID 000026
+!v301!Betacam 20
+!v302!Betacam 20
+!v303!Betacam 20
+!v304!Betacam 20
+!v305!Betacam 20
+!v370!/acp2/img/039.gif
+!v371!1
+!v999!^d20100209^h0122^bZedu
+!v999!^d20100819^h1915^bZedu
+!ID 000027
+!v301!Betacam 30
+!v302!Betacam 30
+!v303!Betacam 30
+!v304!Betacam 30
+!v305!Betacam 30
+!v370!/acp2/img/039.gif
+!v371!1
+!v999!^d20100209^h0122^bZedu
+!v999!^d20100819^h1915^bZedu
+!ID 000028
+!v301!Betacam 60
+!v302!Betacam 60
+!v303!Betacam 60
+!v304!Betacam 60
+!v305!Betacam 60
+!v370!/acp2/img/039.gif
+!v371!1
+!v999!^d20100209^h0122^bZedu
+!v999!^d20100819^h1915^bZedu
+!ID 000029
+!v301!Betacam 90
+!v302!Betacam 90
+!v303!Betacam 90
+!v304!Betacam 90
+!v305!Betacam 90
+!v370!/acp2/img/039.gif
+!v371!1
+!v999!^d20100209^h0122^bZedu
+!v999!^d20100819^h1915^bZedu
+!ID 000030
+!v301!DVCPRO
+!v302!DVCPRO
+!v303!DVCPRO
+!v304!DVCPRO
+!v305!DVCPRO
+!v370!/acp2/img/039.gif
+!v371!1
+!v999!^d20100209^h0122^bZedu
+!v999!^d20100819^h1915^bZedu
+!ID 000031
+!v301!DVCPRO 66
+!v302!DVCPRO 66
+!v303!DVCPRO 66
+!v304!DVCPRO 66
+!v305!DVCPRO 66
+!v370!/acp2/img/039.gif
+!v371!1
+!v999!^d20100209^h0122^bZedu
+!v999!^d20100819^h1915^bZedu
+!ID 000032
+!v301!DVCPRO 126
+!v302!DVCPRO 126
+!v303!DVCPRO 126
+!v304!DVCPRO 126
+!v305!DVCPRO 126
+!v370!/acp2/img/039.gif
+!v371!1
+!v999!^d20100209^h0122^bZedu
+!v999!^d20100819^h1916^bZedu
+!ID 000033
+!v301!DVCAM
+!v302!DVCAM
+!v303!DVCAM
+!v304!DVCAM
+!v305!DVCAM
+!v370!/acp2/img/039.gif
+!v371!1
+!v999!^d20100209^h0122^bZedu
+!v999!^d20100819^h1916^bZedu
+!ID 000034
+!v301!DV
+!v302!DV
+!v303!DV
+!v304!DV
+!v305!DV
+!v370!/acp2/img/039.gif
+!v371!1
+!v999!^d20100209^h0122^bZedu
+!v999!^d20100819^h1916^bZedu
+!ID 000035
+!v301!MINI-DV
+!v302!MINI-DV
+!v303!MINI-DV
+!v304!MINI-DV
+!v305!MINI-DV
+!v370!/acp2/img/039.gif
+!v371!1
+!v999!^d20100209^h0122^bZedu
+!v999!^d20100819^h1916^bZedu
+!ID 000036
+!v301!U-MATIC
+!v302!U-MATIC
+!v303!U-MATIC
+!v304!U-MATIC
+!v305!U-MATIC
+!v370!/acp2/img/039.gif
+!v371!1
+!v999!^d20100209^h0122^bZedu
+!v999!^d20100819^h1916^bZedu
+!ID 000037
+!v301!SVHS
+!v302!SVHS
+!v303!SVHS
+!v304!SVHS
+!v305!SVHS
+!v370!/acp2/img/039.gif
+!v371!1
+!v999!^d20100209^h0122^bZedu
+!v999!^d20100819^h1916^bZedu
+!ID 000038
+!v301!VHS
+!v302!VHS
+!v303!VHS
+!v304!VHS
+!v305!VHS
+!v370!/acp2/img/039.gif
+!v371!1
+!v999!^d20100209^h0122^bZedu
+!v999!^d20100819^h1916^bZedu
+!ID 000039
+!v301!DVCPRO 33
+!v302!DVCPRO 33
+!v303!DVCPRO 33
+!v304!DVCPRO 33
+!v305!DVCPRO 33
+!v370!/acp2/img/039.gif
+!v371!1
+!v999!^d20100222^h1312^bZedu
+!v999!^d20100819^h1917^bZedu
+!ID 000040
+!v301!Online
+!v302!Online
+!v303!Online
+!v304!Online
+!v305!Online
+!v370!/acp2/img/023.gif
+!v999!^d20100818^h1120^bZedu
+!v999!^d20100819^h1917^bZedu
+!ID 000041
+!v301!Braille
+!v302!Braille
+!v303!Braille
+!v304!Braille
+!v305!Braille
+!v370!/acp2/img/055.gif
+!v999!^d20110629^h1445^bZedu
+!v999!^d20110629^h1446^bZedu
+!ID 000042
+!v301!Papel
+!v302!Papel
+!v303!Paper
+!v304!Carta
+!v305!Papier
+!v370!/acp2/img/032.gif
+!v999!^d20110713^h1504^bZedu
+!v999!^d20110713^h1505^bZedu
+!ID 000043
+!v301!Digital
+!v302!Digital
+!v303!Digital
+!v304!Digitali
+!v305!Numérique
+!v370!/acp2/img/023.gif
+!v999!^d20110713^h1511^bZedu
+!v999!^d20110713^h1513^bZedu

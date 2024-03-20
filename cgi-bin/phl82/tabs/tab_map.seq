@@ -1,0 +1,3 @@
+!ID 000001
+!v001!/Data/DadosApl/ACEBIB
+!v002!Caminho físico do diretório servido pelo HTTP. Este caminho é utilizado para indicar a localização dos arquivos para a rotina de "edição de arquivos".

@@ -1,0 +1,64 @@
+'<input type="hidden" name="IsisScript" value="',cat('path_xis'),''v960'.xis">'/
+'<input type="hidden" name="opc" value="grava">'/
+'<input type="hidden" name="dbvar" value="^aphl_pwd^b17^cpwd">'/
+'<input type="hidden" name="mfn" value="'v957'">'/
+'<input type="hidden" name="rec" value="'v1010'">'
+'<input type="hidden" name="exp" value="'v958,"$"n958,'">'/
+'<input type="hidden" name="653" value="1">'/
+'<input type="hidden" name="999" value="'v999[1]'">'/
+'<tr><td class="td1o"></td><td class="topico">',ref(['tab_txt']272,@tab_txt.pft,),'</td></tr>'/
+'<tr><td class="td1o">Login&nbsp;<a href=JavaScript:tab_man(651);>[651]</a></td><td class="td2"><input type="text" class="textbox" name="651" value="',v651,'"></td></tr>'/
+'<tr><td class="td1o">',ref(['tab_txt']325,@tab_txt.pft,),'&nbsp;<a href=JavaScript:tab_man(652);>[652]</a></td><td class="td2"><input type="password" name="652" value="',v652,'" size="60"></td></tr>'/
+'<tr><td class="td1e">Faixa de IP&nbsp;<a href=JavaScript:tab_man(659);>[659]</a></td><td class="td2"><input type="text" class="textbox" name="659" value="',v659,'"></td></tr>'/
+,if nocc(v3601)>1 then
+'<tr>
+  <td class="td1o">',ref(['tab_txt']378,@tab_txt.pft,),'(s)&nbsp;<a href=JavaScript:abre_manual("pwd_654");>[654]</a></td>
+  <td class="td2">
+    <select multiple size="4" name="654">',
+      (,'<option ',if v654[1]=v3601^a or v654=v3601^a then 'selected' fi,' value="'v3601^a'">'v3601^b'</option>'/),
+    '</select>
+  </td>
+</tr>'/
+else
+'<input type="hidden" name="654" value="'v654,"001"n654,'">'/
+,fi,
+/*menu inicial*/,         '<tr><td class="td1o"></td><td class="topico">'ref(['tab_txt']1126,@tab_txt.pft,)'</td></tr>'/
+/*buscas e reservas*/,    '<tr><td class="td1e"></td><td class="td2"><input type="checkbox" name="657" value="^a1"',if v657^a='1' then 'checked' fi,'>'ref(['tab_txt']1127,@tab_txt.pft,)'</td></tr>'/
+/*circulacao*/,           '<tr><td class="td1e"></td><td class="td2"><input type="checkbox" name="657" value="^b1"',if v657^b='1' then 'checked' fi,'>'ref(['tab_txt']451,@tab_txt.pft,)'</td></tr>'/
+/*entrada*/,              '<tr><td class="td1e"></td><td class="td2"><input type="checkbox" name="657" value="^c1"',if v657^c='1' then 'checked' fi,'>'ref(['tab_txt']122,@tab_txt.pft,)'</td></tr>'/
+/*edicao*/,               '<tr><td class="td1e"></td><td class="td2"><input type="checkbox" name="657" value="^d1"',if v657^d='1' then 'checked' fi,'>'ref(['tab_txt']110,@tab_txt.pft,)'</td></tr>'/
+/*exportacao*/,           '<tr><td class="td1e"></td><td class="td2"><input type="checkbox" name="657" value="^e1"',if v657^e='1' then 'checked' fi,'>'ref(['tab_txt']145,@tab_txt.pft,)'</td></tr>'/
+/*importacao*/,           '<tr><td class="td1e"></td><td class="td2"><input type="checkbox" name="657" value="^f1"',if v657^f='1' then 'checked' fi,'>'ref(['tab_txt']453,@tab_txt.pft,)'</td></tr>'/
+/*relatorios*/,           '<tr><td class="td1e"></td><td class="td2"><input type="checkbox" name="657" value="^g1"',if v657^g='1' then 'checked' fi,'>'ref(['tab_txt']298,@tab_txt.pft,)'</td></tr>'/
+/*diagnostico*/,          '<tr><td class="td1e"></td><td class="td2"><input type="checkbox" name="657" value="^h1"',if v657^h='1' then 'checked' fi,'>'ref(['tab_txt']617,@tab_txt.pft,)'</td></tr>'/
+/*e-mail (lote) */        '<tr><td class="td1e"></td><td class="td2"><input type="checkbox" name="657" value="^i1"',if v657^i='1' then 'checked' fi,'>E-mail (lote)</td></tr>'/
+/*portaria*/,             '<tr><td class="td1e"></td><td class="td2"><input type="checkbox" name="657" value="^j1"',if v657^j='1' then 'checked' fi,'>'ref(['tab_txt']1128,@tab_txt.pft,)'</td></tr>'/
+/*devolucao expres*/,     '<tr><td class="td1e"></td><td class="td2"><input type="checkbox" name="657" value="^k1"',if v657^k='1' then 'checked' fi,'>'ref(['tab_txt']1001,@tab_txt.pft,)'</td></tr>'/
+/*registros*/,            '<tr><td class="td1e"></td><td class="td2"><input type="checkbox" name="657" value="^n1"',if v657^n='1' then 'checked' fi,'>'ref(['tab_txt']1123,@tab_txt.pft,)'</td></tr>'/
+/*configuracoes*/,        '<tr><td class="td1e"></td><td class="td2"><input type="checkbox" name="657" value="^m1"',if v657^m='1' then 'checked' fi,'>'ref(['tab_txt']58,@tab_txt.pft,)'</td></tr>'/
+/*rotinas permitidas*/,   '<tr><td class="td1o"></td><td class="topico">'ref(['tab_txt']1124,@tab_txt.pft,)'</td></tr>'/
+/*emprestimo*/,           '<tr><td class="td1e"></td><td class="td2"><input type="checkbox" name="656" value="^a1"',if v656^a='1' then 'checked' fi,'>'ref(['tab_txt']118,@tab_txt.pft,)'</td></tr>'/
+/*extrato*/,              '<tr><td class="td1e"></td><td class="td2"><input type="checkbox" name="656" value="^c1"',if v656^c='1' then 'checked' fi,'>'ref(['tab_txt']147,@tab_txt.pft,)'</td></tr>'/
+/*recebimento de multas*/,'<tr><td class="td1e"></td><td class="td2"><input type="checkbox" name="656" value="^i1"',if v656^i='1' then 'checked' fi,'>'ref(['tab_txt']1125,@tab_txt.pft,)'</td></tr>'/
+/*historico*/,            '<tr><td class="td1e"></td><td class="td2"><input type="checkbox" name="656" value="^d1"',if v656^d='1' then 'checked' fi,'>'ref(['tab_txt']171,@tab_txt.pft,)'</td></tr>'/
+/*importacao*/,           '<tr><td class="td1e"></td><td class="td2"><input type="checkbox" name="656" value="^e1"',if v656^e='1' then 'checked' fi,'>'ref(['tab_txt']453,@tab_txt.pft,)'</td></tr>'/
+/*exportacao*/,           '<tr><td class="td1e"></td><td class="td2"><input type="checkbox" name="656" value="^f1"',if v656^f='1' then 'checked' fi,'>'ref(['tab_txt']145,@tab_txt.pft,)'</td></tr>'/
+/*relatorios*/,           '<tr><td class="td1e"></td><td class="td2"><input type="checkbox" name="656" value="^g1"',if v656^g='1' then 'checked' fi,'>'ref(['tab_txt']298,@tab_txt.pft,)'</td></tr>'/
+/*diagnostico*/,          '<tr><td class="td1e"></td><td class="td2"><input type="checkbox" name="656" value="^h1"',if v656^h='1' then 'checked' fi,'>'ref(['tab_txt']617,@tab_txt.pft,)'</td></tr>'/
+/*reserva*/,              '<tr><td class="td1e"></td><td class="td2"><input type="checkbox" name="656" value="^j1"',if v656^j='1' then 'checked' fi,'>'ref(['tab_txt']304,@tab_txt.pft,)'</td></tr>'/
+'</table>'/
+'<table width="100%">'/
+/*bases de dados*/,       '<tr><td width="20%"></td><td class="topico">'ref(['tab_txt']424,@tab_txt.pft,)'</td></tr>'/
+'</table>'/
+'<table width="100%">'/
+/*catalogo*/,             '<tr><td width="20%"></td><td width="40%">'ref(['tab_txt']547,@tab_txt.pft,)'</td><td width="40%">&nbsp;Consulta<input type="checkbox" name="658" value="^a1"',if v658^a='1' then 'checked' fi,'>&nbsp;Consulta, entrada, edição<input type="checkbox" name="655" value="^a1"',if v655^a='1' then ' checked' fi,'></td></tr>'/
+/*kardex*/,               '<tr><td width="20%"></td><td width="40%">'ref(['tab_txt']953,@tab_txt.pft,)'</td><td width="40%">&nbsp;Consulta<input type="checkbox" name="658" value="^d1"',if v658^d='1' then 'checked' fi,'>&nbsp;Consulta, entrada, edição<input type="checkbox" name="655" value="^d1"',if v655^d='1' then ' checked' fi,'></td></tr>'/
+/*usuarios*/,             '<tr><td width="20%"></td><td width="40%">'ref(['tab_txt']978,@tab_txt.pft,)'</td><td width="40%">&nbsp;Consulta<input type="checkbox" name="658" value="^c1"',if v658^c='1' then 'checked' fi,'>&nbsp;Consulta, entrada, edição<input type="checkbox" name="655" value="^c1"',if v655^c='1' then ' checked' fi,'></td></tr>'/
+/*tombo*/,                '<tr><td width="20%"></td><td width="40%">'ref(['tab_txt']367,@tab_txt.pft,)'</td><td width="40%">&nbsp;Consulta<input type="checkbox" name="658" value="^b1"',if v658^b='1' then 'checked' fi,'>&nbsp;Consulta, entrada, edição<input type="checkbox" name="655" value="^b1"',if v655^b='1' then ' checked' fi,'></td></tr>'/
+/*fornecedores*/,         '<tr><td width="20%"></td><td width="40%">'ref(['tab_txt']951,@tab_txt.pft,)'</td><td width="40%">&nbsp;Consulta<input type="checkbox" name="658" value="^e1"',if v658^e='1' then 'checked' fi,'>&nbsp;Consulta, entrada, edição<input type="checkbox" name="655" value="^e1"',if v655^e='1' then ' checked' fi,'></td></tr>'/
+/*autoridades*/,          '<tr><td width="20%"></td><td width="40%">'ref(['tab_txt']827,@tab_txt.pft,)'</td><td width="40%">&nbsp;Consulta<input type="checkbox" name="658" value="^p1"',if v658^p='1' then 'checked' fi,'>&nbsp;Consulta, entrada, edição<input type="checkbox" name="655" value="^p1"',if v655^p='1' then ' checked' fi,'></td></tr>'/
+/*classes*/,              '<tr><td width="20%"></td><td width="40%">'ref(['tab_txt']963,@tab_txt.pft,)'</td><td width="40%">&nbsp;Consulta<input type="checkbox" name="658" value="^n1"',if v658^n='1' then 'checked' fi,'>&nbsp;Consulta, entrada, edição<input type="checkbox" name="655" value="^n1"',if v655^n='1' then ' checked' fi,'></td></tr>'/
+/*vocabulario*/,          '<tr><td width="20%"></td><td width="40%">'ref(['tab_txt']845,@tab_txt.pft,)'</td><td width="40%">&nbsp;Consulta<input type="checkbox" name="658" value="^m1"',if v658^m='1' then 'checked' fi,'>&nbsp;Consulta, entrada, edição<input type="checkbox" name="655" value="^m1"',if v655^m='1' then ' checked' fi,'></td></tr>'/
+/*uso colecao*/,          '<tr><td width="20%"></td><td width="40%">'ref(['tab_txt']616,@tab_txt.pft,)'</td><td width="40%">&nbsp;Consulta<input type="checkbox" name="658" value="^71"',if v658^7='1' then 'checked' fi,'>&nbsp;Consulta, entrada, edição<input type="checkbox" name="655" value="^71"',if v655^7='1' then ' checked' fi,'></td></tr>'/
+/*sugestoes*/,            '<tr><td width="20%"></td><td width="40%">'ref(['tab_txt']962,@tab_txt.pft,)'</td><td width="40%">&nbsp;Consulta<input type="checkbox" name="658" value="^o1"',if v658^o='1' then 'checked' fi,'>&nbsp;Consulta, entrada, edição<input type="checkbox" name="655" value="^o1"',if v655^o='1' then ' checked' fi,'></td></tr>'/
+/*pemissoes*/,            '<tr><td width="20%"></td><td width="40%">'ref(['tab_txt']272,@tab_txt.pft,)'</td><td width="40%">&nbsp;Consulta<input type="checkbox" name="658" value="^k1"',if v658^k='1' then 'checked' fi,'>&nbsp;Consulta, entrada, edição<input type="checkbox" name="655" value="^k1"',if v655^k='1' then ' checked' fi,'></td></tr>'/

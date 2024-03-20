@@ -1,0 +1,15 @@
+'?subject=''Alerta'
+'&body='   'Prezado(a) usuario(a)'
+',%0A%0A',v890^a,| (|v900^u|) |,
+'%0A%0A'   'Alertamos que a data para devolucao da midia abaixo descrita esta proxima do vencimento'
+'.%0A%0A'  'Vencimento'': 'v900^v*6.2,'/'v900^v*4.2,'/'v900^v.4,
+'%0A%0A'   'Tombo'': 'v900^t
+'%0A%0A'   'Titulo'': 'v18
+'%0A%0A('  'O texto desta mensagem foi criado automaticamente, sem acentuacao'
+')%0A%0A'  'Atenciosamente'
+',%0A',v600^r
+'%0A',v600^e
+'%0A'      'Telefone'': 'v600^f
+'%0A',v600^n
+'%0A',ref(['phl_cnf']1,v204)
+']]>'

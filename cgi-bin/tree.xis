@@ -1,0 +1,62 @@
+<IsisScript>
+
+<display><pft>'Content-type: text/html; charset=iso-8859-1'/#</pft></display>
+
+<!-- Inclue funcao (vars) que carrega as variaveis de configuracao -->
+     <include>/Data/DadosApl/ACEBIB/ant/cgi-bin/phl82/001.fnc</include>
+
+<section>
+
+<field action="cgi" tag="958">parentId</field>
+<field action="replace" tag="958" split="occ"><pft>(v958/)</pft></field>
+
+<!-- Chama funcao que carrega outras variaveis -->
+     <call name="001">now</call>
+     
+     <parm name="cipar"><pft>,cat('/Data/DadosApl/ACEBIB/apl/ant/cgi-bin/phl82.cip'),</pft></parm>
+
+<do task="search">
+  <parm name="db">phl_acv</parm>
+  <parm name="expression"><pft>,v958,</pft></parm>
+  <field action="define" tag="1001">Isis_Current</field>
+  <field action="define" tag="1002">Isis_Total</field>
+      <loop>
+        <list action="load" type="sort">
+          <pft>
+             '^a'v65,
+            ,'^m'mfn(1)/,
+          </pft>
+        </list>
+      </loop>
+  </do>
+
+<do task="list">
+<field action="define" tag="1">Isis_Item</field>
+  <loop>
+    <field action="import" tag="list">4001</field>
+    <display>
+      <pft>
+      ,ref(['phl_acv']val(v1^m),
+       ,if v6='s' then
+        '<li>
+           <a href="#">',if v6='s' then "v. "v31,", n. "v32, else v18,fi," - "v64,'</a>
+           <ul><li parentId="pai='v2'"><a href="#">Aguarde...</a></li></ul>
+         </li>'
+       ,fi,
+       ,if v6='m' then
+        '<li>
+           <a href="#">',if v6='m' then "v. "v31,", n. "v32, else v18,fi," - "v64,'</a>
+           <ul><li parentId="pai='v2'"><a href="#">Aguarde...</a></li></ul>
+         </li>'
+       ,fi,
+       ,if v6:'a' then
+        '<li class="dhtmlgoodies_sheet.gif"><a href="JavaScript:tab_mfn('mfn(1)');"><i>',v12,v150," - p."v14,'</i></a></li>'
+       ,fi,
+         ),
+      </pft>
+    </display>
+  </loop>
+</do>
+
+</section>
+</IsisScript>

@@ -1,0 +1,1964 @@
+mfn=     1 
+6001  ®1¯
+6002  ®1¯
+6003  ®1¯
+6005  ®1¯
+6006  ®1¯
+6007  ®1¯
+6010  ®1¯
+6012  ®1¯
+6015  ®1¯
+6016  ®1¯
+6018  ®1¯
+6022  ®1¯
+6026  ®1¯
+6038  ®1¯
+6040  ®1¯
+6062  ®1¯
+6064  ®1¯
+6065  ®1¯
+6066  ®1¯
+6071  ®1¯
+6086  ®1¯
+6087  ®1¯
+6090  ®1¯
+6103  ®1¯
+6121  ®1¯
+6141  ®1¯
+6181  ®1¯
+6182  ®1¯
+  1  ®Código da biblioteca¯
+  2  ®Identificação do título¯
+  3  ®Classificação¯
+  4  ®Base de dados¯
+  5  ®Tipo de documento¯
+  6  ®Nível bibliográfico¯
+  7  ®Tombo¯
+  8  ®Suporte eletrônico¯
+  9  ®Separata¯
+ 10  ®Autor¯
+ 11  ®Autor coletivo¯
+ 12  ®Título¯
+ 13  ®Título traduzido¯
+ 14  ®Paginação¯
+ 15  ®Créditos¯
+ 16  ®Autor¯
+ 17  ®Autor coletivo¯
+ 18  ®Título¯
+ 19  ®Título traduzido¯
+ 20  ®Total de páginas¯
+ 21  ®Volume¯
+ 22  ®Tipo de suporte¯
+ 23  ®Autor¯
+ 24  ®Autor coletivo¯
+ 25  ®Título¯
+ 26  ®Tipo de coleção¯
+ 27  ®Total de volumes¯
+ 28  ®Nacionalidade¯
+ 29  ®Divulgar¯
+ 30  ®Título da série¯
+ 31  ®Volume¯
+ 32  ®Fascículo¯
+ 33  ®ID Kardex¯
+ 34  ®Suplemento¯
+ 35  ®ISSN¯
+ 36  ®Livre¯
+ 37  ®Livre¯
+ 38  ®Informação descritiva¯
+ 39  ®Nível arquivístico¯
+ 40  ®Idioma¯
+ 41  ®Idioma do resumo¯
+ 42  ®Patente¯
+ 43  ®Patente¯
+ 44  ®Patente¯
+ 45  ®Livre¯
+ 46  ®Livre¯
+ 47  ®Livre¯
+ 48  ®Livre¯
+ 49  ®Livre¯
+ 50  ®Instituição¯
+ 51  ®Notas de tese¯
+ 52  ®Pratrocinadores do evento¯
+ 53  ®Nome do evento¯
+ 54  ®Data do evento¯
+ 55  ®Data padronizada¯
+ 56  ®Local do evento¯
+ 57  ®País do evento¯
+ 58  ®Patrocinadores do projeto¯
+ 59  ®Nome do projeto¯
+ 60  ®Número do projeto¯
+ 61  ®Notas gerais¯
+ 62  ®Gravadora¯
+ 63  ®Edição¯
+ 64  ®Data de gravação¯
+ 65  ®Data padronizada¯
+ 66  ®Cidade de gravação¯
+ 67  ®País de publicação¯
+ 68  ®Número da publicação¯
+ 69  ®ISBN¯
+ 70  ®Imagem do objeto¯
+ 71  ®Tipo de conteúdo¯
+ 72  ®Total de referências¯
+ 73  ®Livre¯
+ 74  ®Desde¯
+ 75  ®Até¯
+ 76  ®Descritor pré-codificado¯
+ 77  ®Livre¯
+ 78  ®Biografado¯
+ 79  ®Bibliografia¯
+ 80  ®Livre¯
+ 81  ®Livre¯
+ 82  ®Descritores geográficos¯
+ 83  ®Resumo¯
+ 84  ®Código HTML¯
+ 85  ®Áreas do conhecimento¯
+ 86  ®Notas de conteúdo¯
+ 87  ®Palavras-chave¯
+ 88  ®Descritores secundários¯
+ 89  ®Observações¯
+ 90  ®Restrições¯
+ 91  ®Nível da restrição¯
+ 92  ®Museu¯
+ 93  ®Museu¯
+ 94  ®Museu¯
+ 95  ®Museu¯
+ 96  ®Código HTML¯
+ 97  ®Livre¯
+ 98  ®Livre¯
+ 99  ®Livre¯
+103  ®Cutter/PHA¯
+105  ®Gênero documental¯
+121  ®Créditos¯
+141  ®Informações descritivas¯
+181  ®Subtítulo¯
+182  ®Subtítulo¯
+186  ®Comentários¯
+301  ®Formulário para descrição de áudio, vídeos (dvd, cds, vhs, fitas, etc.)¯
+302  ®Áudio¯
+303  ®Audio¯
+304  ®Áudio¯
+305  ®Áudio¯
+999  ®^d20010501^belysio¯
+999  ®^d20100120^h1759^bZedu¯
+mfn=     2 
+6001  ®1¯
+6002  ®1¯
+6003  ®1¯
+6005  ®1¯
+6006  ®1¯
+6007  ®1¯
+6010  ®1¯
+6012  ®1¯
+6014  ®1¯
+6015  ®1¯
+6016  ®1¯
+6018  ®1¯
+6022  ®1¯
+6026  ®1¯
+6029  ®1¯
+6038  ®1¯
+6039  ®1¯
+6062  ®1¯
+6064  ®1¯
+6065  ®1¯
+6066  ®1¯
+6071  ®1¯
+6083  ®1¯
+6086  ®1¯
+6087  ®1¯
+6090  ®1¯
+6103  ®1¯
+6105  ®1¯
+6121  ®1¯
+6141  ®1¯
+6181  ®1¯
+  1  ®Código da biblioteca¯
+  2  ®Identificação do título¯
+  3  ®Classificação¯
+  4  ®Base de dados¯
+  5  ®Tipo de documento¯
+  6  ®Nível bibliográfico¯
+  7  ®Tombo¯
+  8  ®Suporte eletronico¯
+  9  ®Separata¯
+ 10  ®Autor¯
+ 11  ®Autor coletivo¯
+ 12  ®Título¯
+ 13  ®Título traduzido¯
+ 14  ®Paginação¯
+ 15  ®Créditos¯
+ 16  ®Autor¯
+ 17  ®Autor coletivo¯
+ 18  ®Título¯
+ 19  ®Título traduzido¯
+ 20  ®Total de páginas¯
+ 21  ®Volume¯
+ 22  ®Tipo de suporte¯
+ 23  ®Autor¯
+ 24  ®Autor coletivo¯
+ 25  ®Título¯
+ 26  ®Tipo de coleção¯
+ 27  ®Total de volumes¯
+ 28  ®Nacionalidade¯
+ 29  ®Divulgar¯
+ 30  ®Título da série¯
+ 31  ®Volume¯
+ 32  ®Fascículo¯
+ 33  ®ID Kardex¯
+ 34  ®Suplemento¯
+ 35  ®ISSN¯
+ 36  ®Livre¯
+ 37  ®Livre¯
+ 38  ®Informação descritiva¯
+ 39  ®Nível arquivístico¯
+ 40  ®Idioma¯
+ 41  ®Idioma do resumo¯
+ 42  ®Patente¯
+ 43  ®Patente¯
+ 44  ®Patente¯
+ 45  ®Livre¯
+ 46  ®Livre¯
+ 47  ®Livre¯
+ 48  ®Livre¯
+ 49  ®Livre¯
+ 50  ®Instituição¯
+ 51  ®Notas de tese¯
+ 52  ®Pratrocinadores do evento¯
+ 53  ®Nome do evento¯
+ 54  ®Data do evento¯
+ 55  ®Data padronizada¯
+ 56  ®Local do evento¯
+ 57  ®País do evento¯
+ 58  ®Patrocinadores do projeto¯
+ 59  ®Nome do projeto¯
+ 60  ®Número do projeto¯
+ 61  ®Notas gerais¯
+ 62  ®Editora¯
+ 63  ®Edição¯
+ 64  ®Data do documento¯
+ 65  ®Data padronizada¯
+ 66  ®Cidade¯
+ 67  ®País de publicação¯
+ 68  ®Número da publicação¯
+ 69  ®ISBN¯
+ 70  ®Imagem do objeto¯
+ 71  ®Tipo de conteúdo¯
+ 72  ®Total de referências¯
+ 73  ®Livre¯
+ 74  ®Desde¯
+ 75  ®Até¯
+ 76  ®Descritor pré-codificado¯
+ 77  ®Livre¯
+ 78  ®Biografado¯
+ 79  ®Bibliografia¯
+ 80  ®Livre¯
+ 81  ®Livre¯
+ 82  ®Descritores geograficos¯
+ 83  ®História Arquivística¯
+ 84  ®Código HTML¯
+ 85  ®Areas do conhecimento¯
+ 86  ®Notas de conteúdo¯
+ 87  ®Palavras-chave¯
+ 88  ®Descritores secundarios¯
+ 89  ®Observações¯
+ 90  ®Restrições¯
+ 91  ®Nível da restrição¯
+ 92  ®Museu¯
+ 93  ®Museu¯
+ 94  ®Museu¯
+ 95  ®Museu¯
+ 96  ®Código HTML¯
+ 97  ®Livre¯
+ 98  ®Livre¯
+ 99  ®Livre¯
+103  ®Cutter/PHA¯
+105  ®Gênero documental¯
+121  ®Créditos¯
+141  ®Informações descritivas¯
+181  ®Subtítulo¯
+182  ®Subtítulo¯
+186  ®Comentários¯
+301  ®Formulário para descrição de documento de arquivos¯
+302  ®Archivo¯
+303  ®File¯
+304  ®Arquivo¯
+305  ®Arquivo¯
+999  ®^d20010501^belysio¯
+999  ®^d20100120^h1801^bZedu¯
+mfn=     3 
+6001  ®1¯
+6002  ®1¯
+6003  ®1¯
+6005  ®1¯
+6006  ®1¯
+6007  ®1¯
+6010  ®1¯
+6012  ®1¯
+6014  ®1¯
+6017  ®1¯
+6018  ®1¯
+6020  ®1¯
+6021  ®1¯
+6022  ®1¯
+6026  ®1¯
+6040  ®1¯
+6054  ®1¯
+6055  ®1¯
+6056  ®1¯
+6062  ®1¯
+6063  ®1¯
+6064  ®1¯
+6065  ®1¯
+6066  ®1¯
+6071  ®1¯
+6087  ®1¯
+6090  ®1¯
+6103  ®1¯
+6121  ®1¯
+6141  ®1¯
+6181  ®1¯
+  1  ®Código da biblioteca¯
+  2  ®Identificação do título¯
+  3  ®Classificação¯
+  4  ®Base de dados¯
+  5  ®Tipo de documento¯
+  6  ®Nível bibliográfico¯
+  7  ®Tombo¯
+  8  ®Suporte eletronico¯
+  9  ®Separata¯
+ 10  ®Autor¯
+ 11  ®Autor coletivo¯
+ 12  ®Título¯
+ 13  ®Título traduzido¯
+ 14  ®Paginação¯
+ 15  ®Créditos¯
+ 16  ®Autor¯
+ 17  ®Autor¯
+ 18  ®Título¯
+ 19  ®Título traduzido¯
+ 20  ®Total de páginas¯
+ 21  ®Volume¯
+ 22  ®Tipo de suporte¯
+ 23  ®Autor¯
+ 24  ®Autor coletivo¯
+ 25  ®Título¯
+ 26  ®Tipo de coleção¯
+ 27  ®Total de volumes¯
+ 28  ®Nacionalidade¯
+ 29  ®Divulgar¯
+ 30  ®Título da série¯
+ 31  ®Volume¯
+ 32  ®Fascículo¯
+ 33  ®ID Kardex¯
+ 34  ®Suplemento¯
+ 35  ®ISSN¯
+ 36  ®Livre¯
+ 37  ®Livre¯
+ 38  ®Informação descritiva¯
+ 39  ®Nível arquivístico¯
+ 40  ®Idioma do texto¯
+ 41  ®Idioma do resumo¯
+ 42  ®Patente¯
+ 43  ®Patente¯
+ 44  ®Patente¯
+ 45  ®Livre¯
+ 46  ®Livre¯
+ 47  ®Livre¯
+ 48  ®Livre¯
+ 49  ®Livre¯
+ 50  ®Instituição¯
+ 51  ®Notas de tese¯
+ 52  ®Pratrocinadores do evento¯
+ 53  ®Nome do evento¯
+ 54  ®Data do evento¯
+ 55  ®Data padronizada do evento¯
+ 56  ®Local do evento¯
+ 57  ®País do evento¯
+ 58  ®Patrocinadores do projeto¯
+ 59  ®Nome do projeto¯
+ 60  ®Número do projeto¯
+ 61  ®Notas gerais¯
+ 62  ®Editora¯
+ 63  ®Edição¯
+ 64  ®Data de publicação¯
+ 65  ®Data padronizada¯
+ 66  ®Cidade de publicação¯
+ 67  ®País de publicação¯
+ 68  ®Número da publicação¯
+ 69  ®ISBN¯
+ 70  ®Imagem do objeto¯
+ 71  ®Tipo de conteúdo¯
+ 72  ®Total de referências¯
+ 73  ®Livre¯
+ 74  ®Desde¯
+ 75  ®Até¯
+ 76  ®Descritor pré-codificado¯
+ 77  ®Livre¯
+ 78  ®Biografado¯
+ 79  ®Bibliografia¯
+ 80  ®Livre¯
+ 81  ®Livre¯
+ 82  ®Descritores geograficos¯
+ 83  ®Resumo¯
+ 84  ®Código HTML¯
+ 85  ®Areas do conhecimento¯
+ 86  ®Notas de conteúdo¯
+ 87  ®Palavras-chave¯
+ 88  ®Descritores secundarios¯
+ 89  ®Observações¯
+ 90  ®Restrições¯
+ 91  ®Nível da restrição¯
+ 92  ®Museu¯
+ 93  ®Museu¯
+ 94  ®Museu¯
+ 95  ®Museu¯
+ 96  ®Código HTML¯
+ 97  ®Livre¯
+ 98  ®Livre¯
+ 99  ®Livre¯
+103  ®Cutter/PHA¯
+105  ®Gênero documental¯
+121  ®Créditos¯
+141  ®Informações descritivas¯
+181  ®Subtítulo¯
+182  ®Subtítulo¯
+186  ®Comentários¯
+301  ®Formulário para descrição de anais, proceedings, meeting e papers¯
+302  ®Evento¯
+303  ®Meeting¯
+304  ®Evento¯
+305  ®Evento¯
+999  ®^d20010501^belysio¯
+999  ®^d20100120^h1813^bZedu¯
+mfn=     4 
+6001  ®1¯
+6002  ®1¯
+6003  ®1¯
+6005  ®1¯
+6006  ®1¯
+6007  ®1¯
+6008  ®1¯
+6010  ®1¯
+6012  ®1¯
+6014  ®1¯
+6015  ®1¯
+6016  ®1¯
+6018  ®1¯
+6022  ®1¯
+6026  ®1¯
+6030  ®1¯
+6038  ®1¯
+6040  ®1¯
+6062  ®1¯
+6064  ®1¯
+6065  ®1¯
+6066  ®1¯
+6070  ®1¯
+6071  ®1¯
+6086  ®1¯
+6087  ®1¯
+6090  ®1¯
+6103  ®1¯
+6121  ®1¯
+6141  ®1¯
+6181  ®1¯
+6182  ®1¯
+  1  ®Código da biblioteca¯
+  2  ®Identificação do título¯
+  3  ®Classificação¯
+  4  ®Base de dados¯
+  5  ®Tipo de documento¯
+  6  ®Nível bibliográfico¯
+  7  ®Tombo¯
+  8  ®Meio eletrônico¯
+  9  ®Separata¯
+ 10  ®Autor¯
+ 11  ®Autor coletivo¯
+ 12  ®Título¯
+ 13  ®Título traduzido¯
+ 14  ®Paginação¯
+ 15  ®Créditos¯
+ 16  ®Autor¯
+ 17  ®Autor coletivo¯
+ 18  ®Título¯
+ 19  ®Título traduzido¯
+ 20  ®Total de páginas¯
+ 21  ®Volume¯
+ 22  ®Tipo de suporte¯
+ 23  ®Autor¯
+ 24  ®Autor coletivo¯
+ 25  ®Título¯
+ 26  ®Tipo de coleção¯
+ 27  ®Total de volumes¯
+ 28  ®Nacionalidade¯
+ 29  ®Divulgar¯
+ 30  ®Nota de série¯
+ 31  ®Volume¯
+ 32  ®Fascículo¯
+ 33  ®ID Kardex¯
+ 34  ®Suplemento¯
+ 35  ®ISSN¯
+ 36  ®Livre¯
+ 37  ®Livre¯
+ 38  ®Informação descritiva¯
+ 39  ®Nível arquivístico¯
+ 40  ®Idioma do texto¯
+ 41  ®Idioma do resumo¯
+ 42  ®Patente¯
+ 43  ®Patente¯
+ 44  ®Patente¯
+ 45  ®Livre¯
+ 46  ®Livre¯
+ 47  ®Livre¯
+ 48  ®Livre¯
+ 49  ®Livre¯
+ 50  ®Instituição¯
+ 51  ®Notas de tese¯
+ 52  ®Pratrocinadores do evento¯
+ 53  ®Nome do evento¯
+ 54  ®Data do evento¯
+ 55  ®Data padronizada¯
+ 56  ®Local do evento¯
+ 57  ®País do evento¯
+ 58  ®Patrocinadores do projeto¯
+ 59  ®Nome do projeto¯
+ 60  ®Número do projeto¯
+ 61  ®Notas gerais¯
+ 62  ®Produtora¯
+ 63  ®Edição¯
+ 64  ®Data de produção¯
+ 65  ®Data padronizada¯
+ 66  ®Cidade de produção¯
+ 67  ®País de publicação¯
+ 68  ®Número da publicação¯
+ 69  ®ISBN¯
+ 70  ®Imagem do objeto¯
+ 71  ®Tipo de conteúdo¯
+ 72  ®Total de referências¯
+ 73  ®Livre¯
+ 74  ®Desde¯
+ 75  ®Até¯
+ 76  ®Descritor pré-codificado¯
+ 77  ®Livre¯
+ 78  ®Biografado¯
+ 79  ®Bibliografia¯
+ 80  ®Livre¯
+ 81  ®Livre¯
+ 82  ®Descritores geograficos¯
+ 83  ®Resumo¯
+ 84  ®Código HTML¯
+ 85  ®Areas do conhecimento¯
+ 86  ®Notas de conteúdo¯
+ 87  ®Palavras-chave¯
+ 88  ®Descritores secundarios¯
+ 89  ®Observações¯
+ 90  ®Restrições¯
+ 91  ®Nível da restrição¯
+ 92  ®Museu¯
+ 93  ®Museu¯
+ 94  ®Museu¯
+ 95  ®Museu¯
+ 96  ®Código HTML¯
+ 97  ®Livre¯
+ 98  ®Livre¯
+ 99  ®Livre¯
+103  ®Cutter/PHA¯
+105  ®Gênero documental¯
+121  ®Créditos¯
+141  ®Informações descritivas¯
+181  ®Subtítulo¯
+182  ®Subtítulo¯
+186  ®Comentários¯
+301  ®Formulário para descrição de fotos e imagens em geral¯
+302  ®Imagen¯
+303  ®Image¯
+304  ®Imagem¯
+305  ®Imagem¯
+999  ®^d20010501^belysio¯
+999  ®^d20100120^h1816^bZedu¯
+mfn=     5 
+6001  ®1¯
+6002  ®1¯
+6003  ®1¯
+6005  ®1¯
+6006  ®1¯
+6007  ®1¯
+6010  ®1¯
+6012  ®1¯
+6015  ®1¯
+6016  ®1¯
+6018  ®1¯
+6022  ®1¯
+6026  ®1¯
+6030  ®1¯
+6038  ®1¯
+6062  ®1¯
+6064  ®1¯
+6065  ®1¯
+6066  ®1¯
+6071  ®1¯
+6086  ®1¯
+6087  ®1¯
+6090  ®1¯
+6103  ®1¯
+6121  ®1¯
+6141  ®1¯
+6181  ®1¯
+6182  ®1¯
+  1  ®Código da biblioteca¯
+  2  ®Identificação do título¯
+  3  ®Classificação¯
+  4  ®Base de dados¯
+  5  ®Tipo de documento¯
+  6  ®Nível bibliográfico¯
+  7  ®Tombo¯
+  8  ®Suporte eletronico¯
+  9  ®Separata¯
+ 10  ®Autor¯
+ 11  ®Autor coletivo¯
+ 12  ®Título¯
+ 13  ®Título traduzido¯
+ 14  ®Paginação¯
+ 15  ®Créditos¯
+ 16  ®Autor¯
+ 17  ®Autor coletivo¯
+ 18  ®Título¯
+ 19  ®Título traduzido¯
+ 20  ®Total de páginas¯
+ 21  ®Volume¯
+ 22  ®Tipo de suporte¯
+ 23  ®Autor¯
+ 24  ®Autor coletivo¯
+ 25  ®Título¯
+ 26  ®Tipo de coleção¯
+ 27  ®Total de volumes¯
+ 28  ®Nacionalidade¯
+ 29  ®Divulgar¯
+ 30  ®Nota de série¯
+ 31  ®Volume¯
+ 32  ®Fascículo¯
+ 33  ®ID Kardex¯
+ 34  ®Suplemento¯
+ 35  ®ISSN¯
+ 36  ®Livre¯
+ 37  ®Livre¯
+ 38  ®Informação descritiva¯
+ 39  ®Nível arquivístico¯
+ 40  ®Idioma¯
+ 41  ®Idioma do resumo¯
+ 42  ®Patente¯
+ 43  ®Patente¯
+ 44  ®Patente¯
+ 45  ®Livre¯
+ 46  ®Livre¯
+ 47  ®Livre¯
+ 48  ®Livre¯
+ 49  ®Livre¯
+ 50  ®Instituição¯
+ 51  ®Notas de tese¯
+ 52  ®Pratrocinadores do evento¯
+ 53  ®Nome do evento¯
+ 54  ®Data do evento¯
+ 55  ®Data padronizada¯
+ 56  ®Local do evento¯
+ 57  ®País do evento¯
+ 58  ®Patrocinadores do projeto¯
+ 59  ®Nome do projeto¯
+ 60  ®Número do projeto¯
+ 61  ®Notas gerais¯
+ 62  ®Fabricante¯
+ 63  ®Edição¯
+ 64  ®Data de fabricação¯
+ 65  ®Data padronizada¯
+ 66  ®Cidade de fabricação¯
+ 67  ®País de publicação¯
+ 68  ®Número da publicação¯
+ 69  ®ISBN¯
+ 70  ®Imagem do objeto¯
+ 71  ®Tipo de conteúdo¯
+ 72  ®Total de referências¯
+ 73  ®Livre¯
+ 74  ®Desde¯
+ 75  ®Até¯
+ 76  ®Descritor pré-codificado¯
+ 77  ®Livre¯
+ 78  ®Biografado¯
+ 79  ®Bibliografia¯
+ 80  ®Livre¯
+ 81  ®Livre¯
+ 82  ®Descritores geograficos¯
+ 83  ®Resumo¯
+ 84  ®Código HTML¯
+ 85  ®Areas do conhecimento¯
+ 86  ®Notas de conteúdo¯
+ 87  ®Palavras-chave¯
+ 88  ®Descritores secundarios¯
+ 89  ®Observações¯
+ 90  ®Restrições¯
+ 91  ®Nível da restrição¯
+ 92  ®Museu¯
+ 93  ®Museu¯
+ 94  ®Museu¯
+ 95  ®Museu¯
+ 96  ®Código HTML¯
+ 97  ®Livre¯
+ 98  ®Livre¯
+ 99  ®Livre¯
+103  ®Cutter/PHA¯
+105  ®Gênero documental¯
+121  ®Créditos¯
+141  ®Informações descritivas¯
+181  ®Subtítulo¯
+182  ®Subtítulo¯
+186  ®Comentários¯
+301  ®Formulário para descrição de jogos infantis, jogos de computador ou kit de jogos¯
+302  ®Juego, Kit¯
+303  ®Play, Kit¯
+304  ®Jogo, Kit¯
+305  ®Jogo, Kit¯
+999  ®^d20010501^belysio¯
+999  ®^d20100120^h1817^bZedu¯
+mfn=     6 
+6001  ®1¯
+6002  ®1¯
+6003  ®1¯
+6005  ®1¯
+6006  ®1¯
+6007  ®1¯
+6010  ®1¯
+6012  ®1¯
+6014  ®1¯
+6016  ®1¯
+6018  ®1¯
+6020  ®1¯
+6022  ®1¯
+6026  ®1¯
+6030  ®1¯
+6040  ®1¯
+6062  ®1¯
+6063  ®1¯
+6064  ®1¯
+6065  ®1¯
+6066  ®1¯
+6071  ®1¯
+6087  ®1¯
+6090  ®1¯
+6103  ®1¯
+6121  ®1¯
+6141  ®1¯
+6181  ®1¯
+  1  ®Código da biblioteca¯
+  2  ®Identificação do título¯
+  3  ®Classificação¯
+  4  ®Base de dados¯
+  5  ®Tipo de documento¯
+  6  ®Nível bibliográfico¯
+  7  ®Tombos¯
+  8  ®Suporte eletronico¯
+  9  ®Separata¯
+ 10  ®Autor(es)¯
+ 11  ®Autor coletivo¯
+ 12  ®Título¯
+ 13  ®Título traduzido¯
+ 14  ®Paginação¯
+ 15  ®Créditos¯
+ 16  ®Autor(es)¯
+ 17  ®Autor coletivo¯
+ 18  ®Título¯
+ 19  ®Título traduzido¯
+ 20  ®Total de páginas¯
+ 21  ®Volume¯
+ 22  ®Tipo de suporte¯
+ 23  ®Autor¯
+ 24  ®Autor coletivo¯
+ 25  ®Título¯
+ 26  ®Tipo de coleção¯
+ 27  ®Total de volumes¯
+ 28  ®Nacionalidade¯
+ 29  ®Divulgar¯
+ 30  ®Nota de série¯
+ 31  ®Volume¯
+ 32  ®Fascículo¯
+ 33  ®ID Kardex¯
+ 34  ®Suplemento¯
+ 35  ®ISSN¯
+ 36  ®Livre¯
+ 37  ®Livre¯
+ 38  ®Informação descritiva¯
+ 39  ®Nível arquivístico¯
+ 40  ®Idioma do texto¯
+ 41  ®Idioma do resumo¯
+ 42  ®Patente - nome detentor¯
+ 43  ®Patente - número registro¯
+ 44  ®Patente - período registro¯
+ 45  ®Livre¯
+ 46  ®Livre¯
+ 47  ®Livre¯
+ 48  ®Livre¯
+ 49  ®Livre¯
+ 50  ®Instituição¯
+ 51  ®Notas de tese¯
+ 52  ®Pratrocinadores do evento¯
+ 53  ®Nome do evento¯
+ 54  ®Data do evento¯
+ 55  ®Data padronizada¯
+ 56  ®Local do evento¯
+ 57  ®País do evento¯
+ 58  ®Patrocinadores do projeto¯
+ 59  ®Nome do projeto¯
+ 60  ®Número do projeto¯
+ 61  ®Notas gerais¯
+ 62  ®Editora¯
+ 63  ®Edição¯
+ 64  ®Data de publicação¯
+ 65  ®Data padronizada¯
+ 66  ®Cidade de publicação¯
+ 67  ®País de publicação¯
+ 68  ®Número da publicação¯
+ 69  ®ISBN¯
+ 70  ®Imagem do objeto¯
+ 71  ®Tipo de conteúdo¯
+ 72  ®Total de referências¯
+ 73  ®Livre¯
+ 74  ®Desde¯
+ 75  ®Até¯
+ 76  ®Descritor pré-codificado¯
+ 77  ®Livre¯
+ 78  ®Biografado¯
+ 79  ®Bibliografia¯
+ 80  ®Livre¯
+ 81  ®Livre¯
+ 82  ®Descritores geograficos¯
+ 83  ®Resumo¯
+ 84  ®Código HTML¯
+ 85  ®Areas do conhecimento¯
+ 86  ®Notas de conteúdo¯
+ 87  ®Palavras-chave¯
+ 88  ®Descritores secundarios¯
+ 89  ®Observações¯
+ 90  ®Restrições¯
+ 91  ®Nível da restrição¯
+ 92  ®Museu¯
+ 93  ®Museu¯
+ 94  ®Museu¯
+ 95  ®Museu¯
+ 96  ®Código HTML¯
+ 97  ®Livre¯
+ 98  ®Livre¯
+ 99  ®Livre¯
+103  ®Cutter/PHA¯
+105  ®Gênero documental¯
+121  ®Créditos¯
+141  ®Informações descritivas¯
+181  ®Subtítulo¯
+182  ®Subtítulo¯
+186  ®Comentários¯
+301  ®Formulário para descrição de livros em geral¯
+302  ®Libro¯
+303  ®Book¯
+304  ®Livro¯
+305  ®Livro¯
+999  ®^d20010501^belysio¯
+999  ®^d20100120^h1823^bZedu¯
+mfn=     7 
+6001  ®1¯
+6002  ®1¯
+6003  ®1¯
+6005  ®1¯
+6006  ®1¯
+6007  ®1¯
+6008  ®1¯
+6010  ®1¯
+6012  ®1¯
+6014  ®1¯
+6015  ®1¯
+6016  ®1¯
+6018  ®1¯
+6020  ®1¯
+6022  ®1¯
+6026  ®1¯
+6038  ®1¯
+6040  ®1¯
+6062  ®1¯
+6064  ®1¯
+6065  ®1¯
+6066  ®1¯
+6071  ®1¯
+6086  ®1¯
+6087  ®1¯
+6089  ®1¯
+6090  ®1¯
+6103  ®1¯
+6121  ®1¯
+6141  ®1¯
+6181  ®1¯
+  1  ®Código da biblioteca¯
+  2  ®Identificação do título¯
+  3  ®Classificação¯
+  4  ®Base de dados¯
+  5  ®Tipo de documento¯
+  6  ®Nível bibliográfico¯
+  7  ®Tombo¯
+  8  ®Suporte eletrônico¯
+  9  ®Separata¯
+ 10  ®Autor¯
+ 11  ®Autor coletivo¯
+ 12  ®Título¯
+ 13  ®Título traduzido¯
+ 14  ®Paginação¯
+ 15  ®Créditos¯
+ 16  ®Autor¯
+ 17  ®Autor coletivo¯
+ 18  ®Título¯
+ 19  ®Título traduzido¯
+ 20  ®Total de páginas¯
+ 21  ®Volume¯
+ 22  ®Tipo de suporte¯
+ 23  ®Autor¯
+ 24  ®Autor coletivo¯
+ 25  ®Título¯
+ 26  ®Tipo de coleção¯
+ 27  ®Total de volumes¯
+ 28  ®Nacionalidade¯
+ 29  ®Divulgar¯
+ 30  ®Título da série¯
+ 31  ®Volume¯
+ 32  ®Fascículo¯
+ 33  ®ID Kardex¯
+ 34  ®Suplemento¯
+ 35  ®ISSN¯
+ 36  ®Livre¯
+ 37  ®Livre¯
+ 38  ®Informação descritiva¯
+ 39  ®Nível arquivístico¯
+ 40  ®Idioma do texto¯
+ 41  ®Idioma do resumo¯
+ 42  ®Patente - nome detentor¯
+ 43  ®Patente - número registro¯
+ 44  ®Patente - período registro¯
+ 45  ®Livre¯
+ 46  ®Livre¯
+ 47  ®Livre¯
+ 48  ®Livre¯
+ 49  ®Livre¯
+ 50  ®Instituição¯
+ 51  ®Notas de tese¯
+ 52  ®Pratrocinadores do evento¯
+ 53  ®Nome do evento¯
+ 54  ®Data do evento¯
+ 55  ®Data padronizada¯
+ 56  ®Local do evento¯
+ 57  ®País do evento¯
+ 58  ®Patrocinadores do projeto¯
+ 59  ®Nome do projeto¯
+ 60  ®Número do projeto¯
+ 61  ®Notas gerais¯
+ 62  ®Escritor¯
+ 63  ®Edição¯
+ 64  ®Data que escreveu¯
+ 65  ®Data padronizada¯
+ 66  ®Cidade que escreveu¯
+ 67  ®País de publicação¯
+ 68  ®Número da publicação¯
+ 69  ®ISBN¯
+ 70  ®Imagem do objeto¯
+ 71  ®Tipo de conteúdo¯
+ 72  ®Total de referências¯
+ 73  ®Livre¯
+ 74  ®Desde¯
+ 75  ®Até¯
+ 76  ®Descritor pré-codificado¯
+ 77  ®Livre¯
+ 78  ®Biografado¯
+ 79  ®Bibliografia¯
+ 80  ®Livre¯
+ 81  ®Livre¯
+ 82  ®Descritores geograficos¯
+ 83  ®Resumo¯
+ 84  ®Código HTML¯
+ 85  ®Areas do conhecimento¯
+ 86  ®Notas de conteúdo¯
+ 87  ®Palavras-chave¯
+ 88  ®Descritores secundarios¯
+ 89  ®Observações¯
+ 90  ®Restrições¯
+ 91  ®Nível da restrição¯
+ 92  ®Museu¯
+ 93  ®Museu¯
+ 94  ®Museu¯
+ 95  ®Museu¯
+ 96  ®Código HTML¯
+ 97  ®Livre¯
+ 98  ®Livre¯
+ 99  ®Livre¯
+103  ®Cutter/PHA¯
+105  ®Gênero documental¯
+121  ®Créditos¯
+141  ®Informações descritivas¯
+181  ®Subtítulo¯
+182  ®Subtítulo¯
+186  ®Comentários¯
+301  ®Formulário para descrição de manuscritos em geral¯
+302  ®Manuscrito¯
+303  ®Manuscrito¯
+304  ®Manuscrito¯
+305  ®Manuscrito¯
+999  ®^d20010501^belysio¯
+999  ®^d20100120^h1825^bZedu¯
+mfn=     8 
+6001  ®1¯
+6002  ®1¯
+6003  ®1¯
+6005  ®1¯
+6006  ®1¯
+6007  ®1¯
+6008  ®1¯
+6010  ®1¯
+6012  ®1¯
+6015  ®1¯
+6016  ®1¯
+6018  ®1¯
+6021  ®1¯
+6022  ®1¯
+6025  ®1¯
+6030  ®1¯
+6038  ®1¯
+6040  ®1¯
+6062  ®1¯
+6064  ®1¯
+6065  ®1¯
+6066  ®1¯
+6070  ®1¯
+6071  ®1¯
+6086  ®1¯
+6087  ®1¯
+6089  ®1¯
+6090  ®1¯
+6103  ®1¯
+6121  ®1¯
+6141  ®1¯
+6181  ®1¯
+  1  ®Código da biblioteca¯
+  2  ®Identificação do título¯
+  3  ®Classificação¯
+  4  ®Base de dados¯
+  5  ®Tipo de documento¯
+  6  ®Nível bibliográfico¯
+  7  ®Tombo¯
+  8  ®Suporte eletrônico¯
+  9  ®Separata¯
+ 10  ®Autor¯
+ 11  ®Autor coletivo¯
+ 12  ®Título¯
+ 13  ®Título traduzido¯
+ 14  ®Paginação¯
+ 15  ®Créditos¯
+ 16  ®Autor¯
+ 17  ®Autor coletivo¯
+ 18  ®Título¯
+ 19  ®Título traduzido¯
+ 20  ®Total de páginas¯
+ 21  ®Volume¯
+ 22  ®Tipo de suporte¯
+ 23  ®Autor¯
+ 24  ®Autor coletivo¯
+ 25  ®Tipo de coleção¯
+ 26  ®Tipo de coleção¯
+ 27  ®Total de volumes¯
+ 28  ®Nacionalidade¯
+ 29  ®Divulgar¯
+ 30  ®Nota de série¯
+ 31  ®Volume¯
+ 32  ®Fascículo¯
+ 33  ®ID Kardex¯
+ 34  ®Suplemento¯
+ 35  ®ISSN¯
+ 36  ®Livre¯
+ 37  ®Livre¯
+ 38  ®Informação descritiva¯
+ 39  ®Nível arquivístico¯
+ 40  ®Idioma¯
+ 41  ®Idioma do resumo¯
+ 42  ®Patente¯
+ 43  ®Patente¯
+ 44  ®Patente¯
+ 45  ®Livre¯
+ 46  ®Livre¯
+ 47  ®Livre¯
+ 48  ®Livre¯
+ 49  ®Livre¯
+ 50  ®Instituição¯
+ 51  ®Notas de tese¯
+ 52  ®Pratrocinadores do evento¯
+ 53  ®Nome do evento¯
+ 54  ®Data do evento¯
+ 55  ®Data padronizada¯
+ 56  ®Local do evento¯
+ 57  ®País do evento¯
+ 58  ®Patrocinadores do projeto¯
+ 59  ®Nome do projeto¯
+ 60  ®Número do projeto¯
+ 61  ®Notas gerais¯
+ 62  ®Editora¯
+ 63  ®Edição¯
+ 64  ®Data de publicação¯
+ 65  ®Data padronizada¯
+ 66  ®Cidade de publicação¯
+ 67  ®País de publicação¯
+ 68  ®Número da publicação¯
+ 69  ®ISBN¯
+ 70  ®Imagem do objeto¯
+ 71  ®Tipo de conteúdo¯
+ 72  ®Total de referências¯
+ 73  ®Livre¯
+ 74  ®Desde¯
+ 75  ®Até¯
+ 76  ®Descritor pré-codificado¯
+ 77  ®Livre¯
+ 78  ®Biografado¯
+ 79  ®Bibliografia¯
+ 80  ®Livre¯
+ 81  ®Livre¯
+ 82  ®Descritores geograficos¯
+ 83  ®Resumo¯
+ 84  ®Código HTML¯
+ 85  ®Areas do conhecimento¯
+ 86  ®Notas de conteúdo¯
+ 87  ®Palavras-chave¯
+ 88  ®Descritores secundarios¯
+ 89  ®Observações¯
+ 90  ®Restrições¯
+ 91  ®Nível da restrição¯
+ 92  ®Museu¯
+ 93  ®Museu¯
+ 94  ®Museu¯
+ 95  ®Museu¯
+ 96  ®Código HTML¯
+ 97  ®Livre¯
+ 98  ®Livre¯
+ 99  ®Livre¯
+103  ®Cutter/PHA¯
+105  ®Gênero documental¯
+121  ®Créditos¯
+141  ®Informações descritivas¯
+181  ®Subtítulo¯
+182  ®Subtítulo¯
+186  ®Comentários¯
+301  ®Formulário para descrição de mapas, cartas de navegação e documentos cartográficos em geral ¯
+302  ®Mapa¯
+303  ®Map¯
+304  ®Mapa¯
+305  ®Mapa¯
+999  ®^d20010501^belysio¯
+999  ®^d20100120^h1826^bZedu¯
+mfn=     9 
+6001  ®1¯
+6002  ®1¯
+6003  ®1¯
+6004  ®1¯
+6005  ®1¯
+6006  ®1¯
+6007  ®1¯
+6008  ®1¯
+6009  ®1¯
+6010  ®1¯
+6011  ®1¯
+6012  ®1¯
+6013  ®1¯
+6014  ®1¯
+6015  ®1¯
+6016  ®1¯
+6017  ®1¯
+6018  ®1¯
+6019  ®1¯
+6020  ®1¯
+6021  ®1¯
+6022  ®1¯
+6023  ®1¯
+6024  ®1¯
+6025  ®1¯
+6026  ®1¯
+6027  ®1¯
+6028  ®1¯
+6029  ®1¯
+6030  ®1¯
+6031  ®1¯
+6032  ®1¯
+6033  ®1¯
+6034  ®1¯
+6035  ®1¯
+6036  ®1¯
+6037  ®1¯
+6038  ®1¯
+6039  ®1¯
+6040  ®1¯
+6041  ®1¯
+6042  ®1¯
+6043  ®1¯
+6044  ®1¯
+6045  ®1¯
+6046  ®1¯
+6047  ®1¯
+6048  ®1¯
+6049  ®1¯
+6050  ®1¯
+6051  ®1¯
+6052  ®1¯
+6053  ®1¯
+6054  ®1¯
+6055  ®1¯
+6056  ®1¯
+6057  ®1¯
+6058  ®1¯
+6059  ®1¯
+6060  ®1¯
+6061  ®1¯
+6062  ®1¯
+6063  ®1¯
+6064  ®1¯
+6065  ®1¯
+6066  ®1¯
+6067  ®1¯
+6068  ®1¯
+6069  ®1¯
+6070  ®1¯
+6071  ®1¯
+6072  ®1¯
+6073  ®1¯
+6074  ®1¯
+6075  ®1¯
+6076  ®1¯
+6077  ®1¯
+6078  ®1¯
+6079  ®1¯
+6080  ®1¯
+6081  ®1¯
+6082  ®1¯
+6083  ®1¯
+6084  ®1¯
+6085  ®1¯
+6086  ®1¯
+6087  ®1¯
+6088  ®1¯
+6089  ®1¯
+6090  ®1¯
+6091  ®1¯
+6092  ®1¯
+6093  ®1¯
+6094  ®1¯
+6095  ®1¯
+6096  ®1¯
+6097  ®1¯
+6098  ®1¯
+6099  ®1¯
+6103  ®1¯
+6105  ®1¯
+6121  ®1¯
+6141  ®1¯
+6181  ®1¯
+6182  ®1¯
+6186  ®1¯
+  1  ®Código da biblioteca¯
+  2  ®Identificação do título¯
+  3  ®Classificação¯
+  4  ®Bases de dados¯
+  5  ®Tipo de documento¯
+  6  ®Nível bibliográfico¯
+  7  ®Tombo¯
+  8  ®Suporte eletrônico¯
+  9  ®Separata¯
+ 10  ®Autor ¯
+ 11  ®Autor coletivo¯
+ 12  ®Título¯
+ 13  ®Título traduzido¯
+ 14  ®Paginação¯
+ 15  ®Créditos¯
+ 16  ®Autor¯
+ 17  ®Autor coletivo¯
+ 18  ®Título¯
+ 19  ®Título traduzido¯
+ 20  ®Total de páginas¯
+ 21  ®Volume¯
+ 22  ®Tipo de suporte¯
+ 23  ®Autor (coleção)¯
+ 24  ®Autor coletivo (coleção)¯
+ 25  ®Título (coleção)¯
+ 26  ®Tipo de coleção¯
+ 27  ®Total de volumes¯
+ 28  ®Procedência¯
+ 29  ®Divulgar¯
+ 30  ®Título da série¯
+ 31  ®Volume (periódico)¯
+ 32  ®Fascículo (periódico)¯
+ 33  ®No. do periódico no kardex¯
+ 34  ®Suplemento (periódico)¯
+ 35  ®ISSN¯
+ 36  ®Livre¯
+ 37  ®Livre¯
+ 38  ®Informação descritiva¯
+ 39  ®Nível arquivístico¯
+ 40  ®Idioma do texto¯
+ 41  ®Idioma do resumo¯
+ 42  ®Patente: nome detentor¯
+ 43  ®Patente: número registro¯
+ 44  ®Patente: período registro¯
+ 45  ®Livre¯
+ 46  ®Livre¯
+ 47  ®Livre¯
+ 48  ®Livre¯
+ 49  ®Livre¯
+ 50  ®Tese: instituição¯
+ 51  ®Tese: notas¯
+ 52  ®Evento: patrocinadores¯
+ 53  ®Evento: nome¯
+ 54  ®Evento: data¯
+ 55  ®Evento: data padronizada¯
+ 56  ®Evento: local¯
+ 57  ®Evento: país¯
+ 58  ®Projeto: patrocinadores¯
+ 59  ®Projeto: nome¯
+ 60  ®Projeto: número¯
+ 61  ®Notas gerais¯
+ 62  ®Editora / Produtora / Gravadora¯
+ 63  ®Edição¯
+ 64  ®Data de publicação / produção / gravação¯
+ 65  ®Data padronizada¯
+ 66  ®Cidade de publicação / produção / gravação¯
+ 67  ®País de publicação / produção / gravação¯
+ 68  ®Símbolo ou código de publicações internacionais¯
+ 69  ®ISBN¯
+ 70  ®Imagem do objeto¯
+ 71  ®Tipo de conteúdo¯
+ 72  ®Total de referências¯
+ 73  ®Livre¯
+ 74  ®Alcance temporal: desde¯
+ 75  ®Alcance temporal: até¯
+ 76  ®Descritor pré-codificado¯
+ 77  ®Livre¯
+ 78  ®Indivíduo como tema (biografia)¯
+ 79  ®Bibliografia para os cursos¯
+ 80  ®Livre¯
+ 81  ®Livre¯
+ 82  ®Descritores geográficos¯
+ 83  ®Resumo¯
+ 84  ®Código HTML¯
+ 85  ®Áreas do conhecimento¯
+ 86  ®Notas de conteúdo¯
+ 87  ®Palavras-chave¯
+ 88  ®Descritores secundários¯
+ 89  ®Observações¯
+ 90  ®Disponibilidade¯
+ 91  ®Nível da restrição¯
+ 92  ®Museu - povo¯
+ 93  ®Museu - técnica de confecção¯
+ 94  ®Museu - estado de conservação¯
+ 95  ®Museu - materiais utilizados¯
+ 96  ®Código HTML (restrito)¯
+ 97  ®Livre¯
+ 98  ®Livre¯
+ 99  ®Livre¯
+103  ®Cutter/PHA¯
+105  ®Gênero documental (NOBRADE)¯
+121  ®Créditos¯
+141  ®Informação descritiva (analítica)¯
+181  ®Subtítulo¯
+182  ®Subtítulo (série)¯
+186  ®Comentários¯
+301  ®Formulário completo¯
+302  ®Otro¯
+303  ®Another¯
+304  ®Outro¯
+305  ®Outro¯
+999  ®^d20010501^belysio¯
+999  ®^d20100120^h1743^bZedu¯
+mfn=    10 
+6001  ®1¯
+6002  ®1¯
+6003  ®1¯
+6005  ®1¯
+6006  ®1¯
+6007  ®1¯
+6016  ®1¯
+6017  ®1¯
+6018  ®1¯
+6022  ®1¯
+6025  ®1¯
+6026  ®1¯
+6027  ®1¯
+6038  ®1¯
+6040  ®1¯
+6061  ®1¯
+6062  ®1¯
+6064  ®1¯
+6065  ®1¯
+6066  ®1¯
+6067  ®1¯
+6070  ®1¯
+6071  ®1¯
+6078  ®1¯
+6082  ®1¯
+6083  ®1¯
+6086  ®1¯
+6087  ®1¯
+6089  ®1¯
+6090  ®1¯
+6091  ®1¯
+6092  ®1¯
+6093  ®1¯
+6094  ®1¯
+6095  ®1¯
+6097  ®1¯
+6181  ®1¯
+  1  ®Código da biblioteca¯
+  2  ®Identificação do objeto¯
+  3  ®Classificação¯
+  4  ®Base de dados¯
+  5  ®Tipo de objeto¯
+  6  ®Nível bibliográfico¯
+  7  ®Tombo¯
+  8  ®Suporte eletronico¯
+  9  ®Separata¯
+ 10  ®Autor¯
+ 11  ®Autor coletivo¯
+ 12  ®Título¯
+ 13  ®Título traduzido¯
+ 14  ®Paginação¯
+ 15  ®Créditos¯
+ 16  ®Autor da peça¯
+ 17  ®Responsável pela guarda¯
+ 18  ®Peça¯
+ 19  ®Título traduzido¯
+ 20  ®Total de páginas¯
+ 21  ®Volume¯
+ 22  ®Tipo de suporte¯
+ 23  ®Autor¯
+ 24  ®Autor coletivo¯
+ 25  ®Nome da coleção¯
+ 26  ®Tipo de coleção¯
+ 27  ®Quantidade de peças¯
+ 28  ®Nacionalidade¯
+ 29  ®Divulgar¯
+ 30  ®Título da série¯
+ 31  ®Volume¯
+ 32  ®Fascículo¯
+ 33  ®ID Kardex¯
+ 34  ®Suplemento¯
+ 35  ®ISSN¯
+ 36  ®Livre¯
+ 37  ®Livre¯
+ 38  ®Dimensões da peça¯
+ 39  ®Nível arquivístico¯
+ 40  ®Família linguística¯
+ 41  ®Idioma do resumo¯
+ 42  ®Patente - Detentor¯
+ 43  ®Patente - Número registro¯
+ 44  ®Patente - Período registro¯
+ 45  ®Livre¯
+ 46  ®Livre¯
+ 47  ®Livre¯
+ 48  ®Livre¯
+ 49  ®Livre¯
+ 50  ®Instituição¯
+ 51  ®Notas de tese¯
+ 52  ®Pratrocinadores do evento¯
+ 53  ®Nome do evento¯
+ 54  ®Data do evento¯
+ 55  ®Data padronizada¯
+ 56  ®Local do evento¯
+ 57  ®País do evento¯
+ 58  ®Patrocinadores do projeto¯
+ 59  ®Nome do projeto¯
+ 60  ®Número do projeto¯
+ 61  ®Notas gerais¯
+ 62  ®Criador / Fabricante¯
+ 63  ®Edição¯
+ 64  ®Data de confeção ou coleta¯
+ 65  ®Data padronizada¯
+ 66  ®Local de confecção¯
+ 67  ®País¯
+ 68  ®Número da publicação¯
+ 69  ®ISBN¯
+ 70  ®Imagem do objeto¯
+ 71  ®Tipo de conteúdo¯
+ 72  ®Total de referências¯
+ 73  ®Livre¯
+ 74  ®Desde¯
+ 75  ®Até¯
+ 76  ®Descritor pré-codificado¯
+ 77  ®Livre¯
+ 78  ®Assunto (pessoa)¯
+ 79  ®Bibliografia¯
+ 80  ®Livre¯
+ 81  ®Livre¯
+ 82  ®Assunto (geográfico)¯
+ 83  ®Resumo¯
+ 84  ®Código HTML¯
+ 85  ®Areas do conhecimento¯
+ 86  ®Função¯
+ 87  ®Palavras-chave¯
+ 88  ®Descritores secundarios¯
+ 89  ®Observações¯
+ 90  ®Disponibilidade¯
+ 91  ®Nível da restrição¯
+ 92  ®Nome do povo¯
+ 93  ®Técnica de confecção¯
+ 94  ®Estado de conservação¯
+ 95  ®Materiais utilizados¯
+ 96  ®Código HTML¯
+ 97  ®Terminologia ética (museu)¯
+ 98  ®Livre¯
+ 99  ®Livre¯
+103  ®Cutter/PHA¯
+105  ®Gênero documental¯
+121  ®Créditos¯
+141  ®Informações descritivas¯
+181  ®Descrição do objeto¯
+182  ®Subtítulo¯
+186  ®Comentários¯
+301  ®Formulário para descrição de peças de museu, obras de arte, etc.¯
+302  ®Peça de Museu¯
+303  ®Museum Part¯
+304  ®Peça de Museu¯
+305  ®Peça de Museu¯
+999  ®^d20010501^belysio¯
+999  ®^d20100120^h1831^bZedu¯
+mfn=    11 
+6001  ®1¯
+6002  ®1¯
+6003  ®1¯
+6005  ®1¯
+6006  ®1¯
+6007  ®1¯
+6008  ®1¯
+6009  ®1¯
+6010  ®1¯
+6012  ®1¯
+6014  ®1¯
+6020  ®1¯
+6022  ®1¯
+6026  ®1¯
+6030  ®1¯
+6031  ®1¯
+6032  ®1¯
+6033  ®1¯
+6034  ®1¯
+6035  ®1¯
+6038  ®1¯
+6040  ®1¯
+6062  ®1¯
+6064  ®1¯
+6065  ®1¯
+6066  ®1¯
+6071  ®1¯
+6086  ®1¯
+6087  ®1¯
+6089  ®1¯
+6090  ®1¯
+6103  ®1¯
+6121  ®1¯
+6141  ®1¯
+6182  ®1¯
+  1  ®Código da biblioteca¯
+  2  ®Identificação do título¯
+  3  ®Classificação¯
+  4  ®Base de dados¯
+  5  ®Tipo de documento¯
+  6  ®Nível bibliográfico¯
+  7  ®Tombo¯
+  8  ®Suporte eletrônico¯
+  9  ®Separata¯
+ 10  ®Autor do artigo¯
+ 11  ®Autor coletivo¯
+ 12  ®Título do artigo¯
+ 13  ®Título traduzido¯
+ 14  ®Paginação¯
+ 15  ®Créditos¯
+ 16  ®Autor¯
+ 17  ®Autor coletivo¯
+ 18  ®Título¯
+ 19  ®Título traduzido¯
+ 20  ®Total de páginas¯
+ 21  ®Volume¯
+ 22  ®Tipo de suporte¯
+ 23  ®Autor¯
+ 24  ®Autor coletivo¯
+ 25  ®Título¯
+ 26  ®Tipo de coleção¯
+ 27  ®Total de volumes¯
+ 28  ®Nacionalidade¯
+ 29  ®Divulgar¯
+ 30  ®Título do periódico¯
+ 31  ®Volume¯
+ 32  ®Fascículo¯
+ 33  ®Kardex¯
+ 34  ®Suplemento¯
+ 35  ®ISSN¯
+ 36  ®Livre¯
+ 37  ®Livre¯
+ 38  ®Informação descritiva¯
+ 39  ®Nível arquivístico¯
+ 40  ®Idioma do texto¯
+ 41  ®Idioma do resumo¯
+ 42  ®Patente - Detentor¯
+ 43  ®Patente - Número registro¯
+ 44  ®Patente - Período registro¯
+ 45  ®Livre¯
+ 46  ®Livre¯
+ 47  ®Livre¯
+ 48  ®Livre¯
+ 49  ®Livre¯
+ 50  ®Instituição¯
+ 51  ®Notas de tese¯
+ 52  ®Pratrocinadores do evento¯
+ 53  ®Nome do evento¯
+ 54  ®Data do evento¯
+ 55  ®Data padronizada¯
+ 56  ®Local do evento¯
+ 57  ®País do evento¯
+ 58  ®Patrocinadores do projeto¯
+ 59  ®Nome do projeto¯
+ 60  ®Número do projeto¯
+ 61  ®Notas gerais¯
+ 62  ®Editora¯
+ 63  ®Edição¯
+ 64  ®Data de publicação¯
+ 65  ®Data padronizada¯
+ 66  ®Cidade publicação¯
+ 67  ®País de publicação¯
+ 68  ®Número da publicação¯
+ 69  ®ISBN¯
+ 70  ®Imagem do objeto¯
+ 71  ®Tipo de conteúdo¯
+ 72  ®Total de referências¯
+ 73  ®Livre¯
+ 74  ®Desde¯
+ 75  ®Até¯
+ 76  ®Descritor pré-codificado¯
+ 77  ®Livre¯
+ 78  ®Biografado¯
+ 79  ®Bibliografia¯
+ 80  ®Livre¯
+ 81  ®Livre¯
+ 82  ®Descritores geograficos¯
+ 83  ®Resumo¯
+ 84  ®Código HTML¯
+ 85  ®Areas do conhecimento¯
+ 86  ®Notas de conteúdo¯
+ 87  ®Palavras-chave¯
+ 88  ®Descritores secundarios¯
+ 89  ®Observações¯
+ 90  ®Restrições¯
+ 91  ®Nível da restrição¯
+ 92  ®Museu - Povo¯
+ 93  ®Museu - Técnica de confecção¯
+ 94  ®Museu - Estado de conservação¯
+ 95  ®Museu - Materiais utilizados¯
+ 96  ®Código HTML¯
+ 97  ®Livre¯
+ 98  ®Livre¯
+ 99  ®Livre¯
+103  ®Cutter/PHA¯
+105  ®Gênero documental¯
+121  ®Créditos¯
+141  ®Informações descritivas¯
+181  ®Subtítulo¯
+182  ®Subtítulo¯
+186  ®Comentários¯
+301  ®Formulário para descrição de documentos seriados em geral (jornais, revistas, periódicos, etc.)¯
+302  ®Revista¯
+303  ®Serial¯
+304  ®Periódico¯
+305  ®Periódico¯
+999  ®^d20010501^belysio¯
+999  ®^d20100120^h1753^bZedu¯
+mfn=    12 
+6001  ®1¯
+6002  ®1¯
+6003  ®1¯
+6005  ®1¯
+6006  ®1¯
+6007  ®1¯
+6008  ®1¯
+6012  ®1¯
+6014  ®1¯
+6015  ®1¯
+6016  ®1¯
+6018  ®1¯
+6020  ®1¯
+6021  ®1¯
+6022  ®1¯
+6026  ®1¯
+6040  ®1¯
+6050  ®1¯
+6051  ®1¯
+6062  ®1¯
+6064  ®1¯
+6065  ®1¯
+6066  ®1¯
+6071  ®1¯
+6087  ®1¯
+6090  ®1¯
+6103  ®1¯
+6121  ®1¯
+6141  ®1¯
+6181  ®1¯
+  1  ®Código da biblioteca¯
+  2  ®Identificação do título¯
+  3  ®Classificação¯
+  4  ®Base de dados¯
+  5  ®Tipo de documento¯
+  6  ®Nível bibliográfico¯
+  7  ®Tombo¯
+  8  ®Suporte eletrônico¯
+  9  ®Separata¯
+ 10  ®Autor¯
+ 11  ®Autor coletivo¯
+ 12  ®Título do capítulo¯
+ 13  ®Título traduzido¯
+ 14  ®Paginação¯
+ 15  ®Orientador¯
+ 16  ®Autor¯
+ 17  ®Autor coletivo¯
+ 18  ®Título¯
+ 19  ®Título traduzido¯
+ 20  ®Total de páginas¯
+ 21  ®Volume¯
+ 22  ®Tipo de suporte¯
+ 23  ®Autor¯
+ 24  ®Autor coletivo¯
+ 25  ®Título¯
+ 26  ®Tipo de coleção¯
+ 27  ®Total de volumes¯
+ 28  ®Nacionalidade¯
+ 29  ®Divulgar¯
+ 30  ®Título da série¯
+ 31  ®Volume¯
+ 32  ®Fascículo¯
+ 33  ®ID Kardex¯
+ 34  ®Suplemento¯
+ 35  ®ISSN¯
+ 36  ®Livre¯
+ 37  ®Livre¯
+ 38  ®Informação descritiva¯
+ 39  ®Nível arquivístico¯
+ 40  ®Idioma do texto¯
+ 41  ®Idioma do resumo¯
+ 42  ®Patente - Detentor¯
+ 43  ®Patente - Número do registro¯
+ 44  ®Patente - Período do registro¯
+ 45  ®Livre¯
+ 46  ®Livre¯
+ 47  ®Livre¯
+ 48  ®Livre¯
+ 49  ®Livre¯
+ 50  ®Instituição de apresentação¯
+ 51  ®Nota de tese¯
+ 52  ®Pratrocinadores do evento¯
+ 53  ®Nome do evento¯
+ 54  ®Data do evento¯
+ 55  ®Data padronizada¯
+ 56  ®Local do evento¯
+ 57  ®País do evento¯
+ 58  ®Patrocinadores do projeto¯
+ 59  ®Nome do projeto¯
+ 60  ®Número do projeto¯
+ 61  ®Notas gerais¯
+ 62  ®Editora¯
+ 63  ®Edição¯
+ 64  ®Data de publicação¯
+ 65  ®Data padronizada¯
+ 66  ®Cidade publicação¯
+ 67  ®País de publicação¯
+ 68  ®Número da publicação¯
+ 69  ®ISBN¯
+ 70  ®Imagem do objeto¯
+ 71  ®Tipo de conteúdo¯
+ 72  ®Total de referências¯
+ 73  ®Livre¯
+ 74  ®Desde¯
+ 75  ®Até¯
+ 76  ®Descritor pré-codificado¯
+ 77  ®Livre¯
+ 78  ®Biografado¯
+ 79  ®Bibliografia¯
+ 80  ®Livre¯
+ 81  ®Livre¯
+ 82  ®Descritores geograficos¯
+ 83  ®Resumo¯
+ 84  ®Código HTML¯
+ 85  ®Areas do conhecimento¯
+ 86  ®Notas de conteúdo¯
+ 87  ®Palavras-chave¯
+ 88  ®Descritores secundarios¯
+ 89  ®Observações¯
+ 90  ®Restrições¯
+ 91  ®Nível da restrição¯
+ 92  ®Museu - Nome do povo¯
+ 93  ®Museu - Técnica de conservação¯
+ 94  ®Museu - Estado de conservação¯
+ 95  ®Museu - Materiais utilizados¯
+ 96  ®Código HTML¯
+ 97  ®Livre¯
+ 98  ®Livre¯
+ 99  ®Livre¯
+103  ®Cutter/PHA¯
+105  ®Gênero documental¯
+121  ®Créditos¯
+141  ®Informações descritivas¯
+181  ®Subtítulo¯
+182  ®Subtítulo¯
+186  ®Comentários¯
+301  ®Formulário para descrição de teses, trabalho de conclusão de curso, monografia, etc.¯
+302  ®Tesis¯
+303  ®Tesis¯
+304  ®Tese¯
+305  ®Tese¯
+999  ®^d20010501^belysio¯
+999  ®^d20100120^h1833^bZedu¯
+mfn=    13 
+6001  ®1¯
+6002  ®1¯
+6003  ®1¯
+6005  ®1¯
+6006  ®1¯
+6007  ®1¯
+6010  ®1¯
+6012  ®1¯
+6014  ®1¯
+6015  ®1¯
+6016  ®1¯
+6018  ®1¯
+6020  ®1¯
+6021  ®1¯
+6022  ®1¯
+6026  ®1¯
+6030  ®1¯
+6038  ®1¯
+6040  ®1¯
+6062  ®1¯
+6063  ®1¯
+6064  ®1¯
+6065  ®1¯
+6066  ®1¯
+6069  ®1¯
+6071  ®1¯
+6086  ®1¯
+6087  ®1¯
+6089  ®1¯
+6090  ®1¯
+6121  ®1¯
+6141  ®1¯
+6181  ®1¯
+  1  ®Código da biblioteca¯
+  2  ®Identificação do título¯
+  3  ®Classificação¯
+  4  ®Base de dados¯
+  5  ®Tipo de documento¯
+  6  ®Nível bibliográfico¯
+  7  ®Tombo¯
+  8  ®Suporte eletronico¯
+  9  ®Separata¯
+ 10  ®Autor do capítulo¯
+ 11  ®Autor coletivo¯
+ 12  ®Título do capítulo¯
+ 13  ®Título traduzido¯
+ 14  ®Paginação¯
+ 15  ®Créditos¯
+ 16  ®Autor¯
+ 17  ®Autor coletivo¯
+ 18  ®Título¯
+ 19  ®Título traduzido¯
+ 20  ®Total de páginas¯
+ 21  ®Volume¯
+ 22  ®Tipo de suporte¯
+ 23  ®Autor¯
+ 24  ®Autor coletivo¯
+ 25  ®Título¯
+ 26  ®Tipo de coleção¯
+ 27  ®Total de volumes¯
+ 28  ®Nacionalidade¯
+ 29  ®Divulgar¯
+ 30  ®Nota de série¯
+ 31  ®Volume¯
+ 32  ®Fascículo¯
+ 33  ®ID Kardex¯
+ 34  ®Suplemento¯
+ 35  ®ISSN¯
+ 36  ®Livre¯
+ 37  ®Livre¯
+ 38  ®Informação descritiva¯
+ 39  ®Nível arquivístico¯
+ 40  ®Idioma do texto¯
+ 41  ®Idioma do resumo¯
+ 42  ®Patente¯
+ 43  ®Patente¯
+ 44  ®Patente¯
+ 45  ®Livre¯
+ 46  ®Livre¯
+ 47  ®Livre¯
+ 48  ®Livre¯
+ 49  ®Livre¯
+ 50  ®Instituição¯
+ 51  ®Notas de tese¯
+ 52  ®Pratrocinadores do evento¯
+ 53  ®Nome do evento¯
+ 54  ®Data do evento¯
+ 55  ®Data padronizada¯
+ 56  ®Local do evento¯
+ 57  ®País do evento¯
+ 58  ®Patrocinadores do projeto¯
+ 59  ®Nome do projeto¯
+ 60  ®Número do projeto¯
+ 61  ®Notas gerais¯
+ 62  ®Editora¯
+ 63  ®Edição¯
+ 64  ®Data de publicação¯
+ 65  ®Data padronizada¯
+ 66  ®Cidade de publicação¯
+ 67  ®País de publicação¯
+ 68  ®Número da publicação¯
+ 69  ®ISBN¯
+ 70  ®Imagem do objeto¯
+ 71  ®Tipo de conteúdo¯
+ 72  ®Total de referências¯
+ 73  ®Livre¯
+ 74  ®Desde¯
+ 75  ®Até¯
+ 76  ®Descritor pré-codificado¯
+ 77  ®Livre¯
+ 78  ®Biografado¯
+ 79  ®Bibliografia¯
+ 80  ®Livre¯
+ 81  ®Livre¯
+ 82  ®Descritores geograficos¯
+ 83  ®Resumo¯
+ 84  ®Código HTML¯
+ 85  ®Areas do conhecimento¯
+ 86  ®Notas de conteúdo¯
+ 87  ®Palavras-chave¯
+ 88  ®Descritores secundarios¯
+ 89  ®Observações¯
+ 90  ®Restrições¯
+ 91  ®Nível da restrição¯
+ 92  ®Museu¯
+ 93  ®Museu¯
+ 94  ®Museu¯
+ 95  ®Museu¯
+ 96  ®Código HTML¯
+ 97  ®Livre¯
+ 98  ®Livre¯
+ 99  ®Livre¯
+103  ®Cutter/PHA¯
+105  ®Gênero documental¯
+121  ®Créditos¯
+141  ®Informações descritivas¯
+181  ®Subtítulo¯
+182  ®Subtítulo¯
+186  ®Comentários¯
+301  ®Formulário para descrição de sitios www (web sites)¯
+302  ®Sitio Web¯
+303  ®Homepage¯
+304  ®Homepage¯
+305  ®Homepage¯
+999  ®^d20010501^belysio¯
+999  ®^d20100120^h1834^bZedu¯

@@ -1,0 +1,65 @@
+'<input type="hidden" name="IsisScript" value="',cat('path_xis'),''v960'.xis">'
+'<input type="hidden" name="opc" value="grava">'
+'<input type="hidden" name="dbvar" value="^aphl_tdo^b11^ctdo">'
+'<input type="hidden" name="999" value="'v999[1]'">'
+'<input type="hidden" name="rec" value="'v1010'">'
+'<input type="hidden" name="exp" value="'v958,"$"n958,'">'
+'<input type="hidden" name="mfn" value="'v957'">'
+'<tr><td class="td1o"></td><td class="topico">',ref(['tab_txt']156,@tab_txt.pft,),'</td></tr>'
+'<tr>
+  <td class="td1o" valign="top">Ícone:</td>
+  <td class="td2">
+    <input type="radio" value="',cat('path_img'),'015.gif"',if s(mpu,v370):s('015.gif',mpl) then 'checked' fi,' name="370"><img src="',cat('path_img'),'015.gif" border="0">
+    <input type="radio" value="',cat('path_img'),'017.gif"',if s(mpu,v370):s('017.gif',mpl) then 'checked' fi,' name="370"><img src="',cat('path_img'),'017.gif" border="0">
+    <input type="radio" value="',cat('path_img'),'023.gif"',if s(mpu,v370):s('023.gif',mpl) then 'checked' fi,' name="370"><img src="',cat('path_img'),'023.gif" border="0">
+    <input type="radio" value="',cat('path_img'),'058.gif"',if s(mpu,v370):s('058.gif',mpl) then 'checked' fi,' name="370"><img src="',cat('path_img'),'058.gif" border="0">
+    <input type="radio" value="',cat('path_img'),'025.gif"',if s(mpu,v370):s('025.gif',mpl) then 'checked' fi,' name="370"><img src="',cat('path_img'),'025.gif" border="0">
+    <input type="radio" value="',cat('path_img'),'026.gif"',if s(mpu,v370):s('026.gif',mpl) then 'checked' fi,' name="370"><img src="',cat('path_img'),'026.gif" border="0">
+    <input type="radio" value="',cat('path_img'),'027.gif"',if s(mpu,v370):s('027.gif',mpl) then 'checked' fi,' name="370"><img src="',cat('path_img'),'027.gif" border="0">
+    <input type="radio" value="',cat('path_img'),'028.gif"',if s(mpu,v370):s('028.gif',mpl) then 'checked' fi,' name="370"><img src="',cat('path_img'),'028.gif" border="0">
+    <input type="radio" value="',cat('path_img'),'029.gif"',if s(mpu,v370):s('029.gif',mpl) then 'checked' fi,' name="370"><img src="',cat('path_img'),'029.gif" border="0">
+    <input type="radio" value="',cat('path_img'),'030.gif"',if s(mpu,v370):s('030.gif',mpl) then 'checked' fi,' name="370"><img src="',cat('path_img'),'030.gif" border="0">
+    <input type="radio" value="',cat('path_img'),'031.gif"',if s(mpu,v370):s('031.gif',mpl) then 'checked' fi,' name="370"><img src="',cat('path_img'),'031.gif" border="0">
+    <input type="radio" value="',cat('path_img'),'032.gif"',if s(mpu,v370):s('032.gif',mpl) then 'checked' fi,' name="370"><img src="',cat('path_img'),'032.gif" border="0">
+    <input type="radio" value="',cat('path_img'),'033.gif"',if s(mpu,v370):s('033.gif',mpl) then 'checked' fi,' name="370"><img src="',cat('path_img'),'033.gif" border="0">
+    <input type="radio" value="',cat('path_img'),'034.gif"',if s(mpu,v370):s('034.gif',mpl) then 'checked' fi,' name="370"><img src="',cat('path_img'),'034.gif" border="0">
+    <input type="radio" value="',cat('path_img'),'035.gif"',if s(mpu,v370):s('035.gif',mpl) then 'checked' fi,' name="370"><img src="',cat('path_img'),'035.gif" border="0">
+    <input type="radio" value="',cat('path_img'),'036.gif"',if s(mpu,v370):s('036.gif',mpl) then 'checked' fi,' name="370"><img src="',cat('path_img'),'036.gif" border="0">
+    <input type="radio" value="',cat('path_img'),'037.gif"',if s(mpu,v370):s('037.gif',mpl) then 'checked' fi,' name="370"><img src="',cat('path_img'),'037.gif" border="0">
+    <input type="radio" value="',cat('path_img'),'038.gif"',if s(mpu,v370):s('038.gif',mpl) then 'checked' fi,' name="370"><img src="',cat('path_img'),'038.gif" border="0">
+    <input type="radio" value="',cat('path_img'),'039.gif"',if s(mpu,v370):s('039.gif',mpl) then 'checked' fi,' name="370"><img src="',cat('path_img'),'039.gif" border="0">
+    <input type="radio" value="',cat('path_img'),'040.gif"',if s(mpu,v370):s('040.gif',mpl) then 'checked' fi,' name="370"><img src="',cat('path_img'),'040.gif" border="0">
+    <input type="radio" value="',cat('path_img'),'041.gif"',if s(mpu,v370):s('041.gif',mpl) then 'checked' fi,' name="370"><img src="',cat('path_img'),'041.gif" border="0">
+    <input type="radio" value="',cat('path_img'),'042.gif"',if s(mpu,v370):s('042.gif',mpl) then 'checked' fi,' name="370"><img src="',cat('path_img'),'042.gif" border="0">
+    <input type="radio" value="',cat('path_img'),'043.gif"',if s(mpu,v370):s('043.gif',mpl) then 'checked' fi,' name="370"><img src="',cat('path_img'),'043.gif" border="0">
+    <input type="radio" value="',cat('path_img'),'044.gif"',if s(mpu,v370):s('044.gif',mpl) then 'checked' fi,' name="370"><img src="',cat('path_img'),'044.gif" border="0">
+    <input type="radio" value="',cat('path_img'),'045.gif"',if s(mpu,v370):s('045.gif',mpl) then 'checked' fi,' name="370"><img src="',cat('path_img'),'045.gif" border="0">
+    <input type="radio" value="',cat('path_img'),'046.gif"',if s(mpu,v370):s('046.gif',mpl) then 'checked' fi,' name="370"><img src="',cat('path_img'),'046.gif" border="0">
+    <input type="radio" value="',cat('path_img'),'047.gif"',if s(mpu,v370):s('047.gif',mpl) then 'checked' fi,' name="370"><img src="',cat('path_img'),'047.gif" border="0">
+    <input type="radio" value="',cat('path_img'),'048.gif"',if s(mpu,v370):s('048.gif',mpl) then 'checked' fi,' name="370"><img src="',cat('path_img'),'048.gif" border="0">
+    <input type="radio" value="',cat('path_img'),'051.gif"',if s(mpu,v370):s('051.gif',mpl) then 'checked' fi,' name="370"><img src="',cat('path_img'),'051.gif" border="0">
+    <input type="radio" value="',cat('path_img'),'052.gif"',if s(mpu,v370):s('052.gif',mpl) then 'checked' fi,' name="370"><img src="',cat('path_img'),'052.gif" border="0">
+    <input type="radio" value="',cat('path_img'),'054.gif"',if s(mpu,v370):s('054.gif',mpl) then 'checked' fi,' name="370"><img src="',cat('path_img'),'054.gif" border="0">
+    <input type="radio" value="',cat('path_img'),'055.gif"',if s(mpu,v370):s('055.gif',mpl) then 'checked' fi,' name="370"><img src="',cat('path_img'),'055.gif" border="0">
+    <input type="radio" value="',cat('path_img'),'056.gif"',if s(mpu,v370):s('056.gif',mpl) then 'checked' fi,' name="370"><img src="',cat('path_img'),'056.gif" border="0">
+    <input type="radio" value="',cat('path_img'),'057.gif"',if s(mpu,v370):s('057.gif',mpl) then 'checked' fi,' name="370"><img src="',cat('path_img'),'057.gif" border="0">
+    <input type="radio" value="',cat('path_img'),'059.gif"',if s(mpu,v370):s('059.gif',mpl) then 'checked' fi,' name="370"><img src="',cat('path_img'),'059.gif" border="0">
+    <input type="radio" value="',cat('path_img'),'060.gif"',if s(mpu,v370):s('060.gif',mpl) then 'checked' fi,' name="370"><img src="',cat('path_img'),'060.gif" border="0">
+    <input type="radio" value="',cat('path_img'),'061.gif"',if s(mpu,v370):s('061.gif',mpl) then 'checked' fi,' name="370"><img src="',cat('path_img'),'061.gif" border="0">
+    <input type="radio" value="',cat('path_img'),'062.gif"',if s(mpu,v370):s('062.gif',mpl) then 'checked' fi,' name="370"><img src="',cat('path_img'),'062.gif" border="0">
+    <input type="radio" value="',cat('path_img'),'063.gif"',if s(mpu,v370):s('063.gif',mpl) then 'checked' fi,' name="370"><img src="',cat('path_img'),'063.gif" border="0">
+    <input type="radio" value="',cat('path_img'),'064.gif"',if s(mpu,v370):s('064.gif',mpl) then 'checked' fi,' name="370"><img src="',cat('path_img'),'064.gif" border="0">
+    <input type="radio" value="',cat('path_img'),'065.gif"',if s(mpu,v370):s('065.gif',mpl) then 'checked' fi,' name="370"><img src="',cat('path_img'),'065.gif" border="0">
+    <input type="radio" value="',cat('path_img'),'066.gif"',if s(mpu,v370):s('066.gif',mpl) then 'checked' fi,' name="370"><img src="',cat('path_img'),'066.gif" border="0">
+    <input type="radio" value="',cat('path_img'),'067.gif"',if s(mpu,v370):s('067.gif',mpl) then 'checked' fi,' name="370"><img src="',cat('path_img'),'067.gif" border="0">
+    <input type="radio" value="',cat('path_img'),'068.gif"',if s(mpu,v370):s('068.gif',mpl) then 'checked' fi,' name="370"><img src="',cat('path_img'),'068.gif" border="0">
+    <input type="radio" value="',cat('path_img'),'069.gif"',if s(mpu,v370):s('069.gif',mpl) then 'checked' fi,' name="370"><img src="',cat('path_img'),'069.gif" border="0">
+  </td>
+</tr>'
+'<tr><td class="td1o">PT&nbsp;<a href=JavaScript:tab_man(301);>[301]</a></td><td class="td2"><input type="text" class="textbox" name="301" value="'v301'"></td></tr>'
+'<tr><td class="td1o">ES&nbsp;<a href=JavaScript:tab_man(302);>[302]</a></td><td class="td2"><input type="text" class="textbox" name="302" value="'v302'"></td></tr>'
+'<tr><td class="td1o">EN&nbsp;<a href=JavaScript:tab_man(303);>[303]</a></td><td class="td2"><input type="text" class="textbox" name="303" value="'v303'"></td></tr>'
+'<tr><td class="td1o">IT&nbsp;<a href=JavaScript:tab_man(304);>[304]</a></td><td class="td2"><input type="text" class="textbox" name="304" value="'v304'"></td></tr>'
+'<tr><td class="td1o">FR&nbsp;<a href=JavaScript:tab_man(305);>[305]</a></td><td class="td2"><input type="text" class="textbox" name="305" value="'v305'"></td></tr>'
+'<tr><td class="td1o">Exibir? <a href=JavaScript:tab_man(371);>[371]</a></td><td class="td2"><input type="checkbox" name="371" value="1"',if v371='1' then 'checked' fi,'><b>&nbsp;Marque para ocultar este item no menu de opções</b></td></tr>'
+'<tr><td class="td1o">Formulário&nbsp;<a href=JavaScript:tab_man(350);>[350]</a></td><td class="td2"><select class="fix" name="350" style="width:650"><option selected value="'v350'">'ref(['phl_acv_fmt']val(v350),@tab_txt.pft,)'</option>',(,if val(v350[1])<>val(v3073^b) then '<option value="'v3073^b'">',v3073^a,'</option>' fi,),'</select></td></tr>'

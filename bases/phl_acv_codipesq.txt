@@ -1,0 +1,586 @@
+a CLA=Classificacao
+a CLS=Classificacao da midia
+a CNT=Tipo de conteudo
+a COL=Tipo de colecao
+a DTA=Data do tombo
+a LET=Letra do numero da midia
+a MFN=Mfn (sem zeros a esquerda)
+a MID=Tipo da midia
+a NMA=Numero da midia se analitico
+a NMM=Numero da midia se monografico
+a NUM=Numero da midia
+a NIB=Nome do nivel bibliografico
+a NIV=Codigo do nivel bibliografico
+a SPT=Codigo tipo de suporte
+a SPT=Tipo da midia
+a STR=Nivel da restricao
+a STT=Disponibilidade (mostrar na busca)
+a TAR=Tipo de arquivamento
+a TBO=Numero do tombo
+a TDO=Nome do tipo de documento
+a TIP=Codigo de tipo de documento
+a TIT=Numero de identificacao do titulo
+b
+b APA=Autor pessoal analitica
+b CRE=Creditos (autoria)
+b DAU=Direito autoral
+b DIR=Direcao do video
+b DPD=Data padronizada
+b DTD=Data de publicacao
+b DTD=Data do documento
+b DTP=Ano da data padronizada
+b DEX=Data de exibicao do video
+b EDT=Editora
+b LOC=Localidade
+b LPB=Local de publicacao
+b PRO=Produtora
+b TNA=Titulo do video
+b TNA=Titulo nivel analitico
+b TNM=Titulo da midia
+b TNM=Titulo nivel monografico
+b ITI=Titulos
+c
+c AGE=Agencia do video
+c APR=Apresentador do video
+c BL1=Duracao do bloco 1
+c BL2=Duracao do bloco 2
+c BL3=Duracao do bloco 3
+c BL4=Duracao do bloco 4
+c BL5=Duracao do bloco 5
+c BL6=Duracao do bloco 6
+c CIN=Cinegrafista do video
+c CLI=Cliente do video
+c DES=Descritor
+c DES=Palavra chave
+c DUR=Duracao do video
+c OBS=Observacoes (inicio do texto)
+c PAI=Codigo do titulo pai da analitica
+c PGM=Programa de origem
+c PRD=Data de digitacao (antiga)
+c PRR=Responsavel digitacao (antigo)
+c REP=Reporter do video
+c SIN=Sinopse (inicio do texto)
+c TCD=Time code
+d
+d AM=Ano de modificacao
+d ANO=Ano de registro
+d AUM=Ano da ultima modificacao
+d BIB=Responsavel pelo registro
+d BIE=Responsavel pela edicao
+d DIA=Dia de registro
+d DM=Dia de modificacao
+d DTM=Data da ultima modificacao
+d DTR=Data de registro
+d DUM=Dia da ultima modificacao
+d MES=Mes de registro
+d MM=Mes de modificacao
+d MUM=Mes da ultima modificacao
+x
+x ACA=|v11^*/),
+x ACC=|v24^*/),
+x ACM=|v17^*/),
+x ACV="v1/,'
+x AGE=|v152/),(v152/),
+x AM=|v999^d*0.4,fi,/)
+x ANO='v999[1]^d*0.4/,
+x APA=|v10^*/),
+x APC=|v23^*/),
+x APM=|v16^*/),
+x APR=|v156/),(v156/),
+x AQU=|v7^c/) fi,"
+x ARQ=|v98/),
+x AT=|v99*0.4/),
+x ATE='v85/ fi,
+x AUM='v999[LAST]^d*0.4,fi,/,
+x AUT=|v10^*/),(v10^*/),
+x AUT=|v11^*/),(v11^*/),
+x AUT=|v16^*/),(v16^*/),
+x AUT=|v17^*/),(v17^*/),
+x AUT=|v23^*/),(v23^*/),
+x AUT=|v24^*/),(v24^*/),
+x AUT=|v53^*/),(v53^*/),
+x BIB='v999[1]^b/,
+x BIE='v999[LAST]^b/,fi,/,
+x BL1=|v155[1]^d/,|
+x BL2=|v155[2]^d/,|
+x BL3=|v155[3]^d/,|
+x BL4=|v155[4]^d/,|
+x BL5=|v155[5]^d/,|
+x BL6=|v155[6]^d/,|
+x BL7=|v155[7]^d/,|
+x BL8=|v155[8]^d/,|
+x BL9=|v155[9]^d/,
+x CIN=|v158/),(v158/),
+x CIP=|v109/),
+x CLA="v3/,"
+x CLI=|v151/),(v151/),
+x CLS='ref(['\Inetpub\wwwroot\video\bases\phl_cnt']val(v71),v301) else 'CLS=?',fi,
+x CNT="v71/,
+x CNT='ref(['\Inetpub\wwwroot\video\bases\phl_cnt']val(v71),v301) else 'CNT=?',fi,
+x COL="v26/,"
+x COL='ref(['\Inetpub\wwwroot\video\bases\phl_col']val(v26),v301) else 'COL=?',fi,
+x CRE=|v121/),(v121/),
+x CUR=|v79/),
+x DAU=|v121/),
+x DBI=|v4/),"
+x DE2=|v88^*,|/|v88^s/),
+x DEG=|v82/),
+x DES=|v78/),(V78/),
+x DES=|v82/),(v82/),
+x DES=|v87^*,|/|v87^s/),(v87^*,|/|v87^s/),
+x DES=|v88^*,|/|v88^s/),(v88^*,|/|v88^s/),
+x DIA='v999[1]^d*6.2/,
+x DIR=|v10^*/),
+x DIV="v29/,"
+x DIV=S"n29/,
+x DM=|v999^d*6.2,fi,/)
+x DPD="v65/,
+x DT=|v99*6.2/),
+x DTA=|v7^d/),(|
+x DTD=|v64/),(v64/),
+x DTE=|v55/),
+x DTF=|v75/),
+x DTI=|v74/),
+x DTM='v999[LAST]^d*0.8,fi,/,
+x DTN=|v46/),(v46/),
+x DTP="v65.4/,v65.4/,v65/,
+x DTR='v999[1]^d*0.8/,
+x DTT=|v99/),
+x DTV=|v54/),
+x DTX=|v64/),
+x DUM='v999[LAST]^d*6.2,fi,/,
+x DUR=|v154/),
+x EDT=|v62/),(v62/),
+x EVE=|v53^*/),
+x EVL=|v56/),(v56/),
+x EVP=|v57/),(v57/),
+x F=|v74/),(|
+x FAS="v32/,v32/,
+x FON=|v37/),
+x GEN=|v105/),
+x GEN='ref(['\Inetpub\wwwroot\video\bases\phl_gen']val(v105),v301),fi,
+x GRF'v1.3,v999[1]^d.6/,
+x ICT=|v78/),
+x IDA=|v141/),
+x IDE=|v38/),
+x IDM=|v40/),(if p(v40) then v1[1],|=IDM=|v40/ fi,),
+x IDM='ref(['\Inetpub\wwwroot\video\bases\phl_idm']val(v40),v301) else 'IDM=?',fi,
+x IDR='ref(['\Inetpub\wwwroot\video\bases\phl_idm']val(v41),v301),fi,
+x ISBN="v69/,
+x ISSN="v35/,
+x LET="v49*5/,
+x LOC=|v66/)/,fi,
+x LOF=|v97/),
+x LPB=|v66/),(|
+x MES='v999[1]^d*4.2/,
+x MFN='mfn(1)/,"
+x MID='ref(['\Inetpub\wwwroot\video\bases\phl_spt']val(v22),v301) else 'MID=?',fi,
+x MM=|v999^d*4.2,fi,/)
+x MT=|v99*4.2/),
+x MUM='v999[LAST]^d*4.2,fi,/,
+x NAU="v103/
+x NDA=|v39/),
+x NIB=Monografico'/,'NIB=Midia'/ else if s(mhu,v6,mpl)='AM' then 'NIB=Analitico'/,'NIB=Video'/ else 'NIB=?',fi,fi, else 'NIB='fi,/
+x NIV="v6/,"
+x NOR=|v45/),(v45/),
+x NUM="v49/,
+x OBS=|v89/),
+x PAI="v996/,
+x PAP=|v67/),(v67/),
+x PCT=|v112/),
+x PDF=|v120/),
+x PGM=|v150/),(v150/),
+x PNP=|v108/),
+x POR=|v111/),
+x PRC='v28/, fi,
+x PRD=|v81/),
+x PRO=|v62/),
+x PRP=|v60/),(v60/),
+x PRR=|v80/),
+x PTD=|v42/),(v42/),
+x PTN=|v43/),(v43/),
+x PTP=|v44/),
+x REF="v72/,
+x REL=|v47/),(v47/),
+x REP=|v157/),(v157/),
+x SBS=|v182/),(v182/),
+x SBT=|v181/),(v181/),
+x SEN="v33,"#"v6/
+x SEP=|v9/),"
+x SER="v33/,"
+x SIG=|v48/),(v48/),
+x SIN=|v83/),
+x SPT="v22/,"
+x SPT='ref(['\Inetpub\wwwroot\video\bases\phl_spt']val(v22),v301) else 'SPT=?',fi,
+x STR=|v91/),
+x STR='ref(['\Inetpub\wwwroot\video\bases\phl_rgl']val(v91),v301),fi,
+x STT="v90/,"STT=B"n90/ else 'STT='v91/ fi/
+x T=|v75/),(|
+x TAR='ref(['\Inetpub\wwwroot\video\bases\phl_col']val(v26),v301) else 'TAR=?',fi,
+x TBO^a'v5[1],'^b'v65[1].4,if v65[1]='' then '0000' fi,'^c'v85[1],if v85[1]='' then '9' fi,'^d'v28[1],if v28[1]='' then '3' fi/ fi,),
+x TBO=|v7^a/),(v1[1],|#TBO#|v7^a/),(|
+x TCD=|v153/),
+x TDO='ref(['\Inetpub\wwwroot\video\bases\phl_tdo']val(v5),v301) else 'TDO=?',fi,
+x TEI=|v50/),(v50/),
+x TET=|v51^a/ else |TET=|v51^*/,fi,|TEG=|v51^b/),
+x TG="v1"=",v5/,"
+x TIP="v5/,"
+x TIT^a'v5,'^b'v65.4,"0000"n65,'^c'v85,"9"n85,'^d'v28,"3"n28/,fi
+x TIT="v2/,"
+x TIV=|v110/),
+x TNA=|v12/),
+x TNC=|v25/),
+x TNM=|v18/),
+x TPR="v30/ fi,(v30/),
+x TSR=|v30/),
+x ITI=|v12/),(v12/),
+x ITI=|v13/),(v13/),
+x ITI=|v18/),(v18/),
+x ITI=|v19/),(v19/),
+x ITI=|v25/),(v25/),
+x ITI=|v30/),(v30/),
+x ITI=|v36/),(v36/),
+x TVR=|v36/),
+x TZA=|v13/),
+x TZM=|v19/),
+x v1,"="v65.4/,fi,
+x v1,'PRC='v28/,'
+x v1'=CNT='v71/ fi,
+x v1'=SPT='v22/ fi,
+x VAL=|v86^v|%|/)
+x VOL="v31/,v31/,
+x WIK=|v186/),
+x WO=|v113/),
+y ?A001
+y ?A002
+y ?A003
+y ?A005
+y ?A006
+y ?A007
+y ?A010
+y ?A011
+y ?A012
+y ?A013
+y ?A016
+y ?A017
+y ?A018
+y ?A019
+y ?A022
+y ?A023
+y ?A024
+y ?A025
+y ?A026
+y ?A030
+y ?A036
+y ?A037
+y ?A038
+y ?A040
+y ?A049
+y ?A055
+y ?A056
+y ?A057
+y ?A062
+y ?A064
+y ?A065
+y ?A066
+y ?A071
+y ?A080
+y ?A081
+y ?A082
+y ?A083
+y ?A085
+y ?A086
+y ?A087
+y ?A088
+y ?A089
+y ?A090
+y ?A091
+y ?A103
+y ?A121
+y ?A141
+y ?A150
+y ?A151
+y ?A152
+y ?A153
+y ?A154
+y ?A155
+y ?A156
+y ?A157
+y ?A158
+y ?A181
+y ?A182
+y ?A996
+y ?A997
+y ?A998
+y ?A999
+y ?P003
+y ?P004
+y ?P007
+y ?P008
+y ?P009
+y ?P010
+y ?P011
+y ?P012
+y ?P013
+y ?P014
+y ?P015
+y ?P016
+y ?P017
+y ?P018
+y ?P019
+y ?P020
+y ?P021
+y ?P022
+y ?P023
+y ?P024
+y ?P025
+y ?P026
+y ?P027
+y ?P028
+y ?P029
+y ?P030
+y ?P031
+y ?P032
+y ?P033
+y ?P034
+y ?P035
+y ?P036
+y ?P037
+y ?P038
+y ?P039
+y ?P040
+y ?P041
+y ?P042
+y ?P043
+y ?P044
+y ?P045
+y ?P046
+y ?P047
+y ?P048
+y ?P049
+y ?P050
+y ?P051
+y ?P052
+y ?P053
+y ?P054
+y ?P055
+y ?P056
+y ?P057
+y ?P058
+y ?P059
+y ?P060
+y ?P061
+y ?P062
+y ?P063
+y ?P064
+y ?P065
+y ?P066
+y ?P067
+y ?P068
+y ?P069
+y ?P070
+y ?P071
+y ?P072
+y ?P073
+y ?P074
+y ?P075
+y ?P076
+y ?P077
+y ?P078
+y ?P079
+y ?P080
+y ?P081
+y ?P082
+y ?P083
+y ?P084
+y ?P085
+y ?P086
+y ?P087
+y ?P088
+y ?P089
+y ?P090
+y ?P091
+y ?P092
+y ?P093
+y ?P094
+y ?P095
+y ?P096
+y ?P097
+y ?P098
+y ?P099
+y ?P100
+y ?P101
+y ?P102
+y ?P103
+y ?P104
+y ?P105
+y ?P106
+y ?P107
+y ?P108
+y ?P109
+y ?P110
+y ?P111
+y ?P112
+y ?P113
+y ?P114
+y ?P115
+y ?P116
+y ?P117
+y ?P118
+y ?P119
+y ?P120
+y ?P121
+y ?P141
+y ?P150
+y ?P151
+y ?P152
+y ?P153
+y ?P154
+y ?P155
+y ?P156
+y ?P157
+y ?P158
+y ?P181
+y ?P182
+y ?P186
+y ?P996
+y ?P997
+y ?P998
+y ?P999
+z 001 Código da biblioteca (unidade do sistema)*/
+z 002 Número de identificação (chave de ligação)*/
+z 003 Classificação*/
+z 004 Base de dados*/
+z 005 Código de tipo de documento*/
+z 006 Código de nível de tratamento bibliografico*/
+z 007 Tombos deste objeto*/
+z 008 Suporte eletrônico*/
+z 009 Separata (s/n) */
+z 010 Autor (nível analítico)*/
+z 011 Autor Coletivo (nivel analitico)*/
+z 012 Título (nível analítico) */
+z 013 Título traduzido (nível analítico)*/
+z 014 Paginação (nível analítico)*/
+z 015 Ementa e créditos (nivel monográfico)*/
+z 016 Autor Pessoal  (nível monográfico)*/
+z 017 Autor Coletivo (nível monográfico)*/
+z 018 Título (nível monográfico)*/
+z 019 Título traduzido (nivel monográfico)*/
+z 020 Total de paginas (nível monográfico) */
+z 021 Volume (nível monográfico)*/
+z 022 Tipo de suporte*/
+z 023 Autor (nível coleção)*/
+z 024 Autor Coletivo (nível coleção)*/
+z 025 Título (nível coleção)*/
+z 026 (0) Tipo de coleção*/
+z 027 Total de volumes (monográfico)*/
+z 028 Procedencia (nacionalidade) */
+z 029 Divulgar como nova aquisição (S/N) */
+z 030 Título (série/coleção)*/
+z 031 Número do volume (periodico) */
+z 032 Número do fascículo*/
+z 033 Número do título no kardex*/
+z 034 Suplemento (periodico)*/
+z 035 ISSN*/
+z 036 Variacao do titulo  (RDB) */
+z 037 Fonte da referencia (RDB) */
+z 038 Informação Descritiva */
+z 039 Nivel de descrição arquivistica */
+z 040 Idioma do documento*/
+z 041 Idioma do resumo */
+z 042 Patente - Detentor */
+z 043 Patente - Número do registro */
+z 044 Patente - Período do registro */
+z 045 Número da norma     (CIB) */
+z 046 Ano da norma        (CIB) */
+z 047 Código do relatório (CIB) */
+z 048 Grau de sigilo      (CIB) */
+z 049 Números de registro (CIB) */
+z 050 Tese - Instituição*/
+z 051 Tese - Notas*/
+z 052 Evento - Patrocinadores*/
+z 053 Evento - Nome*/
+z 054 Data do evento*/
+z 055 Data Padronizada */
+z 056 Local do evento*/
+z 057 Evento - País*/
+z 058 Projeto - Patrocinadores*/
+z 059 Projeto - Nome*/
+z 060 Projeto - Número */
+z 061 Notas gerais*/
+z 062 Editora*/
+z 063 Edição, revisão, etc*/
+z 064 Data da publicação*/
+z 065 Data padronizada ISO para efeito de ordenação */
+z 066 Local de publicação*/
+z 067 País de publicação*/
+z 068 Símbolo*/
+z 069 ISBN*/
+z 070 Imagem do objeto */
+z 071 Tipo de conteudo*/
+z 072 Total de referências*/
+z 073 livre */
+z 074 Alcance temporal - desde */
+z 075 Alcance temporal - até*/
+z 076 Descritor pré-codificado */
+z 077 livre */
+z 078 Indivíduo como tema (biografia)*/
+z 079 Bibliografia de cursos*/
+z 080 Responsável processamento */
+z 081 Data de processamento */
+z 082 Descritores geograficos*/
+z 083 Resumo do documento*/
+z 085 Área do conhecimento (CNPQ)*/
+z 086 Notas de Conteúdo*/
+z 087 Descritores do conteúdo, palavras-chaves*/
+z 088 Descritores Secundários*/
+z 089 Observações*/
+z 090 Disponibilidade (Status de publicação na Web)*/
+z 091 Nivel da restricao */
+z 092 Museu - Povo */
+z 093 Museu - Técnica de confecção */
+z 094 Museu - Estado de conservação */
+z 095 Museu - Materiais utilizados */
+z 097 Localizacao fisica (JEVS) */
+z 098 Arquivamento       (JEVS) */
+z 099 Data de descarte   (JEVS) */
+z 100 livre */
+z 101 livre */
+z 102 livre */
+z 103 Cutter / PHA */
+z 104 livre */
+z 105 Genero documental (arquivo)*/
+z 106 livre */
+z 107 livre */
+z 108 Patente - Pais e numero da patente  (RDB) */
+z 109 Patente - Class. intern. patentes   (RDB) */
+z 110 Patente - Titular ou inventor       (RDB) */
+z 111 Patente - Pais origem/num. deposito (RDB) */
+z 112 Patente - PCT (Patent Coop. Treaty) (RDB) */
+z 113 Patente - WO (world collection)     (RDB) */
+z 114 livre */
+z 115 livre */
+z 116 livre */
+z 117 livre */
+z 118 livre */
+z 119 livre */
+z 120 Arquivo do Adobe (.pdf) (RDB) */
+z 121 Ementa - Créditos (nivel analítico)*/
+z 141 Informacao descritiva (nivel analítico) */
+z 150 Video - programa de origem */
+z 151 Video - cliente */
+z 152 Video - agencia */
+z 153 Video - time code */
+z 154 Video - duração */
+z 155 Video - blocos [^b ordem, ^d duracao (mm'ss") */
+z 156 Video - apresentador */
+z 157 Video - reporter */
+z 158 Video - cinegrafista */
+z 181 Subtítulo (nível monográfico)*/
+z 182 Subtítulo (nível série)*/
+z 186 Comentários do usuário (wiki) */
+z 996 ID nivel superior*/
+z 998 mfn*/
+z 999 Controle de datas*/
+z htm Código escrito em HTML*/
+z htr Codigo escrito em HTML (acesso restrito) */

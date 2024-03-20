@@ -1,0 +1,77 @@
+<!-- Elimina reserva (externa)
+     14/04/2007 - Revisado -->
+     
+     <IsisScript name="032.xis">
+
+<!-- Define o tipo de conteúdo dos htmls que gerados dinamicamente -->
+     <display><pft>'Content-type: text/html; charset=iso-8859-1'/#</pft></display>
+
+<!-- Inclue funcao (vars) que carrega as variaveis de configuracao -->
+     <include>/Data/DadosApl/ACEBIB/ant/cgi-bin/phl82/001.fnc</include>
+     
+<!-- Inclue funcao (manutencao) que verifica estado de manutencao do sistema -->
+     <include>/Data/DadosApl/ACEBIB/ant/cgi-bin/phl82/manutencao.fnc</include>
+
+<!-- Inicia a secao do script -->
+     <section>
+
+<!-- Carrega variáveis de configuração -->
+     <call name="001">now</call>
+     
+<!-- Verifica estado de manutencao  -->
+     <call name="manutencao">now</call>
+     
+<!-- Carrega variáveis do formulário do cliente -->
+     <field action="cgi" tag="957">mfn</field>
+
+     <flow action="jump">
+       <pft>
+          ,if v3000^3='funcionario' then 'deletar' else
+           ,if ref(['phl_res']val(v957),v930^u)=v3000^2 then 'deletar' else '251' fi,
+          ,fi,
+       </pft>
+     </flow>
+     <flow action="exit">1</flow>
+  
+     <label>deletar</label>
+
+     <!-- Elimina registro da base de dados de reservas -->
+     
+          <!-- 29/05/2008 10:49:12 --><file action="close" type="database">phl_res</file>
+
+          <do task="update">
+           <parm name="db">phl_res</parm>
+           <parm name="mfn"><pft>,v957,</pft></parm>
+           <parm name="uctab"><pft>cat('uctab')</pft></parm>
+           <parm name="actab"><pft>cat('actab')</pft></parm>
+           <parm name="fst"><pft>,cat('phl_res.fst'),</pft></parm>
+           <field action="define" tag="1105">Isis_Lock</field>
+           <parm name="lockid"><pft>getenv('REMOTE_ADDR'),x1,s(date).8</pft></parm>
+           <field action="define" tag="1003">Isis_Status</field>
+
+           <update>
+             <field action="export" tag="list">701,801,900/940</field>
+             <field action="delete" tag="list">ALL</field>
+             <write>Delete</write>
+             <field action="import" tag="list">701,801,900/958,3000,1010,7003</field>
+             <field action="replace" tag="3000"><pft>,v3000,'^w'v1003,'^x'mstname,'^y'mfn,'^z'v7003.15,</pft></field>
+	   </update>
+
+           <field action="add" tag="250">158</field>
+           <display><htmlpft><pft>
+            ,if val(v1003)=0 then ref(['tab_fmx']10,v4),fi,
+           </pft></htmlpft></display>
+          
+          </do>
+          <file action="close" type="database">phl_res</file>
+          <flow action="exit">1</flow>
+          
+<!-- Mensagens de erro -->
+     
+     <label>251</label>
+     <field action="replace" tag="250">251</field>
+     <display><htmlpft><pft>,ref(['tab_fmx']10,v4),</pft></htmlpft></display>
+     <flow action="exit">1</flow>
+
+</section>
+</IsisScript>

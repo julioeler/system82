@@ -1,0 +1,21 @@
+<!-- Edição de arquivos do phl -->
+     <IsisScript name="070.xis">
+
+<!-- Define o tipo de conteúdo dos htmls que gerados dinamicamente -->
+     <display><pft>'Content-type: text/html; charset=iso-8859-1'/#</pft></display>
+
+<!-- Inclue funcao que carrega as variaveis de configuracao -->
+     <include>/Data/DadosApl/ACEBIB/ant/cgi-bin/phl82/001.fnc</include>
+
+<!-- Inicia a secao do script -->
+     <section>
+
+<!-- Carrega dados da sessao -->
+     <call name="001">now</call>
+
+<!-- Abre formulário de parâmetros -->
+     <display><htmlpft><pft>,ref(['tab_fmx']242,(v4/)),</pft></htmlpft></display>
+     <flow action="exit">1</flow>
+
+</section>
+</IsisScript>

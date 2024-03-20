@@ -1,0 +1,162 @@
+<!--
+body {
+ scrollbar-face-color:#C831DD;
+ scrollbar-highlight-color:#FFFFFF;
+ scrollbar-3dlight-color:#FFFFFF;
+ scrollbar-darkshadow-color:#FFFFFF;
+ scrollbar-shadow-color:#FFFFFF;
+ scrollbar-arrow-color:#FFFFFF;
+ scrollbar-track-color:#FFFFFF;
+ font-family:Arial, Helvetica, sans-serif;
+ color:#006699;
+ background-color:#FFFFFF;
+ font-size: 12px;
+ }
+table {
+ width:100%;
+ color:#006699;
+ font-size: 12px;
+ }
+th {
+ color:#006699;
+ background-color:#EFC2F5;
+ }
+h1 {
+ text-align:center;
+ padding:10px;
+ margin:10px auto 20px auto;
+ margin-left:10px;
+ background-color:#EFC2F5;
+ font-size: 12px;
+ color:#006699;
+ border: solid 1px;
+ }
+h2 {
+ text-align:center;
+ padding:10px;
+ margin:10px auto 20px auto;
+ margin-left:20px;
+ margin-right:20px;
+ background-color:#FFFF00;
+ font-size: 12px;
+ color:red;
+ border: solid 1px;
+ }
+.menu {background-color: #EFC2F5; border: solid 1px; text-align: center;}
+.botao {
+ background-color:#EFC2F5;
+ font-weight:bold;
+ font-size:12px;
+ padding:2px;
+ margin-top:10px;
+ color:#006699;
+ }
+.foto img {
+ border:0;
+ width: 90px;
+ height: 120px;
+ text-align: center;
+ }
+.fe {
+ text-align:center;
+ padding:10px;
+ margin:0px auto 0px auto;
+ background-color:#EFC2F5;
+ font-size: 12px;
+ color:#006699;
+ border:0px;
+ }
+.ft10 {
+ font-size:10px;
+ color:#006699;
+ }
+.foto img {
+ border:0;
+ width:90px;
+ height:120px;
+ text-align:center;
+ }
+.inv12 {
+ background-color:#C831DD;
+ color:#FFFFFF;
+ font-size:12px;
+ font-weight:bold;
+ text-decoration: none;
+ }
+.inv12c {
+ background-color:#C831DD;
+ color:#FFFFFF;
+ font-size:12px;
+ font-weight:bold;
+ text-decoration: none;
+ text-align:center;
+ }
+.inv12red {
+ background-color:red;
+ color:#FFFFFF;
+ font-size:12px;
+ font-weight:bold;
+ text-decoration: none;
+ text-align:center;
+ }
+.inv12green {
+ background-color:green;
+ color:#FFFFFF;
+ font-size:12px;
+ font-weight:bold;
+ text-decoration: none;
+ text-align:center;
+ }
+.inv14 {
+ background-color:#C831DD;
+ color:#FFFFFF;
+ font-size:14px;
+ font-weight:bold;
+ text-decoration: none;
+ }
+a {
+ color:#0000CD;
+ text-decoration:none;
+ }
+a:hover {
+ color:#FFD700;
+ background-color:#C831DD;
+ text-decoration:none;
+ }
+.legenda {text-align: right; color: #006699; font-size: 11px;}
+textarea {width: 100%; font-family:monospace; font-size: 14px;}
+select {font-family:monospace; width: 300px; font-size: 14px;}
+.C39 {color: #000000; font-family: Code 3of9; font-size: 16;}
+.F39 {color: #000000; font-family: Free 3 of 9; font-size: 16;}
+.F39X {color: #000000; font-family: Free 3 of 9 Extended; font-size: 16;}
+.IDC39 {color: #000000; font-family: IDAutomation.com Code39; font-size: 16;}
+.link10 {font-size:10px;}
+.ft12vi {background-color:#FFFF00;}
+.alerta {background-color:#FFFF00;}
+.textbox {width: 100%; font-family:monospace; font-size: 14px;}
+.td1e {width: 22%; font-family:Arial, Helvetica, sans-serif; text-align: right; vertical-align:top; font-weight: bold;}
+.td1f {width: 22%; font-family:Arial, Helvetica, sans-serif; text-align: right; vertical-align:top; color: #006699;}
+.td1o {width: 22%; font-family:Arial, Helvetica, sans-serif; text-align: right; vertical-align:top; color: red; font-weight: bold;}
+.td2  {width: 78%; font-family:Arial, Helvetica, sans-serif; background-color: #EFC2F5; text-align: left;}
+.td3  {width: 78%; font-family:Arial, Helvetica, sans-serif; background-color: #EFC2F5; text-align: left;}
+.topico {color: #FFFFFF; text-align: center; width: 70%; font-size: 14px; background-color: #C831DD; FONT-WEIGHT: bold;}
+.erro {color: #FFFFFF; background-color: red;}
+.etiqueta {color: #000000;}
+#c1 {background-color:#FFFF00;}
+.suggest_link {background-color: #FFFFFF; padding: 2px 6px 2px 6px; }
+.suggest_link_over {background-color: yellow; padding: 2px 6px 2px 6px;}
+#search_suggest {position: relative; background-color: #FFFFFF; text-align: left; border: 1px solid #EFC2F5;}
+#busca_vocabulario {position: relative; background-color: #6487DC; text-align: left; border: 1px solid #EFC2F5;}
+#busca_autoridades {position: relative; background-color: #6487DC; text-align: left; border: 1px solid #EFC2F5;}
+#busca_autoridades_analitica {position: relative; background-color: #6487DC; text-align: left; border: 1px solid #EFC2F5;}
+#busca_autores {position: relative; background-color: #FFFFFF; text-align: left; border: 1px solid #EFC2F5;}
+#busca_autores_analitica {position: relative; background-color: #FFFFFF; text-align: left; border: 1px solid #EFC2F5;}
+#busca_descritores {position: relative; background-color: yellow; text-align: left; border: 1px solid #EFC2F5;}
+#busca_cidade {position: relative; background-color: yellow; text-align: left; border: 1px solid #EFC2F5;}
+#busca_editora {position: relative; background-color: yellow; text-align: left; border: 1px solid #EFC2F5;}
+#busca_fornecedor {position: relative; background-color: yellow; text-align: left; border: 1px solid #EFC2F5;}
+#busca_kardex {position: absolute; background-color: yellow; text-align: left; border: 1px solid #EFC2F5;}
+#busca_classe {font-family:Arial, Helvetica, sans-serif; position: relative; background-color: yellow; text-align: left; border: 1px solid #EFC2F5;}
+#busca_cutter {font-family:Arial, Helvetica, sans-serif; position: relative; background-color: yellow; text-align: left; border: 1px solid #EFC2F5;}
+#busca_curso {position: relative; background-color: yellow; text-align: left; border: 1px solid #EFC2F5;}
+-->

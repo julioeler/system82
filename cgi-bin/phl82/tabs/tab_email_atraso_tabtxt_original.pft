@@ -1,0 +1,15 @@
+'?subject='ref(['tab_txt']744,@tab_txt.pft,)/*Aviso de atraso*/
+'&body='   ref(['tab_txt']984,@tab_txt.pft,)/*Prezado(a) usuario(a)*/
+':%0A%0A'  ref(['tab_txt']345,@tab_txt.pft,)/*Informamos que o objeto descrito abaixo esta com a data de devolucao vencida*/
+'.%0A%0A'  ref(['tab_txt']985,@tab_txt.pft,)/*Data do vencimento*/': 'v900^v*6.2,'/'v900^v*4.2,'/'v900^v.4,
+'%0A%0A'   ref(['tab_txt']367,@tab_txt.pft,)/*Tombo*/': 'v900^t
+'%0A%0A'   ref(['tab_txt']986,@tab_txt.pft,)/*Titulo*/': 'v18
+'%0A%0A'   ref(['tab_txt']988,@tab_txt.pft,)/*A partir desta data, sujeito as penalidades previstas no regulamento da biblioteca*/
+'.%0A%0A(' ref(['tab_txt']987,@tab_txt.pft,)/*Texto gerado automaticamente sem acentuacao*/
+').%0A%0A' ref(['tab_txt']439,@tab_txt.pft,)/*Atenciosamente*/
+',%0A'v600^r
+'%0A'v600^e
+'%0A'      ref(['tab_txt']159,@tab_txt.pft,)/*Fones*/':'v600^f
+'%0A'      v600^n
+'%0A'      ref(['phl_cnf']1,v204)
+']]>'/

@@ -1,0 +1,73 @@
+*********************************************************************
+Bases gerais do Phl82
+*********************************************************************
+phl_acv.mst : base de dados do catalogo
+phl_aut.mst : tabela de autoridades (autoria) com alimentacao automatica
+phl_cnf.mst : configuracoes do sistema de bibliotecas
+phl_cpa.mst : base de dados de sugestoes de compra (feitas pelos usuarios)
+phl_cut.mst : tabela de codigos Cutter/PHA
+phl_err.mst : 
+phl_for.mst : cadastro de fornecedores						
+phl_giz.mst : tabela gizmo para conversao de caracteres
+phl_idx.mst : registros de acessos ao sistema
+phl_log.mst : 
+phl_mec.mst : tabela de areas do conhecimento (tematicas) do MEC
+phl_pen.mst : registros de penalidades (multa, suspensao)
+phl_pqt.mst : regras para prazos e quantidades permitidas na rotina de emprestimo
+phl_pwd.mst : permissoes de acesso `a area restrita do PHL			
+phl_rel.mst : configuracao de relatorios personalizados
+phl_res.mst : reservas pendentes
+phl_set.mst : configuracoes de cada biblioteca do sistema de bibliotecas
+phl_usr.mst : base de dados de usuarios
+phl_voc.mst : vocabulario controlado (descritores) para indexacao do catalogo
+
+phl_aqu.mst : tabela de tipos de aquisicao
+phl_ass.mst : tabela de tipos de assinaturas
+phl_cnt.mst : tabela de tipos de conteudo
+phl_col.mst : tabela de tipos de colecao
+phl_cur.mst : tabela de tipos de cursos e disciplinas
+phl_gen.mst : tabela de tipos de generos de documentos
+phl_idm.mst : tabela de tipos de idiomas
+phl_nda.mst : tabela de tipos de nivel arquivistico
+phl_per.mst : tabela de tipos de periodos (horario) de cursos
+phl_prc.mst : tabela de tipos de procedencia do material (compra)
+phl_rgl.mst : tabela de tipos de usuario (regulamento do sistema de bibliotecas)
+phl_spt.mst : tabela de tipos de suporte ("Impresso", por exemplo)
+phl_tdo.mst : tabela de tipos de documentos
+phl_tpr.mst : tabela de tipos de periodicidade de periodicos
+                  
+phl_acv_fmt.mst : tabela de campos na planilha da base de dados do catalogo
+phl_for_fmt.mst : tabela de campos na planilha da fornecedores
+phl_usr_fmt.mst : tabela de campos na planilha da base de dados de usuarios
+                
+phl7_giz.mst : tabela gizmo para conversao de bases phl7
+
+*********************************************************************
+Bases da biblioteca 001
+*********************************************************************
+001_cal.mst : calendario da biblioteca (fechada/aberta) para calculo de periodos
+001_cdu.mst : tabela de classificacao (CDU) adotada pela biblioteca
+001_cxa.mst : livro caixa que armazena as multas pagas
+001_emp.mst : emprestimos pendentes da biblioteca
+001_log.mst : historico das operacoes de emprestimo, devolucoes, renovacoes e reservas
+001_ser.mst : colecao de periodicos (kardex)
+001_tbo.mst : base de dados de tombos pertencentes `a biblioteca
+001_usc.mst : base de indicadores de uso da colecao da bilioteca
+
+001_ser_fmt.mst : tabela de campos na planilha da colecao de periodicos (kardex)
+001_tbo_fmt.mst : tabela de campos na planilha da base de dados de tombo
+
+*********************************************************************
+Tabelas para gerar codigo wxis/html (cgi-bin\phl82\tabs)
+*********************************************************************
+tab_dag : regras para validacao da edicao
+tab_ent : tabela de caracteres ascii
+tab_fdt : tabelas de definicao de campos
+tab_fmt : formularios de entrada e edicao (indicador para includes .cab, .fmt e .rod)
+tab_fmx : menus e formularios do PHL
+tab_man : tabela com textos do manual (por campos)
+tab_map : caminho fisico da raiz de http onde responde o Phl (rotina edicao de arquivos)
+tab_pft : formatos de apresentacao de registros para edicao
+tab_val : descontinuada (antiga regras para validacao de novos registros)
+tab_txt : tabela com textos das mensagens do sistema
+tab_xml : identidades XML (caracteres)

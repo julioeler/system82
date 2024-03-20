@@ -1,0 +1,124 @@
+<!-- Acesso ao indice invertido como no Phl8
+     codigo retirado do 003.xis -->
+     
+     <IsisScript name="indice80.xis">
+
+<!-- Inclue funcao (vars) que carrega as variaveis de configuracao -->
+     <include>/Data/DadosApl/ACEBIB/ant/cgi-bin/phl82/001.fnc</include>
+     
+<!-- Inicia a secao do script -->
+     <section>
+     
+<!-- Carrega variáveis de configuração  -->
+     <call name="001">now</call>
+     
+<!-- Carrega permissões de entrada e edição do usuário -->
+     <field action="add" tag="2000"><pft>,ref(['phl_pwd']val(v3000^4),v655),</pft></field>
+
+<!-- Carrega variáveis do formulário do cliente -->
+
+     <field action="cgi" tag="200">pag</field>
+     <field action="cgi" tag="201">rpp</field>
+     <field action="cgi" tag="202">bool</field>
+     <field action="cgi" tag="203">tag</field>
+     <field action="cgi" tag="934">ser</field>
+     <field action="cgi" tag="950">opc</field>
+     <field action="cgi" tag="951">opc.x</field>
+     <field action="cgi" tag="953">acv</field>
+     <field action="cgi" tag="958">exp</field>
+     <field action="replace" tag="958"><pft>,replace(v958,'+',' or '),</pft></field>
+     <field action="cgi" tag="964">tip</field>
+     <field action="cgi" tag="980">idx</field>
+     <field action="cgi" tag="965">pft</field>
+     <field action="replace" tag="965"><pft>,if v980='indice_periodicos.xis' then 'tree' else v965 fi,</pft></field>
+     <field action="cgi" tag="966">campo</field>
+     <field action="cgi" tag="967">idm</field>
+     <field action="cgi" tag="968">cnt</field>
+     <field action="cgi" tag="970">col</field>
+     <field action="cgi" tag="971">spt</field>
+     <field action="cgi" tag="977">stf</field>
+
+     <field action="cgi" tag="2">tit</field>
+     <field action="cgi" tag="2015">sel</field>
+     <field action="replace" tag="2015" split="occ"><pft>(v2015/)</pft></field>
+
+<!-- <field action="cgi" tag="7001">lang</field>  -->
+<!-- <field action="cgi" tag="7002">cipar</field> -->
+
+<!-- Direciona para opção fornecida -->
+     <flow action="jump"><pft>,if p(v950) then v950 fi,</pft></flow>
+
+<!-- Indice -->
+     <label>indice</label>
+
+     <display><pft>'Content-type: text/html; charset=iso-8859-1'/#</pft></display>
+     
+<!-- <display><htmlpft><pft>,ref(['tab_fmx']22,v4),</pft></htmlpft></display> -->
+<display><pft>
+'<!-- FMX000022 Phl8 -->'/
+'<html>'/
+'<head>'/
+'<link href="',cat('path_css'),'phl.css" rel="stylesheet" type="text/css">'/
+'</head>'/
+'<body>'/
+'<form action="',cat('path_cgi'),'wxis.exe" method="POST">'/
+'<input type="hidden" name="IsisScript" value="',cat('path_xis'),'indice80.xis">'/
+'<input type="hidden" name="code" value="'v3000^h'">'/
+/*'<input type="hidden" name="lang" value="'v7001'">'/*/
+/*'<input type="hidden" name="cipar" value="'v7002'">'/*/
+'<input type="hidden" name="lang" value="'v3000^a'">'/
+'<input type="hidden" name="cipar" value="'v3000^b'">'/
+'<input type="hidden" name="opc" value="indice">'/
+'<input type="hidden" name="tmp" value="'v4001'">'/
+'<table width="100%" align="center" border="0">'/
+'<tr><td width="100%" align="center"><input class="botao" type="submit" value="Ir para:">&nbsp;<input type="text" name="exp" value="'mhu,v958,"A"n958,mhl'" size="10"></td></tr>'/
+'</table>'/
+'</form>'/
+'</body>'/
+'</html>'/
+</pft></display>
+
+<!-- <display><htmlpft><pft>,ref(['tab_fmx']72,v4),</pft></htmlpft></display> -->
+<display><pft>
+'<!-- FMX000072 Phl8 -->'/
+'<table border="0" width="100%">'/
+'<form action="',cat('path_cgi'),'wxis.exe" method="POST">'/
+'<input type="hidden" name="IsisScript" value="',cat('path_xis'),'003.xis">'/
+'<input type="hidden" name="code" value="'v3000^h'">'/
+/*'<input type="hidden" name="lang" value="'v7001'">'/*/
+/*'<input type="hidden" name="cipar" value="'v7002'">'/*/
+'<input type="hidden" name="lang" value="'v3000^a'">'/
+'<input type="hidden" name="cipar" value="'v3000^b'">'/
+'<input type="hidden" name="opc" value="decorado">'/
+'<input type="hidden" name="bool" value="exp">'/
+'<input type="hidden" name="tmp" value="'v4001'">'/
+
+'<tr><td width="100%" align="center"><select name="exp" size="20" multiple style="width: 350px"><option selected value="xyz"></option>'/
+</pft></display>
+     <do task="keyrange">
+       <parm name="db">phl_acv</parm>
+   <!--<parm name="from"><pft>,"DES="v958,"DES=A"n958,</pft></parm>-->
+   <!--<parm name="to"><pft>'DES=ZZ'</pft></parm>-->
+       <parm name="from"><pft>,""v958,"A"n958,</pft></parm>
+       <parm name="to"><pft>'ZZZZ'</pft></parm>
+       <parm name="count">1000</parm>
+       <field action="define" tag="1">Isis_Key</field>
+       <field action="define" tag="2">Isis_Postings</field>
+       <loop>
+     <!--<display><pft>'<option value="',v1,'">',v1*4,' - (',v2,')</option>',</pft></display>-->
+         <display><pft>'<option value="or ~',replace(v1,'"','&quot;'),'~ ">',replace(s(f(val(v2),5,0)),' ','&nbsp;'),' - ',replace(v1,'"','&quot;'),'</option>',</pft></display>
+       </loop>
+   <!--<display><htmlpft><pft>,ref(['tab_fmx']71,v4),</pft></htmlpft></display>-->
+<display><pft>
+'<!-- FMX000071 -->'/
+'</select></td></tr><tr><td></td></tr>'/
+'<tr><td width="100%" align="center"><input class="botao" name="submitter" onClick="return DoubleClickTrapperAction();" type="submit" value="Buscar"></td></tr>'/
+'</form></table>'
+'</body></html>'
+</pft></display>
+     </do>
+     <file action="close" type="database">phl_acv</file>
+     <flow action="exit">1</flow>
+
+</section>
+</IsisScript>

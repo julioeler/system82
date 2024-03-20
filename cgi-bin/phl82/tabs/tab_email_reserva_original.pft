@@ -1,0 +1,14 @@
+'?subject=''Aviso de disponibilidade'
+'&body='   'Prezado(a) usuario(a)'
+',%0A%0A'  ,v890^a,| (|v900^u|) |,
+'%0A%0A'   'Informamos que o objeto de sua reserva encontra-se disponivel para emprestimo ate o final do dia'
+' '        ,ref([v3000^1'_cal']val(v930^n),v320,'/',v322,'/',v323,)
+'.%0A%0A'  'Titulo'': ',ref(['phl_acv']l(['phl_acv'],'TIT='v930^a,),mhu,if p(v18) then v18 else v30 fi,mpl,),
+'%0A%0A'   'Caso nao seja retirado ate a data indicada, sua reserva sera cancelada e o objeto ficara disponivel para o proximo usuario da lista de espera'
+'.%0A%0A(' 'O texto desta mensagem foi criado automaticamente, sem acentuacao'
+')%0A%0A'  'Atenciosamente'
+',%0A'     ,ref(['phl_set']l(['phl_set'],'ACV='v3000^1,),v609)
+'%0A'      ,ref(['phl_set']l(['phl_set'],'ACV='v3000^1,),v608)
+'%0A'      'Telefone'': ',ref(['phl_set']l(['phl_set'],'ACV='v3000^1,),v607)
+'%0A'      ,ref(['phl_set']l(['phl_set'],'ACV='v3000^1,),v602)
+']]>'

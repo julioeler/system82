@@ -1,0 +1,10 @@
+'d3',
+'a3~'v3[1]'~',
+'a103~'v3[2]'~',
+,if a(v40) then 'a40~1~' fi,
+,if a(v64) then 'a64~[s.d.]~' fi,
+,if size(v64)=4 and a(v65) then 'a65~'v64'0000~' fi,
+,if a(v66) then 'a66~[s.l.]~' fi,
+,if a(v62) then 'a62~[s.n.]~' fi,
+,if a(v20) and a(v38) then 'a20~[s.p.]~' fi
+,if a(v998) then 'a998~'mfn(1)'~' fi,

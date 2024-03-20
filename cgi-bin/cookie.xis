@@ -1,0 +1,26 @@
+<IsisScript>
+     <display><pft>'Content-type: text/html; charset=iso-8859-1'/#</pft></display>
+<section>
+<!--
+<display>
+  <pft>
+    '<script>
+       document.cookie = "phl=variavel3";
+    </script>'
+     getenv('HTTP_COOKIE'),
+  </pft>
+</display>
+
+<field action=add tag=100><pft>,getenv('HTTP_COOKIE'),</pft></field>
+<field action=replace tag=100 split=occ><pft>,replace(v100,'; ',s('',#)),</pft></field>
+
+<display>
+ <pft>,
+  ('*'v100'*<br>'),
+  (if v100.4='phl=' then v100*4'<br>' fi,),
+ </pft>
+</display>
+-->
+
+</section>
+</IsisScript>

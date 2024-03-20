@@ -1,0 +1,133 @@
+<!-- Script de abertura -->
+
+     <IsisScript name="phl82.xis">
+
+<!-- Define o tipo de conteúdo dos htmls que gerados dinamicamente -->
+
+     <display><pft>'Content-type: text/html; charset=iso-8859-1'/#</pft></display>
+     
+<!-- Inicia a secao do script -->
+     <section>
+        
+<!-- Carrega variaveis do cliente -->
+     <field action="cgi" tag="4001">tmp</field>
+     <file action="delete" type="output"><pft>,v4001,</pft></file>
+
+     <field action="cgi" tag="7001">lang</field>
+     <field action="cgi" tag="7002">cipar</field>
+
+     <parm name="cipar"><pft>,cat(v7002),</pft></parm>
+     <display><pft>,putenv('cod.idioma='v7001),</pft></display>
+     <list action="load"><pft>,cat('index.html'),</pft></list>
+     
+     <do task="list">
+     <field action="define" tag="1">Isis_Item</field>
+       <loop>
+         <display>
+           <pft>,proc('<10>'replace(v1,';','#')'</10>')</pft>
+         </display>
+       <field action="export" tag="10">10</field>
+       </loop>
+     </do>
+     
+<!-- Armazena dados da sessao -->
+
+     <do task="update">
+       <parm name="db">phl_idx</parm>
+       <parm name="mfn">New</parm>
+       <field action="define" tag="1003">Isis_Status</field>
+       <update>
+         <field action="import" tag="list">10,7001,7002</field>
+         <field action="add" tag="3000">
+           <pft>
+             '^a'v7001,
+             '^b'v7002,
+             '^c'v10.17,
+             '^d's(date),
+             '^e',getenv('REMOTE_ADDR'),
+             '^f',getenv('SERVER_SOFTWARE'),
+             '^g',getenv('SERVER_PORT'),
+             '^h',getenv('REQUEST_METHOD'),
+             '^i',getenv('PATH_INFO'),
+             '^j',getenv('PATH_TRANSLATED'),
+             '^k',getenv('SCRIPT_NAME'),
+             '^l',getenv('REMOTE_HOST'),
+           </pft>
+         </field>
+         <field action="export" tag="list">3000</field>
+         <field action="delete" tag="list">10,7001,7002</field>
+         <write>Unlock</write>
+
+         <!-- verifica o modo de armazenamento da referencia ao registro de conexao -->
+              <flow action="jump">
+                <pft>
+                  ,if ref(['phl_cnf']1,v219)='C' then 'cookie' else 'tempfile' fi,
+                </pft>
+              </flow>
+              <flow action="exit">1</flow>
+         
+         <!-- funcao que armazena dados sobre a sessao corrente em cookie no cliente -->
+              <label>cookie</label>
+              <display><pft>,'<script>document.cookie = "phl=^m'mfn'^c'v3000^b'";</script>',</pft></display>
+              <flow action="jump">saida</flow>
+
+         <!-- Armazena dados da sessao corrente em tempfile do servidor -->
+              <label>tempfile</label>
+              <file action="create" type="tempfile">4001</file>
+              <file action="append" type="output"><pft>,v4001,</pft></file>
+              <display><pft>,'^m'mfn'^c'v3000^b,</pft></display>
+              <file action="close" type="output"><pft>,v4001,</pft></file>
+              <field action="export" tag="list">4001</field>
+
+       <label>saida</label>
+       </update>
+     </do>
+     
+<!-- Compõe página principal do PHL -->
+
+     <!-- Conta conexoes para compor o contador -->
+          <field action="statusdb" tag="6789">phl_idx</field>
+
+     <display>
+       <pft>,
+        '<html>'/
+        '<head>'/
+        '<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">'/
+        '<META HTTP-EQUIV="Pragma" CONTENT="no-cache">'/
+        '<META HTTP-EQUIV="Expires" CONTENT="-1">'/
+        '<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">'/
+        '<title>'/*ref(['tab_fmx']1,v1)' - '*/ref(['phl_cnf']1,v200)'</title>'/
+        '</head>'/
+        '<frameset framespacing="0" rows="'ref(['phl_cnf']1,f(val(v217)+21,0,0),)',*" frameborder="0">'/
+        '<frameset framespacing="0" rows="'ref(['phl_cnf']1,v217,)',*" frameborder="0">'/
+        '<frame name="logo_cabe" scrolling="no" src="',cat('path_cgi'),'wxis.exe?IsisScript=',cat('path_xis'),'004.xis&opc=logo_cabe&tmp='v4001'" target="_self" marginwidth="0" marginheight="0">'/
+        '<frame name="cabecalho" scrolling="no" src="',cat('path_cgi'),'wxis.exe?IsisScript=',cat('path_xis'),'004.xis&opc=cabecalho&tmp='v4001'&counter='f((val(v6789^n)-1),0,0)'" target="_self" marginwidth="0" marginheight="0">'/
+        '</frameset>'/
+        '<frameset cols="46,161">'/
+        '<frameset framespacing="0" rows="'ref(['phl_cnf']1,v239)',*" frameborder="0">'/
+        '<frame name="logo" scrolling="no" src="',cat('path_cgi'),'wxis.exe?IsisScript=',cat('path_xis'),'025.xis&opc=logo&tmp='v4001'" marginwidth="0" marginheight="0" scrolling="auto" target="_self">'/
+        ,if ref(['phl_cnf']1,v210,)='S' then
+        '<frame name="menu" src="',cat('path_cgi'),'wxis.exe?IsisScript=',cat('path_xis'),'021.xis&opc=form_login&tmp='v4001'&counter='f((val(v6789^n)-1),0,0)'" target="_self" scrolling="auto">'/,
+        ,else
+
+        '<frame name="menu" scrolling="no" src="',cat('path_cgi'),'wxis.exe?IsisScript=',cat('path_xis'),'025.xis&opc=menu&tmp='v4001'&counter='f((val(v6789^n)-1),0,0)'" marginwidth="0" marginheight="0" scrolling="auto" target="_self">'/
+
+        ,fi,
+        '</frameset>'/
+         ,if ref(['phl_cnf']1,v210,)<>'S' then
+         '<frame name="result" src="',cat('path_cgi'),'wxis.exe?IsisScript=',cat('path_xis'),'003.xis&opc=busca&tmp='v4001'" target="_self" scrolling="auto">'/,
+         else
+        '<frame name="result" src="',cat('path_cgi'),'wxis.exe?IsisScript=',cat('path_xis'),'003.xis&opc=html_restrito&tmp='v4001'" target="_self" scrolling="auto">'/,
+        ,fi,
+        '</frameset>'/
+        '</frameset>'/
+        '</html>'/
+       </pft>
+     </display>
+     <flow action="exit">1</flow>
+
+<!-- Finaliza a secao -->
+     </section>
+
+<!-- Finaliza o script -->
+     </IsisScript>

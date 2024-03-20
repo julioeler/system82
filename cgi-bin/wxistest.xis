@@ -1,0 +1,45 @@
+<!-- *************************************************
+Teste da presença do wxis
+************************************************* -->
+<IsisScript name="wxistest.xis">
+<display>
+  <pft>
+    'Content-type: text/html; charset=iso-8859-1'/#
+  </pft>
+</display>
+
+<section>
+<trace>Off</trace>
+<field action=add    tag=1001>Server_Name</field>
+<field action=add    tag=1002><pft>getenv('SERVER_NAME')</pft></field>
+<field action=add    tag=1003><pft>getenv('LOCAL_ADDR')</pft></field>
+<field action=add    tag=1004><pft>getenv('REMOTE_ADDR')</pft></field>
+<field action=add    tag=1005><pft>getenv('APPL_PHYSICAL_PATH')</pft></field>
+
+<display><pft>,'
+  <html>
+    <head>
+      <base target="_self">
+    </head>
+    <body bgColor="#6487dc">
+      <table width="800" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td align="left" valign="center">hello!</td>
+          <td align="left" valign="center">'v1001'<font color="#ffffff"></font></td>
+          <td align="left" valign="center">'v1002'<font color="#ffffff"></font></td>
+          <td align="left" valign="center">'v1003'<font color="#ffffff"></font></td>
+          <td align="left" valign="center">'v1004'<font color="#ffffff"></font></td>
+          <td align="left" valign="center">'v1005'<font color="#ffffff"></font></td>
+        </tr>
+      </table>
+      <table width="800" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td align="center"><font color="#ffffff">&nbsp;</td>
+        </tr>
+      </table>
+    </body>
+  </html>
+',</pft></display>
+
+</section>
+</IsisScript>

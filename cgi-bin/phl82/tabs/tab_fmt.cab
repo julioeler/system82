@@ -1,0 +1,19 @@
+'<html>'/
+'<head>'/
+'<script language=javascript>function proibido_voltar(){history.go(1) == false;}</script>'/
+'<link href="',cat('path_css'),'phl.css" rel="stylesheet" type="text/css">'/
+'<script language="JavaScript" src="',cat('path_js'),'val_cpf.js"></script>'/
+'<script language="JavaScript" src="',cat('path_js'),'submit.js"></script>'/
+'<script language="JavaScript" src="',cat('path_js'),'isis_limite.js"></script>'/
+'<script>
+ function tab_man(x)
+  {
+    window.open("',cat('path_cgi'),'wxis.exe?IsisScript=',cat('path_xis'),'049.xis&tmp='v4001'&mfn="+x,"janela","height=400,width=600,menubar=no,resizable=yes,scrollbars=yes,status=no")
+  }
+</script>'/
+'</head>'/
+'<body>'/
+'<script language=javascript>proibido_voltar()</script>'/
+'<table width="100%">'/
+'<form name="formulario" onSubmit="return count(30000)" action="',cat('path_cgi'),'wxis.exe" method="post">'/
+'<input type="hidden" name="tmp" value="'v4001'">'

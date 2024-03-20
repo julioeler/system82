@@ -1,0 +1,5 @@
+'<html>'/
+'<head>'/
+'<link href="',cat('path_css'),'phl.css" rel="stylesheet" type="text/css">'/
+'</head>'/
+'<body>'/

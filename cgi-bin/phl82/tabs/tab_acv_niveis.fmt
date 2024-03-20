@@ -1,0 +1,128 @@
+   v6='m'        v6='am'       v6='as'       v6='s'        v6:'c' 
+                 /*ana*/       /*ana*/                            
+                 p(v10)        p(v10)                             
+                 p(v11)        p(v11)                             
+                 p(v12)        p(v12)                             
+                 p(v13)        p(v13)                             
+                 p(v121)       p(v121)                            
+                 p(v14)        p(v14)                             
+                 p(v141)       p(v141)                            
+   /*mon*/       /*mon*/       /*ser*/       /*ser*/       /*col*/
+   p(v16)        p(v16)                                           
+   p(v17)        p(v17)                                           
+   p(v18)        p(v18)                      p(v18)               
+   p(v181)       p(v181)                                          
+   p(v19)        p(v19)                                           
+   p(v15)        p(v15)                                           
+   p(v63)        p(v63)                                           
+   p(v20)        p(v20)                      p(v20)               
+   p(v21)        p(v21)                                           
+   p(v30)        p(v30)        p(v30)        p(v30)        p(v30) 
+                               p(v182)       p(v182)       p(v182)
+                               p(v34)        p(v34)        p(v34) 
+                               p(v31)        p(v31)               
+                               p(v32)        p(v32)               
+                               p(v33)        p(v33)        p(v33) 
+   p(v38)        p(v38)                                    p(v38) 
+   p(v68)        p(v68)                                           
+   p(v35)        p(v35)        p(v35)        p(v35)        p(v35) 
+   p(v69)        p(v69)                                           
+
+
+/* ============================================================= */
+/* nivel analitico monografico (capitulos de livros ou partes de outros documentos) */
+,if v6='am' then
+ /* Secao analitico */
+  ,if ref(['phl_acv_fmt']val(v5000),v6010)<>'' or p(v10) then ,fi,
+  ,if ref(['phl_acv_fmt']val(v5000),v6011)<>'' or p(v11) then ,fi,
+  ,if ref(['phl_acv_fmt']val(v5000),v6012)<>'' or p(v12) then ,fi,
+  ,if ref(['phl_acv_fmt']val(v5000),v6013)<>'' or p(v13) then ,fi,
+  ,if ref(['phl_acv_fmt']val(v5000),v6121)<>'' or p(v121) then ,fi,
+  ,if ref(['phl_acv_fmt']val(v5000),v6014)<>'' or p(v14) then ,fi,
+  ,if ref(['phl_acv_fmt']val(v5000),v6141)<>'' or p(v141) then ,fi,
+ /* ============================================================= */
+ /* Secao monografico */
+  ,if ref(['phl_acv_fmt']val(v5000),v6016)<>'' or p(v16) then ,fi,
+  ,if ref(['phl_acv_fmt']val(v5000),v6017)<>'' or p(v17) then ,fi,
+  ,if ref(['phl_acv_fmt']val(v5000),v6018)<>'' or p(v18) then ,fi,
+  ,if ref(['phl_acv_fmt']val(v5000),v6181)<>'' or p(v181) then ,fi,
+  ,if ref(['phl_acv_fmt']val(v5000),v6019)<>'' or p(v19) then ,fi,
+  ,if ref(['phl_acv_fmt']val(v5000),v6015)<>'' or p(v15) then ,fi,
+  ,if ref(['phl_acv_fmt']val(v5000),v6063)<>'' or p(v63) then ,fi,
+  ,if ref(['phl_acv_fmt']val(v5000),v6020)<>'' or p(v20) then ,fi,
+  ,if ref(['phl_acv_fmt']val(v5000),v6021)<>'' or p(v21) then ,fi,
+  ,if ref(['phl_acv_fmt']val(v5000),v6030)<>'' or p(v30) then ,fi,
+  ,if ref(['phl_acv_fmt']val(v5000),v6038)<>'' or p(v38) then ,fi,
+  ,if ref(['phl_acv_fmt']val(v5000),v6068)<>'' or p(v68) then ,fi,
+  ,if ref(['phl_acv_fmt']val(v5000),v6035)<>'' or p(v35) then ,fi,
+  ,if ref(['phl_acv_fmt']val(v5000),v6069)<>'' or p(v69) then ,fi,
+,fi/* v6='am' */,
+
+/* ============================================================= */
+/* nivel analitico de serie (artigos de periodicos) */
+,if v6='as' then
+ /* secao analitico */
+  ,if ref(['phl_acv_fmt']val(v5000),v6010)<>'' or p(v10) then ,fi,
+  ,if ref(['phl_acv_fmt']val(v5000),v6011)<>'' or p(v11) then ,fi,
+  ,if ref(['phl_acv_fmt']val(v5000),v6012)<>'' or p(v12) then ,fi,
+  ,if ref(['phl_acv_fmt']val(v5000),v6013)<>'' or p(v13) then ,fi,
+  ,if ref(['phl_acv_fmt']val(v5000),v6121)<>'' or p(v121) then ,fi,
+  ,if ref(['phl_acv_fmt']val(v5000),v6014)<>'' or p(v14) then ,fi,
+  ,if ref(['phl_acv_fmt']val(v5000),v6141)<>'' or p(v141) then ,fi,
+ /* ============================================================= */
+ /* secao serie */
+  ,if ref(['phl_acv_fmt']val(v5000),v6030)<>'' or p(v30) then ,fi,
+  ,if ref(['phl_acv_fmt']val(v5000),v6182)<>'' or p(v182) then ,fi,
+  ,if ref(['phl_acv_fmt']val(v5000),v6034)<>'' or p(v34) then ,fi,
+  ,if ref(['phl_acv_fmt']val(v5000),v6031)<>'' or p(v31) then ,fi,
+  ,if ref(['phl_acv_fmt']val(v5000),v6032)<>'' or p(v32) then ,fi,
+  ,if ref(['phl_acv_fmt']val(v5000),v6035)<>'' or p(v35) then ,fi,
+  ,if ref(['phl_acv_fmt']val(v5000),v6033)<>'' or p(v33) then ,fi
+,fi/* v6='as' */,
+
+/* ============================================================= */
+/* nível monográfico */,
+,if v6='m' then
+ /* secao monografico */
+  ,if ref(['phl_acv_fmt']val(v5000),v6016)<>'' or p(v16) then ,fi,
+  ,if ref(['phl_acv_fmt']val(v5000),v6017)<>'' or p(v17) then ,fi,
+  ,if ref(['phl_acv_fmt']val(v5000),v6018)<>'' or p(v18) then ,fi,
+  ,if ref(['phl_acv_fmt']val(v5000),v6181)<>'' or p(v181) then ,fi,
+  ,if ref(['phl_acv_fmt']val(v5000),v6019)<>'' or p(v19) then ,fi,
+  ,if ref(['phl_acv_fmt']val(v5000),v6015)<>'' or p(v15) then ,fi,
+  ,if ref(['phl_acv_fmt']val(v5000),v6063)<>'' or p(v63) then ,fi,
+  ,if ref(['phl_acv_fmt']val(v5000),v6020)<>'' or p(v20) then ,fi,
+  ,if ref(['phl_acv_fmt']val(v5000),v6021)<>'' or p(v21) then ,fi,
+  ,if ref(['phl_acv_fmt']val(v5000),v6030)<>'' or p(v30) then ,fi,
+  ,if ref(['phl_acv_fmt']val(v5000),v6038)<>'' or p(v38) then ,fi,
+  ,if ref(['phl_acv_fmt']val(v5000),v6068)<>'' or p(v68) then ,fi,
+  ,if ref(['phl_acv_fmt']val(v5000),v6035)<>'' or p(v35) then ,fi,
+  ,if ref(['phl_acv_fmt']val(v5000),v6069)<>'' or p(v69) then ,fi,
+,fi/* v6='m' */,
+
+/* ============================================================= */
+/* nível série (fasciculos de revistas) */
+,if v6='s' then
+ /* Secao serie */
+  ,if ref(['phl_acv_fmt']val(v5000),v6030)<>'' or p(v30) then ,fi,
+  ,if ref(['phl_acv_fmt']val(v5000),v6182)<>'' or p(v182) then ,fi,
+  ,if ref(['phl_acv_fmt']val(v5000),v6034)<>'' or p(v34) then ,fi,
+  ,if ref(['phl_acv_fmt']val(v5000),v6018)<>'' or p(v18) then ,fi,
+  ,if ref(['phl_acv_fmt']val(v5000),v6031)<>'' or p(v31) then ,fi,
+  ,if ref(['phl_acv_fmt']val(v5000),v6032)<>'' or p(v32) then ,fi,
+  ,if ref(['phl_acv_fmt']val(v5000),v6020)<>'' or p(v20) then ,fi,
+  ,if ref(['phl_acv_fmt']val(v5000),v6035)<>'' or p(v35) then ,fi,
+  ,if ref(['phl_acv_fmt']val(v5000),v6033)<>'' or p(v33) then ,fi,
+,fi/* v6='s' */,
+
+/* ============================================================= */
+/* Nivel colecao (titulos de periodicos) */
+,if v6:'c' then
+ /* Secao colecao */
+  ,if ref(['phl_acv_fmt']val(v5000),v6030)<>'' or p(v30) then ,fi,
+  ,if ref(['phl_acv_fmt']val(v5000),v6182)<>'' or p(v182) then ,fi,
+  ,if ref(['phl_acv_fmt']val(v5000),v6034)<>'' or p(v34) then ,fi,
+  ,if ref(['phl_acv_fmt']val(v5000),v6038)<>'' or p(v38) then ,fi,
+  ,if ref(['phl_acv_fmt']val(v5000),v6035)<>'' or p(v35) then ,fi,
+  ,if ref(['phl_acv_fmt']val(v5000),v6033)<>'' or p(v33) then ,fi,
+,fi/* v6:'c' */,

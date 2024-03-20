@@ -1,0 +1,17 @@
+ (,if p(v7) then
+  '^a'v3[1],
+  '^b'v103[1],
+ ,'^c'v63[1],
+ ,'^d'v21[1],
+ ,'^e'v31[1],
+ ,'^f'v32[1],
+ ,'^i'v65[1].4,
+ ,'^j'ref(['phl_col']val(v26[1]),@tab_txt.pft,),
+ ,'^k'v1[1],
+ ,'^l'ref(['phl_spt']val(v22[1]),@tab_txt.pft,),
+ ,'^m'ref(['phl_tdo']val(v5[1]),@tab_txt.pft,),
+ ,'^n'ref(['phl_cnt']val(v71[1]),@tab_txt.pft,),
+ ,'^g'v7^a,
+ ,'^h'v7^b,
+ ,'^q'if v18[1]<>'' then v18[1] else v30[1] fi,
+ ,fi/)

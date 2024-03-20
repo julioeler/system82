@@ -1,0 +1,175 @@
+<!-- Formulário para edição de dados
+     14/11/2008 11:47:52 - Revisado -->
+     
+     <IsisScript name="001.xis">
+
+<!-- Define o tipo de conteúdo dos htmls que gerados dinamicamente -->
+     <display><pft>'Content-type: text/html; charset=iso-8859-1'/#</pft></display>
+
+<!-- Inclue funcao que carrega as variaveis de configuracao -->
+     <include>/Data/DadosApl/ACEBIB/ant/cgi-bin/phl82/001.fnc</include>
+     
+<!-- Inclue funcao que gera as caixas de seleção -->
+     <include>/Data/DadosApl/ACEBIB/ant/cgi-bin/phl82/tipo.documento.fnc</include>
+     <include>/Data/DadosApl/ACEBIB/ant/cgi-bin/phl82/tipo.aquisicao.fnc</include>
+     <include>/Data/DadosApl/ACEBIB/ant/cgi-bin/phl82/tipo.assinatura.fnc</include>
+     <include>/Data/DadosApl/ACEBIB/ant/cgi-bin/phl82/tipo.conteudo.fnc</include>
+     <include>/Data/DadosApl/ACEBIB/ant/cgi-bin/phl82/tipo.genero.fnc</include>
+     <include>/Data/DadosApl/ACEBIB/ant/cgi-bin/phl82/tipo.arquivo.fnc</include>
+     <include>/Data/DadosApl/ACEBIB/ant/cgi-bin/phl82/tipo.idioma.fnc</include>
+     <include>/Data/DadosApl/ACEBIB/ant/cgi-bin/phl82/tipo.periodicidade.fnc</include>
+     <include>/Data/DadosApl/ACEBIB/ant/cgi-bin/phl82/tipo.periodo.fnc</include>
+     <include>/Data/DadosApl/ACEBIB/ant/cgi-bin/phl82/tipo.procedencia.fnc</include>
+     <include>/Data/DadosApl/ACEBIB/ant/cgi-bin/phl82/tipo.suporte.fnc</include>
+     <include>/Data/DadosApl/ACEBIB/ant/cgi-bin/phl82/tipo.usuario.fnc</include>
+     <include>/Data/DadosApl/ACEBIB/ant/cgi-bin/phl82/tipo.mec.fnc</include>
+     <include>/Data/DadosApl/ACEBIB/ant/cgi-bin/phl82/tipo.colecao.fnc</include>
+     <include>/Data/DadosApl/ACEBIB/ant/cgi-bin/phl82/tipo.curso.fnc</include>
+     <include>/Data/DadosApl/ACEBIB/ant/cgi-bin/phl82/rede.bibliotecas.fnc</include>
+     <include>/Data/DadosApl/ACEBIB/ant/cgi-bin/phl82/tipo.formulario.fnc</include>
+
+<!-- Inicia a secao do script -->
+     <section>
+
+<!-- Carrega variáveis de configuração -->
+     <call name="001">now</call>
+
+<!-- Carrega variáveis do formulário do cliente -->
+     <field action="cgi" tag="950">opc</field>
+     <field action="cgi" tag="957">mfn</field>
+     <field action="cgi" tag="958">exp</field>
+     <!-- <field action="cgi" tag="802">tip</field> -->
+     <field action="add" tag="960">002</field>
+     <field action="cgi" tag="961">form</field>
+     <field action="cgi" tag="1010">rec</field>
+     <field action="cgi" tag="3004">dbvar</field>
+
+<!-- Chama funcao que compoe box de cursos e disciplinas para os formulários -->
+     <call name="tipo.documento">now</call>
+     <call name="tipo.aquisicao">now</call>
+     <call name="tipo.assinatura">now</call>
+     <call name="tipo.conteudo">now</call>
+     <call name="tipo.genero">now</call>
+     <call name="tipo.arquivo">now</call>
+     <call name="tipo.idioma">now</call>
+     <call name="tipo.periodicidade">now</call>
+     <call name="tipo.periodo">now</call>
+     <call name="tipo.procedencia">now</call>
+     <call name="tipo.suporte">now</call>
+     <call name="tipo.usuario">now</call>
+     <call name="tipo.mec">now</call>
+     <call name="tipo.colecao">now</call>
+     <call name="tipo.curso">now</call>
+     <call name="rede.bibliotecas">now</call>
+     <call name="tipo.formulario">now</call>
+
+<!--Carrega permissões de entrada e edição do usuário -->
+    <field action="add" tag="2000"><pft>,ref(['phl_pwd']val(v3000^4),v655),</pft></field>
+
+    <flow action="jump">
+    <pft>,if v3000^1='' then v3000^c*12.1 else v3000^c*11.1 fi,</pft></flow>
+    <flow action="exit">1</flow>
+    
+    <label>l</label>
+    <display><htmlpft><pft>,ref(['tab_fmx']55,v4),</pft></htmlpft></display>
+    <flow action="exit">1</flow>
+
+    <label>E</label>
+    <flow action="jump"><pft>,
+    if ref(['phl_cnf']1,v201)='S' and v3004^c<>'cnf' then 'manutencao' else v950 fi,
+    </pft></flow>
+
+    <label>manutencao</label>
+    <display><htmlpft><pft>,ref(['tab_fmx']46,v4),</pft></htmlpft></display>
+    <flow action="exit">1</flow>
+    
+<!-- 01 catalogo - analitica -->
+     <label>acv_analitica</label>
+     
+     <do task="mfnrange">
+       <parm name="db">phl_acv</parm>
+       <parm name="from"><pft>,v957,</pft></parm>
+       <parm name="count">1</parm>
+       <loop>
+         <field action="add" tag="996"><pft>,v2,</pft></field>
+         <field action="export" tag="list">3/6,15/60,62/70,71,103,996</field>
+       </loop>
+     </do>
+     <file action="close" type="database">phl_acv</file>
+
+     <!-- Zedu 20100303: troca tipo de documento de Midia (TV) para Video (TV) e modifica campos --> 
+     <pft>,if val(v5)=26 then </pft>
+           <field action="replace" tag="5"><pft>'25'</pft></field>
+           <field action="add" tag="150"><pft>(v18/)</pft></field>
+          <field action="delete" tag="18">ALL</field>
+     <pft>,fi,</pft>
+
+     <field action="add" tag="1"><pft>,v3000^1,</pft></field>
+     <field action="add" tag="5000"><pft>,ref(['phl_tdo']val(v5),v350),</pft></field>
+     <field action="replace" tag="6"><pft>'a',v6,</pft></field>
+     <field action="replace" tag="960">027</field>
+     <field action="delete" tag="957">ALL</field>
+     <field action="delete" tag="33">ALL</field>
+     <parm name="buffersize">90000</parm>
+
+          <display>
+            <htmlpft>
+               <pft>
+                   ,ref(['tab_fmt']1,'[pft]',v4,'[/pft]',),
+               </pft>
+            </htmlpft>
+          </display>
+
+     <flow action="exit">1</flow>
+                       
+<!-- 25 usuarios -->
+     <label>usr</label>    
+     <field action="replace" tag="957">
+       <pft>,if a(v957) then ref(['phl_usr']l(['phl_usr'],'USR='v3000^2),mfn(1),) else v957 fi,</pft>
+     </field>
+     <file action="close" type="database">phl_usr</file>
+     <flow action="jump">abre</flow>
+     <flow action="exit">1</flow>
+        
+<!-- Abre registro para edicao -->
+     <label>abre</label>
+     <file action="close" type="database"><pft>,v3004^a,</pft></file>
+
+<!-- Verifica se registro existe -->
+     <flow action="jump"><pft>,if a(v957) and a(v958) then v3000^c*14.1 else v3000^c*13.1 fi,</pft></flow>
+     
+     <label>s</label>
+     <display><pft>,'Record not found!'</pft></display>
+     <flow action="exit">1</flow>
+
+     <label>y</label>
+
+     <do task="search">
+       <parm name="db"><pft>,v3004^a,</pft></parm>
+       <parm name="expression"><pft>,'MFN='v957,</pft></parm>
+       <parm name="buffersize">90000</parm>
+       <field action="define" tag="1003">Isis_Status</field>
+       
+       <loop>
+
+       <field action="import" tag="list">957,958,960,961,2000,3000/3110,4001,3500/3510,3601,1010</field>
+       <field action="add" tag="5000"><pft>,ref(['phl_tdo']val(v5),v350),</pft></field>
+         <display>
+           <htmlpft>
+             <pft>
+               ,if val(v1003)=0 then
+                  ,ref(['tab_fmt']val(v3004^b),'[pft]',v4,'[/pft]',)
+                  ,else ref(['tab_fmx']133,v4)
+               ,fi,
+             </pft>
+           </htmlpft>
+         </display>
+         
+       </loop>
+
+     </do>
+     <file action="close" type="database"><pft>,v3004^a,</pft></file>
+     <flow action="exit">1</flow>
+
+</section>
+</IsisScript>

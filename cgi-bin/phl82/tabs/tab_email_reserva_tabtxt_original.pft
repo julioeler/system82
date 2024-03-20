@@ -1,0 +1,11 @@
+'?subject='ref(['tab_txt']989,@tab_txt.pft,)/*Aviso de disponibilidade*/
+'&body='   ref(['tab_txt']984,@tab_txt.pft,)/*Prezado(a) usuario(a)*/
+':%0A%0A'  ref(['tab_txt']990,@tab_txt.pft,)/*Informamos que o objeto de sua reserva se encontra disponivel para emprestimo ate a meia noite do dia*/
+' ',ref([v3000^1'_cal']val(v930^n),v320,'/',v322,'/',v323,)
+'.%0A%0A'  ref(['tab_txt']986,@tab_txt.pft,)/*Titulo*/
+': ',ref(['phl_acv']l(['phl_acv'],'TIT='v930^a,),mhu,if p(v18) then v18 else v30 fi,mpl,),
+'%0A%0A'   ref(['tab_txt']991,@tab_txt.pft,)/*Caso nao seja retirado ate a data indicada, sua reserva sera cancelada e o objeto ficara disponivel para o proximo usuario da lista, se houver*/
+'.%0A%0A(' ref(['tab_txt']987,@tab_txt.pft,)/*Texto gerado automaticamente sem acentuacao*/
+')%0A%0A'  ref(['tab_txt']439,@tab_txt.pft,)/*Atenciosamente*/
+',%0A',ref(['phl_set']l(['phl_set'],'ACV='v3000^1,),v602)
+']]>'

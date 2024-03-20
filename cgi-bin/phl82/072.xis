@@ -1,0 +1,43 @@
+<!-- Edição de arquivos do phl -->
+     <IsisScript name="072.xis">
+
+<!-- Define o tipo de conteúdo dos htmls que gerados dinamicamente -->
+     <display><pft>'Content-type: text/html; charset=iso-8859-1'/#</pft></display>
+
+<!-- Inclue funcao que carrega as variaveis de configuracao -->
+     <include>/Data/DadosApl/ACEBIB/ant/cgi-bin/phl82/001.fnc</include>
+
+<!-- Inicia a secao do script -->
+     <section>
+
+<!-- Carrega dados da sessao -->
+     <call name="001">now</call>
+
+     <field action="cgi" tag="300">file_name</field>
+     <field action="cgi" tag="301">file_content</field>
+     <field action="replace" tag="301" split="occ"><pft>,(v301/),</pft></field>
+
+     <field action="statusfile" tag="1091"><pft>,v300,</pft></field>
+     
+     <flow action="jump">
+       <pft>
+         ,if v1091^s:'e' then 'efetua_backup' else 'grava_file' fi,
+       </pft>
+     </flow>
+
+     <label>efetua_backup</label>
+     <file action="create" type="output"><pft>v300'-'s(date).8,s(date)*9.6'.bkp'</pft></file>
+     <display><pft>,cat(v300),</pft></display>
+     <file action="close" type="output"><pft>v300'-'s(date).8,s(date)*9.6'.bkp'</pft></file>
+
+     <label>grava_file</label>
+     <file action="create" type="output"><pft>,v300,</pft></file>
+     <!-- <field action="add" tag="301"><pft>,cat(v300)</pft></field> -->
+     <field action="replace" tag="301" split="occ"><pft>,(v301#),</pft></field>
+     <display><pft>(v301#)</pft></display>
+     <file action="close" type="output"><pft>v300</pft></file>
+
+     <display><htmlpft><pft>,ref(['tab_fmx']244,(v4/)),</pft></htmlpft></display>
+        
+</section>
+</IsisScript>
